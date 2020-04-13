@@ -14,7 +14,7 @@ Feel free to learn from then and build your own!
 
     <title>{% if page.title %}{{ page.title | escape }}{% if page.eventName %} &mdash; {{ page.eventName }}{% endif %} &mdash; {{ site.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
     {% assign pagecss = layout.sass %}
-    <style>{% capture include_to_scssify %}{% include {{ pagecss }} %}{% endcapture %}{{ include_to_scssify | scssify }}</style>
+    <style>{%- capture include_to_scssify -%}{%- include {{ pagecss }} -%}{%- endcapture -%}{{- include_to_scssify | scssify -}}</style>
     <meta name="description" content="{{ page.meta.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
     <link rel="canonical" href="{{ page.url | replace:'/index.html','' | absolute_url }}" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}" />
@@ -98,115 +98,105 @@ Feel free to learn from then and build your own!
     <link rel="alternate" type="application/atom+xml" title="RSS Feed for pasztor.at" href="/feed.xml" />
   </head>
   <body>
-    <header class="header">
-      <a href="/" class="header__sitename">
-        <img src="{% base64 /assets/avatar-64.jpg %}" alt="" class="header__avatar" />
-        <span class="header__name">Janos Pasztor</span>
-      </a>
-      <div class="header__subscribe">
-        <span class="header__subscribesection">
-          <a href="https://discord.gg/sEWQcpe" class="header__sociallink header__sociallink" target="_blank" data-event-category="sign_up" data-event="Discord">
-            <img src="{% base64 /assets/img/discord-round.svg %}" alt="Discord" title="Join the community on Discord" class="header__socialicon header__socialicon" />
-          </a>
-        </span>
-        <span class="header__subscribesection">
-          <a href="https://facebook.com/janoszen" class="header__sociallink" target="_blank" data-event-category="sign_up" data-event="Facebook">
-            <img src="{% base64 /assets/img/facebook-round.svg %}" alt="Facebook" title="Follow me on Facebook" class="header__socialicon" />
-          </a>
-          <a href="https://twitter.com/janoszen" class="header__sociallink" target="_blank" data-event-category="sign_up" data-event="Twitter">
-            <img src="{% base64 /assets/img/twitter-round.svg %}" alt="Twitter" title="Follow me on Twitter" class="header__socialicon" />
-          </a>
-          <a href="https://github.com/janoszen" class="header__sociallink" target="_blank" data-event-category="sign_up" data-event="GitHub">
-            <img src="{% base64 /assets/img/github-round.svg %}" alt="GitHub" title="Visit me on GitHub" class="header__socialicon" />
-          </a>
-          <a href="https://www.youtube.com/c/JanosPasztor" class="header__sociallink" target="_blank" data-event-category="sign_up" data-event="YouTube">
-            <img src="{% base64 /assets/img/youtube-round.svg %}" alt="YouTube" title="Subscribe on YouTube" class="header__socialicon" />
-          </a>
-          <a href="/feed.xml" class="header__sociallink" target="_blank" data-event-category="sign_up" data-event="RSS">
-            <img src="{% base64 /assets/img/rss-round.svg %}" alt="RSS" title="Subscribe to my feed" class="header__socialicon" />
-          </a>
-        </span>
-      </div>
-    </header>
+    <div class="container">
+      <header rel="main">
+        <h1>
+          <a href="/">Janos Pasztor</a>
+        </h1>
+        <div class="speech">
+          <h2>Table of Contents of this page</h2>
+          <ul>
+            <li><a href="#mainmenu">Main menu</a></li>
+            <li><a href="#aboutme">About Me</a></li>
+            <li><a href="#getnotified">Get Notified</a></li>
+            <li><a href="#recent">Recent posts</a></li>
+          </ul>
+        </div>
+        <label for="mobilemenutoggle" class="toaster__hamburger no-speech"><span>Open mobile menu</span></label>
+        <input type="checkbox" id="mobilemenutoggle" class="toaster__checkbox no-speech" />
+        <div class="mobile">
+          <nav rel="main">
+            <h2 class="speech" id="mainmenu">Main menu</h2>
+            <div class="speech">
+              <a href="#after-main-menu">Skip main menu</a>
+            </div>
+            <ul>
+              {% assign current = '' %}
+              {% if page.url == '/' %}
+              {% assign current = 'active' %}
+              {% endif %}
+              <li class="{{ current }}"><a href="/">Home</a></li>
 
-    <nav class="topmenu">
-      {% assign current = '' %}
-      {% if page.url == '/' %}
-      {% assign current = 'topmenu__item--current' %}
-      {% endif %}
-      <a href="/" class="topmenu__item {{current}}">
-        Home
-      </a>
 
-      {% assign current = '' %}
-      {% if page.url == '/blog' or page.url contains '/blog/' %}
-      {% assign current = 'topmenu__item--current' %}
-      {% endif %}
-      <a href="/blog" class="topmenu__item {{current}}">
-        Blog
-      </a>
+              {% assign current = '' %}
+              {% if page.url == '/talks' or page.url contains '/talks/' %}
+              {% assign current = 'active' %}
+              {% endif %}
+              <li class="{{ current }}"><a href="/talks">Talks</a></li>
 
-      {% assign current = '' %}
-      {% if page.url == '/videos' or page.url contains '/videos/' %}
-      {% assign current = 'topmenu__item--current' %}
-      {% endif %}
-      <a href="/videos" class="topmenu__item {{current}}">
-        Videos
-      </a>
+              {% assign current = '' %}
+              {% if page.url == '/workshops' or page.url contains '/workshops/' %}
+              {% assign current = 'active' %}
+              {% endif %}
+              <li class="{{ current }}"><a href="/workshops">Workshops</a></li>
 
-      {% assign current = '' %}
-      {% if page.url == '/projects' or page.url contains '/projects/' %}
-      {% assign current = 'topmenu__item--current' %}
-      {% endif %}
-      <a href="/projects" class="topmenu__item {{current}}">
-        Projects
-      </a>
+              {% assign current = '' %}
+              {% if page.url == '/videos' or page.url contains '/videos/' %}
+              {% assign current = 'active' %}
+              {% endif %}
+              <li class="{{ current }}"><a href="/videos">Videos</a></li>
 
-      {% assign current = '' %}
-      {% if page.url == '/speaking' or page.url contains '/speaking/' %}
-      {% assign current = 'topmenu__item--current' %}
-      {% endif %}
-      <a href="/speaking" class="topmenu__item {{current}}">
-        Talks
-      </a>
+              {% assign current = '' %}
+              {% if page.url == '/blog' or page.url contains '/blog/' %}
+              {% assign current = 'active' %}
+              {% endif %}
+              <li class="{{ current }}"><a href="/blog">Blog</a></li>
 
-      {% assign current = '' %}
-      {% if page.url == '/workshops' or page.url contains '/workshops/' %}
-      {% assign current = 'topmenu__item--current' %}
-      {% endif %}
-      <a href="/workshops" class="topmenu__item {{current}}">
-        Workshops
-      </a>
+              {% assign current = '' %}
+              {% if page.url == '/about' or page.url contains '/about/' %}
+              {% assign current = 'active' %}
+              {% endif %}
+              <li class="{{ current }}"><a href="/about">About</a></li>
 
-      {% assign current = '' %}
-      {% if page.url == '/cv' %}
-      {% assign current = 'topmenu__item--current' %}
-      {% endif %}
-      <a href="/cv" class="topmenu__item {{current}}">
-        About me
-      </a>
+              {% assign current = '' %}
+              {% if page.url == '/contact' or page.url contains '/contact/' %}
+              {% assign current = 'active' %}
+              {% endif %}
+              <li class="{{ current }}"><a href="/contact">Contact</a></li>
+            </ul>
+          </nav>
+          <aside rel="menu">
+            <form>
+              <label for="search">Search:</label>
+              <input type="text" id="search" rel="search" placeholder="Search" />
+              <input type="submit" />
+            </form>
+            <button rel="subscribe" class="btn"><span>Subscribe</span></button>
+          </aside>
+          <div id="after-main-menu"></div>
+        </div>
+      </header>
 
-      {% assign current = '' %}
-      {% if page.url == '/contact' %}
-      {% assign current = 'topmenu__item--current' %}
-      {% endif %}
-      <a href="/contact" class="topmenu__item {{current}}">
-        Contact
-      </a>
-    </nav>
-
-    <main>
       {{ content }}
-    </main>
 
-    <footer class="footer">
-      <div class="footer__copyright"><a href="/terms">Copyright &copy; Janos Pasztor</a></div>
-      <div class="footer__links"><a href="/imprint">Imprint</a> &bull; <a href="/terms">Terms of Use</a> &bull; <a href="/privacy">Privacy Policy</a></div>
-    </footer>
-    <footer class="footer--print">
-      This article is available for free on www.pasztor.at &bull; Copyright &copy; Janos Pasztor
-    </footer>
-
+      <footer rel="main">
+        <main class="footer__main">
+          <h2>Janos Pasztor</h2>
+          <nav>
+            <ul>
+              <li><a href="/imprint">Imprint</a></li>
+              <li><a href="/terms">Terms of Use</a></li>
+              <li><a href="/privacy">Privacy Policy</a></li>
+            </ul>
+          </nav>
+        </main>
+        <aside class="footer__credits">
+          <div class="footer__creditline">Designed by <a href="https://bunjaku.at/">Beatrice Bunjaku</a></div>
+          <div class="footer__creditline">Photography by <a href="https://www.zsofiahollosiphoto.com/">Zsófia Hollósi</a></div>
+          <div class="footer__creditline">Copyright &copy; Janos Pasztor</div>
+        </aside>
+      </footer>
+    </div>
     <script type="text/javascript">
         window.addEventListener('load', function () {
             //region LQIP
@@ -226,36 +216,6 @@ Feel free to learn from then and build your own!
                     }
                 }
             }
-            //endregion
-
-            //region Social Proof
-            var httpRequest = new XMLHttpRequest();
-            httpRequest.open('GET', '/api/stats?url=' + encodeURIComponent(window.location.pathname), true);
-            httpRequest.onreadystatechange = function () {
-                if (httpRequest.readyState === XMLHttpRequest.DONE && httpRequest.status === 200) {
-                    var response = JSON.parse(httpRequest.responseText);
-                    for (var socialNetwork in response) {
-                        if (response.hasOwnProperty(socialNetwork)) {
-                            var shareCount = response[socialNetwork]['count'];
-                            var shareUrl = response[socialNetwork]['url'];
-                            if (shareCount !== null && shareCount > 0) {
-                                var elements = document.querySelectorAll('[data-sharecount=' + socialNetwork + ']');
-                                for (var i = 0; i < elements.length; i++) {
-                                    elements[i].innerHTML = shareCount;
-                                    elements[i].classList.add("post__sharecount--active");
-                                }
-                            }
-                            if (shareUrl !== null) {
-                                var elements = document.querySelectorAll('[data-shareurl=' + socialNetwork + ']');
-                                for (var i = 0; i < elements.length; i++) {
-                                    elements[i].href = shareUrl;
-                                }
-                            }
-                        }
-                    }
-                }
-            };
-            httpRequest.send();
             //endregion
 
             //region Privacy

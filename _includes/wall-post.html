@@ -1,36 +1,64 @@
-<article class="{% if post.preview %}wall__post{%else%}wall__post wall__post--noimage{%endif%}">
-    {% if include.categorylabel %}
-        <div class="{% if post.preview %}wall__categories{%else%}wall__categories--noimage{%endif%}">
-            {% for category in post.categories %}
-                <a href="/{{category}}" class="{% if post.preview %}wall__category{%else%}wall__category--noimage{%endif%}">{{ category | replace:"blog","Blog" | replace:"videos","Video" | replace:"speaking","Talk" | replace:"workshops","Workshop" | replace:"projects","Project" }}</a>
-            {% endfor %}
-        </div>
-    {% endif %}
-    {% if post.preview %}
-        <a href="{{post.url}}" class="wall__image">
-            {% capture defaultImageSize %}{{ post.preview | replace:'/assets/img', '/assets/resized/217' }}{% endcapture %}
-            <img
-                class="wall__imagelowres"
+<hr class="speech" />
+<a class="post"
+   href="{{include.post.url}}"
+   itemprop="itemListElement"
+   itemscope
+   itemtype="http://schema.org/BlogPosting">
+    <div class="post__image">
+        {% capture defaultImageSize %}{{ include.post.preview | replace:'/assets/img', '/assets/resized/384' }}{% endcapture %}
+        <img
+                class="post__img--lowres"
                 src="{% base64 defaultImageSize %}"
                 alt=""
-            />
+        />
+        <noscript>
             <img
-                class="wall__imagehighres"
-                data-srcset="
-                    {{ post.preview | replace:'/assets/img', '/assets/resized/465' }} 465w,
-                    {{ post.preview | replace:'/assets/img', '/assets/resized/768' }} 768w,
-                    {{ post.preview | replace:'/assets/img', '/assets/resized/960' }} 960w
-                "
-                data-sizes="
-                    (min-width:466px) 768px,
-                    (min-width:769px) 960px,
-                    (min-width:961px) 465px,
-                    465px
-                "
-                data-src="{{ post.preview | replace:'/assets/img', '/assets/resized/960' }}"
+                decoding="async"
+                class="post__img--highres"
+                src="{{ include.post.preview | replace:'/assets/img', '/assets/resized/1080' }}"
                 alt=""
             />
-        </a>
-    {% endif %}
-    {% include wall-post-content.html %}
-</article>
+        </noscript>
+        <img
+                decoding="async"
+                class="post__img--highres"
+                data-srcset="
+                    {{ post.preview | replace:'/assets/img', '/assets/resized/768' }} 768w,
+                    {{ post.preview | replace:'/assets/img', '/assets/resized/1080' }} 1080w,
+                    {{ post.preview | replace:'/assets/img', '/assets/resized/1440' }} 1440w,
+                    {{ post.preview | replace:'/assets/img', '/assets/resized/1920' }} 1920w,
+                    {{ post.preview | replace:'/assets/img', '/assets/resized/2560' }} 2560w,
+                    {{ post.preview | replace:'/assets/img', '/assets/resized/3840' }} 3840w
+"
+                data-sizes="
+                    (min-width:1090px and min-device-pixel-ratio: 3) 2560px,
+                    (min-width:1090px and min-device-pixel-ratio: 2) 1920px,
+                    (min-width:1090px) 768px,
+                    (min-device-pixel-ratio: 3) 2560px
+                    (min-device-pixel-ratio: 2) 1920px
+                    1080px
+                "
+                data-src="{{ include.post.preview | replace:'/assets/img', '/assets/resized/1080' }}"
+                alt=""
+        />
+    </div>
+    <div class="post__tags" itemprop="keywords">
+        {% capture tagscommas %}{% for tag in include.post.tags %}{{tag}}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endcapture %}
+        {{ tagscommas }}
+    </div>
+    <h3 class="post__title">{{ include.post.title | escape }}</h3>
+    <div class="post__excerpt">
+        {{include.post.excerpt | truncate:180}}
+    </div>
+    <div class="post__meta">
+        <time datetime="{{ post.date | date: date_format }}" class="post__pubdate">
+            {{ include.post.date | date: "%-d %b, %Y" }}
+        </time>
+        <span class="post__readtime">
+            {% include readtime.html post=include.post %}
+        </span>
+        <span class="post__read">
+            Read &raquo;
+        </span>
+    </div>
+</a>

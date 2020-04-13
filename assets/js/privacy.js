@@ -245,9 +245,3 @@ var onStylesheetLoaded = function() {
         saveSettings(privacyModal, privacySettings);
     }
 };
-
-var stylesheetLink = document.createElement("link");
-stylesheetLink.rel = "stylesheet";
-stylesheetLink.onload = onStylesheetLoaded;
-stylesheetLink.href="/assets/site.css";
-document.head.appendChild(stylesheetLink);

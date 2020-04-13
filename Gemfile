@@ -12,6 +12,7 @@ group :jekyll_plugins do
     gem 'classifier-reborn'
     gem 'jekyll-tagging-related_posts'
     gem 'jekyll-archives'
+    gem 'mimemagic'
 end
 
 gem 'gsl'

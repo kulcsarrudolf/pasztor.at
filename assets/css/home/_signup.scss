@@ -1,0 +1,85 @@
+@import "../common/variables";
+@import "../common/buttons";
+@import "../common/block";
+
+.signup {
+  @include block;
+
+  background:$color-alternate;
+  h2 .signup__line {
+    display: block;
+  }
+
+  label span {
+    display:none;
+  }
+
+  form {
+    margin-bottom:1.5vw;
+  }
+
+  input[type="text"], input[type="email"], button[type="submit"] {
+    height: 6vw;
+    line-height:6vw;
+    font-size:2vw;
+
+    @media screen and (min-width: $mobile-break) {
+      height: 4vw;
+      line-height:4vw;
+    }
+  }
+
+  input[type="text"], input[type="email"] {
+    width:30vw;
+    padding-left:1vw;
+    padding-right:1vw;
+    margin-right:2vw;
+
+    background-color:#b6f1e2;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-bottom: 0.2vw solid #0CD0A1;
+    border-left-width: 0;
+    color:#000000;
+    transition: border-bottom-color ease-in-out $animation-length;
+
+    &:focus, &:hover {
+      outline: 0;
+      border-bottom:0.2vw solid $color-active;
+    }
+    &::placeholder {
+      color: #999999;
+    }
+  }
+
+  button[type="submit"] {
+    position:relative;
+    top:-$pixel;
+    @include button(
+      6vw,
+      4vw,
+      0,
+      $color-active,
+      #ffffff,
+      $color-hover,
+      #ffffff
+    );
+  }
+
+  .disclaimer {
+    font-size: 2.5vw;
+    line-height: 3vw;
+    @media screen and (min-width: $mobile-break) {
+      font-size: 1.7vw;
+      line-height: 2vw;
+    }
+  }
+
+  a {
+    color: $color-active;
+    transition: color ease-in-out $animation-length;
+    &:hover {
+      color:$color-hover;
+    }
+  }
+}

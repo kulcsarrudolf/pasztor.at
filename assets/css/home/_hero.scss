@@ -1,0 +1,167 @@
+@import "../common/variables";
+
+.hero {
+  background:#1b1819;
+  height: 48.5vw;
+  color: #ffffff;
+  font-family: $font-family-sans;
+  margin-top: $header-height-mobile;
+  @media screen and (min-width: $mobile-break){
+    height: 37.5vw;
+    margin-top: 0;
+  }
+  &__contents {
+    position: relative;
+    opacity:0;
+    background: #1b1819 url("../img/janos-1.jpg") no-repeat;
+    height: 37.5vw;
+    background-size: contain;
+    animation: fadein $animation-length-slow;
+    animation-fill-mode: forwards;
+    border-bottom: 11vw solid #333333;
+    @media screen and (min-width: $mobile-break) {
+      border-bottom-width: 0;
+    }
+  }
+  &__title {
+    font-weight: $font-weight-headline - 100;
+    padding-top:2vw;
+    margin-left:5vw;
+    line-height:7vw;
+    font-size: 6vw;
+    @media screen and (min-width: $mobile-break) {
+      padding-top:5vw;
+      margin-left:5vw;
+      line-height:5vw;
+      font-size: 4.5vw;
+    }
+  }
+  &__subtitle {
+    margin-top:8vw;
+    font-size:3vw;
+    line-height:3.5vw;
+    margin-left:5vw;
+    font-weight: $font-weight-normal;
+    .hero__line {
+      display:block;
+      @media screen and (min-width: $mobile-break) {
+        display:inline;
+      }
+    }
+    @media screen and (min-width: $mobile-break) {
+      margin-top: 1vw;
+      font-size: 1.5vw;
+      line-height:1.5vw;
+      margin-left: 5vw;
+    }
+  }
+  &__elsewhere {
+    position:absolute;
+    top: 37.5vw;
+    height: 6vw;
+    padding-top:2.5vw;
+    padding-bottom:2.5vw;
+    display: flex;
+    flex-direction: row;
+    @media screen and (min-width: $mobile-break) {
+      position: static;
+      top:auto;
+      height:auto;
+      display:block;
+      padding-top:0;
+      padding-bottom:0;
+    }
+  }
+  &__contact {
+    display:inline-block;
+    @media screen and (min-width: $mobile-break) {
+      display:block;
+    }
+    padding-left:5vw;
+    @media screen and (min-width: $mobile-break) {
+      padding-top: 5vw;
+    }
+    h2 {
+      display: none;
+    }
+
+    li {
+      display: inline-block;
+    }
+
+    a {
+      position:relative;
+
+      display:inline-block;
+      height:6vw;
+      width:6vw;
+      @media screen and (min-width: $mobile-break) {
+        height: 3vw;
+        width: 3vw;
+      }
+      margin-right:($pixel * 75);
+      background-position: center center;
+      background-repeat:no-repeat;
+      background-size: 95%;
+      text-decoration: none;
+      opacity: 0.9;
+      transition: opacity 250ms ease-in-out;
+      &:hover {
+        opacity: 1;
+      }
+      span {
+        display:none;
+      }
+    }
+    a[rel="discord"] {
+      background-image:url("../img/discord-white.svg")
+    }
+    a[rel="youtube"] {
+      background-image:url("../img/youtube-white.svg")
+    }
+    a[rel="twitter"] {
+      background-image:url("../img/twitter-white.svg")
+    }
+    a[rel="linkedin"] {
+      background-image:url("../img/linkedin-white.svg")
+    }
+    a[rel="github"] {
+      background-image:url("../img/github-white.svg")
+    }
+    a[rel="facebook"] {
+      background-image:url("../img/facebook-white.svg")
+    }
+    a[type="application/rss+xml"] {
+      background-image:url("../img/rss-white.svg")
+    }
+  }
+
+  &__getintouch {
+    @media screen and (min-width: $mobile-break){
+      padding-top: 3vw;
+      padding-bottom: 3vw;
+      background-image: url("../img/arrow.svg");
+      margin-left:5vw;
+    }
+    background-size: auto 4vw;
+    background-repeat: no-repeat;
+    background-position: 13vw 4vw;
+    .btn {
+      height:6vw;
+      border-radius: 3vw;
+      padding-left:3vw;
+      line-height:6vw;
+      padding-right:3vw;
+      font-size: 3vw;
+      font-weight: 600;
+      @media screen and (min-width: $mobile-break){
+        height: $base-size * 10;
+        line-height: $base-size * 10;
+        border-radius:$base-size * 5;
+        font-size:$base-size * 4;
+        padding-left: $base-size * 6;
+        padding-right: $base-size * 6;
+      }
+    }
+  }
+}

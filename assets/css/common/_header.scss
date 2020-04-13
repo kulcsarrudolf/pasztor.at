@@ -1,0 +1,237 @@
+@import "variables";
+@import "shadow";
+
+header[rel="main"] {
+  background-color:#ffffff;
+  opacity: 0;
+  animation: fadein $animation-length-slow;
+  animation-fill-mode: forwards;
+  height: $header-height-mobile;
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  @media screen and (min-width: $mobile-break) {
+    height: $header-height-desktop;
+    position: static;
+    top:inherit;
+    left:inherit;
+    right: inherit;
+  }
+  display:flex;
+  z-index: 2;
+  @include elevation(2);
+  h1, nav, aside {
+    vertical-align: middle;
+    a {
+      color:#000000;
+      text-decoration: none;
+    }
+  }
+  h1 {
+    display: inline-block;
+    height: $header-height-mobile;
+    line-height: $header-height-mobile;
+  }
+  @media screen and (min-width: $mobile-break) {
+    h1, nav, aside {
+      display: inline-block;
+      height: $header-height-desktop;
+      line-height: $header-height-desktop;
+    }
+  }
+
+  h1 {
+    font-weight: $font-weight-headline;
+    margin-left: 22px;
+    margin-right:22px;
+    font-size: 20px;
+    line-height: $header-height-mobile * 0.9;
+    flex:1;
+    @media screen and (min-width: $mobile-break) {
+      flex: inherit;
+      line-height: $header-height-desktop * 0.9;
+      font-size:$base-size * 6;
+      margin-left:$base-size * 7;
+      margin-right:$base-size * 7;
+    }
+  }
+
+  .mobile {
+    background:#ffffff;
+    z-index:1;
+    position:absolute;
+    transition: height $animation-length ease-in-out;
+    top:$header-height-mobile;
+    left:0;
+    right: 0;
+    height: 0;
+    overflow:hidden;
+    padding-left:10px;
+    padding-right:10px;
+  }
+  .toaster__checkbox {
+    display:none;
+  }
+  .toaster__checkbox:checked + .mobile {
+    height:9*$menu-item-height-mobile;
+  }
+  .toaster__hamburger {
+    width:$header-height-mobile;
+    background:url("../img/hamburger.svg") no-repeat center;
+    background-size:50%;
+    cursor: pointer;
+    span {
+      display:none;
+    }
+  }
+
+  @media screen and (min-width: $mobile-break) {
+    .toaster__hamburger {
+      display: none;
+    }
+    .mobile {
+      position:static;
+      top:auto;
+      left:auto;
+      right:auto;
+      z-index: auto;
+      flex:1;
+      display: flex;
+      height:auto;
+      padding:0;
+    }
+  }
+
+  nav {
+    @media screen and (min-width: $mobile-break) {
+      ul, li, a {
+        height: $header-height-desktop;
+        line-height: $header-height-desktop * 0.9;
+        text-align:left;
+      }
+      a {
+        padding-left: $base-size * 2.5;
+        padding-right: $base-size * 2.5;
+      }
+    }
+    ul, li, a {
+      @media screen and (min-width: $mobile-break) {
+        display: inline-block;
+        font-size:$base-size * 4;
+      }
+      text-align: center;
+      display:block;
+      font-size:16px;
+      font-weight: 600;
+    }
+    li, a {
+      line-height:$menu-item-height-mobile;
+      height:$menu-item-height-mobile;
+      @media screen and (min-width: $mobile-break) {
+        line-height: $header-height-desktop;
+        height: $header-height-desktop;
+      }
+    }
+
+    a {
+      color: inherit;
+      transition: color ease-in-out $animation-length;
+    }
+
+    li.active a {
+      color: $color-hover;
+    }
+    li:hover a {
+      color: $color-hover;
+    }
+  }
+
+  aside {
+    text-align:center;
+  }
+  @media screen and (min-width: $mobile-break) {
+    aside {
+      flex: 1;
+      text-align:left;
+      display:flex;
+      margin-right: $base-size * 6;
+    }
+  }
+
+  form {
+    position:relative;
+    height: 100%;
+    width:100%;
+    @media screen and (min-width: $mobile-break) {
+      width:auto;
+      flex: 1;
+    }
+    display:block;
+    label {
+      display: none;
+    }
+    input[rel="search"] {
+      box-sizing: border-box;
+      @media screen and (min-width: $mobile-break) {
+        float:right;
+        height:$base-size * 6;
+        margin-top:($header-height-desktop - ($base-size * 6))/2;
+        margin-bottom:($header-height-desktop - ($base-size * 6))/2;
+        margin-right:$base-size * 4;
+        width: 0;
+        transition: width ease-in-out $animation-length, border-bottom-color ease-in-out $animation-length;
+        cursor: pointer;
+        border-bottom:1px solid #ffffff;
+        background-size: $base-size * 3 $base-size * 3;
+        padding-left: $base-size * 6;
+        &:hover, &:focus {
+          width: $base-size * 50;
+          border-bottom: 1px solid #000000;
+          cursor: text;
+        }
+      }
+      &:hover, &:focus {
+        outline: none;
+      }
+      height: $menu-item-height-mobile;
+      display: block;
+      background: url("../img/magnifier.svg") no-repeat left center;
+      background-size: $menu-item-height-mobile * 0.5 $menu-item-height-mobile * 0.5;
+      width:100%;
+      padding-left: $menu-item-height-mobile;
+      border:0;
+      border-bottom: 1px solid #000000;
+    }
+    input[type="submit"] {
+      display:none;
+    }
+  }
+
+  .btn[rel="subscribe"] {
+    margin-top:0.5 * $menu-item-height-mobile;
+    height:$menu-item-height-mobile;
+    line-height:$menu-item-height-mobile;
+    border-radius:$menu-item-height-mobile/2;
+    padding-left:$menu-item-height-mobile;
+    padding-right:$menu-item-height-mobile;
+    font-size:$menu-item-height-mobile/2;
+    margin-left:auto;
+    margin-right:auto;
+    text-transform: uppercase;
+    font-weight: 800;
+    display:inline;
+    cursor: pointer;
+    position:relative;
+    @media screen and (min-width: $mobile-break) {
+      margin-top: $base-size * 3;
+      height: $base-size * 8;
+      line-height: $base-size * 8;
+      border-radius: $base-size * 4;
+      padding-left: $base-size * 6;
+      padding-right: $base-size * 6;
+      font-size: $base-size * 3;
+    }
+  }
+}
+

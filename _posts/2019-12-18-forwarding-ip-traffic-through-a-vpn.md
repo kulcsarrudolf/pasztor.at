@@ -9,7 +9,7 @@ fbimage:       /assets/img/forward-ip-traffic-vpn.png
 twitterimage:  /assets/img/forward-ip-traffic-vpn.png
 googleimage:   /assets/img/forward-ip-traffic-vpn.png
 twitter_card:  summary_large_image
-tags:          [Linux, Netowrking]
+tags:          [Linux, Networking]
 sharing:
   twitter:  "Want to serve traffic for an IP from a different server? Here's how!"
   facebook: "Want to serve traffic for an IP from a different server? Here's how!"

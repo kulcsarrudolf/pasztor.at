@@ -58,7 +58,7 @@ jekyll_tidy:
   exclude: ["robots.txt", "feed.medium.xml"]
   compress_html: false
 sass:
-  style: compressed
+  style: compact
 kramdown:
   input: GFM
   syntax_highlighter: rouge
@@ -75,10 +75,13 @@ responsive_image:
   # An array of resize configuration objects. Each object must contain at least
   # a `width` value.
   sizes:
-    - width: 960
+    - width: 384
     - width: 768
-    - width: 465
-    - width: 217
+    - width: 1080
+    - width: 1440
+    - width: 1920
+    - width: 2560
+    - width: 3840
 
   # [Optional, Default: false]
   # Rotate resized images depending on their EXIF rotation attribute. Useful for
