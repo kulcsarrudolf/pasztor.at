@@ -1,0 +1,23 @@
+@import "../common/variables";
+@import "../common/post";
+
+.blog__latest {
+  h3 {
+    font-size:1.5vw;
+    line-height:1.8vw;
+    margin-bottom:1.8vw;
+  }
+  @media screen and (min-width: $mobile-break) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+    .blog__latest__first, .blog__latest__rest {
+      width: 42vw;
+    }
+  }
+
+  .blog__latest__rest .post {
+    margin-bottom: 2vw;
+  }
+}

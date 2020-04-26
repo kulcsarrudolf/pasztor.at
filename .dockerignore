@@ -1,0 +1,6 @@
+.kubernetes
+.terraform
+.circleci
+README.md
+_ansible
+Dockerfile

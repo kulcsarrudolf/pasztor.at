@@ -1,0 +1,32 @@
+@import "variables";
+
+.post__list {
+  @media screen and (min-width: $mobile-break) {
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .post {
+    margin-bottom:2.25vw;
+    border-bottom: $pixel solid #cccccc;
+    @media screen and (min-width: $mobile-break) {
+      width: 28vw;
+      flex-grow: 0;
+      flex-shrink: 0;
+      border-bottom:0;
+      margin-bottom:3vw;
+
+      &__image {
+        width:28vw;
+        height:14.7vw;
+        overflow: hidden;
+      }
+
+      img {
+        width:28vw;
+        height:14.7vw;
+        overflow: hidden;
+      }
+    }
+  }
+}

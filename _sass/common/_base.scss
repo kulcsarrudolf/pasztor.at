@@ -13,6 +13,7 @@ body {
   font-weight: $font-weight-normal;
   font-size:1.2vw;
   line-height: 1.8vw;
+  shape-rendering: geometricPrecision;
 }
 
 @keyframes fadein{

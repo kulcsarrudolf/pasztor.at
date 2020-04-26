@@ -1,126 +1,15 @@
 @import "../common/variables";
 @import "../common/shadow";
 @import "../common/block";
+@import "../common/post";
+@import "../common/postlist";
 
 .recent {
   @include block();
 
   background:#ffffff;
 
-
-  .post__list {
-    @media screen and (min-width: $mobile-break) {
-      display:flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-
-    .post {
-      display:block;
-      color: inherit;
-      position: relative;
-      text-decoration: none;
-
-      margin-bottom:2.25vw;
-      padding-bottom:2.25vw*1.5;
-      border-bottom: $pixel solid #cccccc;
-
-      @media screen and (min-width: $mobile-break) {
-        width:28vw;
-        flex-grow: 0;
-        flex-shrink: 0;
-        @include elevation(1);
-        margin-bottom:0;
-        border-bottom:0;
-        padding-bottom:1.125*1.5vw;
-
-        &__image {
-          width:28vw;
-          height:14.7vw;
-          overflow: hidden;
-        }
-
-        img {
-          width:28vw;
-          height:14.7vw;
-          overflow: hidden;
-        }
-      }
-
-      img {
-        object-fit: cover;
-        width:100%;
-        border:0;
-        outline: none;
-      }
-
-      .post__tags {
-        color:$color-active;
-        font-weight: $font-weight-headline;
-        text-transform: uppercase;
-      }
-
-      .post__title {
-        font-weight: $font-weight-headline;
-      }
-
-      .post__tags, .post__title, .post__excerpt, .post__meta {
-        font-size:3vw;
-        line-height:4.5vw;
-        margin-top:2.25vw;
-        margin-bottom:2.25vw;
-        padding-right: 1vw;
-        padding-left: 1vw;
-
-        @media screen and (min-width: $mobile-break){
-          font-size:1vw;
-          line-height:1.5vw;
-          margin-top: 0.75vw;
-          margin-bottom: 0.75vw;
-        }
-      }
-
-      /*
-      Implement when browser support gets better.
-      .post__excerpt {
-        max-height: 4.5*2vw;
-        text-overflow: ellipsis;
-        overflow:hidden;
-        @media screen and (min-width: $mobile-break){
-          max-height:1.5*2vw;
-        }
-      }
-      */
-
-      .post__meta {
-        position: absolute;
-        bottom:0;
-        font-size: 2vw;
-        @media screen and (min-width: $mobile-break){
-          font-size:0.8vw;
-        }
-      }
-
-      .post__pubdate::after, .post__readtime::after {
-        content: " | ";
-      }
-
-      .post__read {
-        text-decoration:underline;
-        color: $color-active;
-      }
-
-      .post__img--highres {
-        position:absolute;
-        top:0;
-        left:0;
-        right:0;
-      }
-    }
-  }
-
   &__gotoblog {
-    margin-top:3vw;
     text-align: center;
     a {
       display: inline-block;

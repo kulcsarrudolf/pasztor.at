@@ -1,0 +1,61 @@
+@import "variables";
+
+.social {
+  display:inline-block;
+  @media screen and (min-width: $mobile-break) {
+    display:block;
+  }
+  h2 {
+    display: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    position:relative;
+
+    display:inline-block;
+    height:6vw;
+    width:6vw;
+    @media screen and (min-width: $mobile-break) {
+      height: 3vw;
+      width: 3vw;
+    }
+    margin-right:($pixel * 75);
+    background-position: center center;
+    background-repeat:no-repeat;
+    background-size: 95%;
+    text-decoration: none;
+    opacity: 0.9;
+    transition: opacity 250ms ease-in-out;
+    &:hover {
+      opacity: 1;
+    }
+    span {
+      display:none;
+    }
+  }
+  a[rel="discord"] {
+    background-image:url64("/assets/layout/discord-black.svg")
+  }
+  a[rel="youtube"] {
+    background-image:url64("/assets/layout/youtube-black.svg")
+  }
+  a[rel="twitter"] {
+    background-image:url64("/assets/layout/twitter-black.svg")
+  }
+  a[rel="linkedin"] {
+    background-image:url64("/assets/layout/linkedin-black.svg")
+  }
+  a[rel="github"] {
+    background-image:url64("/assets/layout/github-black.svg")
+  }
+  a[rel="facebook"] {
+    background-image:url64("/assets/layout/facebook-black.svg")
+  }
+  a[type="application/rss+xml"] {
+    background-image:url64("/assets/layout/rss-black.svg")
+  }
+}

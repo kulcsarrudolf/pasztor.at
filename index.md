@@ -18,7 +18,7 @@ description: Latest posts by Janos Pasztor
                 <span class="hero__line">DevOps Educator with 10+ Years</span> <span class="hero_line">of Experience in the Field</span>
             </div>
             <div class="hero__elsewhere">
-                <div class="hero__contact">
+                <div class="hero__contact social">
                     <h3 class="speech">Me, elsewhere</h3>
                     <ul>
                         <li><a href="https://pasztor.at/discord" rel="discord"><span>Discord</span></a></li>
@@ -46,6 +46,7 @@ description: Latest posts by Janos Pasztor
     </h2>
     <div class="speech">
         <a href="#after-signup">Skip newsletter section</a>
+        <a href="#top">Back to top</a>
     </div>
     <form action="/signup" method="post">
         <label>
@@ -67,24 +68,29 @@ description: Latest posts by Janos Pasztor
     <h2 id="recent">Recent Posts</h2>
     <div class="speech">
         <a href="#after-recent">Skip recent posts</a>
+        <a href="#top">Back to top</a>
     </div>
     <div class="post__list" itemscope itemtype="http://schema.org/ItemList http://schema.org/BlogPosting">
         {% assign posts = site.categories.blog | where_exp:"post","post.date < site.time" %}
-        {% for post in posts limit:3 %}
+        {% for post in posts limit:6 %}
+            <hr class="speech" />
             {% include wall-post.html post=post %}
         {% endfor %}
     </div>
     <div class="recent__gotoblog">
-        <a href="/blog">Go to Blog</a>
+        <a href="/blog">See {{ posts | size | minus: 6 }} more posts &raquo;</a>
     </div>
     <div id="after-recent"></div>
 </div>
+{% comment %}{% raw %}
 <div class="events">
     <h2>Upcoming Events</h2>
     <div class="speech">
         <a href="#after-events">Skip events</a>
+        <a href="#top">Back to top</a>
     </div>
     <div class="events__list">
+        {% for post in posts limit:4 %}
         <a href="#" class="events__event">
             <time class="events__time">
                 <span class="events__date">
@@ -200,3 +206,4 @@ description: Latest posts by Janos Pasztor
     </div>
     <div id="after-events"></div>
 </div>
+{% endraw %}{% endcomment %}
