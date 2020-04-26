@@ -76,7 +76,7 @@ way to manage an immutable infrastructure.
 
 ## Terraform basics
 
-The code, as usual, is [on GitHub](https://github.com/janoszen/pasztor.at/tree/master/_terraform), so you can go and
+The code, as usual, is [on GitHub](https://github.com/janoszen/pasztor.at-terraform), so you can go and
 have a look at the complete project.
 
 As first step we will set up an object storage backend for Terraform. This is needed because Terraform keeps a so-called
