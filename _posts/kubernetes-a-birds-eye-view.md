@@ -74,15 +74,64 @@ networked together using [docker-compose](https://docs.docker.com/compose/) on a
 become quite complicated when you want to use multiple servers. Who decides which server to run each container on? Who
 deals storage? Or load balancing if you have multiple orchestrators?
 
+## Kubernetes
+
+These are all things that Kubernetes does for you. Kubernetes is a rather complex set of applications that ultimately
+provide you with an API you can talk to. This API lets you deploy an application without having to SSH into a server and
+worry about the actual machine.
+
+Needless to say, simply using Kubernetes doesn't free you from the burden of having to deal with updates in your
+containers, and you will often be responsible for managing the worker servers (nodes) even if you use Kubernetes from
+a cloud provider.
+
 ## Deployments
 
-These are all things that Kubernetes does for you. One if the fundamental things you can do with the API it provides is
-create *deployments*. Deployments allow you to define a set of containers that should be run, and with which parameters.
-One deployment can, of course, deploy more than one copy of your application, so one copy of your application is called
-*a Pod*, no matter how many containers one of these copies consists of.
+One if the fundamental things you can do with the API it provides is create
+[deployments](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/). Deployments allow you to
+define a set of containers that should be run, and with which parameters.
 
-Pods have a very useful attribute: they share the *network namespace*. Or, in other words, they can talk to each other
-on `localhost` (127.0.0.1) and don't need to go over the internal network.
+When a deployment actually executes it will launch one or more *Pods*. Each pod will contain a set of your containers
+that you have defined, and as a bonus, the services in these containers can communicate on the local network interface
+(`localhost`, `127.0.0.1`).
 
-## Networking and services
+## Networking, services and ingress
+
+Having a deployment is not very useful in and of itself, since these deployments need to be accessible to other
+deployments and to the outside world. This is done using an object called
+[a Service](https://kubernetes.io/docs/concepts/services-networking/service/). Services provide an internal load
+load balancer that other services can use. Additionally, they can also publicly expose the service.
+
+The public exposure is done either using `NodePort`, which will publish the service on a random port (not very useful)
+or a load balancer, which will communicate to your cloud providers load balancer. (You can run this yourself too with,
+for example, [MetalLB](https://metallb.universe.tf/).)
+
+Alternatively you can make your life even more convenient as Kubernetes also has a way to manage reverse proxies, such
+as [nginx](https://github.com/kubernetes/ingress-nginx) or [Traefik](https://docs.traefik.io/providers/kubernetes-ingress/).
+These reverse proxies are called *ingress controllers* in Kubernetes lingo and you can create a rule for them using
+an [Ingress resource](https://kubernetes.io/docs/concepts/services-networking/ingress/). Apart from HTTP routing ingress
+controllers often also take care of certificate management for you.
+
+All the internal communication is done using a network provided by a third party tool plugged into Kubernetes using the
+[Container Network Interface (CNI) API](https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/).
+There are a plethora of plugins, some adapting native capabilities of cloud providers, others creating a mesh VPN
+between your Kubernetes nodes. 
+
+## Storage management
+
+Some pods will require a persistent data storage that survives a pod recreation. These are called
+[Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/). Of course, PVs can be mounted
+from the host machine, but in order to move around containers between servers it is useful to have either a network 
+block storage, or a network file system. When Kubernetes moves a pod to a different node it can also move the volume
+mount. This may not be a requirement for every application, but larger deployments most certainly will want to make use
+of it.
+
+> **Warning!** Using a network block storage or network file system doesn't save you from having a sound backup
+> strategy! Data can still be deleted on the application level, and cloud providers are not infallible either!
+
+## Getting your first application kuberneticized
+
+Now that we have taken a gander through some of the features Kubernetes has to offer, let's depoy a sample
+application. Before we even begin working on the Kubernetes part, we will need to make sure that our container images
+are built properly. To do that we will go back to our trusty Docker.
+
 
