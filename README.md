@@ -16,7 +16,6 @@ Notable parts of this repository:
 - [_posts](_posts): Blog posts and events for Jekyll
 - [assets](assets): Contains graphics and other assets for the site.
 - [.build.sh](.build.sh): The Jekyll build script
-- [.cssh.sh](.cssh.sh): Cluster SSH to all CDN nodes
 - [.deploy.sh](.deploy.sh): rsync script to deploy the generated content
 - [.dns.json](.dns.json): The Route53 DNS settings
 - [.dns.sh](.dns.sh): The script to deploy Route53 DNS settings
