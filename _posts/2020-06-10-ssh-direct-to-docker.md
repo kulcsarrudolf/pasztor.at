@@ -25,7 +25,7 @@ a rarity. Providing SSH access, however, was not without its challenges.
 
 > **In a hurry?** I have written a [fully functional SSH microservice](https://github.com/janoszen/containerssh) that
 > launches containers. The sample code for
-> [this post is also available on GitHub](https://github.com/janoszen/minicontainerssh)
+> [this post is also available on GitHub](https://github.com/janoszen/minicontainerssh).
 
 <figure><img alt="A demonstration of the SSH server in action." src="/assets/img/ssh-in-action.gif" /><figcaption>The SSH server in action.</figcaption></figure>
 
