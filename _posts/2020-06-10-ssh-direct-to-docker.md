@@ -23,11 +23,11 @@ wanted to give customers the maximum amount of freedom to do what they have to d
 leading provided full on SSH access to maintain their sites. That was at a time when even FTP encryption was still
 a rarity. Providing SSH access, however, was not without its challenges.
 
-<figure><img alt="Animation: first an SSH client is started. This launches a container. Then a second SSH is started which launches a second container and so on." src="/assets/img/ssh-docker-anim.gif" /><figcaption>Here's the plan.</figcaption></figure>
-
 > **In a hurry?** I have written a [fully functional SSH microservice](https://github.com/janoszen/containerssh) that
 > launches containers. The sample code for
 > [this post is also available on GitHub](https://github.com/janoszen/minicontainerssh)
+
+<figure><img alt="A demonstration of the SSH server in action." src="/assets/img/ssh-in-action.gif" /><figcaption>The SSH server in action.</figcaption></figure>
 
 Traditionally web hosting environments that offer SSH did so by providing a per-site or per-customer environment.
 These environments are separated from each other by the virtue of creating separate Linux users for each environment.
@@ -49,6 +49,8 @@ can access multiple sites is almost impossible simply due to permission problems
 You, of course, know where I'm going with this, but it's nothing new. Containers have been around for 15 years on Linux
 and even longer on other operating systems. However, the have only recently reached a stage of wide-spread adoption and
 general usability.
+
+<figure><img alt="Animation: first an SSH client is started. This launches a container. Then a second SSH is started which launches a second container and so on." src="/assets/img/ssh-docker-anim.gif" /><figcaption>Here's the plan.</figcaption></figure>
 
 How about we put each site in a *container* instead of creating separate users? The PHP, Python, or what have you
 website engine runs in a container, and the data directory the website is located in is *mounted* for that container?
