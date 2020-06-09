@@ -893,6 +893,6 @@ be considered production ready.
 ## Use cases
 
 Creating a custom SSH server that launches containers goes way beyond simple web hosting. Imagine a school where
-stundents need to access temporary environments. Or a Linux / security education environment. These cases of firing up
+students need to access temporary environments. Or a Linux / security education environment. These cases of firing up
 workloads on demand is what the cloud and Kubernetes were basically made for, but there is no simple way to SSH into
 them.
