@@ -48,6 +48,8 @@ You, of course, know where I'm going with this, but it's nothing new. Containers
 and even longer on other operating systems. However, the have only recently reached a stage of wide-spread adoption and
 general usability.
 
+<figure><img alt="Animation: first an SSH client is started. This launches a container. Then a second SSH is started which launches a second container and so on." src="/assets/img/ssh-docker-anim.gif" /><figcaption>Here's the plan.</figcaption></figure>
+
 How about we put each site in a *container* instead of creating separate users? The PHP, Python, or what have you
 website engine runs in a container, and the data directory the website is located in is *mounted* for that container?
 
