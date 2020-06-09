@@ -16,9 +16,6 @@ jobs:
           name: Build website
           command: JEYKLL_ENV=prod bundle exec jekyll build --future --drafts --unpublished
       - run:
-          name: Build slides
-          command: cd ./_slides && ./build.sh
-      - run:
           name: Remove index.html
           command: rm _site/slides/index.html
       - persist_to_workspace:
