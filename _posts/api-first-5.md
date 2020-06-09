@@ -136,7 +136,7 @@ export default class BlogClient {
 }
 ```
 
-While this might seem like a pointless excercise in creating an abstraction, please let me reiterate, that when the
+While this might seem like a pointless exercise in creating an abstraction, please let me reiterate, that when the
 generated code changes, this might break your app. If you use an abstraction like this, it will break in only one place.
 
 Please note that I have not abstracted away the `BlogPost` object, because I consider it a business entity and if its
