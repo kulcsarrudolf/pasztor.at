@@ -3,7 +3,7 @@ layout:        post
 title:         "Go is a terrible language"
 date:          "2020-06-22"
 categories:    blog
-excerpt:       "Go certainly caught a lot of attention recently. Let's look at the bad parts!"
+excerpt:       "Go certainly caught a lot of attention. Let's look at the bad parts!"
 preview:       /assets/img/go-is-terrible.jpg
 fbimage:       /assets/img/go-is-terrible.png
 twitterimage:  /assets/img/go-is-terrible.png

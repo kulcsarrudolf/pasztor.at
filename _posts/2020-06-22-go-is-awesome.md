@@ -3,7 +3,7 @@ layout:        post
 title:         "Go is an awesome language"
 date:          "2020-06-22"
 categories:    blog
-excerpt:       "Go certainly caught a lot of attention recently. Let's look at the good parts!"
+excerpt:       "Go certainly caught a lot of attention. Let's look at the good parts!"
 preview:       /assets/img/go-is-awesome.jpg
 fbimage:       /assets/img/go-is-awesome.png
 twitterimage:  /assets/img/go-is-awesome.png
@@ -28,8 +28,8 @@ about the language.
 
 ## Cross-platform
 
-One of the reasons Go caught my eye was its build system. The original promise of Java was that it would be cross
-platform, but the fact that you needed to install a runtime was clearly a turnoff. Go, on the other hand, compiles
+One of the reasons Go caught my eye was its build system. The original promise of Java was that it would be
+cross-platform, but the fact that you needed to install a runtime was clearly a turnoff. Go, on the other hand, compiles
 to native binaries. On Windows, you will get an `.exe` file, on Linux an ELF binary and so on. What's more, unless you
 use [cgo](https://golang.org/cmd/cgo/) your Go program can live with *almost* no external dependencies. No need to
 install any `.dll` or `.so` files, a Go program will [just work](https://www.youtube.com/watch?v=YPN0qhSyWy8) out of
@@ -63,11 +63,11 @@ func main() {
 }
 ```
 
-Notice the `go` keyword. By using this keyword `someOtherFunction()` in a *goroutine*. Imagine the way Go deals with 
-concurrency as a pool of threads. Whenever you run a goroutine it will run in one of these threads.  This way Go
+Notice the `go` keyword. By using this keyword `someOtherFunction()` runs in a *goroutine*. Imagine the way Go deals
+with concurrency as a pool of threads. Whenever you run a goroutine it will run in one of these threads.  This way Go
 optimizes the use of threads for performance.
 
-To facilitate data transfer between goroutines Go introduces *channels*, which are an in-application message queue to
+To facilitate data transfer between goroutines Go introduces *channels*, which are in-application message queues to
 send data.
 
 ```go
@@ -193,7 +193,7 @@ func (treeNode * TreeNode) AddChild(child * TreeNode) {
 }
 ```
 
-Go calls the `(treeNode * TreeNode)` part a *receiver*. Receives in Go can work with any data type and functions very 
+Go calls the `(treeNode * TreeNode)` part a *receiver*. Receivers in Go can work with any data type and functions very 
 similar to the `this` keyword in other languages.
 
 ## Slices
