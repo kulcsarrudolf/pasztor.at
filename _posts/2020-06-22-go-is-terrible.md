@@ -26,13 +26,13 @@ if one looks at the [popularity graphs](http://pypl.github.io/PYPL.html) of
 [the language](https://www.tiobe.com/tiobe-index/) Go is very far from the most popular, or even the fastest growing
 programming language.
 
-Why is it then that eveybody seems to be talking about and hiring for Go? Seemingly everybody wants to use Go, from 
+Why is it then that everybody seems to be talking about and hiring for Go? Seemingly everybody wants to use Go, from
 system-level engineering to building webshops? Is this just a hype curve and is Go even suitable for the tasks it is 
 being used for?
 
 I have recently written an [SSH server that launches containers](https://github.com/janoszen/containerssh) in Go.
 The project has certainly grown to quite a large size, and I have also sent a
-[pull request to Golang itself](https://go-review.googlesource.com/c/crypto/+/236517) to fix a bug I found. After having
+[pull request to Golang itself](https://go-review.googlesource.com/c/crypto/+/236517) to fix a bug I found after having
 gathered substantially more experience than a `Hello world!`.
 
 In this article I'm going to take a look at the **bad parts**: the language design flaws, the parts where Go needs to
@@ -162,7 +162,7 @@ In other words lower case things are only accessible in the same directory, uppe
 Unfortunately there is **no way to restrict visibility within the same directory**.
 
 Imagine you have a data structure, and a set of functions that implement a very specific business logic. Someone who is
-not familiar with the business logic might not think much of it an implement a function in the same directory that 
+not familiar with the business logic might not think much of it and implement a function in the same directory that
 changes the data in a fashion that is not desirable from a business perspective.
 
 In other programming languages this is usually prevented by more granular scoping. You could, for example, use classes 
@@ -177,7 +177,7 @@ You can, of course, go with option 1., but I've never seen that go right. There'
 hurry and implements something without thinking. Scoping is there to make the bad things hard and the good things easy.
 This is called [defensive programming](https://en.wikipedia.org/wiki/Defensive_programming).
 
-In Go defensive programming means you have to create a *lot* of directories. And I mean a lot. And you thought Java has
+In Go defensive programming means you have to create a *lot* of directories. And I mean a lot. And you thought Java had
 too many files and directories...
 
 ## The lack of immutability
@@ -186,7 +186,7 @@ Another useful tool in defensive programming is *immutability*. Immutable data s
 data structures after they have been created, they can only be copied. While this is not as efficient in terms of 
 performance it is also desirable to prevent accidental side effects.
 
-Imagine an HTTP request struct: the first layer of your application creates it and the passes it down through several
+Imagine an HTTP request struct: the first layer of your application creates it and then passes it down through several
 modules. If the request struct was passed down as a pointer any layer modifying the request will modify it globally,
 leading to a potential side effect in the top layer.
 
@@ -237,7 +237,7 @@ In this case `data` will be a string without any further magic and we can be sur
 tree.
 
 Now, this is a feature that's sorely lacking from Go. We constantly have to keep casting to the data type we believe or
-hope it will be returned.
+hope will be returned.
 
 ## OOP (the bad parts)
 
@@ -285,7 +285,7 @@ type TreeNodeInterface interface {
 ```
 
 Quite simple and the interface above already implements this interface. No special keywords required, which is not
-exactly helpful when diving into new code. IDE's like Goland help you with code navigation, but it can be quite hard
+exactly helpful when diving into new code. IDEs like Goland help you with code navigation, but it can be quite hard
 to follow which implementation is where. Furthermore, if you fail to implement even one function required for an
 interface the code navigation doesn't work anymore.
 
