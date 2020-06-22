@@ -154,15 +154,19 @@ to include error handling, but it would be better if Go had learnt from the mist
 ## Scoping and code structure
 
 By far one of the biggest bug bears I have with Go is the scoping. Go does not have qualifiers like `public`, `private`
-or `protected`. The compiler takes all `.go` files in the same directory and merges them. If a variable name, interface,
+or `protected`. The compiler takes all `.go` files in the same package and merges them. If a variable name, interface,
 etc. is written with a lower case starting letter it is considered &ldquo;private&rdquo; and is only visible within
 the package. If it is written with a capital first letter it is &ldquo;public&rdquo;.
 
-In other words lower case things are only accessible in the same directory, upper case things are globally visible.
-Unfortunately there is **no way to restrict visibility within the same directory**.
+In other words lower case things are only accessible in the same package, upper case things are globally visible.
+Unfortunately there is **no way to restrict visibility within the same package**.
+
+> **Note:** When using Go modules (which is the preferred way) one package means one directory. Other build systems
+> like [Bazel](https://bazel.build/) allow for multiple packages per directory. This somewhat mitigates the lack of
+> scoping.
 
 Imagine you have a data structure, and a set of functions that implement a very specific business logic. Someone who is
-not familiar with the business logic might not think much of it an implement a function in the same directory that 
+not familiar with the business logic might not think much of it an implement a function in the same package that 
 changes the data in a fashion that is not desirable from a business perspective.
 
 In other programming languages this is usually prevented by more granular scoping. You could, for example, use classes 
@@ -171,7 +175,7 @@ and create private member variables to **encapsulate** the data.
 You have two options to deal with this problem: 
 
 1. Trust that no one is going to violate the integrity of any data stored. 
-2. Organize your code in such a way that each directory only contains a minimal amount of code.
+2. Organize your code in such a way that each package only contains a minimal amount of code.
 
 You can, of course, go with option 1., but I've never seen that go right. There's always that one colleague who is in a
 hurry and implements something without thinking. Scoping is there to make the bad things hard and the good things easy.
