@@ -30,6 +30,11 @@ Why is it then that eveybody seems to be talking about and hiring for Go? Seemin
 system-level engineering to building webshops? Is this just a hype curve and is Go even suitable for the tasks it is 
 being used for?
 
+I have recently written an [SSH server that launches containers](https://github.com/janoszen/containerssh) in Go.
+The project has certainly grown to quite a large size, and I have also sent a
+[pull request to Golang itself](https://go-review.googlesource.com/c/crypto/+/236517) to fix a bug I found. After having
+gathered substantially more experience than a `Hello world!`.
+
 In this article I'm going to take a look at the **bad parts**: the language design flaws, the parts where Go needs to
 mature more, down to the plain annoying stupid things.
 
