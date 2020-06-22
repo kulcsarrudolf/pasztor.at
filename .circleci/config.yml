@@ -46,7 +46,6 @@ workflows:
           filters:
             branches:
               only:
-                - master
                 - production
             tags:
               ignore: /.*/
@@ -55,7 +54,7 @@ workflows:
       - build:
           filters:
             branches:
-              only: master
+              only: production
             tags:
               ignore: /.*/
       - deploy:
@@ -65,7 +64,6 @@ workflows:
           filters:
             branches:
               only:
-                - master
                 - production
             tags:
               ignore: /.*/

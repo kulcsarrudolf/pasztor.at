@@ -23,7 +23,7 @@ sharing:
 I have recently written an [SSH server that launches containers](https://github.com/janoszen/containerssh) in Go.
 The project has certainly grown to quite a large size, and I have also sent a
 [pull request to Golang itself](https://go-review.googlesource.com/c/crypto/+/236517) to fix a bug I found. After having
-gathered substantially more experience than a `Hello world!` I now feel confident to lay out the parts I really like
+gathered substantially more experience than a `Hello world!`. I now feel confident to lay out the parts I really like
 about the language. 
 
 ## Cross-platform
