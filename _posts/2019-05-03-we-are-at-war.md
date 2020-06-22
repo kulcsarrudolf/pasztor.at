@@ -58,7 +58,7 @@ inability to quickly change the whole product. There are tests for each individu
 application as a whole. Since the system, now grown large, is split into microservices that multiple teams maintain,
 compatibility needs to be maintained in their APIs.
 
-This does not mean that these projects cannot be bring out new features, or launch new products, but the codebase and
+This does not mean that these projects cannot bring out new features, or launch new products, but the codebase and
 system makes it hard to introduce *radical* changes. Then a new startup comes along, writing code from ground up in
 NodeJS (weakly and dynamically typed) and no legacy systems to maintain. With a 10 person team they quickly launch a 
 fundamentally new product and become successful over the coming years, at which stage one of the big ones buys them.
