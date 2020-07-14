@@ -199,5 +199,6 @@ offer a vast array of services the in-house IT doesn't have a snowballs chance i
 threatened by the fintech startups and are *forced* to move faster. More user-friendly interfaces, faster development
 cycles. Gone is the age of terrible user interfaces that only work with Java applets in Internet Explorer.
 
-However, I have my stash of popcorn supply ready and waiting. [IT monocultures](/blog/monocultures) are becoming
-a real problem and a shift in geopolitics could yield some frantic migration projects.
+However, I have my stash of popcorn ready. [IT monocultures](/blog/monocultures) are becoming
+a real problem, and a potential shift in geopolitics could yield some fun to watch migration projects.
+(Fun for the bystander, not so much the person who has to do them.)
