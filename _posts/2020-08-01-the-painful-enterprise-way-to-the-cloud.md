@@ -23,7 +23,7 @@ suddenly found myself amid very large corporations. Many of them on the move to 
 the move to the cloud like a tidal wave that upends everything they have done so far in IT.
 
 Although this post is quite snarky in its tone there is nothing bad or surprising about it. Large corporations are
-slow-moving *by design*. You can't just simply launch a new service or move a system somewhere else there are *rules*.
+slow-moving *by design*. You can't just simply launch a new service or move a system somewhere else. There are *rules*.
 These rules, like compliance security or legal requirements, are put in place so that no individual can cause a huge
 amount of damage that would tank the share price. Furthermore, to a degree every employee should be *replaceable* like
 cogs in a wheel.
@@ -43,7 +43,7 @@ little bit dated.
 
 There are *rumors* of a better world. *Rumors* that there is a way to create a fast-paced environment where deployments
 happen several thousand times a day, tests run automatically and applications are fast and responsive. There are
-*rumors* of something called the cloud. Whomever gets there first will win the race. This *cloud* is rumored to solve
+*rumors* of something called the cloud. Whoever gets there first will win the race. This *cloud* is rumored to solve
 all the scaling problems, never go down and make everything just simply *better*.
 
 ## Stage 1: The Lies
@@ -55,7 +55,7 @@ Job boards are filled to the brim with DevOps engineer positions to help with th
 
 If you are a manager in such a company you are attending *cloud strategy meetings* where pretty boxes of components are
 drawn on Power Point slides. (Usually in a visually very unappealing fashion.) If you can't quite decide which cloud you
-are moving Multi-Cloud is written all over your banners to hide the fact that there is no clear vision on what the 
+are moving to, Multi-Cloud is written all over your banners to hide the fact that there is no clear vision on what the 
 future holds.
 
 If you are one of the few managers who don't yet have a *cloud strategy* you may be subject to incredible peer pressure
@@ -71,7 +71,8 @@ problems! The cloud will make everything faster! The cloud will never go down!
 ## Stage 2: Lift & Shift
 
 At some point it's time to move the first workloads. Dipping their toes in to test the waters initially just one or two
-projects are moved over. This move is usually done in a *lift and shift* fashion.
+projects are moved over. This move is usually done in a *lift and shift* fashion. As the name suggests this means
+taking the legacy setup and moving it to the cloud with no or minimal adaptations.
 
 Some companies chose to extend their on-premises VMware environment to the cloud. They simply use the cloud as an
 extension to their existing environment. Others try, and do a full-on move of one of their systems. In neither scenario
@@ -115,10 +116,12 @@ started using the cloud on their company projects.
 
 Here's the kicker: larger companies have policies. Lots of policies. These policies and procedures serve two goals: the
 primary goal is to protect the organization from *mistakes*. Mistakes made by people. Every action carried out is
-described, sometimes in excruciating detail. It has to go through multiple people until it can be done.
+described, sometimes in excruciating detail. It has to go through multiple people until it can be done. The second
+goal is to cover everyone's behind who stuck to the rules.
 
 You see, these *procedures* make sure that established workflows are carried out exactly the way they are supposed to be
-carried out. However, at this point the cloud is not established. There are no workflows how to &ldquo;do cloud&rdquo;.
+carried out. However, at this point the cloud is not established. There are no workflows on how to
+*&ldquo;do cloud&rdquo;*.
 
 You would be forgiven to think that the in-house IT operations would drive such a change. They could be the ones who
 would spearhead moving to the cloud. However, what does the in-house IT ops do? They are setting up and maintaing
@@ -132,7 +135,7 @@ faster.
 These are two different worlds. That's why IT operations does not usually lead the campaign for the cloud.
 &ldquo;Who then?&rdquo; &mdash; you ask.
 
-Let's rephrase the question: who has the *most* to gain from cloud adoption? It's the department who has to food the
+Let's rephrase the question: who has the *most* to gain from cloud adoption? It's the department who has to foot the
 bill for the infrastructure. It's the project owners, developers who gain from reduced costs, faster deployments, etc.
 But they can't ask IT ops to move them to the cloud as they would gain nothing.
 
@@ -176,15 +179,24 @@ that cater specifically to the needs of the data analysis crowd. Even though mov
 rubbing a lot of traditional folk the wrong way there is simply no denying the business value of being able to better
 understand customers.
 
-## The Future
+## Stage 5: The Future
 
-This is, of course, not the end of the road, nor is it the end of on-premises systems. It's a fact of life that the
-largest cloud providers are US-owned. This presents a problem for some European customers, for example, which is why
-the [GAIA-X](https://www.data-infrastructure.eu/GAIAX/Navigation/EN/Home/home.html) project even exists.
+This is, of course, not the end of the road, nor is it the end of on-premises systems. The on-premises system will
+exist for a long time. The bill after a lift-and-shift project may well prompt the occasional move back to on-premises
+as it turns out the cloud is only cheaper if the workload makes use of the advantages.
+
+As the massive databases stay at home, and the application servers make their move to the cloud the data transfer costs
+for the interconnects, no matter if it's leased fiber, MPLS or VPN, will add up. But that won't be visible. And even
+if someone understands that the cloud may even be more expensive for certain workloads... nobody wants to be a 
+naysayer and rock the boat.  
+
+It's also a fact of life that the largest cloud providers are US-owned. This can present a problem for some European
+customers, for example when government projects are on the line. Which is why the
+[GAIA-X](https://www.data-infrastructure.eu/GAIAX/Navigation/EN/Home/home.html) project even exists.
 
 Does this mean no European company is moving to the cloud? Of course not. They don't have a choice. Cloud providers
 offer a vast array of services the in-house IT doesn't have a snowballs chance in hell to catch up with. Even banks are
-threatened by the fintech startups and are *forced* to move faster. More user friendly interfaces, faster development
+threatened by the fintech startups and are *forced* to move faster. More user-friendly interfaces, faster development
 cycles. Gone is the age of terrible user interfaces that only work with Java applets in Internet Explorer.
 
 However, I have my stash of popcorn supply ready and waiting. [IT monocultures](/blog/monocultures) are becoming
