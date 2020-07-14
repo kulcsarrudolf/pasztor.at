@@ -62,7 +62,7 @@ If you are one of the few managers who don't yet have a *cloud strategy* you may
 and [fear of missing out](https://en.wikipedia.org/wiki/Fear_of_missing_out). You can't participate in the conversations
 around the proverbial water cooler.
 
-These conversations are usually jam-packed with buzzwords and make an actual cloud engineers' ears bleed. In Hungarian
+These conversations are usually jam-packed with buzzwords and make an actual cloud engineers' ears bleed. In Hungarian,
 we have a saying for this: [The blind leading the sightless](https://en.wiktionary.org/wiki/vak_vezet_vil%C3%A1gtalant).
 
 The reasons thrown around for moving to the cloud are many: The cloud will save costs! The cloud will solve our scaling
