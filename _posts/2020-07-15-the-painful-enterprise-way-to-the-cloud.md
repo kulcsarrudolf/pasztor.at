@@ -18,13 +18,13 @@ sharing:
   discord:  "@everyone Use the #cloud, they said. It will be great, they said."
 ---
 
-In recent years my career has taken an unforeseen turn. After having worked a decade in small to medium businesses, I 
+In recent years, my career has taken an unforeseen turn. After having worked a decade in small to medium businesses, I 
 suddenly found myself amid very large corporations. Many of them on the move to the cloud. Some of them experiencing
 the move to the cloud, like a tidal wave that upends everything they have done so far in IT.
 
 Although this post is quite snarky in its tone, there is nothing terrible or surprising about it. Large corporations
-are slow-moving *by design*. You can’t just simply launch a new service or move a system somewhere else. There are
-*rules*. These rules, like compliance security or legal requirements, are put in place so that no individual can cause a
+are slow-moving *by design*. You can’t just simply launch a new service or move a system elsewhere. There are
+*rules*. These rules, like compliance, security or legal requirements, are put in place so that no individual can cause a
 considerable amount of damage that would tank the share price. Furthermore, to a degree, every employee should be
 *replaceable* like cogs in a machine.
 
@@ -33,9 +33,9 @@ Let’s take a trip down the cloud lane and observe our imaginary, very traditio
 ## Stage 0: On-Premises
 
 We start our trip from the on-premises setup. (Yes, it’s on-premises and not on-premise.) A typical setup includes 
-either an own cage or a full-on datacenter. Every 3-5 years an IT manager would have to decide what kind of hardware
-to purchase that will last the next 3-5 years. As we are talking about enterprises this hardware is usually bought
-with a support contract so if something breaks the vendor is responsible for supplying the replacement hardware.
+either an own cage or a full-on datacenter. Every 3-5 years, an IT manager would have to decide what kind of hardware
+to purchase that will last the next 3-5 years. As we are talking about enterprises, this hardware is usually bought
+with a support contract, so if something breaks, the vendor is responsible for supplying the replacement hardware.
 
 It’s a comfortable, slow way of iterating over hardware. Not much excitement. Not without problems, mind you. Sometimes
 systems go down. Sometimes the systems can’t handle the load. Generally, everything is a little bit slow and looks a
@@ -58,7 +58,7 @@ drawn on PowerPoint slides. (Usually in a visually very unappealing fashion.) If
 are moving to, Multi-Cloud is written all over your banners to hide the fact that there is no clear vision on what the 
 future holds.
 
-If you are one of the few managers who don’t yet have a *cloud strategy* you may be subject to incredible peer pressure
+If you are one of the few managers who don’t yet have a *cloud strategy*, you may be subject to incredible peer pressure
 and [fear of missing out](https://en.wikipedia.org/wiki/Fear_of_missing_out). You can’t participate in the conversations
 around the proverbial water cooler.
 
@@ -78,20 +78,20 @@ Some companies chose to extend their on-premises VMware environment to the cloud
 extension of their existing environment. Others try and do a full-on move of one of their systems. In neither scenario
 do they recognize that their on-premises environment had features that the cloud doesn’t.
 
-A typical on-premises environment often has VM failover. In your traditional on-premises environment has a storage
+A typical on-premises environment often has VM failover. Your traditional on-premises environment has a storage
 system that lets you restart a VM from a failed machine on a different machine. This storage system is usually connected
-over a high-performance fiber channel connection. You can treat it the same way you would a local disk. Since
-you *own* the storage you have the option to create even very large disks. 10 TB of high-performance storage for your
+over a high-performance fiber channel connection. You can treat it the same way you would treat a local disk. Since
+you *own* the storage, you have the option to create even very large disks. 10 TB of high-performance storage for your
 Oracle database? Sure, if you have the money.
 
-Can you do this in the cloud? Absolutely. Network-connected block storage, such as EBS from Amazon offers you the
-ability to get a guaranteed throughput for your disk system. At the time of writing you can get up to a GBit/s and up to
+Can you do this in the cloud? Absolutely. Network-connected block storage, such as EBS from Amazon, offers you the
+ability to get a guaranteed throughput for your disk system. At the time of writing, you can get up to a GBit/s and up to
 64.000 IOPS [on Amazon](https://aws.amazon.com/ebs/features/#Amazon_EBS_volume_types). If you max it out with a 10 TB
-disk your bill will be 5000 USD per month just for the storage. That’s 60.000 USD a year. 180.000 USD over three years.
-300.000 USD over five.
+disk, your bill will be 5000 USD per month just for the storage. That’s 60.000 USD a year. 180.000 USD over three years.
+300.000 USD over five. You can reduce the price by signing a pre-commitment, but you get the picture.
 
 You can, of course, see the problem. If you simply throw your workload on the cloud the same way you treat your
-on-premises setup you will spend a *lot* of money. You see, until now you threw oversized storage at the problem
+on-premises setup, you will spend a *lot* of money. You see, until now, you threw oversized storage at the problem
 *because* you had to plan for 3-5 years. As the imaginary IT manager, you *had* to make sure you wouldn’t run into
 problems two years down the line. Remember, you wouldn’t get the budget to buy another shipment of metal.
 
@@ -190,7 +190,7 @@ transfer costs for the interconnects will add up quickly. But that won’t be vi
 that the cloud may even be more expensive for specific workloads... nobody wants to be a naysayer and rock the boat.  
 
 It’s also a fact of life that the largest cloud providers are US-owned. This can present a problem for some European
-customers, for example, when government projects are on the line. Which is why the
+customers, such as when government projects are on the line. Which is why the
 [GAIA-X](https://www.data-infrastructure.eu/GAIAX/Navigation/EN/Home/home.html) project even exists.
 
 Does this mean no European company is moving to the cloud? Of course not. They don’t have a choice. Cloud providers
