@@ -1,7 +1,7 @@
 ---
 layout:        post
 title:         "The (painful) Enterprise Way to the Cloud"
-date:          "2020-08-01"
+date:          "2020-07-15"
 categories:    blog
 excerpt:       "Use the cloud, they said. It will be great, they said. Why is it painful then?"
 preview:       /assets/img/the-painful-enterprise-way-to-the-cloud.jpg
@@ -199,6 +199,12 @@ offer a vast array of services the in-house IT doesn't have a snowballs chance i
 threatened by the fintech startups and are *forced* to move faster. More user-friendly interfaces, faster development
 cycles. Gone is the age of terrible user interfaces that only work with Java applets in Internet Explorer.
 
-However, I have my stash of popcorn ready. [IT monocultures](/blog/monocultures) are becoming
+Let me reiterate: there is nothing wrong with this. Big enterprises are built to last. That comes with a certain
+rigidness. They are slow to accept change *by design*. But, you don't see large enterprises going under all that
+often. Which is more than you can say about startups. So make fun as much as you want, there's method to the madness. 
+
+I for one have my stash of popcorn ready. [IT monocultures](/blog/monocultures) are becoming
 a real problem, and a potential shift in geopolitics could yield some fun to watch migration projects.
 (Fun for the bystander, not so much the person who has to do them.)
+
+Fun times, people. Fun times.
