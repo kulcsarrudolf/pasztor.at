@@ -26,7 +26,7 @@ Although this post is quite snarky in its tone, there is nothing terrible or sur
 are slow-moving *by design*. You can’t just simply launch a new service or move a system somewhere else. There are
 *rules*. These rules, like compliance security or legal requirements, are put in place so that no individual can cause a
 considerable amount of damage that would tank the share price. Furthermore, to a degree, every employee should be
-*replaceable* like cogs in a wheel.
+*replaceable* like cogs in a machine.
 
 Let’s take a trip down the cloud lane and observe our imaginary, very traditional large corporation on their way.
 
