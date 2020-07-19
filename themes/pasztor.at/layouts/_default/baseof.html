@@ -27,20 +27,20 @@
             <div class="logo">
                 {{ partial "logo" . }}
             </div>
-            <div class="mobile-toggle">
+            <div class="mobile-toggle" aria-hidden="true">
                 <label for="show-mobile-menu">
                     <span class="hamburger-bar"></span>
                     <span class="hamburger-bar"></span>
                     <span class="hamburger-bar"></span>
                 </label>
             </div>
-            <input type="checkbox" id="show-mobile-menu" value="1" />
-            <div class="mobile-menu">
+            <input type="checkbox" id="show-mobile-menu" value="1" aria-hidden="true" />
+            <div class="mobile-menu" aria-hidden="false">
                 <label for="show-mobile-menu" class="hide-mobile-menu"></label>
                 <nav>
                     <header>
                         <h1>Navigation</h1>
-                        <label for="show-mobile-menu" class="navigation-close">&times;</label>
+                        <label for="show-mobile-menu" class="navigation-close" aria-hidden="true">&times;</label>
                     </header>
                     <ul>
                         {{ $currentPage := . }}
