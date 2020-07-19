@@ -39,14 +39,16 @@ header.page {
     margin-top:0.2em;
     display:block;
   }
-  #show-mobile-menu + .mobile-menu nav {
+  #show-mobile-menu + .mobile-toggle + .mobile-menu nav {
     background:$color-background-footer;
   }
 
   .mobile-toggle {
+    cursor: pointer;
     display: block;
     width:1.2em;
     height:1em;
+    z-index:5;
   }
   .mobile-menu {
     overflow:hidden;
@@ -59,7 +61,7 @@ header.page {
     background:rgba(0,0,0,0.5);
     transition: opacity $transition-length ease-in-out, bottom $transition-length ease-in-out,;
   }
-  #show-mobile-menu:checked + .mobile-menu {
+  #show-mobile-menu:checked + .mobile-toggle + .mobile-menu {
     opacity:1;
     bottom:0;
   }
@@ -97,11 +99,11 @@ header.page {
         flex: 1;
         font-variant: small-caps;
       }
-      .navigation-close {
-        font-size:inherit;
-        line-height:inherit;
-        font-weight:bold;
-      }
+    }
+
+    a:hover{
+      border-bottom: 0;
+      margin-bottom:0;
     }
   }
 }
@@ -114,10 +116,6 @@ header.page {
 
     .mobile-menu {
       flex: 1;
-    }
-
-    .navigation-close {
-      display:none;
     }
 
     nav {

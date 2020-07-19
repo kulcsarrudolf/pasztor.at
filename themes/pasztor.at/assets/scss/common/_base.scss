@@ -10,7 +10,7 @@ body {
   @media screen {
     border-top: $size-stripe solid $color-header;
     color:$color-text;
-    background:$color-background url("data:image/svg+xml;utf8,<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?><svg xmlns=\"http://www.w3.org/2000/svg\" id=\"svg8\" version=\"1.1\" viewBox=\"0 0 512 512\" height=\"512\" width=\"512\"><defs id=\"defs2\"><filter id=\"filter857\" style=\"color-interpolation-filters:sRGB;\"><feTurbulence id=\"feTurbulence847\" result=\"result0\" seed=\"0\" baseFrequency=\"1\" numOctaves=\"3\" type=\"fractalNoise\" /><feColorMatrix id=\"feColorMatrix849\" type=\"saturate\" values=\"0\" result=\"result4\" /><feComposite id=\"feComposite851\" result=\"result2\" k3=\"0.5\" k2=\"0.5\" k1=\"1.25\" operator=\"arithmetic\" in2=\"result4\" in=\"SourceGraphic\" /><feBlend id=\"feBlend853\" in2=\"SourceGraphic\" in=\"result2\" mode=\"normal\" result=\"result5\" /><feComposite id=\"feComposite855\" result=\"result3\" operator=\"in\" in2=\"SourceGraphic\" in=\"result5\" /></filter></defs><g id=\"layer1\"><rect y=\"0\" x=\"0\" height=\"512\" width=\"512\" id=\"rect859\" style=\"opacity:1;fill:#00e000;fill-opacity:1;stroke-width:0.602903;stroke-miterlimit:4;stroke-dasharray:none\" /><rect transform=\"matrix(0.50758352,0,0,0.50758352,-0.5122659,-0.5122659)\" y=\"0\" x=\"0\" height=\"1024\" width=\"1024\" id=\"rect10\" style=\"fill:#e0e0e0;fill-opacity:1;fill-rule:evenodd;stroke-width:0.529166;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter857);opacity:0.5\" /></g></svg>");
+    background:$color-background;
   }
 }
 

@@ -24,8 +24,8 @@
   }
 
   .page-footer {
-    padding-left: $padding-left-page;
-    padding-right: $padding-right-page;
+    padding-left: $padding-left-page/0.8;
+    padding-right: $padding-right-page/0.8;
     font-size: 0.8em;
     line-height: 1.875em;
     max-width: $width-max;
