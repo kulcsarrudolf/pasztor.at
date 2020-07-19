@@ -67,6 +67,9 @@ header.page {
     width:1.2em;
     height:1em;
     z-index:5;
+    label, .hamburger-bar {
+      cursor: pointer;
+    }
   }
   .mobile-menu {
     overflow:hidden;
