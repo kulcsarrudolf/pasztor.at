@@ -27,19 +27,34 @@
             <div class="logo">
                 {{ partial "logo" . }}
             </div>
-            <nav>
-                <ul>
-                    {{ $currentPage := . }}
-                    {{ range .Site.Menus.main }}
-                        <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-                            <a href="{{ .URL }}">
-                                {{ .Pre }}
-                                <span>{{ .Name }}</span>
-                            </a>
-                        </li>
-                    {{ end }}
-                </ul>
-            </nav>
+            <div class="mobile-toggle">
+                <label for="show-mobile-menu">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </label>
+            </div>
+            <input type="checkbox" id="show-mobile-menu" value="1" />
+            <div class="mobile-menu">
+                <label for="show-mobile-menu" class="hide-mobile-menu"></label>
+                <nav>
+                    <header>
+                        <h1>Navigation</h1>
+                        <label for="show-mobile-menu" class="navigation-close">&times;</label>
+                    </header>
+                    <ul>
+                        {{ $currentPage := . }}
+                        {{ range .Site.Menus.main }}
+                            <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                                <a href="{{ .URL }}">
+                                    {{ .Pre }}
+                                    <span>{{ .Name }}</span>
+                                </a>
+                            </li>
+                        {{ end }}
+                    </ul>
+                </nav>
+            </div>
         </header>
         <main class="page">
             {{- block "main" . }}{{- end }}
