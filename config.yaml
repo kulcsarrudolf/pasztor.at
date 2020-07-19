@@ -1,7 +1,7 @@
 baseURL: https://pasztor.at
 disablePathToLower: true
 languageCode: en-us
-title: Janos Pasztor
+title: Sanja & Janos
 theme: pasztor.at
 copyright: Copyright © Janos Pasztor. All rights reserved.
 permalinks:
@@ -12,7 +12,7 @@ markup:
       unsafe: true
 taxonomies:
   blog: blog
-  author: authors
+  about: about
 menu:
   main:
     - identifier: home
@@ -24,17 +24,20 @@ menu:
       url: /blog/
       weight: -100
     - identifier: about
-      name: About me
-      url: /cv/
+      name: About Us
+      url: /about/
       weight: -90
   footer:
     - identifier: about
-      name: About me
-    - identifier: cv
+      name: About Us
+    - identifier: about-janos
       parent: about
-      name: CV
-      url: /cv/
-
+      name: Janos
+      url: /about/janos
+    - identifier: about-sanja
+      parent: about
+      name: Sanja
+      url: /about/sanja
     - identifier: legal
       name: Legal
     - identifier: imprint

@@ -5,9 +5,18 @@
 {{ define "main" }}
     <div class="text">
         <h1>{{ .Title }}</h1>
-        <!--div class="meta">
-            {{ $.PublishDate.Format "Jan 2, 2006" }}
-        </div-->
+        <div class="meta">
+            <time datetime="{{ $.PublishDate }}">{{ $.PublishDate.Format "Jan 2, 2006" }}</time>
+            {{- with $.Site.GetPage "taxonomyTerm" (printf "about/%s" (urlize .Params.author )) }}
+                by <a href="{{ .Permalink }}">{{ .Title }}</a>
+            {{ end }}
+        </div>
         {{ .Content }}
+        <div class="bio">
+            {{- with $.Site.GetPage "taxonomyTerm" (printf "about/%s" (urlize .Params.author )) }}
+                <h2>About {{ .Title }}</h2>
+                {{ .Content }}
+            {{ end }}
+        </div>
     </div>
 {{ end }}

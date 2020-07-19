@@ -47,7 +47,28 @@ body {
 @mixin typography($text-width, $text-margin-left) {
   position: relative;
 
+  .meta {
+    font-variant: small-caps;
+  }
+
   @media screen and (min-width: 760px) {
+    .meta {
+      margin-top:1.875em;
+      width: $text-margin-left;
+      float:left;
+      font-size:0.8em;
+      line-height:1.875em;
+      margin-left:0;
+      opacity:0.7;
+      time {
+        display:block;
+      }
+    }
+
+    .bio {
+      margin-left: $text-margin-left/0.8;
+    }
+
     h2 {
       margin-left: $text-margin-left/$size-h2;
       max-width:$text-width;
@@ -63,19 +84,35 @@ body {
       max-width:$text-width;
     }
 
-    &>p, &>ul, &>ol, &>figure, &>dl, &>div, &>pre, &>blockquote {
+    &>p, &>ul, &>ol, &>figure, &>dl, &>div, &>pre, &>blockquote, &>hr {
       margin-left: $text-margin-left;
       max-width:$text-width;
     }
 
-    h1 + p:first-of-type {
+    h1 + .meta + p:first-of-type {
       margin-left:$text-margin-left / $size-lead;
     }
 
-    h1 + p:first-of-type {
+    h1 + .meta + p:first-of-type {
       font-size:1em * $size-lead;
       line-height: 1.5em/$size-lead;
       margin-top:1.5em/$size-lead;
+    }
+
+    .bio>h2 {
+      margin-left:0;
+    }
+  }
+
+  .bio {
+    border-top:0.2em solid $color-header;
+    margin-top:1.4em;
+    padding-top:1.4em;
+    font-size:0.8em;
+    line-height:1.875em;
+    h2 {
+      @include heading-margins($size-h3);
+      margin-top:0;
     }
   }
 
@@ -83,12 +120,12 @@ body {
     @include heading;
   }
 
-  p, ul, ol, figure, dl {
+  p, ul, ol, figure, dl, hr {
     margin-top:1.5em;
     font-size:inherit;
   }
 
-  h1, h2, h3, h4, h5, h6, p, ul, ol, figure, dl, div.admonition {
+  h1, h2, h3, h4, h5, h6, p, ul, ol, figure, dl, div, hr {
     animation: fadein 0.233s;
   }
 
@@ -174,7 +211,7 @@ body {
       page-break-after: always;
     }
 
-    h1 + p:first-of-type {
+    h1 + .meta + p:first-of-type {
       margin-top:0;
     }
   }
@@ -244,6 +281,13 @@ body {
       white-space: pre-wrap;
       overflow-y: hidden;
     }
+  }
+
+  hr {
+    border:0;
+    height:0.2em;
+    background:$color-header;
+    margin-top:1.3em;
   }
 
   .admonition {
