@@ -63,7 +63,7 @@ body {
       max-width:$text-width;
     }
 
-    &>p, &>ul, &>ol, &>figure, &>dl, &>div.admonition {
+    &>p, &>ul, &>ol, &>figure, &>dl, &>div, &>pre {
       margin-left: $text-margin-left;
       max-width:$text-width;
     }
