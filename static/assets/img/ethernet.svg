@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="700"
+   height="40"
+   viewBox="0 0 700 40"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="ethernet.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="216.22158"
+     inkscape:cy="28.402628"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer2"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="1005"
+     inkscape:window-x="0"
+     inkscape:window-y="265"
+     inkscape:window-maximized="1"
+     showguides="true" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-1012.3622)"
+     style="display:none">
+    <rect
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4136"
+       width="1640"
+       height="99.000023"
+       x="0.49998683"
+       y="952.86212" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Layer 2"
+     style="display:inline"
+     transform="translate(0,-60)">
+    <rect
+       style="opacity:1;fill:#b5e3ad;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4136-9"
+       width="99"
+       height="39"
+       x="0.5"
+       y="60.5" />
+    <g
+       id="g6105"
+       transform="matrix(0.42657,0,0,0.42657,-1.4016785,62.414589)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text4138"
+         y="37.562153"
+         x="119.91039"
+         style="font-style:normal;font-weight:normal;font-size:26.25px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="37.562153"
+           x="119.91039"
+           id="tspan4140"
+           sodipodi:role="line">Preamble</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4138-3"
+         y="60.671833"
+         x="120.26561"
+         style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:20px;text-align:center;text-anchor:middle"
+           y="60.671833"
+           x="120.26561"
+           id="tspan4140-6"
+           sodipodi:role="line">7 bytes + 1 byte SFD</tspan></text>
+    </g>
+    <rect
+       style="display:inline;opacity:1;fill:#adbce3;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4136-9-1-9"
+       width="100"
+       height="39"
+       x="199.5"
+       y="60.5" />
+    <rect
+       style="display:inline;opacity:1;fill:#ade3de;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4136-9-1"
+       width="100"
+       height="39"
+       x="99.5"
+       y="60.5" />
+    <g
+       id="g6111"
+       transform="matrix(0.42657,0,0,0.42657,-4.278472,63.232867)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text4138-7"
+         y="35.643879"
+         x="359.936"
+         style="font-style:normal;font-weight:normal;font-size:26.25px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="35.643879"
+           x="359.936"
+           id="tspan4140-5"
+           sodipodi:role="line">Destination MAC</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4138-3-3"
+         y="58.753559"
+         x="360.29489"
+         style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:20px;text-align:center;text-anchor:middle"
+           y="58.753559"
+           x="360.29489"
+           id="tspan4140-6-5"
+           sodipodi:role="line">6 bytes</tspan></text>
+    </g>
+    <g
+       id="g6117"
+       transform="matrix(0.42657,0,0,0.42657,-6.655285,63.134452)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text4138-7-2"
+         y="35.643879"
+         x="600.35901"
+         style="font-style:normal;font-weight:normal;font-size:26.25px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="35.643879"
+           x="600.35901"
+           id="tspan4140-5-7"
+           sodipodi:role="line">Source MAC</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4138-3-3-0"
+         y="58.753559"
+         x="600.29492"
+         style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:20px;text-align:center;text-anchor:middle"
+           y="58.753559"
+           x="600.29492"
+           id="tspan4140-6-5-9"
+           sodipodi:role="line">6 bytes</tspan></text>
+    </g>
+    <rect
+       style="display:inline;opacity:1;fill:#e3ade3;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4136-9-1-9-8"
+       width="100"
+       height="39"
+       x="299.5"
+       y="60.5" />
+    <g
+       id="g6123"
+       transform="matrix(0.42657,0,0,0.42657,8.030715,63.232867)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text4138-7-2-3"
+         y="35.643879"
+         x="799.9104"
+         style="font-style:normal;font-weight:normal;font-size:26.25px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="35.643879"
+           x="799.9104"
+           id="tspan4140-5-7-6"
+           sodipodi:role="line">Ethertype</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4138-3-3-0-0"
+         y="58.753559"
+         x="800.26074"
+         style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:20px;text-align:center;text-anchor:middle"
+           y="58.753559"
+           x="800.26074"
+           id="tspan4140-6-5-9-6"
+           sodipodi:role="line">2 bytes</tspan></text>
+    </g>
+    <rect
+       style="display:inline;opacity:1;fill:#e3adad;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4136-9-1-9-8-4"
+       width="100"
+       height="39"
+       x="399.5"
+       y="60.5" />
+    <g
+       id="g6129"
+       transform="matrix(0.42657,0,0,0.42657,39.779515,63.232867)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text4138-7-2-3-2"
+         y="35.643879"
+         x="960.40387"
+         style="font-style:normal;font-weight:normal;font-size:26.25px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="35.643879"
+           x="960.40387"
+           id="tspan4140-5-7-6-6"
+           sodipodi:role="line">Payload</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4138-3-3-0-0-1"
+         y="58.753559"
+         x="960.50488"
+         style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:20px;text-align:center;text-anchor:middle"
+           y="58.753559"
+           x="960.50488"
+           id="tspan4140-6-5-9-6-8"
+           sodipodi:role="line">46-1500 bytes</tspan></text>
+    </g>
+    <rect
+       style="display:inline;opacity:1;fill:#e3c8ad;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4136-9-1-9-8-4-8"
+       width="100"
+       height="39"
+       x="499.5"
+       y="60.5" />
+    <g
+       id="g6135"
+       transform="matrix(0.42657,0,0,0.42657,80.059715,63.134452)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text4138-7-2-3-2-7"
+         y="35.643879"
+         x="1099.9424"
+         style="font-style:normal;font-weight:normal;font-size:26.25px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="35.643879"
+           x="1099.9424"
+           id="tspan4140-5-7-6-6-9"
+           sodipodi:role="line">FCS</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4138-3-3-0-0-1-2"
+         y="58.753559"
+         x="1100.5049"
+         style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:20px;text-align:center;text-anchor:middle"
+           y="58.753559"
+           x="1100.5049"
+           id="tspan4140-6-5-9-6-8-0"
+           sodipodi:role="line">4 bytes</tspan></text>
+    </g>
+    <rect
+       style="display:inline;opacity:1;fill:#dee3ad;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect4136-9-1-9-8-4-8-1"
+       width="100"
+       height="39"
+       x="599.5"
+       y="60.5" />
+    <g
+       id="g6141"
+       transform="matrix(0.42657,0,0,0.42657,52.088689,63.134452)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text4138-7-2-3-2-7-2"
+         y="35.643879"
+         x="1399.9297"
+         style="font-style:normal;font-weight:normal;font-size:26.25px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           y="35.643879"
+           x="1399.9297"
+           id="tspan4140-5-7-6-6-9-3"
+           sodipodi:role="line">Inter Frame Gap</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text4138-3-3-0-0-1-2-7"
+         y="58.753559"
+         x="1399.8945"
+         style="font-style:normal;font-weight:normal;font-size:20px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         xml:space="preserve"><tspan
+           style="font-size:20px;text-align:center;text-anchor:middle"
+           y="58.753559"
+           x="1399.8945"
+           id="tspan4140-6-5-9-6-8-0-5"
+           sodipodi:role="line">12 bytes</tspan></text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+        <title>{{ if not .IsHome }}{{ with .Title }}{{ . }} | {{ end }}{{ end }}{{ .Site.Title }}</title>
+        <link rel="canonical" href="{{ .Permalink }}" />
+
+        {{- block "css" . }}{{- end }}
+
+        {{ partial "head" . }}
+
+        {{ template "_internal/opengraph.html" . }}
+        {{ template "_internal/twitter_cards.html" . }}
+    </head>
+    <body>
+        <header class="page">
+            <div class="logo">
+                {{ partial "logo" . }}
+            </div>
+            <nav>
+                <ul>
+                    {{ $currentPage := . }}
+                    {{ range .Site.Menus.main }}
+                        {{ if .HasChildren }}
+                            <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+                                <a href="#">
+                                    {{ .Pre }}
+                                    <span>{{ .Name }}</span>
+                                </a>
+                            </li>
+                            <ul class="sub-menu">
+                                {{ range .Children }}
+                                    <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                                        <a href="{{ .URL }}">{{ .Name }}</a>
+                                    </li>
+                                {{ end }}
+                            </ul>
+                        {{ else }}
+                            <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                                <a href="{{ .URL }}">
+                                    {{ .Pre }}
+                                    <span>{{ .Name }}</span>
+                                </a>
+                            </li>
+                        {{ end }}
+                    {{ end }}
+                </ul>
+            </nav>
+        </header>
+        <main class="page">
+            {{- block "main" . }}{{- end }}
+        </main>
+        <footer class="page">
+
+        </footer>
+    </body>
+</html>

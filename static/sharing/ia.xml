@@ -1,0 +1,60 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>{{ site.title | xml_escape }}</title>
+        <description>Janos Pasztor is an author, public speaker and video creator.</description>
+        <link>{{ site.url }}{{ site.baseurl }}/</link>
+        <atom:link href="{{ "/sharing/ia.xml" | prepend: site.baseurl | prepend: site.url }}" rel="self" type="application/rss+xml" />
+        <lastBuildDate>{{ site.time | date_to_xmlschema }}</lastBuildDate>
+        <language>en-us</language>
+        <author>
+            <name>Janos Pasztor</name>
+        </author>
+        {% assign posts = site.posts | where_exp:"post","post.date < site.time" %}
+        {% for post in posts limit:50 %}
+        <item>
+            <title>{{ post.title | xml_escape }}</title>
+            <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
+            <guid isPermaLink="true">{{ post.url | prepend: site.baseurl | prepend: site.url }}</guid>
+            <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+            <author>Janos Pasztor</author>
+            <description>{{ post.excerpt | xml_escape }}</description>
+            <content:encoded>
+              <![CDATA[
+                <!doctype html>
+                <html lang="en" prefix="op: http://media.facebook.com/op#">
+              <head>
+                <meta charset="utf-8">
+                <link rel="canonical" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">
+                <meta property="op:markup_version" content="v1.0">
+              </head>
+              <body>
+                <article>
+                  <header>
+                      <h1>{{ post.title | xml_escape }}</h1>
+                      <figure>
+                          <img src="{{ post.fbimage }}" alt=" {{ post.title }} ">
+                          <figcaption>{{ post.title }}</figcaption>
+                      </figure>
+                      <time class="op-published" dateTime="{{ post.date | date: "%Y-%m-%d %H:%M:%S %Z" }}">{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</time>
+                      <time class="op-modified" dateTime="{{ post.modified | date: "%Y-%m-%d %H:%M:%S %Z" }}">{{ post.modified }}</time>
+                  </header>
+                  {{ post.content }}
+                   <footer>
+                      <aside>
+                        I'm a DevOps engineer with a strong background in both backend development and operations, with a history of hosting and delivering content. I run an active DevOps and development community on Discord, and if you like what I do and would like me to do more, you can also support me on <a href="https://pasztor.at/patreon">Patreon</a>.
+                    </aside>
+                  </footer>
+                </article>
+              </body>
+            </html>
+        ]]>
+            </content:encoded>
+        </item>
+        {% endfor %}
+    </channel>
+</rss>

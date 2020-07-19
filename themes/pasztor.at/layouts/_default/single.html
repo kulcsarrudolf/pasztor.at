@@ -1,0 +1,13 @@
+{{ define "css" }}
+    {{ partial "scss" (dict "file" "scss/single.scss") }}
+{{ end }}
+
+{{ define "main" }}
+    <div class="text">
+        <h1>{{ .Title }}</h1>
+        <!--div class="meta">
+            {{ $.PublishDate.Format "Jan 2, 2006" }}
+        </div-->
+        {{ .Content }}
+    </div>
+{{ end }}

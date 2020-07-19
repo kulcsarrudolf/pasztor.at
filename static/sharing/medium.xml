@@ -1,0 +1,38 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>{{ site.title | xml_escape }}</title>
+        <description>Janos Pasztor is an author, public speaker and video creator.</description>
+        <link>{{ site.url }}</link>
+        <lastBuildDate>{{ site.time | date_to_xmlschema }}</lastBuildDate>
+        <language>en-us</language>
+        <author>
+            <name>Janos Pasztor</name>
+        </author>
+        {% assign posts = site.posts | where_exp:"post","post.date < site.time" %}
+        {% for post in posts limit:50 %}
+        <item>
+            <title>{{ post.title | xml_escape }}</title>
+            <link>{{ post.url | prepend: site.baseurl | prepend: site.url }}</link>
+            <guid isPermaLink="true">{{ post.url | prepend: site.url }}</guid>
+            <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+            <author>Janos Pasztor</author>
+            <description>
+                <![CDATA[
+                    <p>{{ post.excerpt }}</p>
+                    <img src="{{site.url}}{{ post.preview }}" alt="" />
+                    {% assign href = 'href="' | append: site.url | append: '/' %}
+                    {% assign src = 'href="' | append: site.url | append: '/' %}
+                    {{ post.content | replace: 'href="/', href}}
+                    <p>
+                        <em>This post was <a href="{{ post.url | prepend: site.url }}">originally published on my blog</a>.</em>
+                    </p>
+                ]]>
+            </description>
+        </item>
+        {% endfor %}
+    </channel>
+</rss>

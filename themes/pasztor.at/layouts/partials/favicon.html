@@ -1,0 +1,17 @@
+{{"<!-- region Favicon -->" | safeHTML}}
+{{ $favicon := resources.Get .favicon -}}
+{{- $sizes := slice 57 60 72 76 114 120 144 152 180 -}}
+{{- range $index, $width := $sizes -}}
+{{- $size := printf "%dx%d png" $width $width -}}
+{{- $image := $favicon.Resize $size -}}
+{{"        "}}<link rel="apple-touch-icon" type="image/png" sizes="{{ $width }}x{{ $width }}" href="{{ $image.RelPermalink }}" />{{"\n"}}
+{{- end }}
+
+{{ $sizes = slice 192 96 32 16 -}}
+{{- range $index, $width := $sizes -}}
+{{- $size := printf "%dx%d png" $width $width -}}
+{{- $image := $favicon.Resize $size -}}
+{{"        "}}<link rel="icon" type="image/png" sizes="{{ $width }}x{{ $width }}"  href="{{ $image.RelPermalink }}">{{"\n"}}
+{{- end }}
+{{"        "}}<meta name="msapplication-TileImage" content="{{ $favicon.Resize "144x144 png" }}">
+{{"        <!-- endregion -->" | safeHTML}}

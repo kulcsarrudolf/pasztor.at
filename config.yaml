@@ -1,0 +1,32 @@
+baseURL: https://pasztor.at
+disablePathToLower: true
+languageCode: en-us
+title: Janos Pasztor
+theme: pasztor.at
+permalinks:
+  blog: /blog/:slug/
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+taxonomies:
+  blog: blog
+  author: authors
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: -110
+    - identifier: blog
+      name: Blog
+      url: /blog/
+      weight: -100
+    - identifier: about
+      name: About me
+      url: /cv/
+      weight: -90
+sitemap:
+  changefreq: weekly
+  filename: sitemap.xml
+  priority: 0.5
