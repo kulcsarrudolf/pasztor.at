@@ -1,0 +1,17 @@
+@import "variables";
+
+@mixin menu {
+  a {
+    color: $color-text;
+    text-decoration: none;
+    border-bottom: 0 solid $color-background;
+    transition: color $transition-length ease-in-out, border-bottom $transition-length;
+
+    &:hover {
+      color: $color-header;
+      border-bottom-width: 3px;
+      border-bottom-color: $color-header;
+    }
+  }
+
+}

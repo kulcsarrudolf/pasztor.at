@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ .Site.LanguageCode }}">
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,8 +11,16 @@
 
         {{ partial "head" . }}
 
+        {{"<!-- region Social -->" | safeHTML}}
         {{ template "_internal/opengraph.html" . }}
         {{ template "_internal/twitter_cards.html" . }}
+        {{"<!-- endregion -->\n" | safeHTML}}
+
+        {{"<!-- region Social -->" | safeHTML}}
+        <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+        <meta name="copyright" content="{{ .Site.Copyright }}" />
+        <meta name="author" content="{{ .Site.Author }}" />
+        {{"<!-- endregion -->\n" | safeHTML}}
     </head>
     <body>
         <header class="page">
@@ -23,28 +31,12 @@
                 <ul>
                     {{ $currentPage := . }}
                     {{ range .Site.Menus.main }}
-                        {{ if .HasChildren }}
-                            <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
-                                <a href="#">
-                                    {{ .Pre }}
-                                    <span>{{ .Name }}</span>
-                                </a>
-                            </li>
-                            <ul class="sub-menu">
-                                {{ range .Children }}
-                                    <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-                                        <a href="{{ .URL }}">{{ .Name }}</a>
-                                    </li>
-                                {{ end }}
-                            </ul>
-                        {{ else }}
-                            <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-                                <a href="{{ .URL }}">
-                                    {{ .Pre }}
-                                    <span>{{ .Name }}</span>
-                                </a>
-                            </li>
-                        {{ end }}
+                        <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                            <a href="{{ .URL }}">
+                                {{ .Pre }}
+                                <span>{{ .Name }}</span>
+                            </a>
+                        </li>
                     {{ end }}
                 </ul>
             </nav>
@@ -53,7 +45,44 @@
             {{- block "main" . }}{{- end }}
         </main>
         <footer class="page">
-
+            <div class="page-footer">
+                <nav class="footer">
+                    <ul>
+                        {{ range .Site.Menus.footer }}
+                            {{ if .HasChildren }}
+                                <li class="has-children {{ if $currentPage.HasMenuCurrent "footer" . }}active{{ end }}">
+                                    {{ if (ne .URL "") }}
+                                        <a href="{{ .URL }}" class="nav-link nav-header">
+                                            {{ .Pre }}
+                                            <span>{{ .Name }}</span>
+                                        </a>
+                                    {{ else }}
+                                        <span  class="nav-link nav-header">
+                                            {{ .Pre }}
+                                            <span>{{ .Name }}</span>
+                                        </span>
+                                    {{ end }}
+                                    <ul class="sub-menu">
+                                        {{ range .Children }}
+                                            <li class="{{ if $currentPage.IsMenuCurrent "footer" . }}active{{ end }}">
+                                                <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+                                            </li>
+                                        {{ end }}
+                                    </ul>
+                                </li>
+                            {{ else }}
+                                <li class="{{ if $currentPage.IsMenuCurrent "footer" . }}active{{ end }}">
+                                    <a href="{{ .URL }}">
+                                        {{ .Pre }}
+                                        <span>{{ .Name }}</span>
+                                    </a>
+                                </li>
+                            {{ end }}
+                        {{ end }}
+                    </ul>
+                </nav>
+                <aside>{{ .Site.Copyright }}</aside>
+            </div>
         </footer>
     </body>
 </html>

@@ -3,6 +3,7 @@ disablePathToLower: true
 languageCode: en-us
 title: Janos Pasztor
 theme: pasztor.at
+copyright: Copyright © Janos Pasztor. All rights reserved.
 permalinks:
   blog: /blog/:slug/
 markup:
@@ -26,6 +27,29 @@ menu:
       name: About me
       url: /cv/
       weight: -90
+  footer:
+    - identifier: about
+      name: About me
+    - identifier: cv
+      parent: about
+      name: CV
+      url: /cv/
+
+    - identifier: legal
+      name: Legal
+    - identifier: imprint
+      parent: legal
+      name: Imprint
+      url: /imprint/
+    - identifier: privacy
+      parent: legal
+      name: Privacy Policy
+      url: /privacy/
+    - identifier: terms
+      parent: legal
+      name: Terms of Use
+      url: /terms/
+
 sitemap:
   changefreq: weekly
   filename: sitemap.xml

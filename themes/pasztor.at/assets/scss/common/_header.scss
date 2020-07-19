@@ -1,40 +1,12 @@
-@import "typography";
-
-body {
-  border-top: 5px solid $color-header;
-}
+@import "../typography";
+@import "menu";
 
 header.page {
-  position: relative;
-  max-width:$width-max;
-  margin-left:auto;
-  margin-right:auto;
-
-  padding-top:3em;
-
-  padding-left:$padding-left-page;
-  padding-right:$padding-right-page;
-  line-height:1.5em;
-  height:1.5em;
-
-  display:flex;
-  flex-direction: row;
+  @include menu;
 
   a {
-    display:block;
-
-    color: $color-text;
-    text-decoration: none;
-    border-bottom: 0 solid $color-background;
-    transition: color $transition-length ease-in-out, border-bottom $transition-length;
-
-    &:hover {
-      color: $color-header;
-      border-bottom-width: 3px;
-      border-bottom-color: $color-header;
-    }
+    display: block;
   }
-
 
   .logo {
     font-size: 1.2em;
@@ -43,33 +15,65 @@ header.page {
     font-variant: small-caps;
 
     a {
-      text-decoration:none;
+      text-decoration: none;
     }
   }
+}
 
-  nav {
-    flex: 1;
-  }
+@media screen {
+  header.page {
+    animation: fadein 0.233s;
 
-  ul {
-    list-style-type: none;
-  }
+    position: relative;
+    max-width: $width-max;
+    margin-left: auto;
+    margin-right: auto;
 
-  nav ul {
-    display:flex;
-    align-items: end;
-    justify-content: flex-end;
+    padding-top: 3em - $size-stripe;
+
+    padding-left: $padding-left-page;
+    padding-right: $padding-right-page;
+    line-height: 1.5em;
+    height: 1.5em;
+
+    display: flex;
     flex-direction: row;
-  }
 
-  nav li {
-    padding-left:0.75em;
-    padding-right:0.75em;
-  }
+    nav {
+      flex: 1;
+    }
 
-  nav li.active a {
-    border-bottom-width: 3px;
-    border-bottom-color: $color-header;
-  }
+    ul {
+      list-style-type: none;
+    }
 
+    nav ul {
+      display: flex;
+      align-items: end;
+      justify-content: flex-end;
+      flex-direction: row;
+    }
+
+    nav li {
+      padding-left: 1.5em;
+    }
+
+    nav li.active a {
+      border-bottom-width: 3px;
+      border-bottom-color: $color-header;
+    }
+
+  }
+}
+
+@media print {
+  header.page .logo {
+    top:45%;
+    text-align:center;
+    width:100%;
+    position:absolute;
+  }
+  header.page nav {
+    display:none;
+  }
 }

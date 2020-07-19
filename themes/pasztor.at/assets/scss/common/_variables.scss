@@ -5,8 +5,10 @@ $font-mono: "Lucida Console", Monaco, monospace;
 $font-weight-normal: 100;
 $font-weight-heading: 500;
 $font-weight-logo: 700;
+$font-weight-footer-heading: 700;
 
-$color-background: #ffffff;
+$color-background: #eaeaea;
+$color-background-footer: #ffffff;
 $color-text: #343434;
 $color-inline-code: #e52e71;
 $color-blockquote-border: #999999;
@@ -24,7 +26,7 @@ $color-header: #e52e71;
 $padding-left-page: 1.5em;
 $padding-right-page: 1.5em;
 
-$transition-length: .200s;
+$transition-length: .233s;
 
 $width-max:1400px;
 
@@ -32,3 +34,4 @@ $size-h2: 2;
 $size-h3: 1.5;
 $size-h4: 1;
 $size-lead: 1.2;
+$size-stripe: 0.75em;

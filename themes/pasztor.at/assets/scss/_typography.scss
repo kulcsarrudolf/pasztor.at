@@ -1,4 +1,4 @@
-@import "variables";
+@import "common/variables";
 
 $font-heading: $font-serif;
 
@@ -10,8 +10,6 @@ body {
   line-height: 1.5;
   font-feature-settings: "liga" 1;
   font-weight:$font-weight-normal;
-  color:$color-text;
-  background-color:$color-background;
 
   font-size: 19px;
   @media (min-width: 900px) {
@@ -23,11 +21,16 @@ body {
   @media (min-width: 1800px) {
     font-size: 25px;
   }
+
+  @media print {
+    font-size: 25px;
+  }
 }
 
 @mixin heading {
   font-family: $font-heading;
   font-weight: $font-weight-heading;
+  page-break-after: avoid;
 }
 
 @mixin heading-margins($size) {
@@ -39,7 +42,6 @@ body {
     line-height: 1.5em/$size;
     margin-top: 1.5em/$size;
   }
-
 }
 
 @mixin typography($text-width, $text-margin-left) {
@@ -69,6 +71,12 @@ body {
     h1 + p:first-of-type {
       margin-left:$text-margin-left / $size-lead;
     }
+
+    h1 + p:first-of-type {
+      font-size:1em * $size-lead;
+      line-height: 1.5em/$size-lead;
+      margin-top:1.5em/$size-lead;
+    }
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -78,6 +86,10 @@ body {
   p, ul, ol, figure, dl {
     margin-top:1.5em;
     font-size:inherit;
+  }
+
+  h1, h2, h3, h4, h5, h6, p, ul, ol, figure, dl {
+    animation: fadein 0.233s;
   }
 
   p>code, ul>code, ol>code, dt>code, dd>code {
@@ -111,27 +123,9 @@ body {
     word-wrap: break-word;
 
     -webkit-hyphens: auto;
-    -webkit-hyphenate-limit-before: 3;
-    -webkit-hyphenate-limit-after: 3;
-    -webkit-hyphenate-limit-chars: 6 3 3;
-    -webkit-hyphenate-limit-lines: 2;
-    -webkit-hyphenate-limit-last: always;
-    -webkit-hyphenate-limit-zone: 8%;
     -moz-hyphens: auto;
-    -moz-hyphenate-limit-chars: 6 3 3;
-    -moz-hyphenate-limit-lines: 2;
-    -moz-hyphenate-limit-last: always;
-    -moz-hyphenate-limit-zone: 8%;
     -ms-hyphens: auto;
-    -ms-hyphenate-limit-chars: 6 3 3;
-    -ms-hyphenate-limit-lines: 2;
-    -ms-hyphenate-limit-last: always;
-    -ms-hyphenate-limit-zone: 8%;
     hyphens: auto;
-    hyphenate-limit-chars: 6 3 3;
-    hyphenate-limit-lines: 2;
-    hyphenate-limit-last: always;
-    hyphenate-limit-zone: 8%;
   }
 
   h1 {
@@ -139,7 +133,7 @@ body {
     font-weight: $font-weight-normal;
     line-height:1.2em;
     margin-top:0.6em;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 760px) {
       font-size:3.5em;
       line-height:1.166em;
       margin-top:0.583em;
@@ -168,6 +162,23 @@ body {
   h4 {
     @include heading-margins($size-h4);
   }
+
+  @media print {
+    h1 {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 3em;
+      width: 80%;
+      font-variant: small-caps;
+      text-align: center;
+      page-break-after: always;
+    }
+
+    h1 + p:first-of-type {
+      margin-top:0;
+    }
+  }
+
 
   strong {
     font-weight: 600;
@@ -222,12 +233,6 @@ body {
     }
   }
 
-  h1 + p:first-of-type {
-    font-size:1em * $size-lead;
-    line-height: 1.5em/$size-lead;
-    margin-top:1.5em/$size-lead;
-  }
-
   pre {
     margin-top:1.5em;
     font-size: inherit;
@@ -275,4 +280,8 @@ body {
       font-weight: bold;
     }
   }
+}
+
+.text {
+  @include typography(760px, 5em);
 }
