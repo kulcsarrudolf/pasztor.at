@@ -42,6 +42,24 @@ header.page {
   #show-mobile-menu + .mobile-toggle + .mobile-menu nav {
     background:$color-background-footer;
   }
+  #show-mobile-menu + .mobile-toggle {
+    .hamburger-bar {
+      transform:translateY(0) rotate(0deg);
+      opacity: 1;
+      transition: transform $transition-length ease-in-out, opacity $transition-length ease-in-out;
+    }
+  }
+  #show-mobile-menu:checked + .mobile-toggle {
+    .hamburger-bar:nth-of-type(1) {
+      transform:translateY(0.41em) rotate(315deg);
+    }
+    .hamburger-bar:nth-of-type(2) {
+      opacity:0;
+    }
+    .hamburger-bar:nth-of-type(3) {
+      transform:translateY(-0.41em) rotate(405deg);
+    }
+  }
 
   .mobile-toggle {
     cursor: pointer;
