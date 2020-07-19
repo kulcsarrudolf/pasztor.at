@@ -50,6 +50,8 @@ header.page {
     }
   }
   #show-mobile-menu:checked + .mobile-toggle {
+    position:fixed;
+    right:$padding-right-page;
     .hamburger-bar:nth-of-type(1) {
       transform:translateY(0.41em) rotate(315deg);
     }
@@ -98,6 +100,8 @@ header.page {
   }
 
   .mobile-menu nav {
+    box-sizing: border-box;
+    max-height:100%;
     border-top: $size-stripe/1.5 solid $color-header;
     position:absolute;
     top:0;
@@ -107,6 +111,8 @@ header.page {
     font-size:1.5em;
     line-height:2em;
     padding: 1em $padding-right-page/1.5 1em $padding-left-page/1.5;
+    display: flex;
+    flex-direction: column;
 
     header {
       display: flex;
@@ -119,6 +125,17 @@ header.page {
         line-height:inherit;
         flex: 1;
         font-variant: small-caps;
+      }
+    }
+
+    ul {
+      overflow-y:scroll;
+      flex:1;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none;  /* IE 10+ */
+      &::-webkit-scrollbar {
+        width: 0;
+        background: transparent; /* make scrollbar transparent */
       }
     }
 
