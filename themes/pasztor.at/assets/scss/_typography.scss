@@ -63,7 +63,7 @@ body {
       max-width:$text-width;
     }
 
-    &>p, &>ul, &>ol, &>figure, &>dl, &>div, &>pre {
+    &>p, &>ul, &>ol, &>figure, &>dl, &>div, &>pre, &>blockquote {
       margin-left: $text-margin-left;
       max-width:$text-width;
     }
