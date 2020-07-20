@@ -1,7 +1,9 @@
 ---
 title: Janos
+fullname: Janos Pasztor
 tagline: Software Engineer, Author & Trainer
 bio: <p>I'm a software engineer with a strong background in DevOps, with a history of hosting and delivering content.</p><p>I run an active DevOps and <a href="https://pasztor.at/discord">development community on Discord</a>, come in and say hi!</p>
+avatar: janos.png
 jobs:
   - company: Deloitte Digital
     roles:
@@ -127,6 +129,4 @@ volunteering:
     end_time: 2018-06-30
 ---
 
-I'm a software engineer with a strong background in DevOps, with a history of hosting and delivering content.
-
-I run an active [DevOps and development community on Discord](https://pasztor.at/discord), come in and say hi!
+Hi there! I'm a software engineer who loves writing. I've been in the industry for over 10 years, and I would like to share what I have learned.

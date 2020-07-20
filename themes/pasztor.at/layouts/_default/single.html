@@ -7,16 +7,25 @@
         <h1>{{ .Title }}</h1>
         <div class="meta">
             <time datetime="{{ $.PublishDate }}">{{ $.PublishDate.Format "Jan 2, 2006" }}</time>
-            {{- with $.Site.GetPage "taxonomyTerm" (printf "about/%s" (urlize .Params.author )) }}
-                by <a href="{{ .Permalink }}">{{ .Title }}</a>
+            {{ if (isset .Params "author")}}
+                {{- with $.Site.GetPage "taxonomyTerm" (printf "about/%s" (urlize .Params.author )) }}
+                    by <a href="{{ .Permalink }}">{{ .Title }}</a>
+                {{ end }}
             {{ end }}
         </div>
         {{ .Content }}
-        <div class="bio">
-            {{- with $.Site.GetPage "taxonomyTerm" (printf "about/%s" (urlize .Params.author )) }}
-                <h2>About {{ .Title }}</h2>
-                {{ .Content }}
-            {{ end }}
-        </div>
+        {{ if (isset .Params "author")}}
+            <div class="bio">
+                {{- with $.Site.GetPage "taxonomyTerm" (printf "about/%s" (urlize .Params.author )) }}
+                    <h2>About {{ .Title }}</h2>
+                    <img class="avatar" src="{{ ((resources.Get .Params.avatar).Resize "512x 90 jpg").Permalink }}" alt="" />
+                    {{ .Content }}
+                    <nav class="readmore">
+                        [<a href="{{ printf "about/%s" (urlize .Params.author ) }}">About {{ .Title }}</a>]
+                        [<a href="{{ printf "about/%s" (urlize .Params.author ) }}">Posts by {{ .Title }}</a>]
+                    </nav>
+                {{ end }}
+            </div>
+        {{ end }}
     </div>
 {{ end }}

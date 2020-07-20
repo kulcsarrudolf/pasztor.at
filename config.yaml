@@ -3,7 +3,7 @@ disablePathToLower: true
 languageCode: en-us
 title: Sanja & Janos
 theme: pasztor.at
-copyright: Copyright © Janos Pasztor. All rights reserved.
+copyright: Copyright © Janos Pasztor & Sanja Bonic. All rights reserved.
 permalinks:
   blog: /blog/:slug/
 markup:
