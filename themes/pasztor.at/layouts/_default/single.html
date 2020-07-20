@@ -3,26 +3,30 @@
 {{ end }}
 
 {{ define "main" }}
-    <div class="text">
+    <div class="text{{ if not $.PublishDate}} text--simple{{ end }}">
         <h1>{{ .Title }}</h1>
+        {{ if $.PublishDate }}
         <div class="meta">
             <time datetime="{{ $.PublishDate }}">{{ $.PublishDate.Format "Jan 2, 2006" }}</time>
             {{ if (isset .Params "author")}}
                 {{- with $.Site.GetPage "taxonomyTerm" (printf "about/%s" (urlize .Params.author )) }}
-                    by <a href="{{ .Permalink }}">{{ .Title }}</a>
+                    by <a href="{{ .RelPermalink }}">
+                        <span class="displayname">{{ .Title }}</span>
+                        <span class="fullname">{{ .Params.fullname }}</span>
+                    </a>
                 {{ end }}
             {{ end }}
         </div>
+        {{ end }}
         {{ .Content }}
         {{ if (isset .Params "author")}}
             <div class="bio">
                 {{- with $.Site.GetPage "taxonomyTerm" (printf "about/%s" (urlize .Params.author )) }}
                     <h2>About {{ .Title }}</h2>
-                    <img class="avatar" src="{{ ((resources.Get .Params.avatar).Resize "512x 90 jpg").Permalink }}" alt="" />
+                    <img class="avatar" src="{{ ((resources.Get .Params.avatar).Resize "512x 90 jpg").RelPermalink }}" alt="" />
                     {{ .Content }}
                     <nav class="readmore">
-                        [<a href="{{ printf "about/%s" (urlize .Params.author ) }}">About {{ .Title }}</a>]
-                        [<a href="{{ printf "about/%s" (urlize .Params.author ) }}">Posts by {{ .Title }}</a>]
+                        <a href="{{ .RelPermalink }}">Read more by {{ .Title }}</a>
                     </nav>
                 {{ end }}
             </div>

@@ -2,11 +2,11 @@
 categories: blog
 date: "2018-12-06T00:00:00Z"
 publishDate: "2018-12-06T00:00:00Z"
-excerpt: How do you scale a network to global proportions? The answer is the Internet
+summary: How do you scale a network to global proportions? The answer is the Internet
   Protocol. Let's dive into it.
-fbimage: /assets/img/fundamentals-internet-protocol.png
-googleimage: /assets/img/fundamentals-internet-protocol.png
-preview: /assets/img/fundamentals-internet-protocol.jpg
+fbimage: posts/fundamentals-internet-protocol.png
+googleimage: posts/fundamentals-internet-protocol.png
+preview: posts/fundamentals-internet-protocol.jpg
 sharing:
   discord: '@everyone new article about Internet basics: the Internet Protocol'
   facebook: 'Let''s talk about the basic #Internet protocols a little more!'
@@ -19,7 +19,7 @@ tags:
 - Theory
 title: 'Fundamentals: The Internet Protocol'
 twitter_card: summary_large_image
-twitterimage: /assets/img/fundamentals-internet-protocol.png
+twitterimage: posts/fundamentals-internet-protocol.png
 ---
 
 You might have heard of TCP/IP, or at least IP addresses. The IP part of this acronym stands for Internet Protocol. The

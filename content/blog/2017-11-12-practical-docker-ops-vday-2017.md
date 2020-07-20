@@ -14,7 +14,7 @@ eventStartdate: "2017-11-07T08:30:00Z"
 publishDate: "2017-11-07T08:30:00Z"
 eventStreetAddress: Krisztina körút 55.
 eventUrl: https://vday.hu/2017/
-excerpt: Docker is the hot new thing, but how do you run it reliably in production?
+summary: Docker is the hot new thing, but how do you run it reliably in production?
   There's a lot more to it than simply starting containers, it's a complete shift
   in running software.
 external_link: https://vday.hu/2017/

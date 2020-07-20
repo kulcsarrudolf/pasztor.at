@@ -27,31 +27,57 @@ menu:
       name: About Us
       url: /about/
       weight: -90
+    - identifier: discord
+      name: Join our Discord
+      url: https://discord.gg/sEWQcpe
+      weight: -80
   footer:
     - identifier: about
       name: About Us
-    - identifier: about-janos
-      parent: about
-      name: Janos
-      url: /about/janos
+      weight: 1
     - identifier: about-sanja
       parent: about
       name: Sanja
       url: /about/sanja
+      weight: 1
+    - identifier: about-janos
+      parent: about
+      name: Janos
+      url: /about/janos
+      weight: 2
+
+    - identifier: subscribe
+      name: Subscribe
+      weight: 2
+    - identifier: subscribe-discord
+      parent: subscribe
+      name: Discord
+      url: /discord
+      weight: 1
+    - identifier: subscribe-rss
+      parent: subscribe
+      name: RSS
+      url: /rss.xml
+      weight: 2
+
     - identifier: legal
       name: Legal
+      weight: 3
     - identifier: imprint
       parent: legal
       name: Imprint
       url: /imprint/
+      weight: 1
     - identifier: privacy
       parent: legal
-      name: Privacy Policy
+      name: Privacy
       url: /privacy/
+      weight: 2
     - identifier: terms
       parent: legal
-      name: Terms of Use
+      name: Terms
       url: /terms/
+      weight: 3
 
 sitemap:
   changefreq: weekly

@@ -2,11 +2,11 @@
 categories: blog
 date: "2018-12-10T07:10:00Z"
 publishDate: "2018-12-10T07:10:00Z"
-excerpt: Cross-Site Request Forgery is a pretty well known security vulnerability,
+summary: Cross-Site Request Forgery is a pretty well known security vulnerability,
   yet many developers still fail to secure their applications. Let's discuss this!
-fbimage: /assets/img/what-is-csrf.png
-googleimage: /assets/img/what-is-csrf.png
-preview: /assets/img/what-is-csrf.jpg
+fbimage: posts/what-is-csrf.png
+googleimage: posts/what-is-csrf.png
+preview: posts/what-is-csrf.jpg
 sharing:
   discord: '@everyone Are you defending against CSRF attacks? If not, find out how
     here:'
@@ -20,7 +20,7 @@ tags:
 - Security
 title: 'Security: What is Cross-Site Request Forgery?'
 twitter_card: summary_large_image
-twitterimage: /assets/img/what-is-csrf.png
+twitterimage: posts/what-is-csrf.png
 ---
 
 Let's say you are operating an affiliate system where people can earn a commission for referring customers.

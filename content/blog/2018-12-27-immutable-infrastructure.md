@@ -2,11 +2,11 @@
 categories: blog
 date: "2018-12-27T00:00:00Z"
 publishDate: "2018-12-27T00:00:00Z"
-excerpt: Immutability is an important concept I talked about before. But how do we
+summary: Immutability is an important concept I talked about before. But how do we
   apply it to infrastructure?
-fbimage: /assets/img/immutable-infrastructure.png
-googleimage: /assets/img/immutable-infrastructure.png
-preview: /assets/img/immutable-infrastructure.jpg
+fbimage: posts/immutable-infrastructure.png
+googleimage: posts/immutable-infrastructure.png
+preview: posts/immutable-infrastructure.jpg
 sharing:
   discord: '@everyone If you are not doing immutable infrastructure, you are not doing
     DevOps. Care to learn more?'
@@ -23,7 +23,7 @@ tags:
 - Theory
 title: Immutable Infrastructure?
 twitter_card: summary_large_image
-twitterimage: /assets/img/immutable-infrastructure.png
+twitterimage: posts/immutable-infrastructure.png
 ---
 
 OK, so you built a new web application and now you want to get it running. You rent a server at the hosting provider of

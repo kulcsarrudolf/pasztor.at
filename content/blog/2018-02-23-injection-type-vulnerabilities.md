@@ -2,17 +2,17 @@
 categories: blog
 date: "2018-02-23T00:00:00Z"
 publishDate: "2018-02-23T00:00:00Z"
-excerpt: XSS, SQL injection, and other injection-class vulnerabilities can cause some
+summary: XSS, SQL injection, and other injection-class vulnerabilities can cause some
   serious damage. Let's root them out!
-fbimage: /assets/img/injection-vuln.png
-googleimage: /assets/img/injection-vuln.png
-preview: /assets/img/injection-vuln.jpg
+fbimage: posts/injection-vuln.png
+googleimage: posts/injection-vuln.png
+preview: posts/injection-vuln.jpg
 tags:
 - Development
 - Security
 title: 'Injection vulnerabilities: Bobby Tables and Friends'
 twitter_card: summary_large_image
-twitterimage: /assets/img/injection-vuln.png
+twitterimage: posts/injection-vuln.png
 ---
 
 I recently [found a video where a guy got a free burger](https://www.youtube.com/watch?v=WWJTsKaJT_g) using a very
@@ -139,7 +139,7 @@ support international characters, that is no longer sufficient. Character sets l
 represent a character.
 
 <figure>
-<img src="/assets/img/multibyte-injection.svg" alt="" />
+<img src="posts/multibyte-injection.svg" alt="" />
 </figure>
 
 Multibyte character sets pose an added threat when dealing with injections if the data is not treated according to the

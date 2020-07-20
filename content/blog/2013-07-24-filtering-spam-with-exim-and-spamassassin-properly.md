@@ -2,7 +2,7 @@
 categories: blog
 date: "2013-07-24T00:00:00Z"
 publishDate: "2013-07-24T00:00:00Z"
-excerpt: SpamAssassin is a frequently used companion for Exim. However, most people
+summary: SpamAssassin is a frequently used companion for Exim. However, most people
   set it up in a synchronous manner – spam is checked directly when the SMTP session
   is opened. While this is certainly a valid technique, it has it’s drawbacks. It
   leaves the server vulnerable to DOS attacks because the spam filtering is a big

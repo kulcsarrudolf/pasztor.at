@@ -2,17 +2,17 @@
 categories: blog
 date: "2018-06-23T00:00:00Z"
 publishDate: "2018-06-23T00:00:00Z"
-excerpt: When it comes to business applications, you need an architecture that scales
+summary: When it comes to business applications, you need an architecture that scales
   well. This is my take, based on Uncle Bobs EBI.
-fbimage: /assets/img/cookie-cutter-architecture.png
-googleimage: /assets/img/cookie-cutter-architecture.png
-preview: /assets/img/cookie-cutter-architecture.jpg
+fbimage: posts/cookie-cutter-architecture.png
+googleimage: posts/cookie-cutter-architecture.png
+preview: posts/cookie-cutter-architecture.jpg
 tags:
 - Development
 - Clean Code
 title: The Cookie Cutter Architecture
 twitter_card: summary_large_image
-twitterimage: /assets/img/cookie-cutter-architecture.png
+twitterimage: posts/cookie-cutter-architecture.png
 ---
 
 Even though most people recognize me as a DevOps person, I often work with business applications as well during the

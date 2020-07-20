@@ -2,16 +2,16 @@
 categories: blog
 date: "2018-03-20T00:00:00Z"
 publishDate: "2018-03-20T00:00:00Z"
-excerpt: A new EU proposal would mandate all online platforms to institute upload
+summary: A new EU proposal would mandate all online platforms to institute upload
   filters. Let's talk about that.
-fbimage: /assets/img/mandatory-upload-filters.png
-googleimage: /assets/img/mandatory-upload-filters.png
-preview: /assets/img/mandatory-upload-filters.jpg
+fbimage: posts/mandatory-upload-filters.png
+googleimage: posts/mandatory-upload-filters.png
+preview: posts/mandatory-upload-filters.jpg
 tags:
 - Law
 title: Mandatory upload filters in the EU?
 twitter_card: summary_large_image
-twitterimage: /assets/img/mandatory-upload-filters.png
+twitterimage: posts/mandatory-upload-filters.png
 ---
 
 I don't normally talk about law and social issues on this blog. Partially, because **I'm not a lawyer**, I never studied 

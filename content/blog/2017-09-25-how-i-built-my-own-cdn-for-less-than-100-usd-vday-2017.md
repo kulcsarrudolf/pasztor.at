@@ -14,7 +14,7 @@ eventStartdate: "2017-11-07T08:30:00Z"
 publishDate: "2017-11-07T08:30:00Z"
 eventStreetAddress: Krisztina körút 55.
 eventUrl: https://vday.hu/2017/
-excerpt: In my quest for the fastest website on the whole internet, I ventured into
+summary: In my quest for the fastest website on the whole internet, I ventured into
   the unknown and started building my own CDN.
 external_link: https://vday.hu/2017/
 inLanguage: EN

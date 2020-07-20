@@ -2,18 +2,18 @@
 categories: blog
 date: "2018-09-03T00:00:00Z"
 publishDate: "2018-09-03T00:00:00Z"
-excerpt: 'I''ve received the same question from a fair number of people: why would
+summary: 'I''ve received the same question from a fair number of people: why would
   you even use interfaces?'
-fbimage: /assets/img/why-interfaces.png
-googleimage: /assets/img/why-interfaces.png
-preview: /assets/img/why-interfaces.jpg
+fbimage: posts/why-interfaces.png
+googleimage: posts/why-interfaces.png
+preview: posts/why-interfaces.jpg
 tags:
 - Development
 - Clean Code
 - S.O.L.I.D.
 title: Why should you use interfaces?
 twitter_card: summary_large_image
-twitterimage: /assets/img/why-interfaces.png
+twitterimage: posts/why-interfaces.png
 ---
 
 When it comes to interfaces people tend to think that their only use is when you have multiple implementations you can

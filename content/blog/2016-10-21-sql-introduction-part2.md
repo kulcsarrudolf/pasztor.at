@@ -2,7 +2,7 @@
 categories: blog
 date: "2016-10-21T00:00:00Z"
 publishDate: "2016-10-21T00:00:00Z"
-excerpt: In the previous episode of our journey we have spoken about the basics of
+summary: In the previous episode of our journey we have spoken about the basics of
   writing an SQL query. However, we did not speak of the limitations you can place
   on SQL tables.
 tags:

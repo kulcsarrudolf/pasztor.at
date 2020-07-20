@@ -2,18 +2,18 @@
 categories: blog
 date: "2018-01-13T00:00:00Z"
 publishDate: "2018-01-13T00:00:00Z"
-excerpt: Have you ever wondered what all the fuss is about with this Docker thing?
+summary: Have you ever wondered what all the fuss is about with this Docker thing?
   Are you having a hard time convincing your colleagues to take it seriously? Well
   then, read on, I'm going to lay it all out for you.
-fbimage: /assets/img/why-docker-matters-and-why-you-should-care.png
-googleimage: /assets/img/why-docker-matters-and-why-you-should-care.png
-preview: /assets/img/why-docker-matters-and-why-you-should-care.jpg
+fbimage: posts/why-docker-matters-and-why-you-should-care.png
+googleimage: posts/why-docker-matters-and-why-you-should-care.png
+preview: posts/why-docker-matters-and-why-you-should-care.jpg
 tags:
 - Docker
 - DevOps
 title: Why Docker matters and why you should care
 twitter_card: summary_large_image
-twitterimage: /assets/img/why-docker-matters-and-why-you-should-care.png
+twitterimage: posts/why-docker-matters-and-why-you-should-care.png
 ---
 
 ## The Good Old Days

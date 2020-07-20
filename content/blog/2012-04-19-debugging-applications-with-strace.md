@@ -2,7 +2,7 @@
 categories: blog
 date: "2012-04-19T00:00:00Z"
 publishDate: "2012-04-19T00:00:00Z"
-excerpt: There are times, when we get an application and need to find out what it
+summary: There are times, when we get an application and need to find out what it
   does fast. We don’t have the time to read the source code. Fortunately there are
   multiple tools to our rescue, one of which is the strace Linux utility. strace means
   system call trace, it shows us every system call the application does, such as opening

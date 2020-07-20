@@ -1,6 +1,16 @@
 @import "variables";
 @import "../typography";
 
+:root {
+  color-scheme: light dark;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  img {
+    filter: brightness(.8) contrast(1.2);
+  }
+}
+
 html, body {
   min-height: 100vh;
 }
@@ -8,9 +18,28 @@ html, body {
 body {
   text-align: center;
   @media screen {
-    border-top: $size-stripe solid $color-header;
-    color:$color-text;
-    background:$color-background;
+    color:$color-text-light;
+    background-color:$color-background-light;
+  }
+  @media screen and (prefers-color-scheme: dark) {
+    color:$color-text-dark;
+    background-color:$color-background-dark;
+  }
+  @media print {
+    color:#000000;
+    background:#ffffff;
+  }
+}
+
+@media screen {
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  main.page {
+    width:100%;
+    flex: 1;
   }
 }
 
@@ -18,10 +47,8 @@ header.page, main.page, footer.page {
   text-align:left;
 }
 
-main.page {
+@mixin container {
   max-width: $width-max;
-  display:flex;
-  flex-direction:column;
   @media print {
     padding:0;
   }
@@ -31,10 +58,14 @@ main.page {
   margin-right:auto;
 }
 
+.page-main {
+  @include container;
+}
+
 @page {
   size: A4;
   padding: 0;
-  margin: 3em;
+  margin: 3rem;
 }
 
 @keyframes fadein{
@@ -44,4 +75,8 @@ main.page {
   to{
     opacity:1
   }
+}
+
+.highlight {
+  color: $color-decor;
 }

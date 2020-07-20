@@ -2,11 +2,11 @@
 categories: blog
 date: "2019-03-19T00:00:00Z"
 publishDate: "2019-03-19T00:00:00Z"
-excerpt: Having anxiety attacks before deployment? Do you keep breaking stuff that
+summary: Having anxiety attacks before deployment? Do you keep breaking stuff that
   already worked? Unit tests are here to help!
-fbimage: /assets/img/unit-testing.png
-googleimage: /assets/img/unit-testing.png
-preview: /assets/img/unit-testing.jpg
+fbimage: posts/unit-testing.png
+googleimage: posts/unit-testing.png
+preview: posts/unit-testing.jpg
 sharing:
   discord: '@everyone Having anxiety attacks before deployment? Do you keep breaking
     stuff that already worked? Learn how to unittest your code!'
@@ -24,7 +24,7 @@ tags:
 - Clean Code
 title: A beginners guide to unit testing
 twitter_card: summary_large_image
-twitterimage: /assets/img/unit-testing.png
+twitterimage: posts/unit-testing.png
 ---
 
 > **Hungry for code?** Check out the code examples from this article

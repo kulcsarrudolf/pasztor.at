@@ -2,17 +2,17 @@
 categories: blog
 date: "2018-11-11T00:00:00Z"
 publishDate: "2018-11-11T00:00:00Z"
-excerpt: I've talked about immutable objects in clean code before, but what exactly
+summary: I've talked about immutable objects in clean code before, but what exactly
   are they? Why do we use them?
-fbimage: /assets/img/why-immutability-matters.png
-googleimage: /assets/img/why-immutability-matters.png
-preview: /assets/img/why-immutability-matters.jpg
+fbimage: posts/why-immutability-matters.png
+googleimage: posts/why-immutability-matters.png
+preview: posts/why-immutability-matters.jpg
 tags:
 - Development
 - Clean Code
 title: Why Immutability Matters
 twitter_card: summary_large_image
-twitterimage: /assets/img/why-immutability-matters.png
+twitterimage: posts/why-immutability-matters.png
 ---
 
 Immutable objects are an immensely powerful programming concept to avoid all sorts of concurrency issues and a whole

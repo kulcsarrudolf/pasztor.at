@@ -3,10 +3,10 @@ categories: blog
 slug: go-is-terrible
 date: "2020-06-22T00:00:00Z"
 publishDate: "2020-06-22T00:00:00Z"
-excerpt: Go certainly caught a lot of attention. Let's look at the bad parts!
-fbimage: /assets/img/go-is-terrible.png
-googleimage: /assets/img/go-is-terrible.png
-preview: /assets/img/go-is-terrible.jpg
+summary: Go certainly caught a lot of attention. Let's look at the bad parts!
+fbimage: posts/go-is-terrible.png
+googleimage: posts/go-is-terrible.png
+preview: posts/go-is-terrible.jpg
 sharing:
   discord: '@everyone Go is a terrible programming language: here''s why'
   facebook: 'Go is a terrible programming language: here''s why'
@@ -19,7 +19,7 @@ tags:
 - Golang
 title: Go is a terrible language
 twitter_card: summary_large_image
-twitterimage: /assets/img/go-is-terrible.png
+twitterimage: posts/go-is-terrible.png
 ---
 
 As a developer it's hard to ignore [Go](https://golang.org/) nowadays. Powering software like

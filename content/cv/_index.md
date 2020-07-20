@@ -1,5 +1,0 @@
----
-type: author
-author: janoszen
----
-

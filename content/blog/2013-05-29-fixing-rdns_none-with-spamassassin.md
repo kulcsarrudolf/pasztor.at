@@ -2,7 +2,7 @@
 categories: blog
 date: "2013-05-29T00:00:00Z"
 publishDate: "2013-05-29T00:00:00Z"
-excerpt: When dealing with SpamAssassin and Exim, one may often encounter a mysterious
+summary: When dealing with SpamAssassin and Exim, one may often encounter a mysterious
   RDNS_NONE
 tags:
 - DevOps

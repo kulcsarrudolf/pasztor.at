@@ -2,17 +2,17 @@
 categories: blog
 date: "2018-03-08T00:00:00Z"
 publishDate: "2018-03-08T00:00:00Z"
-excerpt: LXC is the older of the two, but how do they compare? What's the difference?
+summary: LXC is the older of the two, but how do they compare? What's the difference?
   Which one should you choose for your next project?
-fbimage: /assets/img/lxc-vs-docker.png
-googleimage: /assets/img/lxc-vs-docker.png
-preview: /assets/img/lxc-vs-docker.jpg
+fbimage: posts/lxc-vs-docker.png
+googleimage: posts/lxc-vs-docker.png
+preview: posts/lxc-vs-docker.jpg
 tags:
 - DevOps
 - Docker
 title: LXC vs Docker
 twitter_card: summary_large_image
-twitterimage: /assets/img/lxc-vs-docker.png
+twitterimage: posts/lxc-vs-docker.png
 ---
 
 With the rising popularity of Docker the question presents itself: why Docker? Why not the much older, and better

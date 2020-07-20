@@ -2,11 +2,11 @@
 categories: blog
 date: "2018-12-14T00:00:00Z"
 publishDate: "2018-12-14T00:00:00Z"
-excerpt: How does a computer know what MAC address belongs to an IP? How does ARP
+summary: How does a computer know what MAC address belongs to an IP? How does ARP
   work?
-fbimage: /assets/img/fundamentals-arp.png
-googleimage: /assets/img/fundamentals-arp.png
-preview: /assets/img/fundamentals-arp.jpg
+fbimage: posts/fundamentals-arp.png
+googleimage: posts/fundamentals-arp.png
+preview: posts/fundamentals-arp.jpg
 sharing:
   discord: '@everyone new article about Internet basics: the Address Resolution Protocol'
   facebook: 'Curious: how does a computer know what MAC address belongs to an IP?'
@@ -19,7 +19,7 @@ tags:
 - Theory
 title: 'Fundamentals: The Address Resolution Protocol'
 twitter_card: summary_large_image
-twitterimage: /assets/img/fundamentals-arp.png
+twitterimage: posts/fundamentals-arp.png
 ---
 
 In two previous articles we discussed how [Ethernet](/blog/fundamentals-ethernet-explained) and

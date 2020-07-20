@@ -2,18 +2,18 @@
 categories: blog
 date: "2018-12-05T00:00:00Z"
 publishDate: "2018-12-05T00:00:00Z"
-excerpt: Kubernetes first major security hole is out... does this mean Kubernetes
+summary: Kubernetes first major security hole is out... does this mean Kubernetes
   is not secure? What can we learn from it?
-fbimage: /assets/img/kubernetes-first-major-security-hole.png
-googleimage: /assets/img/kubernetes-first-major-security-hole.png
-preview: /assets/img/kubernetes-first-major-security-hole.jpg
+fbimage: posts/kubernetes-first-major-security-hole.png
+googleimage: posts/kubernetes-first-major-security-hole.png
+preview: posts/kubernetes-first-major-security-hole.jpg
 tags:
 - DevOps
 - Kubernetes
 - Docker
 title: What can we learn from Kubernetes' first major security hole?
 twitter_card: summary_large_image
-twitterimage: /assets/img/kubernetes-first-major-security-hole.png
+twitterimage: posts/kubernetes-first-major-security-hole.png
 ---
 
 Kubernetes is a staple of modern day DevOps. Everybody wants to use it, not using it means you are not part of the

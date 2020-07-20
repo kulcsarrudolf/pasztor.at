@@ -2,18 +2,18 @@
 categories: blog
 date: "2018-05-06T00:00:00Z"
 publishDate: "2018-05-06T00:00:00Z"
-excerpt: Why do so many developers struggle with testing? Why don't we all have 9x%
+summary: Why do so many developers struggle with testing? Why don't we all have 9x%
   test coverage on our code?
-fbimage: /assets/img/why-testing-is-hard.png
-googleimage: /assets/img/why-testing-is-hard.png
-preview: /assets/img/why-testing-is-hard.jpg
+fbimage: posts/why-testing-is-hard.png
+googleimage: posts/why-testing-is-hard.png
+preview: posts/why-testing-is-hard.jpg
 tags:
 - Clean Code
 - Testing
 - Development
 title: Why testing is hard
 twitter_card: summary_large_image
-twitterimage: /assets/img/why-testing-is-hard.png
+twitterimage: posts/why-testing-is-hard.png
 ---
 
 When most people start testing their software, they are driven by one urge: if they user does X, then Y should happen.

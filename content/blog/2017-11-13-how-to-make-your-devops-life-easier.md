@@ -14,7 +14,7 @@ eventStartdate: "2017-11-24T18:00:00Z"
 publishDate: "2017-11-24T18:00:00Z"
 eventStreetAddress: Futó utca 47-53
 eventUrl: https://www.meetup.com/Letscode-hu-meetup/
-excerpt: How to make your DevOps' life easier? A short guide for developers to write
+summary: How to make your DevOps' life easier? A short guide for developers to write
   easy to operate software will be presented by yours truly at the first Letscode.hu
   meetup.
 external_link: https://www.meetup.com/Letscode-hu-meetup/

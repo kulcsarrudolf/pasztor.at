@@ -3,11 +3,11 @@ categories: blog
 slug: "ssh-direct-to-docker"
 date: "2020-06-10T00:00:00Z"
 publishDate: "2020-06-10T00:00:00Z"
-excerpt: Let's build an SSH server in Go that launches Docker containers for each
+summary: Let's build an SSH server in Go that launches Docker containers for each
   session!
-fbimage: /assets/img/ssh-direct-to-docker.png
-googleimage: /assets/img/ssh-direct-to-docker.png
-preview: /assets/img/ssh-direct-to-docker.jpg
+fbimage: posts/ssh-direct-to-docker.png
+googleimage: posts/ssh-direct-to-docker.png
+preview: posts/ssh-direct-to-docker.jpg
 sharing:
   discord: '@everyone Let''s build an SSH server that launches a #Docker container
     for each SSH connection!'
@@ -26,9 +26,9 @@ tags:
 - Docker
 - Kubernetes
 - containers
-title: Building a custom SSH server for fun and... containers! in Go
+title: Building a custom SSH server for fun and... containers!
 twitter_card: summary_large_image
-twitterimage: /assets/img/ssh-direct-to-docker.png
+twitterimage: posts/ssh-direct-to-docker.png
 ---
 
 During my career I had several projects in the web-hosting business. Partially driven by engineering pride I always
@@ -40,7 +40,7 @@ a rarity. Providing SSH access, however, was not without its challenges.
 **In a hurry?** I have written a [fully functional SSH microservice](https://github.com/janoszen/containerssh) that launches containers. The sample code for [this post is also available on GitHub](https://github.com/janoszen/minicontainerssh).
 {{% /tip %}}
 
-<figure><img alt="A demonstration of the SSH server in action." src="/assets/img/ssh-in-action.gif" /><figcaption>The SSH server in action.</figcaption></figure>
+<figure><img alt="A demonstration of the SSH server in action." src="posts/ssh-in-action.gif" /><figcaption>The SSH server in action.</figcaption></figure>
 
 Traditionally web hosting environments that offer SSH did so by providing a per-site or per-customer environment.
 These environments are separated from each other by the virtue of creating separate Linux users for each environment.
@@ -51,7 +51,7 @@ Both approaches have a significant drawback: there is no option to allow a user 
 a single SSH user. It's all or nothing. Either the user sees all sites in an environment or just a single one. There is
 no option to make the user see a specific set of sites. 
 
-<figure><img alt="User A can access websites A and B, User B can access websites B and C" src="/assets/img/ssh-multi-access.svg" /><figcaption>Ideally this kind of access should be possible via SSH.</figcaption></figure>
+<figure><img alt="User A can access websites A and B, User B can access websites B and C" src="posts/ssh-multi-access.svg" /><figcaption>Ideally this kind of access should be possible via SSH.</figcaption></figure>
 
 ## Containers to the rescue 
 
@@ -63,7 +63,7 @@ You, of course, know where I'm going with this, but it's nothing new. Containers
 and even longer on other operating systems. However, the have only recently reached a stage of wide-spread adoption and
 general usability.
 
-<figure><img alt="Animation: first an SSH client is started. This launches a container. Then a second SSH is started which launches a second container and so on." src="/assets/img/ssh-docker-anim.gif" /><figcaption>Here's the plan.</figcaption></figure>
+<figure><img alt="Animation: first an SSH client is started. This launches a container. Then a second SSH is started which launches a second container and so on." src="posts/ssh-docker-anim.gif" /><figcaption>Here's the plan.</figcaption></figure>
 
 How about we put each site in a *container* instead of creating separate users? The PHP, Python, or what have you
 website engine runs in a container, and the data directory the website is located in is *mounted* for that container?
@@ -266,7 +266,7 @@ func main() {
 This will perform the SSH handshake and establish a secure connection. It will return a number of
 things:
 
-<figure><img src="/assets/img/ssh.svg" alt="A single SSH connection can contain multiple SSH channels and global requests can be sent directly over the connection. Each channel transports data and channel requests in both directions." /><figcaption>SSH connection anatomy</figcaption></figure>
+<figure><img src="posts/ssh.svg" alt="A single SSH connection can contain multiple SSH channels and global requests can be sent directly over the connection. Each channel transports data and channel requests in both directions." /><figcaption>SSH connection anatomy</figcaption></figure>
 
 - `sshConn` is the actual SSH connection.
 - `chans` is a Go channel where new SSH channels come in. An SSH connection can have multiple SSH channels

@@ -14,7 +14,7 @@ eventStartdate: "2018-03-14T09:00:00Z"
 publishDate: "2018-03-14T09:00:00Z"
 eventStreetAddress: Ozo str. 18
 eventUrl: http://devopspro.lt/
-excerpt: This workshop aims to teach you how to use Docker from the ground up, from
+summary: This workshop aims to teach you how to use Docker from the ground up, from
   setting up your very first Docker container to getting your containers production
   ready.
 external_link: http://devopspro.lt/getting-started-with-development-on-docker/

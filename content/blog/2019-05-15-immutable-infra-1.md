@@ -2,11 +2,11 @@
 categories: blog
 date: "2019-05-15T00:00:00Z"
 publishDate: "2019-05-15T00:00:00Z"
-excerpt: Recently I rebuilt the infrastructure that hosts this website following the
+summary: Recently I rebuilt the infrastructure that hosts this website following the
   principles of immutable infrastructure. Let's see how that works!
-fbimage: /assets/img/immutable-infra-1.png
-googleimage: /assets/img/immutable-infra-1.png
-preview: /assets/img/immutable-infra-1.jpg
+fbimage: posts/immutable-infra-1.png
+googleimage: posts/immutable-infra-1.png
+preview: posts/immutable-infra-1.jpg
 sharing:
   discord: '@everyone I rebuilt the server for my blog using immutable infrastructure.
     Want to see how?'
@@ -22,7 +22,7 @@ tags:
 - DevOps
 title: Immutable Infrastructure in Practice — Part 1
 twitter_card: summary_large_image
-twitterimage: /assets/img/immutable-infra-1.png
+twitterimage: posts/immutable-infra-1.png
 ---
 
 For over a year I [ran my own CDN for this website](/blog/building-your-own-cdn). However, I had to amend the article
@@ -44,7 +44,7 @@ need to be stored in some sort of a persistent storage.
 
 ## Designing the system
 
-<figure><img src="/assets/img/website-architecture.svg" alt="" /></figure>
+<figure><img src="posts/website-architecture.svg" alt="" /></figure>
 
 My blog is built using [Jekyll](https://jekyllrb.com/), an engine that generates static HTML files. This makes the whole
 ordeal much simpler as I can just simply generate content and copy it to the new server as it comes up. I don't need to

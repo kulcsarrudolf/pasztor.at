@@ -2,18 +2,18 @@
 categories: blog
 date: "2019-01-05T00:00:00Z"
 publishDate: "2019-01-05T00:00:00Z"
-excerpt: Is OOP dead? Is Functional Programming the future? Some articles seem to
+summary: Is OOP dead? Is Functional Programming the future? Some articles seem to
   suggest so. I would tend to disagree. Let's discuss!
-fbimage: /assets/img/oop-misunderstandings.png
-googleimage: /assets/img/oop-misunderstandings.png
-preview: /assets/img/oop-misunderstandings.jpg
+fbimage: posts/oop-misunderstandings.png
+googleimage: posts/oop-misunderstandings.png
+preview: posts/oop-misunderstandings.jpg
 tags:
 - Development
 - Clean Code
 - OOP
 title: What people misunderstand about OOP
 twitter_card: summary_large_image
-twitterimage: /assets/img/oop-misunderstandings.png
+twitterimage: posts/oop-misunderstandings.png
 ---
 
 Every few months I come across a blog post where the author brings up seemingly legitimate issues with object-oriented

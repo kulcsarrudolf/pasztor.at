@@ -2,7 +2,7 @@
 categories: blog
 date: "2013-05-07T00:00:00Z"
 publishDate: "2013-05-07T00:00:00Z"
-excerpt: Few developers actually know that not only character encodings but also time
+summary: Few developers actually know that not only character encodings but also time
   handling can cause you headaches when it comes to PHP and MySQL. Contrary to popular
   belief, PHP’s time handling actually works quite reasonably if you know how time
   actually works. If you don’t, you may be in for a big surprise when you add 3 days

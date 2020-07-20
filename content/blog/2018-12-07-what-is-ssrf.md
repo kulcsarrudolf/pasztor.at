@@ -2,11 +2,11 @@
 categories: blog
 date: "2018-12-07T00:00:00Z"
 publishDate: "2018-12-07T00:00:00Z"
-excerpt: Cross-site Request Forgery or CSRF is a well known security vulnerability.
+summary: Cross-site Request Forgery or CSRF is a well known security vulnerability.
   But what is SSRF?
-fbimage: /assets/img/what-is-ssrf.png
-googleimage: /assets/img/what-is-ssrf.png
-preview: /assets/img/what-is-ssrf.jpg
+fbimage: posts/what-is-ssrf.png
+googleimage: posts/what-is-ssrf.png
+preview: posts/what-is-ssrf.jpg
 sharing:
   discord: '@everyone new article about security: What is Server Side Request Forgery?'
   facebook: '#SSRF is a sneaky #security vulnerability that may cause you big headaches.
@@ -23,7 +23,7 @@ tags:
 - Security
 title: 'Security: What is Server Side Request Forgery?'
 twitter_card: summary_large_image
-twitterimage: /assets/img/what-is-ssrf.png
+twitterimage: posts/what-is-ssrf.png
 ---
 
 [CSRF](/blog/what-is-ssrf) is, while still prevalent, no longer an unknown type of security vulnerability. It's brother,
@@ -88,7 +88,7 @@ from the internal service.
 Let's look at a practical example. Many social networks nowadays integrate [OpenGraph](http://ogp.me/) as a method to
 render previews such as this:
 
-<figure><img src="/assets/img/ssrf-facebook-preview.png" alt="" /><figcaption>Image: How Facebook renders previews</figcaption></figure>
+<figure><img src="posts/ssrf-facebook-preview.png" alt="" /><figcaption>Image: How Facebook renders previews</figcaption></figure>
 
 Now, think about how this works: the user pastes a link and some server side component needs to download the information
 from the server. Assuming that your `etcd` database lives on `10.2.0.1`. What is the user pastes this link?

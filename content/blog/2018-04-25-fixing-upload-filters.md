@@ -2,15 +2,15 @@
 categories: blog
 date: "2018-04-25T00:00:00Z"
 publishDate: "2018-04-25T00:00:00Z"
-excerpt: 'Here''s a thought experiment: how would I fix the upload filter law?'
-fbimage: /assets/img/fixing-upload-filters.png
-googleimage: /assets/img/fixing-upload-filters.png
-preview: /assets/img/fixing-upload-filters.jpg
+summary: 'Here''s a thought experiment: how would I fix the upload filter law?'
+fbimage: posts/fixing-upload-filters.png
+googleimage: posts/fixing-upload-filters.png
+preview: posts/fixing-upload-filters.jpg
 tags:
 - Law
 title: Fixing upload filters...
 twitter_card: summary_large_image
-twitterimage: /assets/img/fixing-upload-filters.png
+twitterimage: posts/fixing-upload-filters.png
 ---
 
 Following a Twitter debate, [I have been challenged](https://twitter.com/netopiaforum/status/988929002462212096) to

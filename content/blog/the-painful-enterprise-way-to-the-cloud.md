@@ -4,11 +4,11 @@ categories: blog
 date: "2020-07-15T00:00:00Z"
 publishDate: "2020-07-15T00:00:00Z"
 slug: the-painful-enterprise-way-to-the-cloud
-excerpt: Use the cloud, they said. It will be great, they said. Why is it painful
+summary: Use the cloud, they said. It will be great, they said. Why is it painful
   then?
-fbimage: /assets/img/the-painful-enterprise-way-to-the-cloud.png
-googleimage: /assets/img/the-painful-enterprise-way-to-the-cloud.png
-preview: /assets/img/the-painful-enterprise-way-to-the-cloud.jpg
+fbimage: posts/the-painful-enterprise-way-to-the-cloud.png
+googleimage: posts/the-painful-enterprise-way-to-the-cloud.png
+preview: posts/the-painful-enterprise-way-to-the-cloud.jpg
 sharing:
   discord: '@everyone Use the #cloud, they said. It will be great, they said.'
   facebook: 'Use the #cloud, they said. It will be great, they said.'
@@ -20,7 +20,7 @@ tags:
 - DevOps
 title: The (painful) Enterprise Way to the Cloud
 twitter_card: summary_large_image
-twitterimage: /assets/img/the-painful-enterprise-way-to-the-cloud.png
+twitterimage: posts/the-painful-enterprise-way-to-the-cloud.png
 ---
 
 In recent years, my career has taken an unforeseen turn. After having worked a decade in small to medium businesses, I 

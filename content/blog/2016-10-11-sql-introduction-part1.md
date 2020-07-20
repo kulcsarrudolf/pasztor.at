@@ -2,7 +2,7 @@
 categories: blog
 date: "2016-10-11T00:00:00Z"
 publishDate: "2016-10-11T00:00:00Z"
-excerpt: Whether you are running a web app, a financial system or a game, you need
+summary: Whether you are running a web app, a financial system or a game, you need
   some method of storing your data. SQL allows you to query most traditional databases,
   like MySQL or PostgreSQL. Let's take a look.
 tags:

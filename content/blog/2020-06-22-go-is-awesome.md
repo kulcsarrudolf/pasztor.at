@@ -3,10 +3,10 @@ categories: blog
 slug: go-is-awesome
 date: "2020-06-22T00:00:00Z"
 publishDate: "2020-06-22T00:00:00Z"
-excerpt: Go certainly caught a lot of attention. Let's look at the good parts!
-fbimage: /assets/img/go-is-awesome.png
-googleimage: /assets/img/go-is-awesome.png
-preview: /assets/img/go-is-awesome.jpg
+summary: Go certainly caught a lot of attention. Let's look at the good parts!
+fbimage: posts/go-is-awesome.png
+googleimage: posts/go-is-awesome.png
+preview: posts/go-is-awesome.jpg
 sharing:
   discord: '@everyone Go is an awesome programming language: here''s why'
   facebook: 'Go is an awesome programming language: here''s why'
@@ -19,7 +19,7 @@ tags:
 - Golang
 title: Go is an awesome language
 twitter_card: summary_large_image
-twitterimage: /assets/img/go-is-awesome.png
+twitterimage: posts/go-is-awesome.png
 ---
 
 I have recently written an [SSH server that launches containers](https://github.com/janoszen/containerssh) in Go.

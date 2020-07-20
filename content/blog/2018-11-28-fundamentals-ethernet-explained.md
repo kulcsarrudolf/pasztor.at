@@ -2,19 +2,19 @@
 categories: blog
 date: "2018-11-28T00:00:00Z"
 publishDate: "2018-11-28T00:00:00Z"
-excerpt: Ethernet is one of the most fundamental protocols underpinning todays internet.
+summary: Ethernet is one of the most fundamental protocols underpinning todays internet.
   It is so fundamental that we often take it as granted and don't even think about
   it.
-fbimage: /assets/img/ethernet-explained.png
-googleimage: /assets/img/ethernet-explained.png
-preview: /assets/img/ethernet-explained.jpg
+fbimage: posts/ethernet-explained.png
+googleimage: posts/ethernet-explained.png
+preview: posts/ethernet-explained.jpg
 tags:
 - Development
 - DevOps
 - Theory
 title: 'Fundamentals: Ethernet explained'
 twitter_card: summary_large_image
-twitterimage: /assets/img/ethernet-explained.png
+twitterimage: posts/ethernet-explained.png
 ---
 
 > **Did you know?** This article is also available [as an animated video](/videos/how-does-ethernet-work).
@@ -41,7 +41,7 @@ so-called interframe gap, 12 bytes (*octets*) of &ldquo;silence&rdquo;.
 
 ## The Modern Ethernet
 
-<figure><img src="/assets/img/ethernet.svg" alt="" /><figcaption>The Ethernet II frame structure</figcaption></figure>
+<figure><img src="posts/ethernet.svg" alt="" /><figcaption>The Ethernet II frame structure</figcaption></figure>
 
 Decades have passed and now networking hardware is available in abundance. Ethernet chips cost next to nothing, we have
 dedicated cables for all our machines and even 10 gigabit interfaces are no longer a rarity. IPX and it's cousins have

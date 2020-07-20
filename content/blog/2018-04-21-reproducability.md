@@ -2,18 +2,18 @@
 categories: blog
 date: "2018-04-21T00:00:00Z"
 publishDate: "2018-04-21T00:00:00Z"
-excerpt: Build environments, server setups should be reproducible, even 6 months down
+summary: Build environments, server setups should be reproducible, even 6 months down
   the line. How does this work?
-fbimage: /assets/img/reproducability.png
-googleimage: /assets/img/reproducability.png
-preview: /assets/img/reproducability.jpg
+fbimage: posts/reproducability.png
+googleimage: posts/reproducability.png
+preview: posts/reproducability.jpg
 tags:
 - DevOps
 - Development
 - Clean Code
 title: Reproducability
 twitter_card: summary_large_image
-twitterimage: /assets/img/reproducability.png
+twitterimage: posts/reproducability.png
 ---
 
 Let's say you are developing a software project. If you are in NodeJS, you specify your dependencies in your

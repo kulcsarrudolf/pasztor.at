@@ -10,6 +10,7 @@
         {{- block "css" . }}{{- end }}
 
         {{ partial "head" . }}
+        <meta name="color-scheme" content="dark light" />
 
         {{"<!-- region Social -->" | safeHTML}}
         {{ template "_internal/opengraph.html" . }}
@@ -21,42 +22,52 @@
         <meta name="copyright" content="{{ .Site.Copyright }}" />
         <meta name="author" content="{{ .Site.Author }}" />
         {{"<!-- endregion -->\n" | safeHTML}}
+
+        {{ range .AlternativeOutputFormats -}}
+            {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+        {{ end -}}
+
+        <script> </script>
     </head>
     <body>
         <header class="page">
-            <div class="logo">
-                {{ partial "logo" . }}
-            </div>
-            <input type="checkbox" id="show-mobile-menu" value="1" aria-hidden="true" />
-            <div class="mobile-toggle" aria-hidden="true">
-                <label for="show-mobile-menu">
-                    <span class="hamburger-bar"></span>
-                    <span class="hamburger-bar"></span>
-                    <span class="hamburger-bar"></span>
-                </label>
-            </div>
-            <div class="mobile-menu" aria-hidden="false">
-                <label for="show-mobile-menu" class="hide-mobile-menu"></label>
-                <nav>
-                    <header>
-                        <h1>Navigation</h1>
-                    </header>
-                    <ul>
-                        {{ $currentPage := . }}
-                        {{ range .Site.Menus.main }}
-                            <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-                                <a href="{{ .URL }}">
-                                    {{ .Pre }}
-                                    <span>{{ .Name }}</span>
-                                </a>
-                            </li>
-                        {{ end }}
-                    </ul>
-                </nav>
+            <div class="page-header">
+                <div class="logo">
+                    {{ partial "logo" . }}
+                </div>
+                <input type="checkbox" id="show-mobile-menu" value="1" aria-hidden="true" />
+                <div class="mobile-toggle" aria-hidden="true">
+                    <label for="show-mobile-menu">
+                        <span class="hamburger-bar"></span>
+                        <span class="hamburger-bar"></span>
+                        <span class="hamburger-bar"></span>
+                    </label>
+                </div>
+                <div class="mobile-menu" aria-hidden="false">
+                    <label for="show-mobile-menu" class="hide-mobile-menu"></label>
+                    <nav>
+                        <header>
+                            <h1><span class="highlight">N</span>avigation</h1>
+                        </header>
+                        <ul>
+                            {{ $currentPage := . }}
+                            {{ range .Site.Menus.main }}
+                                <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                                    <a href="{{ .URL }}" {{ if strings.HasPrefix .URL "http" }} target="_blank" rel="noopener noreferrer"{{ end }}>
+                                        {{ .Pre }}
+                                        <span>{{ .Name }}</span>
+                                    </a>
+                                </li>
+                            {{ end }}
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </header>
         <main class="page">
-            {{- block "main" . }}{{- end }}
+            <div class="page-main">
+                {{- block "main" . }}{{- end }}
+            </div>
         </main>
         <footer class="page">
             <div class="page-footer">

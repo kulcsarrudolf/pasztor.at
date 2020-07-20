@@ -2,7 +2,7 @@
 categories: blog
 date: "2016-12-15T00:00:00Z"
 publishDate: "2016-12-15T00:00:00Z"
-excerpt: Managing dependencies is hard, especially if we are using third party libraries
+summary: Managing dependencies is hard, especially if we are using third party libraries
   and projects. Let's talk about splitting our code into layers!
 tags:
 - Development

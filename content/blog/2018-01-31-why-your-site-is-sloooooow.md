@@ -2,17 +2,17 @@
 categories: blog
 date: "2018-01-31T00:00:00Z"
 publishDate: "2018-01-31T00:00:00Z"
-excerpt: Google Tag Manager is probably the worst thing that happened to the web in
+summary: Google Tag Manager is probably the worst thing that happened to the web in
   the last 10 years. Yes, you read me right. Your shiny marketing tools are murdering
   your conversions. Wonder why? Read on.
-fbimage: /assets/img/heres-why-your-site-is-slow.png
-googleimage: /assets/img/heres-why-your-site-is-slow.png
-preview: /assets/img/heres-why-your-site-is-slow.jpg
+fbimage: posts/heres-why-your-site-is-slow.png
+googleimage: posts/heres-why-your-site-is-slow.png
+preview: posts/heres-why-your-site-is-slow.jpg
 tags:
 - Development
 title: Your marketing tools are killing your site performance
 twitter_card: summary_large_image
-twitterimage: /assets/img/heres-why-your-site-is-slow.png
+twitterimage: posts/heres-why-your-site-is-slow.png
 ---
 
 ## It's not your Wordpress

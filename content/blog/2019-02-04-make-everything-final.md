@@ -2,11 +2,11 @@
 categories: blog
 date: "2019-02-04T00:00:00Z"
 publishDate: "2019-02-04T00:00:00Z"
-excerpt: 'I have a pretty radical suggestion for clean code: make all your classes
+summary: 'I have a pretty radical suggestion for clean code: make all your classes
   final!'
-fbimage: /assets/img/make-everything-final.png
-googleimage: /assets/img/make-everything-final.png
-preview: /assets/img/make-everything-final.jpg
+fbimage: posts/make-everything-final.png
+googleimage: posts/make-everything-final.png
+preview: posts/make-everything-final.jpg
 sharing:
   discord: '@everyone Here''s a radical idea: why not make all classes final?'
   facebook: 'Here''s a radical idea: why not make all classes final? #cleancode #development'
@@ -18,7 +18,7 @@ tags:
 - Development
 title: Make all classes final!
 twitter_card: summary_large_image
-twitterimage: /assets/img/make-everything-final.png
+twitterimage: posts/make-everything-final.png
 ---
 
 Wait, what? Now I must have surely lost my marbles, right?

@@ -129,4 +129,4 @@ volunteering:
     end_time: 2018-06-30
 ---
 
-Hi there! I'm a software engineer who loves writing. I've been in the industry for over 10 years, and I would like to share what I have learned.
+Hi there! I'm a software engineer who loves writing. I've been in the industry for over 10 years, and I like to share what I have learned.

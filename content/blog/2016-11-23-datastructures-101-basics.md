@@ -2,7 +2,7 @@
 categories: blog
 date: "2016-11-23T00:00:00Z"
 publishDate: "2016-11-23T00:00:00Z"
-excerpt: Why would you learn data structures? You won't need it unless you are a programmer,
+summary: Why would you learn data structures? You won't need it unless you are a programmer,
   database engineer or university student... wait, you are? Never mind, keep on reading.
 tags:
 - Development

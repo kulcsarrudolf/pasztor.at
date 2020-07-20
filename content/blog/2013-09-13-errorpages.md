@@ -2,16 +2,16 @@
 categories: projects
 date: "2013-09-13T00:00:00Z"
 publishDate: "2013-09-13T00:00:00Z"
-excerpt: Default browser error pages are a bit barebones. This is a set of sexier
+summary: Default browser error pages are a bit barebones. This is a set of sexier
   error pages.
-fbimage: /assets/img/errorpages.png
-googleimage: /assets/img/derrorpages.png
-preview: /assets/img/errorpages.jpg
+fbimage: posts/errorpages.png
+googleimage: posts/derrorpages.png
+preview: posts/errorpages.jpg
 tags:
 - DevOps
 title: Better Server Error Pages
 twitter_card: summary_large_image
-twitterimage: /assets/img/errorpages.png
+twitterimage: posts/errorpages.png
 ---
 
 User friendliness is not something that comes to mind when you think of error pages. They are mostly an unhelpful

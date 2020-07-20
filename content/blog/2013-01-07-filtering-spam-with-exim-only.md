@@ -2,7 +2,7 @@
 categories: blog
 date: "2013-01-07T00:00:00Z"
 publishDate: "2013-01-07T00:00:00Z"
-excerpt: Defense against spam has always been a hassle. Statistical filters only get
+summary: Defense against spam has always been a hassle. Statistical filters only get
   you so far and they consume a LOT of resources. For exactly that reason I like to
   employ basic checking policies before accepting e-mail at all. These policies have
   gotten me pretty far and my false positive rate is pretty low.

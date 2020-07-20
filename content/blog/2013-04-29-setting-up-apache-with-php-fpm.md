@@ -2,7 +2,7 @@
 categories: blog
 date: "2013-04-29T00:00:00Z"
 publishDate: "2013-04-29T00:00:00Z"
-excerpt: 'Nowadays nginx seems to experience a serious growth in terms of numbers
+summary: 'Nowadays nginx seems to experience a serious growth in terms of numbers
   when looking at HTTP server software. Almost all articles regarding PHP-FPM detail
   the setup with nginx, very few talk about the good old [Apache HTTPd](http://httpd.apache.org/).
   Admittedly, it’s a little harder to set up due to the myriad hacks layered in it’s

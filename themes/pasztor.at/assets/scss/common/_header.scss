@@ -2,15 +2,23 @@
 @import "menu";
 
 header.page {
+  border-top: $size-stripe solid $color-decor;
+}
+
+.page-header {
   @include menu;
+  @include menu-color-light;
+  @media screen and (prefers-color-scheme: dark) {
+    @include menu-color-dark;
+  }
 
   a {
     display: block;
   }
 
   .logo {
-    font-size: 1.2em;
-    line-height: 1.25em;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
     font-weight: $font-weight-logo;
     font-variant: small-caps;
 
@@ -29,18 +37,18 @@ header.page {
 }
 
 @media screen and (max-width: 759px) {
-  header.page {
+  .page-header {
     justify-content: space-between;
     z-index:1;
   }
   .hamburger-bar {
-    height:0.2em;
-    background:$color-text;
-    margin-top:0.2em;
+    height:0.2rem;
+    background:$color-text-light;
+    margin-top:0.2rem;
     display:block;
   }
   #show-mobile-menu + .mobile-toggle + .mobile-menu nav {
-    background:$color-background-footer;
+    background:$color-background-footer-light;
   }
   #show-mobile-menu + .mobile-toggle {
     .hamburger-bar {
@@ -53,21 +61,21 @@ header.page {
     position:fixed;
     right:$padding-right-page;
     .hamburger-bar:nth-of-type(1) {
-      transform:translateY(0.41em) rotate(315deg);
+      transform:translateY(0.4rem) rotate(315deg);
     }
     .hamburger-bar:nth-of-type(2) {
       opacity:0;
     }
     .hamburger-bar:nth-of-type(3) {
-      transform:translateY(-0.41em) rotate(405deg);
+      transform:translateY(-0.4rem) rotate(405deg);
     }
   }
 
   .mobile-toggle {
     cursor: pointer;
     display: block;
-    width:1.2em;
-    height:1em;
+    width:1.2rem;
+    height:1rem;
     z-index:5;
     label, .hamburger-bar {
       cursor: pointer;
@@ -82,7 +90,7 @@ header.page {
     bottom:100vh;
     opacity:0;
     background:rgba(0,0,0,0.5);
-    transition: opacity $transition-length ease-in-out, bottom $transition-length ease-in-out,;
+    transition: opacity $transition-length ease-in-out, bottom $transition-length ease-in-out;
   }
   #show-mobile-menu:checked + .mobile-toggle + .mobile-menu {
     opacity:1;
@@ -102,15 +110,15 @@ header.page {
   .mobile-menu nav {
     box-sizing: border-box;
     max-height:100%;
-    border-top: $size-stripe/1.5 solid $color-header;
+    border-top: $size-stripe solid $color-decor;
     position:absolute;
     top:0;
     left:0;
     right:0;
     z-index:3;
-    font-size:1.5em;
-    line-height:2em;
-    padding: 1em $padding-right-page/1.5 1em $padding-left-page/1.5;
+    font-size:1rem;
+    line-height:3rem;
+    padding: 3rem-$size-stripe $padding-right-page 1.5rem $padding-left-page;
     display: flex;
     flex-direction: column;
 
@@ -119,10 +127,11 @@ header.page {
       flex-direction: row;
       font-size:inherit;
       line-height:inherit;
-      margin-bottom:1em;
+      margin-bottom:1.5rem;
       h1 {
-        font-size:inherit;
-        line-height:inherit;
+        margin-top:0;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
         flex: 1;
         font-variant: small-caps;
       }
@@ -147,7 +156,7 @@ header.page {
 }
 
 @media screen and (min-width: 760px) {
-  header.page {
+  .page-header {
     .mobile-toggle {
       display: none;
     }
@@ -176,31 +185,39 @@ header.page {
     }
 
     nav li {
-      padding-left: 1.5em;
+      padding-left: 1.5rem;
     }
 
     nav li.active a {
       border-bottom-width: 3px;
-      border-bottom-color: $color-header;
+      border-bottom-color: $color-decor;
     }
   }
 }
 
+@media screen and (max-width: 759px) and (prefers-color-scheme: dark) {
+  .hamburger-bar {
+    background: $color-text-dark;
+  }
+  #show-mobile-menu + .mobile-toggle + .mobile-menu nav {
+    background: $color-background-footer-dark;
+  }
+}
+
 @media screen {
-  header.page {
-    animation: fadein 0.233s;
+  .page-header {
+    animation: fadein $transition-length;
 
     position: relative;
     max-width: $width-max;
     margin-left: auto;
     margin-right: auto;
 
-    padding-top: 3em - $size-stripe;
+    padding-top: 3rem - $size-stripe;
 
     padding-left: $padding-left-page;
     padding-right: $padding-right-page;
-    line-height: 1.5em;
-    height: 1.5em;
+    height: 1.5rem;
 
     display: flex;
     flex-direction: row;
@@ -208,14 +225,24 @@ header.page {
 }
 
 @media print {
-  header.page .logo {
-    top:45%;
-    text-align:center;
-    width:100%;
-    position:absolute;
-  }
-  header.page nav {
+  header.page {
     display:none;
   }
 }
 
+@media screen and (max-width: 759px) and (prefers-reduced-motion: reduce) {
+  .mobile-menu {
+    transition: none;
+  }
+  #show-mobile-menu + .mobile-toggle {
+    .hamburger-bar {
+      transition: none;
+    }
+  }
+}
+
+@media screen and (max-width: 759px) and (prefers-reduced-transparency: reduce) {
+  .mobile-menu {
+    background: rgb(128,128,128);
+  }
+}

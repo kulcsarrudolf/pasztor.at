@@ -2,7 +2,7 @@
 categories: blog
 date: "2012-04-26T00:00:00Z"
 publishDate: "2012-04-26T00:00:00Z"
-excerpt: Ever so often I get to set up hosts for running PHP. When running a load
+summary: Ever so often I get to set up hosts for running PHP. When running a load
   balanced solution, you have more hosts and reading logs gets complicated, development
   gets tedious. So what helps, is a central logging server. This is pretty easy to
   set up with syslog-ng, however PHP has a annoying habit of logging everything with

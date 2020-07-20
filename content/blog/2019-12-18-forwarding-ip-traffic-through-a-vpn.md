@@ -3,11 +3,11 @@ categories: blog
 slug: forwarding-ip-traffic-through-a-vpn
 date: "2019-12-18T00:00:00Z"
 publishDate: "2019-12-18T00:00:00Z"
-excerpt: 'You have two servers and want to serve the traffic for an IP address on
+summary: 'You have two servers and want to serve the traffic for an IP address on
   one server from another server? '
-fbimage: /assets/img/forward-ip-traffic-vpn.png
-googleimage: /assets/img/forward-ip-traffic-vpn.png
-preview: /assets/img/forward-ip-traffic-vpn.jpg
+fbimage: posts/forward-ip-traffic-vpn.png
+googleimage: posts/forward-ip-traffic-vpn.png
+preview: posts/forward-ip-traffic-vpn.jpg
 sharing:
   discord: '@everyone @krnlpnc#1927 asked for it: how do do you forward IP traffic
     through a VPN'
@@ -20,7 +20,7 @@ tags:
 - Networking
 title: Forwarding IP traffic through a VPN
 twitter_card: summary_large_image
-twitterimage: /assets/img/forward-ip-traffic-vpn.png
+twitterimage: posts/forward-ip-traffic-vpn.png
 ---
 
 One of my readers has posed me the question a while ago: I have two servers, A and B. How do I run a webserver on 

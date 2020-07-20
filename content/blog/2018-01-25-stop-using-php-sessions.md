@@ -2,17 +2,17 @@
 categories: blog
 date: "2018-01-25T00:00:00Z"
 publishDate: "2018-01-25T00:00:00Z"
-excerpt: OK, that title may be a little provocative, but PHP sessions have a fatal
+summary: OK, that title may be a little provocative, but PHP sessions have a fatal
   flaw that make them problematic with modern-day web applications. Let's take a look.
-fbimage: /assets/img/stop-using-php-sessions.png
-googleimage: /assets/img/stop-using-php-sessions.png
-preview: /assets/img/stop-using-php-sessions.jpg
+fbimage: posts/stop-using-php-sessions.png
+googleimage: posts/stop-using-php-sessions.png
+preview: posts/stop-using-php-sessions.jpg
 tags:
 - PHP
 - Development
 title: Stop using PHP sessions!
 twitter_card: summary_large_image
-twitterimage: /assets/img/stop-using-php-sessions.png
+twitterimage: posts/stop-using-php-sessions.png
 ---
 
 ## How do PHP sessions work?

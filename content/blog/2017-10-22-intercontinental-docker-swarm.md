@@ -2,18 +2,18 @@
 categories: blog
 date: "2017-10-22T00:00:00Z"
 publishDate: "2017-10-22T00:00:00Z"
-excerpt: 'Docker is the new hotness. Swarm is an even newer, even hotter thing. The
+summary: 'Docker is the new hotness. Swarm is an even newer, even hotter thing. The
   question is: will it blend? Can it run spanning multiple continents?'
-fbimage: /assets/img/intercontinental-docker-swarm.png
-googleimage: /assets/img/intercontinental-docker-swarm.png
-preview: /assets/img/intercontinental-docker-swarm.png
+fbimage: posts/intercontinental-docker-swarm.png
+googleimage: posts/intercontinental-docker-swarm.png
+preview: posts/intercontinental-docker-swarm.png
 tags:
 - CDN
 - Docker
 - DevOps
 title: Intercontinental Docker Swarm
 twitter_card: summary_large_image
-twitterimage: /assets/img/intercontinental-docker-swarm.png
+twitterimage: posts/intercontinental-docker-swarm.png
 ---
 
 ## Preparing AWS

@@ -2,7 +2,7 @@
 categories: blog
 date: "2017-01-11T00:00:00Z"
 publishDate: "2017-01-11T00:00:00Z"
-excerpt: Quite by accident, I've stumbled upon a rather interesting technology called
+summary: Quite by accident, I've stumbled upon a rather interesting technology called
   IPFS. It promises to replace HTTP as a transport protocol for websites and scale
   to interplanetary levels. Even though the claims sound just tiny bit far fetched,
   the technology behind it got me quite excited.

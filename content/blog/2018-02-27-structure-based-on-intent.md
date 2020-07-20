@@ -2,17 +2,17 @@
 categories: blog
 date: "2018-02-27T00:00:00Z"
 publishDate: "2018-02-27T00:00:00Z"
-excerpt: When reviewing code I often see folders like model, view, controller, form,
+summary: When reviewing code I often see folders like model, view, controller, form,
   etc. There is a way to make your folder names talk, but this ain't it.
-fbimage: /assets/img/structure-based-on-intent.png
-googleimage: /assets/img/structure-based-on-intent.png
-preview: /assets/img/structure-based-on-intent.jpg
+fbimage: posts/structure-based-on-intent.png
+googleimage: posts/structure-based-on-intent.png
+preview: posts/structure-based-on-intent.jpg
 tags:
 - Development
 - Clean Code
 title: Structure your program based on Intent, not Architecture
 twitter_card: summary_large_image
-twitterimage: /assets/img/structure-based-on-intent.png
+twitterimage: posts/structure-based-on-intent.png
 ---
 
 Let's set aside the fact that I think MVC is a horrible design pattern (we'll talk about that some other day) and focus

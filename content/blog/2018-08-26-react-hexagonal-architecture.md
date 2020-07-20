@@ -2,17 +2,17 @@
 categories: blog
 date: "2018-08-26T00:00:00Z"
 publishDate: "2018-08-26T00:00:00Z"
-excerpt: ReactJS is a workhorse of frontend development, but it doesn't do so well
+summary: ReactJS is a workhorse of frontend development, but it doesn't do so well
   in terms of S.O.L.I.D. Can we change it by adopting a classic approach?
-fbimage: /assets/img/hexagonal-architecture-react.png
-googleimage: /assets/img/hexagonal-architecture-react.png
-preview: /assets/img/hexagonal-architecture-react.jpg
+fbimage: posts/hexagonal-architecture-react.png
+googleimage: posts/hexagonal-architecture-react.png
+preview: posts/hexagonal-architecture-react.jpg
 tags:
 - Development
 - Clean Code
 title: Hexagonal React
 twitter_card: summary_large_image
-twitterimage: /assets/img/hexagonal-architecture-react.png
+twitterimage: posts/hexagonal-architecture-react.png
 ---
 
 When looking at ReactJS as a modern JavaScript solution for a UI, a lot of people seem to have a problem organizing

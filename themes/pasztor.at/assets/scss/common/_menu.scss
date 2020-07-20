@@ -2,17 +2,38 @@
 
 @mixin menu {
   a {
-    color: $color-text;
     text-decoration: none;
-    border-bottom: 0 solid $color-background;
     transition: color $transition-length ease-in-out, border-bottom $transition-length, margin-bottom $transition-length;
     margin-bottom:0;
 
     &:hover {
-      color: $color-header;
+      color: $color-decor;
       border-bottom-width: 3px;
-      border-bottom-color: $color-header;
+      border-bottom-color: $color-decor;
       margin-bottom:-3px;
+    }
+  }
+}
+
+@mixin menu-color-light {
+  a {
+    color: $color-text-light;
+    border-bottom: 0 solid $color-background-light;
+
+    &:hover {
+      color: $color-decor;
+    }
+  }
+}
+
+
+@mixin menu-color-dark {
+  a {
+    color: $color-text-dark;
+    border-bottom: 0 solid $color-background-dark;
+
+    &:hover {
+      color: $color-decor;
     }
   }
 }

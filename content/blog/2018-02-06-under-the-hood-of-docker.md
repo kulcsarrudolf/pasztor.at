@@ -2,17 +2,17 @@
 categories: blog
 date: "2018-02-06T00:00:00Z"
 publishDate: "2018-02-06T00:00:00Z"
-excerpt: The runc and rkt container runtimes power Docker & co. But what powers the
+summary: The runc and rkt container runtimes power Docker & co. But what powers the
   container runtimes? Read on for a deeper look into containerization technology.
-fbimage: /assets/img/under-the-hood-of-docker.png
-googleimage: /assets/img/under-the-hood-of-docker.png
-preview: /assets/img/under-the-hood-of-docker.jpg
+fbimage: posts/under-the-hood-of-docker.png
+googleimage: posts/under-the-hood-of-docker.png
+preview: posts/under-the-hood-of-docker.jpg
 tags:
 - Docker
 - DevOps
 title: Under the hood of Docker
 twitter_card: summary_large_image
-twitterimage: /assets/img/under-the-hood-of-docker.png
+twitterimage: posts/under-the-hood-of-docker.png
 ---
 
 It may come as a surprise to you, but containers are not a technology. They don't exist. They are actually a result

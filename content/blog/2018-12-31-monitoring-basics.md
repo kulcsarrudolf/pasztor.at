@@ -2,11 +2,11 @@
 categories: blog
 date: "2018-12-31T00:00:00Z"
 publishDate: "2018-12-31T00:00:00Z"
-excerpt: Monitoring your application is critical. But how do you do it? What are the
+summary: Monitoring your application is critical. But how do you do it? What are the
   important things you need to watch out for?
-fbimage: /assets/img/monitoring-basics.png
-googleimage: /assets/img/monitoring-basics.png
-preview: /assets/img/monitoring-basics.jpg
+fbimage: posts/monitoring-basics.png
+googleimage: posts/monitoring-basics.png
+preview: posts/monitoring-basics.jpg
 sharing:
   discord: '@everyone Are you monitoring your devops stack? Or did you just install
     a monitoring system?'
@@ -23,7 +23,7 @@ tags:
 - Monitoring
 title: 'Monitoring: Basics'
 twitter_card: summary_large_image
-twitterimage: /assets/img/monitoring-basics.png
+twitterimage: posts/monitoring-basics.png
 ---
 
 If you ask a sysadmin what the most important thing in running an infrastructure is, they are either going to say

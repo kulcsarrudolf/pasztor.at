@@ -2,11 +2,11 @@
 categories: blog
 date: "2019-06-12T00:00:00Z"
 publishDate: "2019-06-12T00:00:00Z"
-excerpt: Monocultures already caused the death of one strand of banana. What can we
+summary: Monocultures already caused the death of one strand of banana. What can we
   learn from it in IT?
-fbimage: /assets/img/monocultures.png
-googleimage: /assets/img/monocultures.png
-preview: /assets/img/monocultures.jpg
+fbimage: posts/monocultures.png
+googleimage: posts/monocultures.png
+preview: posts/monocultures.jpg
 sharing:
   discord: '@everyone What''s similar between bananas and your IT setup? Both can
     have monocultures, and both could be a problem!'
@@ -23,7 +23,7 @@ tags:
 - Development
 title: The danger of monocultures
 twitter_card: summary_large_image
-twitterimage: /assets/img/monocultures.png
+twitterimage: posts/monocultures.png
 ---
 
 In the 1950's a bananas looked much different than today. They were straight instead of curved, and they didn't have the

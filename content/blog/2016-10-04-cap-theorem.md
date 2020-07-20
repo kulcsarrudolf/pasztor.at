@@ -2,7 +2,7 @@
 categories: blog
 date: "2016-10-04T00:00:00Z"
 publishDate: "2016-10-04T00:00:00Z"
-excerpt: The CAP theorem is one of the most fundamental principles of distributed
+summary: The CAP theorem is one of the most fundamental principles of distributed
   system design. Yet, it is often misunderstood or outright disregarded.
 tags:
 - Theory

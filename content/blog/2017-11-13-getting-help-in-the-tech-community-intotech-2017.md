@@ -14,7 +14,7 @@ eventStartdate: "2017-11-11T09:00:00Z"
 publishDate: "2017-11-11T09:00:00Z"
 eventStreetAddress: Lindengasse 56
 eventUrl: https://into.technology/
-excerpt: Getting help in the IT or tech community as a beginner can be tricky. Lots
+summary: Getting help in the IT or tech community as a beginner can be tricky. Lots
   of unwritten rules and expectations, dangerous waters to navigate.
 external_link: https://into.technology/
 inLanguage: EN

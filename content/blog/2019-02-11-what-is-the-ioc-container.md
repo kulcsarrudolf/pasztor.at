@@ -2,11 +2,11 @@
 categories: blog
 date: "2019-02-11T00:00:00Z"
 publishDate: "2019-02-11T00:00:00Z"
-excerpt: Just what in the name of the allmighy bit is an IoC / Dependency Injection
+summary: Just what in the name of the allmighy bit is an IoC / Dependency Injection
   container? If find that this confuses a lot of people. Let's dig into it.
-fbimage: /assets/img/what-is-the-ioc-container.png
-googleimage: /assets/img/what-is-the-ioc-container.png
-preview: /assets/img/what-is-the-ioc-container.jpg
+fbimage: posts/what-is-the-ioc-container.png
+googleimage: posts/what-is-the-ioc-container.png
+preview: posts/what-is-the-ioc-container.jpg
 sharing:
   discord: '@everyone Just what the *** is an IoC / Dependency Injection container?
     Find out after the click!'
@@ -23,7 +23,7 @@ tags:
 - Development
 title: What the *** is an IoC container?
 twitter_card: summary_large_image
-twitterimage: /assets/img/what-is-the-ioc-container.png
+twitterimage: posts/what-is-the-ioc-container.png
 ---
 
 > **Note:** The code examples in this article are ficticious! The actual method calls depend on your IoC container

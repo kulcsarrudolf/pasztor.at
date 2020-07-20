@@ -3,16 +3,16 @@ categories: videos
 date: "2017-07-04T00:00:00Z"
 publishDate: "2017-07-04T00:00:00Z"
 embed: https://www.youtube-nocookie.com/embed/5u52wbqBgEY?rel=0
-excerpt: How do computers communicate on a local network? How does Ethernet work?
-fbimage: /assets/img/how-does-ethernet-work.png
-googleimage: /assets/img/how-does-ethernet-work.png
-preview: /assets/img/how-does-ethernet-work.jpg
+summary: How do computers communicate on a local network? How does Ethernet work?
+fbimage: posts/how-does-ethernet-work.png
+googleimage: posts/how-does-ethernet-work.png
+preview: posts/how-does-ethernet-work.jpg
 tags:
 - Networks
 - Animated
 title: How does Ethernet work?
 twitter_card: summary_large_image
-twitterimage: /assets/img/how-does-ethernet-work.png
+twitterimage: posts/how-does-ethernet-work.png
 video: https://youtu.be/5u52wbqBgEY
 ---
 

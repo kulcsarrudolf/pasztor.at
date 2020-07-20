@@ -14,13 +14,13 @@ eventStartdate: "2018-05-03T17:00:00Z"
 publishDate: "2018-05-03T17:00:00Z"
 eventStreetAddress: Handelskai 94-96
 eventUrl: https://www.meetup.com/Amazon-Web-Services-AWS-Vienna/
-excerpt: How do you use AWS to build a CDN? This talk is all about the nitty-gritty
+summary: How do you use AWS to build a CDN? This talk is all about the nitty-gritty
   details!
 external_link: https://www.meetup.com/Amazon-Web-Services-AWS-Vienna/
-fbimage: /assets/img/aws-vienna.png
-googleimage: /assets/img/aws-vienna.png
+fbimage: posts/aws-vienna.png
+googleimage: posts/aws-vienna.png
 inLanguage: EN
-preview: /assets/img/aws-vienna.jpg
+preview: posts/aws-vienna.jpg
 tags:
 - Docker
 - DevOps
@@ -30,7 +30,7 @@ publishDate: "2018-05-03T18:00:00Z"
 talkStartdate: "2018-05-03T17:00:00Z"
 publishDate: "2018-05-03T17:00:00Z"
 title: 'AWS-Vienna-Meetup:  How I built my own CDN with AWS?'
-twitterimage: /assets/img/aws-vienna.png
+twitterimage: posts/aws-vienna.png
 ---
 
 I already [wrote an article on my CDN](https://pasztor.at/blog/building-your-own-cdn), but this time we are going

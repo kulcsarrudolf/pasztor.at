@@ -2,11 +2,11 @@
 categories: blog
 date: "2018-12-24T00:00:00Z"
 publishDate: "2018-12-24T00:00:00Z"
-excerpt: Often when a big service provider messes up, there is an inevitable slew
+summary: Often when a big service provider messes up, there is an inevitable slew
   of people who tout the advantages of self-hosting everything. But is it really efficient?
-fbimage: /assets/img/selfhosting.png
-googleimage: /assets/img/selfhosting.png
-preview: /assets/img/selfhosting.jpg
+fbimage: posts/selfhosting.png
+googleimage: posts/selfhosting.png
+preview: posts/selfhosting.jpg
 sharing:
   discord: '@everyone To self host or not to self host, that is the question?'
   facebook: 'To #selfhost or not to #selfhost, that is the question?'
@@ -18,7 +18,7 @@ tags:
 - Theory
 title: Host everything yourself!
 twitter_card: summary_large_image
-twitterimage: /assets/img/selfhosting.png
+twitterimage: posts/selfhosting.png
 ---
 
 It just now happened that apparently [Slack blocked an irani national living in Canada](https://twitter.com/a_h_a/status/1075510422617219077).

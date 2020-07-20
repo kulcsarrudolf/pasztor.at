@@ -2,11 +2,11 @@
 categories: blog
 date: "2018-02-20T00:00:00Z"
 publishDate: "2018-02-20T00:00:00Z"
-excerpt: How many actions do you put in a controller? 5-6? 20? What would you say
+summary: How many actions do you put in a controller? 5-6? 20? What would you say
   if I told you my limit is just one method?
-fbimage: /assets/img/one-controller-one-action.png
-googleimage: /assets/img/one-controller-one-action.png
-preview: /assets/img/one-controller-one-action.jpg
+fbimage: posts/one-controller-one-action.png
+googleimage: posts/one-controller-one-action.png
+preview: posts/one-controller-one-action.jpg
 tags:
 - Development
 - Clean Code
@@ -14,7 +14,7 @@ tags:
 - OOP
 title: One Controller, One Action
 twitter_card: summary_large_image
-twitterimage: /assets/img/one-controller-one-action.png
+twitterimage: posts/one-controller-one-action.png
 ---
 
 It is safe to say that most web applications have way too many action methods in their controllers. It starts out with

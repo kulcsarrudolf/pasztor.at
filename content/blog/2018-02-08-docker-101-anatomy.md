@@ -2,17 +2,17 @@
 categories: blog
 date: "2018-02-08T00:00:00Z"
 publishDate: "2018-02-08T00:00:00Z"
-excerpt: Docker is (mostly) used to run Linux, but in order to successfully create
+summary: Docker is (mostly) used to run Linux, but in order to successfully create
   a Docker image, we must first understand how Linux works.
-fbimage: /assets/img/docker-101-anatomy.png
-googleimage: /assets/img/docker-101-anatomy.png
-preview: /assets/img/docker-101-anatomy.jpg
+fbimage: posts/docker-101-anatomy.png
+googleimage: posts/docker-101-anatomy.png
+preview: posts/docker-101-anatomy.jpg
 tags:
 - Docker
 - DevOps
 title: 'Docker 101: Linux Anatomy'
 twitter_card: summary_large_image
-twitterimage: /assets/img/docker-101-anatomy.png
+twitterimage: posts/docker-101-anatomy.png
 ---
 
 If you are used to Windows system administration, you may be used to only being able to clone a system using

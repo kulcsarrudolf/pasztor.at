@@ -2,7 +2,7 @@
 categories: blog
 date: "2010-03-22T00:00:00Z"
 publishDate: "2010-03-22T00:00:00Z"
-excerpt: In September 2009 I created the big Exim tutorial consisting of 5 parts on
+summary: In September 2009 I created the big Exim tutorial consisting of 5 parts on
   the Hungarian Unix Portal. In January 2010, I transfered it to my Hungarian site.
   Now I’m translating it to English.
 tags:

@@ -2,17 +2,17 @@
 categories: projects
 date: "2018-02-10T00:00:00Z"
 publishDate: "2018-02-10T00:00:00Z"
-excerpt: A very simple container runtime implemented from scratch in C for educational
+summary: A very simple container runtime implemented from scratch in C for educational
   purposes.
-fbimage: /assets/img/demo-container-runtime.png
-googleimage: /assets/img/demo-container-runtime.png
-preview: /assets/img/demo-container-runtime.jpg
+fbimage: posts/demo-container-runtime.png
+googleimage: posts/demo-container-runtime.png
+preview: posts/demo-container-runtime.jpg
 tags:
 - Docker
 - DevOps
 title: Demo Container Runtime
 twitter_card: summary_large_image
-twitterimage: /assets/img/demo-container-runtime.png
+twitterimage: posts/demo-container-runtime.png
 ---
 
 This container engine has been specifically built to learn Linux containerization from. The high level details are

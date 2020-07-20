@@ -2,11 +2,11 @@
 categories: blog
 date: "2019-05-17T00:00:00Z"
 publishDate: "2019-05-17T00:00:00Z"
-excerpt: After setting up the server as a Docker baseline, we now venture in building
+summary: After setting up the server as a Docker baseline, we now venture in building
   a Docker infrastructure.
-fbimage: /assets/img/immutable-infra-2.png
-googleimage: /assets/img/immutable-infra-2.png
-preview: /assets/img/immutable-infra-2.jpg
+fbimage: posts/immutable-infra-2.png
+googleimage: posts/immutable-infra-2.png
+preview: posts/immutable-infra-2.jpg
 sharing:
   discord: '@everyone Immutable infrastructure in Practice, part 2 is here! Docker,
     Traefik, Prometheus, and Grafana in action!'
@@ -23,7 +23,7 @@ tags:
 - Docker
 title: Immutable Infrastructure in Practice — Part 2
 twitter_card: summary_large_image
-twitterimage: /assets/img/immutable-infra-2.png
+twitterimage: posts/immutable-infra-2.png
 ---
 
 In the [previous part](/blog/immutable-infra-1) we discussed how to set up a server based on the principle of 

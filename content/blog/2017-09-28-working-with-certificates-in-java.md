@@ -2,17 +2,17 @@
 categories: blog
 date: "2017-09-28T00:00:00Z"
 publishDate: "2017-09-28T00:00:00Z"
-excerpt: Let's face it, the Java crypto API is a mess. It is extremely hard to use,
+summary: Let's face it, the Java crypto API is a mess. It is extremely hard to use,
   and very confusing. Let's try and make sense of this sorry excuse for an API.
-fbimage: /assets/img/working-with-certificates-in-java.jpg
-googleimage: /assets/img/working-with-certificates-in-java.jpg
-preview: /assets/img/working-with-certificates-in-java.jpg
+fbimage: posts/working-with-certificates-in-java.jpg
+googleimage: posts/working-with-certificates-in-java.jpg
+preview: posts/working-with-certificates-in-java.jpg
 tags:
 - Java
 - Development
 title: Working with Certificates in Java
 twitter_card: summary_large_image
-twitterimage: /assets/img/working-with-certificates-in-java.jpg
+twitterimage: posts/working-with-certificates-in-java.jpg
 ---
 
 ## Install Bouncy Castle

@@ -2,11 +2,11 @@
 categories: blog
 date: "2019-05-03T00:00:00Z"
 publishDate: "2019-05-03T00:00:00Z"
-excerpt: There's an invisible war being waged in the IT industry. A war to find out
+summary: There's an invisible war being waged in the IT industry. A war to find out
   which way is the best to produce code.
-fbimage: /assets/img/we-are-at-war.png
-googleimage: /assets/img/we-are-at-war.png
-preview: /assets/img/we-are-at-war.jpg
+fbimage: posts/we-are-at-war.png
+googleimage: posts/we-are-at-war.png
+preview: posts/we-are-at-war.jpg
 sharing:
   discord: '@everyone There''s an invisible war being waged in the IT industry. A
     war to find out which way is the best to produce code.'
@@ -23,7 +23,7 @@ tags:
 - Clean Code
 title: We are at war
 twitter_card: summary_large_image
-twitterimage: /assets/img/we-are-at-war.png
+twitterimage: posts/we-are-at-war.png
 ---
 
 There's a war going on in our industry. A war to find the best way to produce code. We are fighting if we should use a 

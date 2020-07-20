@@ -2,11 +2,11 @@
 categories: blog
 date: "2019-03-02T00:00:00Z"
 publishDate: "2019-03-02T00:00:00Z"
-excerpt: Your IDE is your best friend when it comes to being efficient. Why do so
+summary: Your IDE is your best friend when it comes to being efficient. Why do so
   many people not use it?
-fbimage: /assets/img/ide-matters.png
-googleimage: /assets/img/ide-matters.png
-preview: /assets/img/ide-matters.jpg
+fbimage: posts/ide-matters.png
+googleimage: posts/ide-matters.png
+preview: posts/ide-matters.jpg
 sharing:
   discord: '@everyone Your choice of IDE matters for cleancode. Maybe stop using vanilla
     vim?'
@@ -21,7 +21,7 @@ tags:
 - Clean Code
 title: Your choice of IDE matters
 twitter_card: summary_large_image
-twitterimage: /assets/img/ide-matters.png
+twitterimage: posts/ide-matters.png
 ---
 
 This piece started out as a rant titled *&ldquo;VIM is not an IDE&rdquo;*, but as I have talked to some people about
@@ -34,13 +34,13 @@ But, instead of bagging on VIM, let's take a look what makes a good IDE and why 
 Our editors and IDEs heavily influence what we optimize for. For example, if you use an IDE, a glance to the left
 give you the directory tree. Therefore it is not a big hassle to create more files.
 
-<figure><img src="/assets/img/ide-directory-tree.png" alt="" /><figcaption>The directory tree of this website, as I'm writing it.</figcaption></figure>
+<figure><img src="posts/ide-directory-tree.png" alt="" /><figcaption>The directory tree of this website, as I'm writing it.</figcaption></figure>
 
 You can, of course, achieve a [similar setup with vim](https://shapeshed.com/vim-netrw/), but you will need to do the
 config legwork to get netrw or NERDtree running. In addition, netrw, as I have tested it, doesn't work well with tabs,
 since tabs open on top of the split layout.
 
-<figure><img src="/assets/img/vim-split.png" alt="" /><figcaption>A split view directory tree in vim.</figcaption></figure>
+<figure><img src="posts/vim-split.png" alt="" /><figcaption>A split view directory tree in vim.</figcaption></figure>
 
 **Vim is immensely powerful, but at its core it is designed to work on one, or very few files.** Other, simpler editors
 have even less facilities to handle a large number of files.
@@ -93,14 +93,14 @@ All reasonable programming languages and environments allow you to debug. This m
 in your program code and make the whole system stop once you get there. While stopped, you can inspect the variables
 set there, and even go back in the call stack to inspect the calls that lead to the point where you are at.
 
-<figure><img src="/assets/img/ide-debug.png" alt="" /><figcaption>Debugging in a modern IDE.</figcaption></figure>
+<figure><img src="posts/ide-debug.png" alt="" /><figcaption>Debugging in a modern IDE.</figcaption></figure>
 
 Furthermore, you can usually also go over the following code step by step, tracing the what each individual line in
 the code does to the variables. This is especially important when refactoring some legacy code that you need to learn.
 
 ## Refactoring tools
 
-<figure><img src="/assets/img/ide-refactor.png" alt="" /><figcaption>Refactor operation in a modern IDE.</figcaption></figure>
+<figure><img src="posts/ide-refactor.png" alt="" /><figcaption>Refactor operation in a modern IDE.</figcaption></figure>
 
 Once your code is written, the project is done, right? Well, not so fast. Sometimes you get old code written by others,
 and sometimes you get old code ... well, written by you. You know the meme, when you look at the code you wrote six
@@ -131,7 +131,7 @@ code changed to match the new image name.
 However, modern IDE's go much further in helping the refactoring process. They may, for example, offer the ability to
 change a method signature.
 
-<figure><img src="/assets/img/ide-change-signature.png" alt="" /><figcaption>The change signature option in a modern IDE.</figcaption></figure>
+<figure><img src="posts/ide-change-signature.png" alt="" /><figcaption>The change signature option in a modern IDE.</figcaption></figure>
 
 If we, for example, add a new parameter in this window, that change will propagate to all places where the method is
 used. When working in a language with static typing, or a static code analyser, it will immediately become apparent
@@ -148,7 +148,7 @@ However, this goes further than just a simple type-check. After all, you could u
 idea is that the IDE will tell you about potential mistakes *as you write them*. A good IDE will root out your bad 
 practices. The turnaround time between making a mistake and fixing it is much faster.
 
-<figure><img src="/assets/img/ide-static-code-analysis.png" alt="" /><figcaption>A code analysis warning in a modern IDE.</figcaption></figure>
+<figure><img src="posts/ide-static-code-analysis.png" alt="" /><figcaption>A code analysis warning in a modern IDE.</figcaption></figure>
 
 This, of course, also influences how you write code. If you pay attention to these kind of warnings you will stop being
 callous about writing potentially unsafe code.
@@ -164,7 +164,7 @@ variable is defined.
 And in the odd chance that you really, really need to do micro-optimization in the code instead of macro optimization,
 it should be really really well documented.
 
-<figure><img src="/assets/img/ide-suppressed-inspection.png" alt="" /><figcaption>A suppressed inspection in a modern IDE</figcaption></figure>
+<figure><img src="posts/ide-suppressed-inspection.png" alt="" /><figcaption>A suppressed inspection in a modern IDE</figcaption></figure>
 
 These kind of inspections are basically like a quick code review, but automated. You should use them.
 
@@ -203,7 +203,7 @@ They didn't know how to use their IDE and get their code up on the server in an 
 So, what are the options? Either you manually copy the code to the server (ugh) or you commit every change to your
 versioning system (git) and pull on the server (double ugh). No, none of these is a workable solution.
 
-<figure><img src="/assets/img/ide-deployment.png" alt="" /><figcaption>Deployment configuration in a modern IDE</figcaption></figure>
+<figure><img src="posts/ide-deployment.png" alt="" /><figcaption>Deployment configuration in a modern IDE</figcaption></figure>
 
 Thankfully, modern IDE's have automated deployment tools. Edit the code, the IDE automatically syncs the code to the
 server and by the time you get over to your server to test it, it's already there.
