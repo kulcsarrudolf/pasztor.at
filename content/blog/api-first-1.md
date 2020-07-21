@@ -1,4 +1,7 @@
 ---
+slug: api-first-1
+authors:
+    - janos
 categories: blog
 date: "2019-10-11T00:00:00Z"
 publishDate: "2019-10-11T00:00:00Z"
@@ -85,8 +88,9 @@ public class UserAccountApi {
     @ApiOperation(
         nickname = "createUserAccount",
         value = "Create a user account",
-        notes = "Create a user account by supplying an e-mail address. The user is sent an e-mail to confirm their " +
-                "account.",
+        notes = "Create a user account by supplying an e-mail " +
+            "address. The user is sent an e-mail to confirm " +
+            "their account.",
         consumes = "application/json",
         produces = "application/json"
     )
@@ -98,12 +102,14 @@ public class UserAccountApi {
         ),
         @ApiResponse(
             code = 400,
-            message = "If the supplied e-mail address is invalid.",
+            message =
+                "If the supplied e-mail address is invalid.",
             response = ApiException.class
         ),
         @ApiResponse(
             code = 409,
-            message = "If an account with the specified e-mail address already exists.",
+            message = "If an account with the specified " +
+                "e-mail address already exists.",
             response = ApiException.class
         )
     })
@@ -116,7 +122,10 @@ public class UserAccountApi {
         @ApiParam(required = true)
         @RequestBody
             UserAccountCreateRequest request
-    ) throws UserAccountAlreadyExistsException, InvalidInputParameters {
+    ) throws
+        UserAccountAlreadyExistsException,
+        InvalidInputParameters
+    {
         //...
     }
 }
@@ -171,8 +180,9 @@ software using our API, including our own frontend.
 
 All this is done using the popular Spring Boot framework, with the help of Spring Fox to generate the API documentation.
 
-> **Criticism:** I absolutely have criticisms towards Spring Boot/SpringFox because it requires a lot of redundant
-> annotations to make OpenAPI work. OpenAPI is a hard requirement for me and I found no better mainstream system.
+{{% info %}}
+**Criticism:** I have severe criticisms towards Spring Boot/SpringFox because it requires a lot of redundant annotations to make OpenAPI work. OpenAPI is a hard requirement for me and I found no better mainstream system.
+{{% /info %}}
 
 ## The frontend
 
@@ -187,7 +197,9 @@ Typescript, which is a type-safe language that compiles to JavaScript.
 ReactJS allows us to write code like this:
 
 ```jsx
-export default class AccountPage extends Page<IAccountProps, IAccountState> {
+export default class AccountPage extends
+    Page<IAccountProps, IAccountState>
+{
     //...
     render() {
         return <Card>
@@ -199,7 +211,9 @@ export default class AccountPage extends Page<IAccountProps, IAccountState> {
                             E-mail:
                         </TableCell>
                         <TableCell>
-                            <span>{this.state.userAccount.email}</span>
+                            <span>
+                                {this.state.userAccount.email}
+                            </span>
                         </TableCell>
                     </TableRow>
                     <TableRow>

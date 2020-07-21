@@ -1,4 +1,5 @@
 ---
+slug: api-first-3
 categories: blog
 date: "2019-10-21T00:00:00Z"
 publishDate: "2019-10-21T00:00:00Z"
@@ -13,10 +14,11 @@ sharing:
   patreon: 'API-driven App: let''s get started on the database!'
   twitter: 'API-driven App: let''s get started on the database!'
 tags:
-- Development
-- Clean code
+- Software Development
 - Java
 title: 'Building an API-driven software: Database Access'
+authors:
+    - janos
 twitter_card: summary_large_image
 twitterimage: posts/api-first-3.png
 ---
@@ -224,7 +226,9 @@ The `@Nullable` annotation here helps with IntelliJ warning us about potentially
 
 So far so good, we have the basic API skeleton ready.
 
-> *Tip:* This may be a good point to move your API-related classes into a separate package.
+{{% tip %}}
+*Tip:* This may be a good point to move your API-related classes into a separate package.
+{{% /tip %}}
 
 ## Starting the storage layer
 
@@ -388,7 +392,9 @@ package at.pasztor.backend.post.storage;
 import at.pasztor.backend.post.entity.BlogPost;
 import org.springframework.data.repository.CrudRepository;
 
-public interface JpaBlogPostRepository extends CrudRepository<BlogPost, String> {
+public interface JpaBlogPostRepository
+    extends CrudRepository<BlogPost, String>
+{
 }
 ```
 
@@ -428,7 +434,11 @@ public class JpaBlogPostStorage implements BlogPostStorage {
     public BlogPost getBySlug(String slug) throws ApiException {
         Optional<BlogPost> post = repository.findById(slug);
         if (!post.isPresent()) {
-            throw new ApiException(HttpStatus.NOT_FOUND, ApiException.ErrorCode.NOT_FOUND, "The blog post you requested was not found.");
+            throw new ApiException(
+                HttpStatus.NOT_FOUND,
+                ApiException.ErrorCode.NOT_FOUND,
+                "The blog post you requested was not found."
+            );
         }
         return post.get();
     }
@@ -529,8 +539,10 @@ public class BlogPostController {
     ) throws ApiException {
         BlogPost post = storage.getBySlug(slug);
 
-        String title = request.title==null?post.title:request.title;
-        String content = request.content==null?post.content:request.content;
+        String title = request.title==null?
+            post.title:request.title;
+        String content = request.content==null?
+            post.content:request.content;
 
         post = new BlogPost(
                 post.slug,
@@ -570,7 +582,9 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 public interface JpaBlogPostRepository extends CrudRepository<BlogPost, String> {
-    @Query("SELECT p FROM posts p WHERE p.title LIKE CONCAT('%', CONCAT(?1, '%'))")
+    @Query(
+        "SELECT p FROM posts p WHERE p.title LIKE CONCAT('%', CONCAT(?1, '%'))"
+    )
     Iterator<BlogPost> getByTitle(String title);
 }
 ```

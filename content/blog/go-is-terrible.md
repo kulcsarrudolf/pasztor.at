@@ -14,9 +14,10 @@ sharing:
   patreon: 'Go is a terrible programming language: here''s why'
   twitter: 'Go is a terrible programming language: here''s why'
 tags:
-- Development
-- Clean code
+- Software Development
 - Golang
+authors:
+- janos
 title: Go is a terrible language
 twitter_card: summary_large_image
 twitterimage: posts/go-is-terrible.png

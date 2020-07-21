@@ -122,7 +122,7 @@ also does latency-based routing.)
 Since we are cheap, Route53 it is. We add our domain and then start setting up the IPs for our machines. We need as many
 DNS records as we have servers around the globe (edge locations), and each record should look like this:
 
-<figure><img src="posts/latency-based-routing.png" alt="Route53 latency-based routing should be set up in Route53 by creating A records with the IP of the edge location, and then setting the routing policy to &quot;latency&quot;. The set ID should be something unique, and the location should be the one closest to our edge location." /></figure>
+.><img src="posts/latency-based-routing.png" alt="Route53 latency-based routing should be set up in Route53 by creating A records with the IP of the edge location, and then setting the routing policy to &quot;latency&quot;. The set ID should be something unique, and the location should be the one closest to our edge location." /></figure>
 
 > **Tip**: it is useful to set up a health check for each of the edge locations so they are removed if they go down.
 
@@ -154,17 +154,19 @@ a bit more engineering, it is probably a lot more stable in the long run.
 Time for the truth, how does my CDN perform? Using [this tool](https://latency.apex.sh/?url=https%3A%2F%2Fpasztor.at&compare),
 let's see some global stats:
 
-<figure><img src="posts/latency.png" alt="Oregon: 246ms, California: 298ms, Ohio: 227ms, Virginia: 108ms, Ireland: 217ms, Frankfurt: 44ms, London: 110ms, Mumbai: 870ms, Singapore: 517ms, Seoul: 253ms, Tokyo: 150ms, Sidney: 358ms, Sao Paulo: 911ms" /></figure>
+![Oregon: 246ms, California: 298ms, Ohio: 227ms, Virginia: 108ms, Ireland: 217ms, Frankfurt: 44ms, London: 110ms, Mumbai: 870ms, Singapore: 517ms, Seoul: 253ms, Tokyo: 150ms, Sidney: 358ms, Sao Paulo: 911ms](posts/latency.png)
 
 As you can see, the results are pretty decent. I might need two more nodes, one in Asia and one in South America to get
 better load times there.
 
+{{% info %}}
 **Update:** After I've made it to the [Hacker News](https://news.ycombinator.com/news) front page (wow!), I had a chance
 to collect a bit of real usage data using Google Analytics:
 
-<figure><img src="posts/real-world-cdn-usage.png" alt="" /></figure>
+![](posts/real-world-cdn-usage.png)
 
 Bottom line: I really need that Singapore node. The load times in India are above the desired 1 second.
+{{% /info %}}
 
 ## Frequently asked questions
 
@@ -217,7 +219,7 @@ comes back with a 404. Upon closer investigation it turned out that the reason f
 Not the CPU usage of my machines but of my &ldquo;neighbors&rdquo;. Logging into my server I saw a CPU steal time of up
 to 90%:
 
-<figure><img src="posts/steal-time.png" alt="" /></figure>
+![](posts/steal-time.png)
 
 This high CPU usage caused Traefik to drop the backend due to a timeout, which in turn caused the 404 error. As I
 installed Uptime Robot to check my site I realized that this is quite a common occurrence and happened 3-4 times a week.

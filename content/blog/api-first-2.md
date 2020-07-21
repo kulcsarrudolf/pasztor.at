@@ -17,6 +17,9 @@ tags:
 - Clean code
 - Java
 title: 'Building an API-driven software: Setting up the backend'
+slug: api-first-2
+authors:
+  - janos
 twitter_card: summary_large_image
 twitterimage: posts/api-first-2.png
 ---
@@ -24,7 +27,7 @@ twitterimage: posts/api-first-2.png
 In our [previous episode](/blog/api-first-1) we have discussed a broad overview of an API-driven software how I do it.
 In this installment I would like to run you through setting up the backend.
 
-# Pre-requisites
+## Pre-requisites
 
 If you are not well versed in Java or OOP, you may want to do some additional reading. More specifically, I would
 recommend the following posts on this blog:
@@ -67,22 +70,20 @@ will see a file called `pom.xml`:
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
+            http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>at.pasztor</groupId>
     <artifactId>backend</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-
 </project>
 ```
 
-This is your project file that contains all your build configuration, such as dependencies, build plugins, etc. For now 
-it's pretty empty, but we will change that soon. For now, you may receive a popup that prompts you to Auto-Import
-changes to your `pom.xml`, which I would strongly recommend to enable:
+This is your project file that contains all your build configuration, such as dependencies, build plugins, etc. For now it's pretty empty, but we will change that soon. For now, you may receive a popup that prompts you to Auto-Import changes to your `pom.xml`, which I would strongly recommend to enable:
 
-<figure><img src="posts/intellij-auto-import-maven.png" alt="" /></figure>
+![](posts/intellij-auto-import-maven.png)
 
 ## Writing a test application
 
@@ -90,7 +91,7 @@ For now, let's create a simple demo to check if everything is working. Let's cre
 `src/main/java/TestApplication.java` by right clicking on the `src/main/java` folder and selecting
 New &rarr; Java Class. 
 
-<figure><img src="posts/intellij-new-java-file.png" alt="" /></figure>
+![](posts/intellij-new-java-file.png)
 
 The contents of the files should be the following:
 
@@ -102,17 +103,13 @@ public class TestApplication {
 }
 ```
 
-Pretty simple, but let's break it down nonetheless. This is a class in Java, just like the OOP articles I recommended
-above. This class contains a single method which is declared `static`. Static is a special case because they are 
-functions that can be called without creating an instance of the class. In other languages you might implement this as
-a simple function, but in Java everything needs to be in classes.
+Pretty simple, but let's break it down nonetheless. This is a class in Java, just like the OOP articles I recommended above. This class contains a single method which is declared `static`. Static is a special case because they are functions that can be called without creating an instance of the class. In other languages you might implement this as a simple function, but in Java everything needs to be in classes.
 
-Now, the `public static void main(String[] argv)` method in Java is even more special, as it is a starting point for 
-your application. The `argv` parameter itself contains the command line parameters, if any.
+Now, the `public static void main(String[] argv)` method in Java is even more special, as it is a starting point for your application. The `argv` parameter itself contains the command line parameters, if any.
 
 IntelliJ is very helpful, by clicking the play button next to the method you can simply run the application:
 
-<figure><img src="posts/intellij-run.png" alt="" /></figure>
+![](posts/intellij-run.png)
 
 This will pop up a little terminal window with the program running in it.
 
@@ -126,7 +123,8 @@ should at the very least set Java version 8:
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+            http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>at.pasztor</groupId>
@@ -168,17 +166,21 @@ that are required to compile Spring Boot applications properly.
     </parent>
 ```
 
-> **Note:** Packages in Maven can be hierarchical. The child packages inherit all the properties of parent packages.
-> This is being used here so you don't have to do a lot of configuration in Maven yourself.
+{{% tip %}}
+**Note:** Packages in Maven can be hierarchical. The child packages inherit all the properties of parent packages. This is being used here so you don't have to do a lot of configuration in Maven yourself.
+{{% /tip %}}
 
 As a final step to see it in action let's *delete* the `TestApplication` and instead create a class called
 `at.pasztor.backend.BlogApplication`. This will create the appropriate folders for this package and place the
 `BlogApplication` class inside. (You can of course opt to use your own package name.)
 
-> *Warning!* Never place the application in the default namespace as that will cause all sorts of problems!
+{{% warning %}}
+**Warning!** Never place the application in the default namespace as that will cause all sorts of problems!
+{{% /warning %}}
 
-> *Note:* The package name `at.pasztor.backend` corresponds to the group ID and artifact ID in pom.xml. This is purely
-> for convenience, but there is no rule enforcing this.
+{{% tip %}}
+**Note:** The package name `at.pasztor.backend` corresponds to the group ID and artifact ID in pom.xml. This is purely for convenience, but there is no rule enforcing this.
+{{% /tip %}}
 
 The `BlogApplication` class should look as follows:
 
@@ -186,7 +188,8 @@ The `BlogApplication` class should look as follows:
 package at.pasztor.backend;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import
+    org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class BlogApplication {
@@ -222,7 +225,7 @@ public class TestController {
 Now, in order to apply the changes we will need to restart the application. This can be done by hitting the restart
 button next to the little terminal window the application is running in:
 
-<figure><img src="posts/intellij-restart.png" alt="" /></figure>
+![](posts/intellij-restart.png)
 
 Once the server is restarted you should see the results on the screen. Now, what exactly did we do?
 
@@ -373,10 +376,9 @@ public class BookController {
 }
 ```
 
-> **Note on `@Nullable`:** unfortunately there is no single standard on marking nullable variables in Java. There was
-> a proposal called JSR-305, but it went nowhere and now each software vendor has their own `@Nullable` implementation.
-> In our case we are using Spring Frameworks version, which IntelliJ can use to determine if a variable is nullable.
-> For more information on nullability read my post called [&ldquo;A few words on null&rdquo;](/blog/nullable).
+{{% tip %}}
+**Note on `@Nullable`:** unfortunately there is no single standard on marking nullable variables in Java. There was a proposal called JSR-305, but it went nowhere and now each software vendor has their own `@Nullable` implementation. In our case we are using Spring Frameworks version, which IntelliJ can use to determine if a variable is nullable. For more information on nullability read my post called [&ldquo;A few words on null&rdquo;](/blog/nullable).
+{{% /tip %}}
 
 ### Request body
 
@@ -414,7 +416,8 @@ public class BookController {
 
     @RequestMapping(
             value = "/books",
-            consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE
+            consumes =
+                MediaType.APPLICATION_FORM_URLENCODED_VALUE
     )
     public String create(
             @RequestParam
@@ -422,16 +425,16 @@ public class BookController {
             @RequestParam
             String author
     ) {
-        return "Created a book called " + title + " by " + author;
+        return "Created a book called " + title + " by " +
+            author;
     }
 }
 ```
 
-However, if you now want to test this you will need something like the
-[Advanced Rest Client](https://install.advancedrestclient.com/install) as `POST` requests can't be submitted without
+However, if you now want to test this you will need something like the [Advanced Rest Client](https://install.advancedrestclient.com/install) as `POST` requests can't be submitted without
 a form.
 
-<figure><img src="posts/arc-post-request.png" alt="" /></figure>
+![](posts/arc-post-request.png)
 
 Alternatively, if you are well versed in the console, you can use Telnet:
 
@@ -446,8 +449,7 @@ Connection: close
 author=Hans+Christian+Andersen&title=The+Emperor's+New+Clothes
 ```
 
-Now, the situation becomes slightly more tricky when it comes to submitting `JSON` requests as is customary
-with APIs in general. In this case we have to create a request object:
+Now, the situation becomes slightly more tricky when it comes to submitting `JSON` requests as is customary with APIs in general. In this case we have to create a request object:
 
 ```java
 package at.pasztor.backend;
@@ -487,12 +489,11 @@ public class BookController {
 }
 ```
 
-The `@RequestBody` annotation tells Spring Boot to decode the request body to an object, whereas the `consumes`
-parameter tells Spring Boot to route requests with the JSON type to this method.
+The `@RequestBody` annotation tells Spring Boot to decode the request body to an object, whereas the `consumes` parameter tells Spring Boot to route requests with the JSON type to this method.
 
-> **Tip:** you can have multiple methods with different `consumes` values to hande different data types. Spring Boot
-> will route the requests accordingly. Similarly, the `produces` stanza can be used to indicate the produced response
-> type and the client can decide using the `Accept` header which response type it wants.
+{{% tip %}}
+**Tip:** you can have multiple methods with different `consumes` values to hande different data types. Spring Boot will route the requests accordingly. Similarly, the `produces` stanza can be used to indicate the produced response type and the client can decide using the `Accept` header which response type it wants.
+{{% /tip %}}
 
 ### Headers
 
@@ -500,8 +501,7 @@ Finally, let's talk about consuming headers. These are very simple, the `@Reques
 
 ## Handling errors
 
-If during your experiments you have tried to send a request that is incomplete, or you tried to access an URL that is
-not mapped, you may have received an error like this:
+If during your experiments you have tried to send a request that is incomplete, or you tried to access an URL that is not mapped, you may have received an error like this:
 
 ```json
 {
@@ -513,14 +513,12 @@ not mapped, you may have received an error like this:
 }
 ```
 
-While this is useful, you may prefer to have your own error handling, or ideally convert exceptions into output
-directly. Generally there are two cases we want to handle:
+While this is useful, you may prefer to have your own error handling, or ideally convert exceptions into output directly. Generally there are two cases we want to handle:
 
 1. Our application threw an exception, which should be output to the user in a reasonable fashion.
 2. Spring Boot threw an exception, e.g. the above Bad Request exception.
 
-For both cases we will need a bit of preparation work. First of all, let's create a class called ApiException like
-this:
+For both cases we will need a bit of preparation work. First of all, let's create a class called ApiException like this:
 
 ```java
 package at.pasztor.backend;
@@ -529,13 +527,18 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.http.HttpStatus;
 
 public class ApiException extends Exception {
-    //Don't output this to the JSON, this will be used only as a HTTP status.
+    //Don't output this to the JSON,
+    //this will be used only as a HTTP status.
     @JsonIgnore
     public final HttpStatus status;
     public final ErrorCode error;
     public final String errorMessage;
 
-    public ApiException(HttpStatus status, ErrorCode error, String errorMessage) {
+    public ApiException(
+        HttpStatus status,
+        ErrorCode error,
+        String errorMessage
+    ) {
         this.status = status;
         this.error = error;
         this.errorMessage = errorMessage;
@@ -548,10 +551,7 @@ public class ApiException extends Exception {
 }
 ```
 
-This will allow us to throw exceptions that are then properly converted to JSON in a manner that we control, with the 
-`error` field containing the error code and the `errorMessage` field containing the actual error message. Having
-errors like this is extremely useful to anyone consuming our API, including our own frontend. The enum will list
-all possible values for the error code, which makes it less of a guesswork to use the API.
+This will allow us to throw exceptions that are then properly converted to JSON in a manner that we control, with the `error` field containing the error code and the `errorMessage` field containing the actual error message. Having errors like this is extremely useful to anyone consuming our API, including our own frontend. The enum will list all possible values for the error code, which makes it less of a guesswork to use the API.
 
 Now we need to build an error handler. First of all, let's handle exceptions from our own application:
 
@@ -567,7 +567,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 @ControllerAdvice
 public class ErrorController {
     @ExceptionHandler(value = { ApiException.class })
-    public ResponseEntity<ApiException> onException(ApiException apiException) {
+    public ResponseEntity<ApiException> onException(
+        ApiException apiException
+    ) {
         return new ResponseEntity<>(
             apiException,
             apiException.status
@@ -576,12 +578,9 @@ public class ErrorController {
 }
 ```
 
-The `@ControllerAdvice` annotation will make this class a handler for all exceptions, while the `@ExceptionHandler` will
-declare the method that handles exceptions of the type `ApiException`. Other exceptions will be handled by the built-in
-exception handler.
+The `@ControllerAdvice` annotation will make this class a handler for all exceptions, while the `@ExceptionHandler` will declare the method that handles exceptions of the type `ApiException`. Other exceptions will be handled by the built-in exception handler.
 
-The `ResponseEntity` we return will invoke Spring Boots automatic object conversion. In other words, any `ApiException`
-will be run through Jackson to be converted to JSON.
+The `ResponseEntity` we return will invoke Spring Boots automatic object conversion. In other words, any `ApiException` will be run through Jackson to be converted to JSON.
 
 Now, let's create a test controller to throw an exception:
 
@@ -605,26 +604,23 @@ public class ExceptionTestController {
 }
 ```
 
-If you call the URL [http://localhost:8080/exception](http://localhost:8080/exception) you will, quite surprisingly,
-see the following:
+If you call the URL [http://localhost:8080/exception](http://localhost:8080/exception) you will, quite surprisingly, see the following:
 
 ```json
 {
-cause: null,
-stackTrace: [
-  //...
-],
-error: "TEST",
-errorMessage: "This is a test.",
-message: null,
-localizedMessage: null,
-suppressed: [ ]
+    cause: null,
+    stackTrace: [
+        //...
+    ],
+    error: "TEST",
+    errorMessage: "This is a test.",
+    message: null,
+    localizedMessage: null,
+    suppressed: [ ]
 }
 ```
 
-These extra fields are in the response because they are properties of exceptions in Java. These are not useful to us,
-and indeed the stack trace could leak information about our application to the user. To hide the extra parameters we can
-change the `ApiException` class to have Jackson ignore those parameters:
+These extra fields are in the response because they are properties of exceptions in Java. These are not useful to us, and indeed the stack trace could leak information about our application to the user. To hide the extra parameters we can change the `ApiException` class to have Jackson ignore those parameters:
 
 ```java
 package at.pasztor.backend;
@@ -649,7 +645,11 @@ public class ApiException extends Exception {
     public final ErrorCode error;
     public final String errorMessage;
 
-    public ApiException(HttpStatus status, ErrorCode error, String errorMessage) {
+    public ApiException(
+        HttpStatus status,
+        ErrorCode error,
+        String errorMessage
+    ) {
         this.status = status;
         this.error = error;
         this.errorMessage = errorMessage;
@@ -662,15 +662,12 @@ public class ApiException extends Exception {
 }
 ```
 
-The `@JsonIgnoreProperties` annotation will cause Jackson to ignore the specified fields and let us produce a clean
-output.
+The `@JsonIgnoreProperties` annotation will cause Jackson to ignore the specified fields and let us produce a clean output.
 
-Now that we have our exception handler in place, we can change the `ErrorController` to include handling of Spring Boot
-internal errors, such as when a route was not found:
+Now that we have our exception handler in place, we can change the `ErrorController` to include handling of Spring Boot internal errors, such as when a route was not found:
 
 ```java
 package at.pasztor.backend;
-
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -694,26 +691,37 @@ public class ErrorController implements org.springframework.boot.web.servlet.err
             value = "/error",
             produces = "application/json"
     )
-    public ResponseEntity<Void> errorJson(HttpServletRequest request) throws ApiException {
-        Object status = request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE);
+    public ResponseEntity<Void> errorJson(
+        HttpServletRequest request
+    ) throws ApiException {
+        Object status = request.getAttribute(
+            RequestDispatcher.ERROR_STATUS_CODE
+        );
 
         if (status != null) {
             int statusCode = Integer.parseInt(status.toString());
             switch (statusCode) {
                 case 404:
                     throw new ApiException(
-                            HttpStatus.NOT_FOUND,
-                            ApiException.ErrorCode.NOT_FOUND,
-                            "The requested API endpoint was not found."
+                        HttpStatus.NOT_FOUND,
+                        ApiException.ErrorCode.NOT_FOUND,
+                        "The requested API endpoint" +
+                        " was not found."
                     );
             }
-            return new ResponseEntity<>(HttpStatus.valueOf(statusCode));
+            return new ResponseEntity<>(
+                HttpStatus.valueOf(statusCode)
+            );
         }
-        return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity<>(
+            HttpStatus.INTERNAL_SERVER_ERROR
+        );
     }
 
     @ExceptionHandler(value = { ApiException.class })
-    public ResponseEntity<ApiException> onException(ApiException apiException) {
+    public ResponseEntity<ApiException> onException(
+        ApiException apiException
+    ) {
         return new ResponseEntity<>(
             apiException,
             apiException.status
@@ -722,14 +730,10 @@ public class ErrorController implements org.springframework.boot.web.servlet.err
 }
 ```
 
-As you can see in the code, we specify that `/error` is the alias for the error page, and below that we specify a 
-regular `@RequestMapping` for said URL. In this variant we are producing a JSON output, but as before, you could
-create a second method for producing HTML output.
+As you can see in the code, we specify that `/error` is the alias for the error page, and below that we specify a regular `@RequestMapping` for said URL. In this variant we are producing a JSON output, but as before, you could create a second method for producing HTML output.
 
-In the error page method we try to find out what the cause of the error is. If it is a 404 (not found) we simply
-throw an `ApiException` to that effect, which will be caught and processed by our exception handler.
+In the error page method we try to find out what the cause of the error is. If it is a 404 (not found) we simply throw an `ApiException` to that effect, which will be caught and processed by our exception handler.
 
 ## Next up
 
-In the [next installment](/blog/api-first-3) of this series we will take a look at connecting a database. We will start
-writing a blog application, store and retrieve blog posts.
+In the [next installment](/blog/api-first-3) of this series we will take a look at connecting a database. We will start writing a blog application, store and retrieve blog posts.

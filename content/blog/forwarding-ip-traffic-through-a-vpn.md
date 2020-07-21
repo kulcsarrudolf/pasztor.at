@@ -17,8 +17,10 @@ sharing:
   twitter: Want to serve traffic for an IP from a different server? Here's how!
 tags:
 - Linux
-- Networking
+- Networks
 title: Forwarding IP traffic through a VPN
+authors:
+- janos
 twitter_card: summary_large_image
 twitterimage: posts/forward-ip-traffic-vpn.png
 ---

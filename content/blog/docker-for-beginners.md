@@ -19,6 +19,8 @@ tags:
 - Docker
 - DevOps
 title: Getting started with Docker for the Inquisitive Mind
+authors:
+- janos
 twitter_card: summary_large_image
 twitterimage: posts/docker-for-beginners.png
 ---

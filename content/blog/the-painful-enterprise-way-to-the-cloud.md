@@ -1,5 +1,6 @@
 ---
-author: janos
+authors:
+- janos
 categories: blog
 date: "2020-07-15T00:00:00Z"
 publishDate: "2020-07-15T00:00:00Z"
@@ -18,6 +19,7 @@ sharing:
 tags:
 - Cloud
 - DevOps
+- Business
 title: The (painful) Enterprise Way to the Cloud
 twitter_card: summary_large_image
 twitterimage: posts/the-painful-enterprise-way-to-the-cloud.png

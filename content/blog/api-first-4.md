@@ -15,10 +15,11 @@ sharing:
   patreon: 'API-driven App: implementing OpenAPI / Swagger!'
   twitter: 'API-driven App: implementing OpenAPI / Swagger!'
 tags:
-- Development
-- Clean code
+- Software Development
 - Java
 title: 'Building an API-driven software: OpenAPI'
+authors:
+- janos
 twitter_card: summary_large_image
 twitterimage: posts/api-first-4.png
 ---
@@ -693,7 +694,7 @@ dependency:
 Tadam, this will expose the Swagger UI at `http://localhost:8080/swagger-ui.html`, rewarding us for all the hard work
 we have put into the documentation.
 
-<figure><img src="posts/swagger-ui.png" alt="The Swagger UI, displaying the automatically generated documentation." /></figure>
+![The Swagger UI, displaying the automatically generated documentation.](posts/swagger-ui.png)
 
 If you want to implement more advanced things like changing this URL or deploying
 CSP headers you will have to do some more legwork, but that's out of the scope of this post.

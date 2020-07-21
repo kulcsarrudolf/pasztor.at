@@ -1,4 +1,7 @@
 ---
+slug: immutable-infra-2
+authors:
+    - janos
 categories: blog
 date: "2019-05-17T00:00:00Z"
 publishDate: "2019-05-17T00:00:00Z"
@@ -26,25 +29,17 @@ twitter_card: summary_large_image
 twitterimage: posts/immutable-infra-2.png
 ---
 
-In the [previous part](/blog/immutable-infra-1) we discussed how to set up a server based on the principle of 
-immutability. Now that we have a server and a way to deploy the Docker package, let's discuss how we set up our Docker
-containers.
+In the [previous part](/blog/immutable-infra-1) we discussed how to set up a server based on the principle of immutability. Now that we have a server and a way to deploy the Docker package, let's discuss how we set up our Docker containers.
 
 ## To Registry or not to Registry
 
-The simplest way to deploy the Docker package would be to use a Docker registry. However, as I'm using an IaaS
-platform, I don't have a registry readily available. I could, of course, pay for an external registry, but to keep
-things simple and reproducible, I opted for a different solution.
+The simplest way to deploy the Docker package would be to use a Docker registry. However, as I'm using an IaaS platform, I don't have a registry readily available. I could, of course, pay for an external registry, but to keep things simple and reproducible, I opted for a different solution.
 
-In my case I created a [docker-compose](https://docs.docker.com/compose/) file for the whole setup. All the files
-required to build the Docker setup are included in a single directory and are deployed to the server as described
-in the previous article. Then `docker-compose build` and `docker-compose up` is ran.
+In my case I created a [docker-compose](https://docs.docker.com/compose/) file for the whole setup. All the files required to build the Docker setup are included in a single directory and are deployed to the server as described in the previous article. Then `docker-compose build` and `docker-compose up` is ran.
 
 ## Traefik
 
-Our first container is going to be [Traefik](https://traefik.io/). Traefik is an amazing reverse proxy that supports
-Docker for routing requests, and also supports [LetsEncrypt](https://letsencrypt.org/) as a way to generate
-certificates.
+Our first container is going to be [Traefik](https://traefik.io/). Traefik is an amazing reverse proxy that supports Docker for routing requests, and also supports [LetsEncrypt](https://letsencrypt.org/) as a way to generate certificates.
 
 The `docker-compose.yaml` part looks quite simple:
 
@@ -184,9 +179,14 @@ need to start a Prometheus container, as well as three metrics collectors called
 
 The exporters I use are the following:
 
-- [node-exporter](https://github.com/prometheus/node_exporter) to gather the server metrics.
-- [cadvisor](https://github.com/google/cadvisor) for gathering the container metrics.
-- [nginx-exporter](https://github.com/nginxinc/nginx-prometheus-exporter) to gather nginx metrics.
+[node-exporter](https://github.com/prometheus/node_exporter)
+: to gather the server metrics.
+
+[cadvisor](https://github.com/google/cadvisor)
+: for gathering the container metrics.
+
+[nginx-exporter](https://github.com/nginxinc/nginx-prometheus-exporter)
+: to gather nginx metrics.
 
 In addition to that I also use the built-in exporter in Traefik to gather Traefik metrics.
 
@@ -213,9 +213,9 @@ scrape_configs:
       - targets: ['traefik:8080']
 ```
 
-*Tip:* The node exporter needs to run in network mode `host`, so it won't be able to participate in the docker-compose
-network. However, I assign IPs manually, so I can use the host servers IP address in the container network to access
-its data.
+{{% tip %}}
+*Tip:* The node exporter needs to run in network mode `host`, so it won't be able to participate in the docker-compose network. However, I assign IPs manually, so I can use the host servers IP address in the container network to access its data.
+{{% /tip %}}
 
 ## Grafana
 

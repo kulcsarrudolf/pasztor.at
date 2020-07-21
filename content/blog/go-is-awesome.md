@@ -14,10 +14,11 @@ sharing:
   patreon: 'Go is an awesome programming language: here''s why'
   twitter: 'Go is an awesome programming language: here''s why'
 tags:
-- Development
-- Clean code
+- Software Development
 - Golang
 title: Go is an awesome language
+authors:
+- janos
 twitter_card: summary_large_image
 twitterimage: posts/go-is-awesome.png
 ---
