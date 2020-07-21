@@ -8,7 +8,7 @@
      xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
      xmlns:media="http://search.yahoo.com/mrss/">
     <channel>
-        <title>{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}</title>
+        <title>{{ .Site.Title }}</title>
         <atom:link href="{{ .Site.BaseURL }}/podcast.xml" rel="self" type="application/rss+xml" />
         <link>{{ .Site.BaseURL }}</link>
         <description>Random topics from the mind of a software engineer with 10+ years of experience.</description>
