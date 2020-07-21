@@ -1,0 +1,7 @@
+<div class="tags">
+    {{ range $taxonomyName, $taxonomy := index .Site.Taxonomies "tags" }}
+        {{ with $.Site.GetPage (printf "/tags/%s" $taxonomyName) }}
+            <a class="tag" href="{{ .RelPermalink }}">{{ .Title  }}</a>
+        {{ end }}
+    {{ end }}
+</div>

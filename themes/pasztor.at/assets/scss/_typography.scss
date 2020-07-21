@@ -49,7 +49,7 @@ html, body {
 
   .meta {
     font-variant: small-caps;
-    .fullname {
+    .byline {
       display:none;
     }
   }
@@ -61,7 +61,7 @@ html, body {
       top:0.1rem;
       //endregion
       margin-top:1.5rem;
-      width: $text-margin-left - 0.1rem;
+      width: $text-margin-left - 0.2rem;
       float:left;
       font-size:0.8rem;
       margin-left:0;
@@ -136,12 +136,13 @@ html, body {
         padding-right:0.75rem;
         background: $color-decor;
         font-size:0.8rem;
-        color:#ffffff;
+        color:$color-decor-contrast;
         text-decoration: none;
         margin-right:0.75rem;
         opacity:1;
         transition: opacity $transition-length ease-in-out;
         &:hover {
+          color:$color-decor-contrast;
           opacity: 0.8;
         }
       }
@@ -245,46 +246,6 @@ html, body {
     @include heading-margins($size-h6);
   }
 
-  @media print {
-    h1 {
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 9rem;
-      width: 80%;
-      font-variant: small-caps;
-      text-align: center;
-    }
-    &--simple h1 {
-      margin-top:0;
-    }
-
-    h1 + .meta {
-      page-break-after: always;
-      text-align:center;
-      font-size:1.2rem;
-      margin-top:1.5rem;
-      a {
-        text-decoration:none;
-      }
-
-      .displayname {
-        display:none;
-      }
-      .fullname {
-        display: inline;
-        color:#000000;
-        text-decoration: none;
-      }
-      time {
-        display: none;
-      }
-    }
-
-    h1 + .meta + p:first-of-type {
-      margin-top:0;
-    }
-  }
-
   strong {
     font-weight: $font-weight-bold;
   }
@@ -340,6 +301,7 @@ html, body {
     position: relative;
     text-align: center;
     img {
+      border-radius: 5px;
       max-width:100%;
     }
     figcaption {
@@ -352,11 +314,10 @@ html, body {
     font-size: inherit;
     line-height:1.5rem;
     padding: 1.5rem;
-    overflow-y: scroll;
     white-space: pre;
     @media screen and (min-width: 768px) {
       white-space: pre-wrap;
-      overflow-y: hidden;
+      word-break: break-all;
     }
   }
 
@@ -391,14 +352,68 @@ html, body {
       height:1.5rem;
     }
     &--warning>:first-child::before {
-      content:"⚠";
+      content:"⚠️";
       color: $color-admonition-warning;
-      font-weight: bold;
     }
     &--info>:first-child::before {
       content:"ⓘ";
       color: $color-admonition-info;
       font-weight: bold;
+    }
+  }
+
+  @media print {
+    h1 {
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 9rem;
+      width: 80%;
+      font-variant: small-caps;
+      text-align: center;
+    }
+    &--simple h1 {
+      margin-top:0;
+    }
+
+    .meta {
+      page-break-after: always;
+      text-align:center;
+      font-size:1.2rem;
+      margin-top:1.5rem;
+      a {
+        text-decoration:none;
+      }
+
+      .byline {
+        display: block;
+      }
+      .displayname {
+        display:none;
+      }
+      .by {
+        display:none;
+      }
+      .fullname {
+        display: inline;
+        color:#000000;
+        text-decoration: none;
+      }
+      time {
+        display: none;
+      }
+    }
+
+    h1 + .meta + p:first-of-type {
+      margin-top:0;
+    }
+
+    pre {
+      padding:0;
+      font-size: inherit;
+      line-height:1.5rem;
+      overflow: hidden;
+      white-space: pre-wrap;
+      word-break: break-all;
     }
   }
 }

@@ -357,7 +357,9 @@ However, unlike Exoscale the AWS networking model is a bit more complicated. In 
 
 It takes a bit of fiddling, but most of the things work just as well on any other provider.
 
+{{% tip %}}
 **Note:** Elastic IPs on AWS do not need to be added to the machine like on Exoscale, they are forwarded automatically.
+{{% /tip %}}
 
 ## Next up: Docker
 

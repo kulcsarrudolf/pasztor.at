@@ -1,18 +1,37 @@
 baseURL: https://pasztor.at
 disablePathToLower: true
 languageCode: en-us
-title: Sanja & Janos
+title: Janos Pasztor
 theme: pasztor.at
-copyright: Copyright © Janos Pasztor & Sanja Bonic. All rights reserved.
+copyright: Copyright © Janos Pasztor. All rights reserved.
 permalinks:
   blog: /blog/:slug/
+  author: /about/:slug/
+taxonomies:
+  tag: tags
+  author: authors
 markup:
   goldmark:
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer: true
     renderer:
       unsafe: true
-taxonomies:
-  blog: blog
-  about: about
+  highlight:
+    codeFences: true
+    guessSyntax: true
+    hl_Lines: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: false
+    style: monokai
+    tabWidth: 4
 menu:
   main:
     - identifier: home

@@ -3,5 +3,12 @@
 {{ end }}
 
 {{ define "main" }}
+    {{ if or .Title .Content }}
+        <div class="text">
+            <h1>{{ .Title }}</h1>
+            {{ .Content }}
+        </div>
+    {{ end }}
+    {{ partial "tags.html" . }}
     {{ partial "post-list.html" . }}
 {{ end }}

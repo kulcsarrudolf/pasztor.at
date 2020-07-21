@@ -1,0 +1,26 @@
+@import "common/variables";
+
+.tags {
+  padding-top:0.1em;
+  position:relative;
+  .tag {
+    transition: opacity $transition-length ease-in-out;
+    line-height:1.3em;
+    margin-bottom:0.1em;
+    height: 1.3em;
+    display:inline-block;
+    margin-right:0.75em;
+    color: $color-decor-contrast;
+    background: $color-decor;
+    text-decoration: none;
+    padding-left:0.75em;
+    padding-righT:0.75em;
+    &:hover {
+      color: $color-decor-contrast;
+      opacity:0.8;
+    }
+    &:visited {
+      color: $color-decor-contrast;
+    }
+  }
+}

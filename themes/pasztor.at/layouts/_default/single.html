@@ -1,5 +1,8 @@
 {{ define "css" }}
     {{ partial "scss" (dict "file" "scss/single.scss") }}
+    {{ if in .Content "<pre class=\"chroma\">" }}
+        {{ partial "scss" (dict "file" "scss/code.scss") }}
+    {{ end }}
 {{ end }}
 
 {{ define "main" }}
@@ -8,26 +11,36 @@
         {{ if $.PublishDate }}
         <div class="meta">
             <time datetime="{{ $.PublishDate }}">{{ $.PublishDate.Format "Jan 2, 2006" }}</time>
-            {{ if (isset .Params "author")}}
-                {{- with $.Site.GetPage "taxonomyTerm" (printf "about/%s" (urlize .Params.author )) }}
-                    by <a href="{{ .RelPermalink }}">
-                        <span class="displayname">{{ .Title }}</span>
-                        <span class="fullname">{{ .Params.fullname }}</span>
-                    </a>
-                {{ end }}
+            {{ if (isset .Params "authors")}}
+                <span class="byline">
+                    <span class="by">by</span>
+                    <span class="authors">
+                            {{ $authorCount := len .Params.authors}}
+                            {{ range $key, $author := .Params.authors }}
+                                {{- with $.Site.GetPage "taxonomyTerm" (printf "about/%s" (urlize $author )) }}
+                                    <a href="{{ .RelPermalink }}">
+                                        <span class="displayname">{{ .Title }}</span>
+                                        <span class="fullname">{{ .Params.fullname }}</span>
+                                    </a>{{ if lt $key (sub $authorCount 1) }},{{ end }}
+                                {{ end }}
+                            {{ end }}
+                    </span>
+                </span>
             {{ end }}
         </div>
         {{ end }}
         {{ .Content }}
-        {{ if (isset .Params "author")}}
+        {{ if (isset .Params "authors")}}
             <div class="bio">
-                {{- with $.Site.GetPage "taxonomyTerm" (printf "about/%s" (urlize .Params.author )) }}
-                    <h2>About {{ .Title }}</h2>
-                    <img class="avatar" src="{{ ((resources.Get .Params.avatar).Resize "512x 90 jpg").RelPermalink }}" alt="" />
-                    {{ .Content }}
-                    <nav class="readmore">
-                        <a href="{{ .RelPermalink }}">Read more by {{ .Title }}</a>
-                    </nav>
+                {{ range $key, $author := .Params.authors }}
+                    {{- with $.Site.GetPage "taxonomyTerm" (printf "about/%s" (urlize $author )) }}
+                        <h2>About {{ .Title }}</h2>
+                        <img class="avatar" src="{{ ((resources.Get .Params.avatar).Resize "512x 90 jpg").RelPermalink }}" alt="" />
+                        {{ .Content }}
+                        <nav class="readmore">
+                            <a href="{{ .RelPermalink }}">Read more by {{ .Title }}</a>
+                        </nav>
+                    {{ end }}
                 {{ end }}
             </div>
         {{ end }}
