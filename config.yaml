@@ -102,3 +102,23 @@ sitemap:
   changefreq: weekly
   filename: sitemap.xml
   priority: 0.5
+outputFormats:
+  Podcast:
+    baseName: podcast
+    rel: alternate
+    isPlainText: false
+    isHTML: false
+    noUgly: true
+    permalinkable: false
+    mediaType:
+      delimiter: .
+      mainType: application
+      string: application/rss+xml
+      subType: rss
+      suffixes:
+        - xml
+      type: application/rss+xml
+outputs:
+  home:
+    - HTML
+    - Podcast

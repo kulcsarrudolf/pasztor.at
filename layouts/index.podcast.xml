@@ -1,0 +1,57 @@
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+     xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+     xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+     xmlns:media="http://search.yahoo.com/mrss/">
+    <channel>
+        <title>{{ with .Title }}{{.}} on {{ end }}{{ .Site.Title }}</title>
+        <atom:link href="{{ .Site.BaseURL }}/podcast.xml" rel="self" type="application/rss+xml" />
+        <link>{{ .Site.BaseURL }}</link>
+        <description>Random topics from the mind of a software engineer with 10+ years of experience.</description>
+        <lastBuildDate>{{ .Date }}</lastBuildDate>
+        <sy:updatePeriod>weekly</sy:updatePeriod>
+        <sy:updateFrequency>1</sy:updateFrequency>
+        <language>{{ .Site.Language }}</language>
+        <copyright>{{ with .Site.Copyright }}{{.}}{{ end }}</copyright>
+        <itunes:new-feed-url>{{ .Site.BaseURL }}/podcast.xml</itunes:new-feed-url>
+        <itunes:subtitle>Thoughts of a Software Engineer</itunes:subtitle>
+        <itunes:summary>Random topics from the mind of a software engineer with 10+ years of experience.</itunes:summary>
+        <itunes:category text="Technology" />
+        <itunes:author>Janos Pasztor</itunes:author>
+        <itunes:owner>
+            <itunes:name>Janos Pasztor</itunes:name>
+            <itunes:email>janos@pasztor.at</itunes:email>
+        </itunes:owner>
+        <itunes:block>no</itunes:block>
+        <itunes:explicit>no</itunes:explicit>
+        <itunes:image href="{{ (resources.Get "podcast.png").Permalink }}" />
+        {{ range first 15 (where .Site.Pages "Params.mp3" "!=" nil) }}
+        <item>
+            <link>{{ .Permalink }}</link>
+            <title>{{ .Title }}</title>
+            <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+            <description>{{ .Params.summary }}</description>
+
+            {{ with resources.Get .Params.mp3 }}<enclosure url="{{ .Permalink | absURL }}" length="{{ len .Content }}" type="{{ .MediaType }}" />{{ end }}
+            <guid>{{ .Params.mp3 }}</guid>
+
+            <itunes:author>
+                {{- $authorCount := len .Params.authors -}}
+                {{- range $key, $author := .Params.authors -}}
+                {{- with $.Site.GetPage "taxonomyTerm" (printf "about/%s" (urlize $author )) -}}
+                    {{- .Params.fullname }}{{ if lt $key (sub $authorCount 1) }}, {{ end -}}
+                {{- end -}}
+                {{- end -}}
+            </itunes:author>
+            <itunes:summary>{{ .Summary | html }}</itunes:summary>
+            <itunes:image href="{{ (resources.Get "podcast.png").Permalink }}" />
+            <itunes:duration>{{ .Params.duration }}</itunes:duration>
+            <itunes:keywords>{{ delimit .Params.tags ", " }}</itunes:keywords>
+        </item>
+        {{ end }}
+    </channel>
+</rss>
