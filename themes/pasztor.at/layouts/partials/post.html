@@ -1,0 +1,12 @@
+
+<a href="{{ .RelPermalink }}" class="card{{ range $tag := .Params.tags}} filter-{{$tag|urlize}}{{ end }}">
+    <div class="card-title">
+        <h2>{{ .Title }}</h2>
+    </div>
+    {{ if (isset .Params "preview") }}
+        <img src="{{ ((resources.Get .Params.preview).Resize "1364x 90 jpg").RelPermalink }}" alt="" />
+    {{ end }}
+    <div class="card-content">
+        {{ .Summary }}
+    </div>
+</a>

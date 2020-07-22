@@ -8,6 +8,12 @@
   margin-left: -0.75rem;
   margin-right: -0.75rem;
 
+  &.post-list--feature .card {
+    &:nth-child(1), &:nth-child(2) {
+      width:45%;
+    }
+  }
+
   .card {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
     0 2px 2px rgba(0, 0, 0, 0.12),
@@ -15,11 +21,7 @@
     0 8px 8px rgba(0, 0, 0, 0.12);
 
     display: block;
-
     width: 30%;
-    &:nth-child(1), &:nth-child(2) {
-      width:45%;
-    }
     @media screen and (max-width: 759px) {
       width: 100%;
       .card-title {

@@ -1,11 +1,24 @@
 @import "common/variables";
 
+.tag-filter-input {
+  display:none;
+}
+.tag-filter-input ~ .post-list .card {
+}
+.tag-filter-input:checked ~ .post-list .card {
+  display:none;
+}
+.tag-filter-input[value=""]:checked ~ .post-list .card {
+  display:block;
+}
+
 .tags {
   margin-top:0.75rem;
   margin-bottom:0.75rem;
   padding-top:0.1rem;
   position:relative;
   .tag {
+    cursor:pointer;
     transition: background $transition-length ease-in-out;
     line-height:1.3em;
     margin-bottom:0.1em;

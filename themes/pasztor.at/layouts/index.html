@@ -4,11 +4,12 @@
 
 {{ define "main" }}
     {{ .Content }}
-    <ul>
-    {{ range .Pages.ByLastmod }}
-        <li>
-            <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
-        </li>
-    {{ end }}
-    </ul>
+    <div class="post-list post-list--feature">
+        {{ range (.Paginate ( where site.RegularPages "Section" "blog" | first 8 ) ).Pages }}
+            {{ partial "post.html" . }}
+        {{ end }}
+    </div>
+    <div class="readmore">
+        <p>Want more? These are just the latest posts! <a href="/blog/">Read more &raquo;</a></p>
+    </div>
 {{ end }}

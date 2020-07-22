@@ -6,7 +6,6 @@ theme: pasztor.at
 copyright: Copyright © Janos Pasztor. All rights reserved.
 permalinks:
   blog: /blog/:slug/
-  author: /about/:slug/
 taxonomies:
   tag: tags
   author: authors

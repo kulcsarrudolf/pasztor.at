@@ -1,7 +1,19 @@
+<style>
+    {{ range $taxonomyName, $taxonomy := index .Site.Taxonomies "tags" }}
+        .tag-filter-input[value="{{ $taxonomyName }}"]:checked ~ .post-list .card.filter-{{$taxonomyName}} {
+            display:block;
+        }
+    {{ end }}
+</style>
+<input class="tag-filter-input" type="radio" id="post-filter-all" name="post-filter" value="" checked />
+{{ range $taxonomyName, $taxonomy := index .Site.Taxonomies "tags" }}
+    <input class="tag-filter-input" type="radio" id="post-filter-{{$taxonomyName}}" name="post-filter" value="{{ $taxonomyName }}" />
+{{ end }}
 <div class="tags">
+    <label class="tag" for="post-filter-all">All</label>
     {{ range $taxonomyName, $taxonomy := index .Site.Taxonomies "tags" }}
         {{ with $.Site.GetPage (printf "/tags/%s" $taxonomyName) }}
-            <a class="tag" href="{{ .RelPermalink }}">{{ .Title  }}</a>
+            <label class="tag" for="post-filter-{{$taxonomyName}}">{{ .Title  }}</label>
         {{ end }}
     {{ end }}
 </div>
