@@ -90,7 +90,8 @@ html, body {
         border-bottom-left-radius:5px;
         border-bottom-right-radius: 5px;
         text-align:center;
-        background: $color-background-card-light-highlight;
+        color: $color-decor-contrast;
+        background: $color-decor;
       }
       .comma {
         display:none;
@@ -118,9 +119,6 @@ html, body {
     .meta {
       color: $color-meta-text-dark;
       background:$color-background-card-dark;
-      .month-year {
-        background: $color-background-card-dark-highlight;
-      }
     }
   }
 
