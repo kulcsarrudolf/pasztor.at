@@ -1,26 +1,18 @@
 ---
+slug: what-is-csrf
+authors:
+- janos
 categories: blog
 date: "2018-12-10T07:10:00Z"
 publishDate: "2018-12-10T07:10:00Z"
-summary: Cross-Site Request Forgery is a pretty well known security vulnerability,
-  yet many developers still fail to secure their applications. Let's discuss this!
-fbimage: posts/what-is-csrf.png
-googleimage: posts/what-is-csrf.png
+summary: Cross-Site Request Forgery is a pretty well known security vulnerability, yet many developers still fail to secure their applications. Let's discuss this!
+images:
+- posts/what-is-csrf.png
 preview: posts/what-is-csrf.jpg
-sharing:
-  discord: '@everyone Are you defending against CSRF attacks? If not, find out how
-    here:'
-  facebook: 'Are you defending against #CSRF attacks? If not, find out how! #security'
-  linkedin: Are you defending against CSRF attacks? If not, find out how!
-  patreon: Are you defending against CSRF attacks? If not, find out how!
-  twitter: 'Are you defending against #CSRF attacks? If not, find out how! #security'
 tags:
-- Development
-- DevOps
+- Software Development
 - Security
 title: 'Security: What is Cross-Site Request Forgery?'
-twitter_card: summary_large_image
-twitterimage: posts/what-is-csrf.png
 ---
 
 Let's say you are operating an affiliate system where people can earn a commission for referring customers.
@@ -128,8 +120,9 @@ Our proper form would look something like this:
 Now, when the form is submitted, the server side compares the submitted token with the token stored in the users
 session on the server side. If it matches, the transfer is let through. If not, the transfer is rejected.
 
-> **Note:** It is very important that the token be *unique* to the users login session so that an attacker cannot
-> get a hold of it.
+{{% tip %}}
+**Note:** It is very important that the token be *unique* to the users login session so that an attacker cannot get a hold of it.
+{{% /tip %}}
 
 Alternatively we could also store the CSRF token in a cookie with the users as the attacker will not be able to get
 a hold of that without some further vulnerability on your side.

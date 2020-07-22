@@ -1,4 +1,7 @@
 ---
+slug: oop-basics
+authors:
+- janos
 categories: blog
 date: "2016-11-04T00:00:00Z"
 publishDate: "2016-11-04T00:00:00Z"
@@ -7,9 +10,7 @@ summary: So you've been programming for a while, and you are still stumped with 
   take a departure from traditional explanations and look at a new way of explaining
   OOP.
 tags:
-- Development
-- OOP
-- Clean Code
+- Software Development
 title: Getting started in Object-Oriented Programming
 ---
 
@@ -290,9 +291,9 @@ languages, like Java or PHP, decided not to deal with this problem and invent in
 interfaces are nothing else than abstract classes with only abstract methods and no variables to circumvent having to
 solve multiple inheritance.
 
-> **Beware of faulty abstractions!** Many OOP tutorials bring the example of a square inheriting from the rectangle.
-> This is only true in the mathematical sense. In programming you want your child classes to behave the same as their
-> parent classes, which is being violated since the rectangle has two independent edges, where as the square doesn't.
+{{% warning %}}
+**Beware of faulty abstractions!** Many OOP tutorials bring the example of a square inheriting from the rectangle. This is only true in the mathematical sense. In programming you want your child classes to behave the same as their parent classes, which is being violated since the rectangle has two independent edges, where as the square doesn't.
+{{% /warning %}}
 
 ## Avoiding global state
 
@@ -326,7 +327,9 @@ In general, you should avoid global state as much as possible. While static is n
 state, it is one of the most pertinent. It is best to avoid using static if at all possible, and going with dependency
 injection as described above.
 
-> **Tip:** `static` does have some legitimate uses, but in general the alternative should always be considered.
+{{% tip %}}
+**Tip:** `static` does have some legitimate uses, but in general the alternative should always be considered.
+{{% /tip %}}
 
 ## Class responsibilities
 

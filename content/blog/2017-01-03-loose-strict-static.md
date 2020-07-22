@@ -1,4 +1,7 @@
 ---
+slug: loose-strict-static
+authors:
+- janos
 categories: blog
 date: "2017-01-03T00:00:00Z"
 publishDate: "2017-01-03T00:00:00Z"
@@ -6,7 +9,7 @@ summary: There seems to be a great deal of confusion in the programming world wh
   loose, weak, strict, static and duck typing actually mean. Let's go through it and
   clear a few things up!
 tags:
-- Theory
+- Software Development
 title: The loose, the strict and the static typing
 ---
 
@@ -149,8 +152,10 @@ Both have their strengths and weaknesses. Dynamic languages make it easier to wr
 don't have to litter your code with type declarations. Also, usually these languages are script languages, so there is
 no compiling involved in coding, which makes the whole process faster.
 
-> **Please note:** dynamic typing does NOT mean that the language is weakly typed! You can have a strongly and 
-> dynamically typed language!
+{{% tip %}}
+**Please note:** dynamic typing does NOT mean that the language is weakly typed! You can have a strongly and 
+dynamically typed language!
+{{% /tip %}}
 
 Statically typed languages, on the other hand, can catch many bugs at compile time. This is something you can only 
 achieve by using code analyzers in the case of dynamic languages (if it is possible at all).

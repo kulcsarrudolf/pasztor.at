@@ -1,0 +1,8 @@
+digraph records {
+  ui [label="User Interface"]
+  bl [label="Business Logic"]
+  storage [label="Database"]
+
+  ui -> bl
+  bl -> storage
+}

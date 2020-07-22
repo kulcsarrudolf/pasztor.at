@@ -1,20 +1,19 @@
 ---
+slug: functional-object-oriented-programming
+authors:
+- janos
 categories: blog
 date: "2017-10-19T00:00:00Z"
 publishDate: "2017-10-19T00:00:00Z"
 summary: Does the title strike you as strange? Do you think functional and object
   oriented programming are two fundamentally contradicting paradigms? I don't think
   so.
-fbimage: posts/functional-object-oriented-programming.png
-googleimage: posts/functional-object-oriented-programming.png
+images:
+- posts/functional-object-oriented-programming.png
 preview: posts/functional-object-oriented-programming.png
 tags:
-- Functional Programming
-- OOP
-- Development
+- Software Development
 title: Functional Object Oriented Programming
-twitter_card: summary_large_image
-twitterimage: posts/functional-object-oriented-programming.png
 ---
 
 Here's the thing: I think functional programming is a good thing, but is lacking a few things that I found to be very
@@ -24,9 +23,11 @@ along the best of both worlds. Join me on a trip through paradigm-land!
 Before we start into the general idea, let's take a look at the good and the bad from both worlds. Let's take a closer
 look at the bride and the groom.
 
-> **Bias warning**: this article is written from a standpoint of a web developer who left PHP for Java because of static
-> typing. Since I have only ever worked in web development, servers, etc. I cannot speak for, say, games development. If
-> you have any feedback regarding this topic, feel free to [contact me](/contact).
+{{% warning %}}
+**Bias warning**: this article is written from a standpoint of a web developer who left PHP for Java because of static
+typing. Since I have only ever worked in web development, servers, etc. I cannot speak for, say, games development. If
+you have any feedback regarding this topic, feel free to [contact me](/contact).
+{{% /warning %}}
 
 ## Object Oriented Programming
 
@@ -206,8 +207,9 @@ blasphemy. State is a necessary evil in programming and we have to live with it.
 *all* our code full of state. Instead, we should try and minimize state to the places that truly need it, such as
 caching and storage implementations, or wrapper classes for external libraries.
 
-> **Follow-up article:** If you wish to learn more about this topic, I recommend reading my follow up article
-> “[One controller, one action](/blog/one-controller-one-action)”.
+{{% tip %}}
+**Follow-up article:** If you wish to learn more about this topic, I recommend reading my follow up article “[One controller, one action](/blog/one-controller-one-action)”.
+{{% /tip %}}
 
 I have been using it for a while like this and I felt no adverse effects. What do you think? Would you code like this?
 [Let me know!](/contact)

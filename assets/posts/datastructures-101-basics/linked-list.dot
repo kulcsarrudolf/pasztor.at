@@ -1,0 +1,14 @@
+digraph records {
+  node [shape=record,fontname="Open Sans;sans-serif",fontsize=14];
+  edge [fontname="Open Sans;sans-serif",fontsize=14]
+  splines=ortho;
+
+  r1 [label="{<id> id|1}|{name|Anna}|{next|<r2> 2}"]
+  r2 [label="{<id> id|2}|{name|Joe}|{next|<r3> 3}"]
+  r3 [label="{<id> id|3}|{name|Betty}|{next|<r4> 4}"]
+  r4 [label="{<id> id|4}|{name|Xavier}|{next|<r5> null}"]
+
+  r1:r2 -> r2:id
+  r2:r3 -> r3:id
+  r3:r4 -> r4:id
+}

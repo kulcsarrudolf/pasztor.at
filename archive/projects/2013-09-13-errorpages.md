@@ -1,4 +1,7 @@
 ---
+slug: errorpages
+authors:
+- janos
 categories: projects
 date: "2013-09-13T00:00:00Z"
 publishDate: "2013-09-13T00:00:00Z"

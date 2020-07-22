@@ -1,4 +1,7 @@
 ---
+slug: filtering-spam-with-exim-and-spamassassin-properly
+authors:
+- janos
 categories: blog
 date: "2013-07-24T00:00:00Z"
 publishDate: "2013-07-24T00:00:00Z"
@@ -10,13 +13,10 @@ summary: SpamAssassin is a frequently used companion for Exim. However, most peo
   also an issue, because the `$h_X-Spam-*` variables will start misbehaving suddenly.
 tags:
 - DevOps
-- Email
 - Exim
-- SpamAssassin
 title: Filtering spam with Exim and Spamassassin (properly)
 ---
 
-{% raw %}
 For the purpose of this article I am going to assume you are fairly familiar with writing your own Exim configuration and you are also able to set up your SpamAssassin configuration. If you lack either of these abilities, please read up on both topics first.  
 
 ## Setting up SpamAssassin
@@ -193,5 +193,3 @@ It is due to how SMTP works. When delivering the same mail to several recipients
 ### I still have questions open
 
 Exim is a complicated topic and requires a lot of learning. You can't just go about copying someone else's code brainlessly because there is a high probability it simply won't work or even worse, cause a bug you didn't anticipate. You really need to understand what your configuration does. If you need more help with Exim, read my [Big Exim Tutorial](/2010/03/22/the-big-exim-tutorial/).
-
-{% endraw %}

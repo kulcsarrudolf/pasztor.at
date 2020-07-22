@@ -1,29 +1,18 @@
 ---
+slug: why-people-want-kubernetes
+authors:
+- janos
 categories: blog
 date: "2019-01-23T00:00:00Z"
 publishDate: "2019-01-23T00:00:00Z"
-summary: I've previously argued that running Kubernetes is hard. Why do people still
-  want it? Let's look past the hype train and take a gander through the valuable things
-  k8s provides.
-fbimage: posts/why-kubernetes.png
-googleimage: posts/why-kubernetes.png
+summary: I've previously argued that running Kubernetes is hard. Why do people still want it? Let's look past the hype train and take a gander through the valuable things k8s provides.
+images:
+- posts/why-kubernetes.png
 preview: posts/why-kubernetes.jpg
-sharing:
-  discord: '@everyone If Kubernetes is so hard, why do people still want it? Let''s
-    look past the hype train! (Thanks to @nivisi#1337 this comes ahead of schedule!)'
-  facebook: 'If #Kubernetes is so hard, why do people still want it? Let''s look past
-    the hype train! #DevOps'
-  linkedin: If Kubernetes is so hard, why do people still want it? Let's look past
-    the hype train!
-  patreon: If Kubernetes is so hard, why do people still want it? Let's look past
-    the hype train!
-  twitter: 'If #Kubernetes is so hard, why do people still want it? Let''s look past
-    the hype train! #DevOps'
 tags:
 - DevOps
+- Containers
 title: Why people want Kubernetes?
-twitter_card: summary_large_image
-twitterimage: posts/why-kubernetes.png
 ---
 
 In a [previous article I argued that Kubernetes is extremely hard to run](/blog/kubernetes-is-hard). Many people have

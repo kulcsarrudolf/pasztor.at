@@ -1,19 +1,19 @@
 ---
+slug: reproducability
+authors:
+- janos
 categories: blog
 date: "2018-04-21T00:00:00Z"
 publishDate: "2018-04-21T00:00:00Z"
 summary: Build environments, server setups should be reproducible, even 6 months down
   the line. How does this work?
-fbimage: posts/reproducability.png
-googleimage: posts/reproducability.png
+images:
+- posts/reproducability.png
 preview: posts/reproducability.jpg
 tags:
 - DevOps
-- Development
-- Clean Code
+- Software Development
 title: Reproducability
-twitter_card: summary_large_image
-twitterimage: posts/reproducability.png
 ---
 
 Let's say you are developing a software project. If you are in NodeJS, you specify your dependencies in your

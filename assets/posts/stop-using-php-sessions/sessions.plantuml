@@ -1,0 +1,24 @@
+actor Browser
+control Server
+database Database
+Browser -> Server: Log me in please, here are my creds
+Activate Server
+Server -> Database: Store new session asdfasdf
+Activate Database
+Server <-- Database
+Deactivate Database
+Server --> Browser: OK, here you go, next time you come\n please send me the cookie PHPSESSID=asdfasdf
+Deactivate Server
+...
+Browser -> Server: Give me this protected resource,\n PHPSESSID=asdfasdf
+Activate Server
+Server -> Database: Retrieve session asdfasdf
+Activate Database
+Server <-- Database
+Deactivate Database
+Server -> Database: Retrieve sensitive data
+Activate Database
+Server <-- Database
+Deactivate Database
+Browser <-- Server: Here you go
+Deactivate Server

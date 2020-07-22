@@ -1,18 +1,18 @@
 ---
+slug: injection-type-vulnerabilities
+authors:
+- janos
 categories: blog
 date: "2018-02-23T00:00:00Z"
 publishDate: "2018-02-23T00:00:00Z"
-summary: XSS, SQL injection, and other injection-class vulnerabilities can cause some
-  serious damage. Let's root them out!
-fbimage: posts/injection-vuln.png
-googleimage: posts/injection-vuln.png
+summary: XSS, SQL injection, and other injection-class vulnerabilities can cause some serious damage. Let's root them out!
+images:
+- posts/injection-vuln.png
 preview: posts/injection-vuln.jpg
 tags:
-- Development
+- Software Development
 - Security
 title: 'Injection vulnerabilities: Bobby Tables and Friends'
-twitter_card: summary_large_image
-twitterimage: posts/injection-vuln.png
 ---
 
 I recently [found a video where a guy got a free burger](https://www.youtube.com/watch?v=WWJTsKaJT_g) using a very
@@ -68,19 +68,27 @@ WHERE
   username="janoszen"; DROP TABLE users; -- " AND password="idontknow"
 ```
 
-> **Joke:** <br />
-> School principal: Is your son really called `Robert'); DROP TABLE students;--` ? <br />
-> Mom: Oh yeah, we call him little Bobby Tables.<br />
-> Via [XKCD](https://xkcd.com/327/)
+{{% tip %}}
+**Joke:** <br />
+School principal: Is your son really called `Robert'); DROP TABLE students;--` ? <br />
+Mom: Oh yeah, we call him little Bobby Tables.<br />
+Via [XKCD](https://xkcd.com/327/)
+{{% /tip %}}
 
 SQL injection is part of a class of vulnerabilities called **injection vulnerabilities**, and they can be used in a
 wide range of scenarios, such as:
 
-- **SQL injection:** When writing user data into SQL queries
-- **Cross-site scripting (XSS):** When writing user data into HTML
-- **JSON injection:** When writing user data into JSON structures
-- **Command execution in shells:** When executing Linux shell commands with user data
-- ...
+**SQL injection:**
+: When writing user data into SQL queries
+
+**Cross-site scripting (XSS):**
+: When writing user data into HTML
+
+**JSON injection:**
+: When writing user data into JSON structures
+
+**Command execution in shells:**
+: When executing Linux shell commands with user data
 
 You get the idea.
 
@@ -113,11 +121,14 @@ result = query(
 
 If you have a system where that's not possible, use [prepared statements](https://en.wikipedia.org/wiki/Prepared_statement).
 
-> **Danger!** Always process all parameters properly, even if you think it's safe. Later refactoring can open holes in
-> your system if you don't do it.
+{{% warning %}}
+**Danger!** Always process all parameters properly, even if you think it's safe. Later refactoring can open holes in your system if you don't do it.
+{{% /warning %}}
 
-> **Danger!** Don't write your own algorithm unless you are in the business of doing so. Chances are you will
-> be rushed and won't have enough time to do your initial research properly, or maintain it later on.
+{{% warning %}}
+**Danger!** Don't write your own algorithm unless you are in the business of doing so. Chances are you will
+be rushed and won't have enough time to do your initial research properly, or maintain it later on.
+{{% /warning %}}
 
 ## Character encodings can kill you
 
@@ -138,9 +149,7 @@ you only use the US alphabet, all characters can be represented in 8 bits or 1 b
 support international characters, that is no longer sufficient. Character sets like UTF-8 use one or more bytes to 
 represent a character.
 
-<figure>
-<img src="posts/multibyte-injection.svg" alt="" />
-</figure>
+![](posts/multibyte-injection.svg)
 
 Multibyte character sets pose an added threat when dealing with injections if the data is not treated according to the
 target character set. For example, let's say a multi-byte character is stored on two bytes (16 bits). If the second byte

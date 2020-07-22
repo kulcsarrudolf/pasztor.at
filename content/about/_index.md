@@ -1,3 +1,3 @@
 ---
-title: About us
+title: About me
 ---

@@ -1,0 +1,13 @@
+hide footbox
+actor User
+group With CDN
+   User -> CDN: 50ms
+   CDN -> Origin: 300ms
+   CDN <-- Origin
+   User <-- CDN
+end
+|||
+group Without CDN
+   User -> Origin: 300ms
+   User <-- Origin
+end

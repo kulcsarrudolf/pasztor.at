@@ -1,4 +1,7 @@
 ---
+slug: fixing-rdns_none-with-spamassassin
+authors:
+- janos
 categories: blog
 date: "2013-05-29T00:00:00Z"
 publishDate: "2013-05-29T00:00:00Z"
@@ -6,9 +9,7 @@ summary: When dealing with SpamAssassin and Exim, one may often encounter a myst
   RDNS_NONE
 tags:
 - DevOps
-- Email
 - Exim
-- SpamAssassin
 title: Fixing RDNS_NONE with Spamassassin
 ---
 

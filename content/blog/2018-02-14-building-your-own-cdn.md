@@ -1,57 +1,40 @@
 ---
+slug: building-your-own-cdn
+authors: 
+- janos
 categories: blog
 date: "2018-02-14T00:00:00Z"
 publishDate: "2018-02-14T00:00:00Z"
-summary: Fresh from the hold-my-beer department, why don't we build our own little
-  CDN? Oh, and it actually makes sense.
-fbimage: posts/building-your-own-cdn.png
-googleimage: posts/building-your-own-cdn.png
+summary: Fresh from the hold-my-beer department, why don't we build our own little CDN? Oh, and it actually makes sense.
+images:
+- posts/building-your-own-cdn.png
 preview: posts/building-your-own-cdn.jpg
 tags:
-- Docker
+- Containers
 - DevOps
-- CDN
 title: Building your own CDN for Fun and Profit
-twitter_card: summary_large_image
-twitterimage: posts/building-your-own-cdn.png
 ---
 
-> **Update one year later:** the CDN is now disabled. If you are curious about the reasons, scroll to the end.
 
 As you can (hopefully) see from this site, I like my pages *fast*. Very, very fast. Now, before we jump into this, let
 me be very clear about it: using a CDN will only get you so far. If your site is slow because of shoddy frontend work,
 a CDN isn't going to help you much. You need to get your frontend work right first. However, once you've optimized
 everything you could, it's time to look at content delivery.
 
+{{% info %}}
+**Update one year later:** the CDN is now disabled. If you are curious about the reasons, scroll to the end.
+{{% /info %}}
+
 My main problem was that even though you could get the inital website load with a single HTTP request, my server being
 hosted in Frankfurt, the folks from Australia still had to wait up to 2-3 seconds to get it. Round trip times of over
 300 ms and a lot of providers inbetween made the page load just like any other Wordpress site.
 
-So what can we do about it? One solution, of course, would be the use of a traditional CDN. However, most commercial
-CDNs pull the data from your server on request and then cache it for a while.
+So what can we do about it? One solution, of course, would be the use of a traditional CDN. However, most commercial CDNs pull the data from your server on request and then cache it for a while.
 
-<figure>{% plantuml %}
-{% include skin.iuml %}
-hide footbox
-actor User
-group With CDN
-   User -> CDN: 50ms
-   CDN -> Origin: 300ms
-   CDN <-- Origin
-   User <-- CDN 
-end
-|||
-group Without CDN
-   User -> Origin: 300ms
-   User <-- Origin
-end
-{% endplantuml %}</figure>
+![A user requests a page from the CDN, which takes 50 ms. The CDN then requests it from the Origin, which takes 300 ms. Without a CDN the user requests directly from the Origin.](posts/building-your-own-cdn/cdn.svg)
 
 Using a traditional CDN the initial page load is slower than without it, since the CDN is a slight detour for the
-content. This is not a problem if you have a high traffic site since the content stays in the cache all the time. If, on
-the other hand, you are running a small blog like I do the content drops out of the cache pretty much all the time. So,
-in effect, **a traditional pull-CDN would make this site slower**. I could, of course, use a push-CDN where I can upload
-the content directly, but those seem to be quite pricey in comparison to what I'm about to build.
+content. This is not a problem if you have a high traffic site since the content stays in the cache all the time. If, on the other hand, you are running a small blog like I do the content drops out of the cache pretty much all the time. So, in effect, **a traditional pull-CDN would make this site slower**. I could, of course, use a push-CDN where I can upload the content directly, but those seem to be quite pricey in comparison to what I'm about to build.
 
 ## How do CDNs work?
 
@@ -63,24 +46,10 @@ Well, not so fast. How is the user going to be routed to the right server? Let's
 getting a site. First, the users browser uses the Domain Name System (DNS) to look up the IP address of the website.
 Once it has the IP address, it can connect the website and download the requested page.
 
-<figure>{% plantuml %}
-{% include skin.iuml %}
-hide footbox
-actor User
-group Lookup IP
-  User -> DNS: pasztor.at IN A ? 
-  User <-- DNS: pasztor.at IN A 18.196.197.7
-end
-|||
-group Get website
-  User -> 18.196.197.7: Gimme the website
-  User <-- 18.196.197.7
-end
-{% endplantuml %}</figure>
+![The user first looks up the IP of "pasztor.at" from the DNS service. Then the user requests the page from the IP looked up.](posts/building-your-own-cdn/dns.svg)
 
 If we think about it on a high level, the solution is quite simple: we need a smart DNS server that does a GeoIP
-lookup on the requesting IP address and returns the IP address closest to it. And indeed, that's (almost) how commercial
-CDNs do it. There is a bit more engineering involved, like measuring latencies, but this is basically how it's done. 
+lookup on the requesting IP address and returns the IP address closest to it. And indeed, that's (almost) how commercial CDNs do it. There is a bit more engineering involved, like measuring latencies, but this is basically how it's done. 
 
 ### Making the DNS servers fast
 
@@ -108,8 +77,10 @@ unstable, the HTTP connection could broken. That adds a lot of complexity for a 
 And finally, the lowest count of hops, which is the basis of BGP route calculations, does not guarantee the lowest round
 trip time. A hop across the ocean may be just one hop, but it's a damn long one.
 
-> **Further reading:** Linkedin Engineering has a
-> [wonderful blog post about this topic](https://engineering.linkedin.com/network-performance/tcp-over-ip-anycast-pipe-dream-or-reality).
+{{% tip %}}
+**Further reading:** Linkedin Engineering has a
+[wonderful blog post about this topic](https://engineering.linkedin.com/network-performance/tcp-over-ip-anycast-pipe-dream-or-reality).
+{{% /tip %}}
 
 ## Setting up DNS
 
@@ -122,9 +93,11 @@ also does latency-based routing.)
 Since we are cheap, Route53 it is. We add our domain and then start setting up the IPs for our machines. We need as many
 DNS records as we have servers around the globe (edge locations), and each record should look like this:
 
-.><img src="posts/latency-based-routing.png" alt="Route53 latency-based routing should be set up in Route53 by creating A records with the IP of the edge location, and then setting the routing policy to &quot;latency&quot;. The set ID should be something unique, and the location should be the one closest to our edge location." /></figure>
+![Route53 latency-based routing should be set up in Route53 by creating A records with the IP of the edge location, and then setting the routing policy to &quot;latency&quot;. The set ID should be something unique, and the location should be the one closest to our edge location.](posts/latency-based-routing.png)
 
-> **Tip**: it is useful to set up a health check for each of the edge locations so they are removed if they go down.
+{{% tip %}}
+**Tip**: it is useful to set up a health check for each of the edge locations so they are removed if they go down.
+{{% /tip %}}
 
 ## Distributing content
 

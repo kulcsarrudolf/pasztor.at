@@ -1,34 +1,18 @@
 ---
+slug: unit-testing
+authors:
+- janos
 categories: blog
 date: "2019-03-19T00:00:00Z"
 publishDate: "2019-03-19T00:00:00Z"
-summary: Having anxiety attacks before deployment? Do you keep breaking stuff that
-  already worked? Unit tests are here to help!
-fbimage: posts/unit-testing.png
-googleimage: posts/unit-testing.png
+summary: Having anxiety attacks before deployment? Do you keep breaking stuff that already worked? Unit tests are here to help!
+images:
+- posts/unit-testing.png
 preview: posts/unit-testing.jpg
-sharing:
-  discord: '@everyone Having anxiety attacks before deployment? Do you keep breaking
-    stuff that already worked? Learn how to unittest your code!'
-  facebook: 'Having anxiety attacks before #deployment? Do you keep breaking stuff
-    that already worked? Learn how to #unittest your #code! #cleancode'
-  linkedin: 'Having anxiety attacks before #deployment? Do you keep breaking stuff
-    that already worked? Learn how to #unittest your #code! #cleancode'
-  patreon: 'Having anxiety attacks before #deployment? Do you keep breaking stuff
-    that already worked? Learn how to #unittest your #code! #cleancode'
-  twitter: 'Having anxiety attacks before #deployment? Do you keep breaking stuff
-    that already worked? Learn how to #unittest your #code! #cleancode'
 tags:
-- Development
-- Testing
-- Clean Code
+- Software Development
 title: A beginners guide to unit testing
-twitter_card: summary_large_image
-twitterimage: posts/unit-testing.png
 ---
-
-> **Hungry for code?** Check out the code examples from this article
-> [in this repository](https://github.com/refactorzone/unit-testing-examples)!
 
 When you start to work on a software project, everything seems easy. Launch some scaffolding script, write a bit of 
 code, make a sexy UI and there you go, the first feature is ready in no time. Your boss is happy, you are happy, 
@@ -71,8 +55,6 @@ external service providers, but even internal dependencies be disconnected, othe
 could falsify the tests. A test that requires a running database server is not a unit test.
 
 ## Writing your first test 
-
-> **Hint:** If you want, [you can read the code in full here](https://github.com/refactorzone/unit-testing-examples/blob/master/fibonacci.py).
 
 But enough of the words, let's write our first test. Let's take the rather simple problem of the Fibonacci sequence.
 The code looks like this, here in Python:
@@ -130,8 +112,6 @@ hard. Remember, in the beginning I mentioned that unit tests test a single unit,
 So, how do we do that? Well *it depends*. It mainly depends on your programming paradigm. Let's look at OOP first.
 
 ### Object Oriented Programming
-
-> **Hint:** If you want, [you can read the code in full here](https://github.com/refactorzone/unit-testing-examples/blob/master/oop.py).
 
 Let's say we have a `DataProcessor` class that takes input from a queue and sends the output to a backend. Its task
 is to provision and deprovision services.
@@ -241,8 +221,6 @@ the object chain. The execute is responsible for executing the test, and the ass
 holds true with our code.
 
 ### Functional programming
-
-> **Hint:** If you want, [you can read the code in full here](https://github.com/refactorzone/unit-testing-examples/blob/master/fp.py).
 
 What about FP you ask? Well, the situation is almost the same. If you don't consider testing your processor function
 might look something like this:

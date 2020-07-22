@@ -1,0 +1,8 @@
+digraph students {
+    node [shape=record fontname="Open Sans;sans-serif"];
+    edge [color="#777777" fontname="Open Sans;sans-serif"];
+    rankdir="LR";
+    students [label="students|student_id INT|student_name VARCHAR(255)|<sclassid> class_id INT"];
+    classes [label="classes|<cclassid> class_id INT|class_name VARCHAR(255)"];
+    students:sclassid->classes:cclassid  [taillabel="n" headlabel="1"];
+}

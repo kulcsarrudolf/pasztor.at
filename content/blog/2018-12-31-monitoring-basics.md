@@ -1,29 +1,17 @@
 ---
+slug: monitoring-basics
+authors:
+- janos
 categories: blog
 date: "2018-12-31T00:00:00Z"
 publishDate: "2018-12-31T00:00:00Z"
-summary: Monitoring your application is critical. But how do you do it? What are the
-  important things you need to watch out for?
-fbimage: posts/monitoring-basics.png
-googleimage: posts/monitoring-basics.png
+summary: Monitoring your application is critical. But how do you do it? What are the important things you need to watch out for?
+images:
+- posts/monitoring-basics.png
 preview: posts/monitoring-basics.jpg
-sharing:
-  discord: '@everyone Are you monitoring your devops stack? Or did you just install
-    a monitoring system?'
-  facebook: 'Are you #monitoring your #devops stack? Or did you just install a monitoring
-    system?'
-  linkedin: 'Are you #monitoring your #devops stack? Or did you just install a monitoring
-    system?'
-  patreon: Are you monitoring your devops stack? Or did you just install a monitoring
-    system?
-  twitter: 'Are you #monitoring your #devops stack? Or did you just install a monitoring
-    system?'
 tags:
 - DevOps
-- Monitoring
 title: 'Monitoring: Basics'
-twitter_card: summary_large_image
-twitterimage: posts/monitoring-basics.png
 ---
 
 If you ask a sysadmin what the most important thing in running an infrastructure is, they are either going to say

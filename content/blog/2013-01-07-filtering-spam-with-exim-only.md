@@ -1,4 +1,7 @@
 ---
+slug: filtering-spam-with-exim-only
+authors:
+- janos
 categories: blog
 date: "2013-01-07T00:00:00Z"
 publishDate: "2013-01-07T00:00:00Z"
@@ -8,7 +11,6 @@ summary: Defense against spam has always been a hassle. Statistical filters only
   gotten me pretty far and my false positive rate is pretty low.
 tags:
 - DevOps
-- Email
 - Exim
 title: Filtering spam with Exim only
 ---

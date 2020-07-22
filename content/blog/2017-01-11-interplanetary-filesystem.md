@@ -1,4 +1,7 @@
 ---
+slug: interplanetary-filesystem
+authors:
+- janos
 categories: blog
 date: "2017-01-11T00:00:00Z"
 publishDate: "2017-01-11T00:00:00Z"
@@ -8,7 +11,6 @@ summary: Quite by accident, I've stumbled upon a rather interesting technology c
   the technology behind it got me quite excited.
 tags:
 - DevOps
-- IPFS
 title: Interplanetary Filesystem
 ---
 
@@ -17,8 +19,10 @@ the design goals became quite clear. They wanted to create a protocol that, for 
 HTTP. They wanted to create a system that 1. scales to interplanetary levels 2. preserves the *history* of the web.
 Let's see if it works.
 
-> **Note:** This article describes the findings based on a very early version of IPFS. By the time you read this
-> article, IPFS may have changed significantly.
+{{% tip %}}
+**Note:** This article describes the findings based on a very early version of IPFS. By the time you read this
+article, IPFS may have changed significantly.
+{{% /tip %}}
 
 ## A tiny bit of scaling theory
 
@@ -40,8 +44,10 @@ here, you can think of DHT as being a distributed key-value store.
 
 ## IPFS data structure
 
-> **Note:** this section describes a simplified description of the IPFS filesystem. The actual implementation is
-> somewhat more complicated than the one outlined in this article.
+{{% tip %}}
+**Note:** this section describes a simplified description of the IPFS filesystem. The actual implementation is
+somewhat more complicated than the one outlined in this article.
+{{% /tip %}}
 
 Quite unsurprisingly, IPFS uses DHT to distribute information about pieces of data. These pieces of data are stored as
 *objects*, consisting of a data block and a links block. The *data* block, as you imagine, contains the data you are

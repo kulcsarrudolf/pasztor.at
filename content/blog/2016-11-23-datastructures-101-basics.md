@@ -1,12 +1,14 @@
 ---
+slug: datastructures-101-basics
+authors:
+- janos
 categories: blog
 date: "2016-11-23T00:00:00Z"
 publishDate: "2016-11-23T00:00:00Z"
 summary: Why would you learn data structures? You won't need it unless you are a programmer,
   database engineer or university student... wait, you are? Never mind, keep on reading.
 tags:
-- Development
-- Theory
+- Software Development
 title: 'Datastructures 101: Basics'
 ---
 
@@ -16,16 +18,9 @@ Why do you need to learn data structures at all? After all, can't the computer t
 it turns out, the answer isn't that simple. Depending on what kind of data you want to store, the data structure 
 has to be adapted.
 
-Let's imagine a simple example: you want to store a bunch of records in memory or on disk. Since you want a simple 
-solution, you just store the data as it is. Something like this:
+Let's imagine a simple example: you want to store a bunch of records in memory or on disk. Since you want a simple solution, you just store the data as it is. Something like this:
 
-{% xdot %}
-digraph records {
-  node [shape=record];
-  
-  data [label="{1|2|3|4}|{Anna|Joe|Betty|Xavier}"]
-}
-{% endxdot %}
+![](posts/datastructures-101-basics/table.svg)
 
 As you can see, the data is ordered by numeric ID, so searching by name is going to require you to read the entire 
 dataset. For simplicity's sake let's just say, for four records it is going to take up to four operations to find a 
@@ -56,94 +51,30 @@ have to copy over all the data into a newly allocated region, which can be quite
 
 The simplest data structure to solve this problem is the **linked list**. It looks like this:
 
-{% xdot %}
-digraph records {
-  node [shape=record,fontname="Open Sans;sans-serif",fontsize=14];
-  edge [fontname="Open Sans;sans-serif",fontsize=14]
-  splines=ortho;
-  
-  r1 [label="{<id> id|1}|{name|Anna}|{next|<r2> 2}"]
-  r2 [label="{<id> id|2}|{name|Joe}|{next|<r3> 3}"]
-  r3 [label="{<id> id|3}|{name|Betty}|{next|<r4> 4}"]
-  r4 [label="{<id> id|4}|{name|Xavier}|{next|<r5> null}"]
-  
-  r1:r2 -> r2:id
-  r2:r3 -> r3:id
-  r3:r4 -> r4:id
-}
-{% endxdot %}
+![](posts/datastructures-101-basics/linked-list.svg)
 
 As you can see, we now have a separate memory space for every record and every record only contains the memory 
 address of the next record (a pointer). This allows us to attach new records at will, without needing to copy over 
 everything. We can even create a doubly linked list if we want to traverse the list in both directions.
 
-> **Recommended exercise:** to better understand linked lists, implement and test the insert, search and delete 
-operations for linked lists in the language of your choice. 
+{{% tip %}}
+**Recommended exercise:** to better understand linked lists, implement and test the insert, search and delete operations for linked lists in the language of your choice.
+{{% /tip %}}
 
 ## Hash tables
 
 Quite unsatisfyingly, the linked lists are still only `O(n)`. They do provide an easily extensible data structure, 
 but they do not yield any speed benefits. Let's create a more advanced data structure named *hash tables*.
 
-Hash tables take the value we want to index, apply some transformation to it and then use it to group the records. A 
-very simple hash table would be to take the first letter of every name and group the records by that. Just like this:
+Hash tables take the value we want to index, apply some transformation to it and then use it to group the records. A very simple hash table would be to take the first letter of every name and group the records by that. Just like this:
 
-{% xdot %}
-digraph records {
-  node [shape=record,fontname="Open Sans;sans-serif",fontsize=14];
-  edge [fontname="Open Sans;sans-serif",fontsize=14]
-  splines=ortho;
-  
-  hash [label="<a> A |<b> B |<c> C"]
-  
-  adam [label="Adam"]
-  anna [label="Anna"]
-  
-  hash:a -> adam
-  adam -> anna
-  
-  bart [label="Bart"]
-  beth [label="Beth"]
-  
-  hash:b -> bart
-  bart -> beth
-  
-  christina [label="Christina"]
-  christopher [label="Christopher"]
-  
-  hash:c -> christina
-  christina -> christopher
-}
-{% endxdot %}
+![](posts/datastructures-101-basics/hash-table.svg)
 
-The performance of a hash table depends on how *evenly* the hash table is distributed. In other words, all your 
-*hash buckets* (or partitions) would need to contain roughly the same number of items. This hashing algorithm 
-(taking the first letter) obviously does a very poor job because names are usually very unevenly distributed.
+The performance of a hash table depends on how *evenly* the hash table is distributed. In other words, all your *hash buckets* (or partitions) would need to contain roughly the same number of items. This hashing algorithm (taking the first letter) obviously does a very poor job because names are usually very unevenly distributed.
 
-Let's look at a slightly better example. Let's create a hash table for numbers and as a hashing algorithm let's use 
-modulo 3. In other words, our hashing algorithm will divide the number by three and take the remainder as a hash value. 
+Let's look at a slightly better example. Let's create a hash table for numbers and as a hashing algorithm let's use modulo 3. In other words, our hashing algorithm will divide the number by three and take the remainder as a hash value. 
 
-{% xdot %}
-digraph records {
-  node [shape=record,fontname="Open Sans;sans-serif",fontsize=14];
-  edge [fontname="Open Sans;sans-serif",fontsize=14]
-  splines=ortho;
-  
-  hash [label="<0> 0|<1> 1 |<2> 2"]
-  
-  hash:0 -> 0
-  0 -> 3
-  3 -> 6
-  
-  hash:1 -> 1
-  1 -> 4
-  4 -> 7
-  
-  hash:2 -> 2
-  2 -> 5
-  5 -> 8
-}
-{% endxdot %}
+![](posts/datastructures-101-basics/hash-table2.svg)
 
 If we wanted to locate the number 8, we would calculate 8 divided by 3, which is 2 and the remainder is 2. So we look
 up the items in bucket 2 and go down in the list until we find the number 8, or we find a number that's larger, 

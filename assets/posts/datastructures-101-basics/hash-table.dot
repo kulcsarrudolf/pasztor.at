@@ -1,0 +1,25 @@
+digraph records {
+  node [shape=record,fontname="Open Sans;sans-serif",fontsize=14];
+  edge [fontname="Open Sans;sans-serif",fontsize=14]
+  splines=ortho;
+
+  hash [label="<a> A |<b> B |<c> C"]
+
+  adam [label="Adam"]
+  anna [label="Anna"]
+
+  hash:a -> adam
+  adam -> anna
+
+  bart [label="Bart"]
+  beth [label="Beth"]
+
+  hash:b -> bart
+  bart -> beth
+
+  christina [label="Christina"]
+  christopher [label="Christopher"]
+
+  hash:c -> christina
+  christina -> christopher
+}

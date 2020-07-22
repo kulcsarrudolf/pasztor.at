@@ -1,15 +1,15 @@
 ---
+slug: clean-code-dependencies
+authors:
+- janos
 categories: blog
 date: "2016-12-15T00:00:00Z"
 publishDate: "2016-12-15T00:00:00Z"
 summary: Managing dependencies is hard, especially if we are using third party libraries
   and projects. Let's talk about splitting our code into layers!
 tags:
-- Development
-- Clean Code
-- S.O.L.I.D.
+- Software Development
 title: 'Clean Code: Dependencies'
-twitter_card: summary_large_image
 ---
 
 Awesome! So [after the last article](/blog/clean-code-responsibilities), we have our responsibilities neatly split up, every 
@@ -34,30 +34,7 @@ would you?
 
 So you have a structure like this:
 
-<figure>
-{% plantuml %}
-{% include skin.iuml %}
-class UserInterface {
-}
-class StudentBusinessLogic {
-}
-class TeacherBusinessLogic {
-}
-class MySQLConnector {
-}
-class ProfileImageStorage {
-}
-class OracleConnector {
-}
-
-UserInterface .down.|> StudentBusinessLogic: calls
-UserInterface .down.|> TeacherBusinessLogic: calls
-StudentBusinessLogic .down.|> MySQLConnector: calls
-StudentBusinessLogic .down.|> ProfileImageStorage: calls
-TeacherBusinessLogic .down.|> ProfileImageStorage: calls
-TeacherBusinessLogic .down.|> OracleConnector: calls
-{% endplantuml %}
-</figure>
+![UserInterface depends on StudentBusinessLogic and TeacherBusinessLogic, these depend on various other classes.](posts/clean-code-dependencies/direct-dependencies.svg)
 
 What happens if with a software upgrade the `Filesystem profile image storage` breaks? Not upgrading is not an option 
 because you won't get security updates and bugfixes. You *could* switch to a different module that provides a similar 
@@ -116,50 +93,9 @@ class StudentBusinessLogicModule {
 }
 ```
 
-In plain English, we require anyone who wants to use the `StudentBusinessLogicModule` class; you will need to pass 
-some implementation of `ProfileImageStorageInterface`, but it doesn't specify which. Our dependency graph now looks 
-like this:
+In plain English, we require anyone who wants to use the `StudentBusinessLogicModule` class; you will need to pass some implementation of `ProfileImageStorageInterface`, but it doesn't specify which. Our dependency graph now looks like this:
 
-<figure>
-{% plantuml %}
-{% include skin.iuml %}
-class UserInterface {
-}
-interface StudentBusinessLogicInterface {
-}
-interface TeacherBusinessLogicInterface {
-}
-class StudentBusinessLogicModule {
-}
-class TeacherBusinessLogicModule {
-}
-interface MySQLConnectorInterface {
-}
-interface ProfileImageStorageInterface {
-}
-interface OracleConnectorInterface {
-}
-class MySQLConnectorModule {
-}
-class ProfileImageStorageModule {
-}
-class OracleConnectorModule {
-}
-
-StudentBusinessLogicInterface <|.up. UserInterface: depends
-TeacherBusinessLogicInterface <|.up. UserInterface: depends
-StudentBusinessLogicInterface <|-down- StudentBusinessLogicModule: implements
-TeacherBusinessLogicInterface <|-down- TeacherBusinessLogicModule: implements
-MySQLConnectorInterface <|.up. StudentBusinessLogicModule: depends
-ProfileImageStorageInterface <|.up. StudentBusinessLogicModule: depends
-OracleConnectorInterface <|.up. TeacherBusinessLogicModule: depends
-ProfileImageStorageInterface <|.up. TeacherBusinessLogicModule: depends
-MySQLConnectorInterface <|-down- MySQLConnectorModule: implements
-ProfileImageStorageInterface <|-down- ProfileImageStorageModule: implements
-OracleConnectorInterface <|-down- OracleConnectorModule: implements
-{% endplantuml %}
-</figure>
-
+![UserInterface depends on StudentBusinessLogicInterface and TeacherBusinessLogicInterface. StudentBusinessLogicModule and TeacherbusinessLogicModule implement these interfaces, and so on.](posts/clean-code-dependencies/indirect-dependencies.svg)
 ## Wiring
 
 OK, are we done yet? Can we start coding? ... Well, not so fast. Whether you are programming in an OOP language, or you 
@@ -251,14 +187,18 @@ UI ui = injector.getInstance(UI.class);
 That's it! The injector will create all the dependencies for us! Wow, that was easy, wasn't it? Why the hell didn't 
 we do this from the start, right?
 
-> **Be careful!** The injector should always be separated from your core application logic! It should never be 
-> injected into your business logic itself because that turns it into a
-> [service locator](https://en.wikipedia.org/wiki/Service_locator_pattern), which hides dependencies and is therefore
-> considered an antipattern.
+{{% warning %}}
+**Be careful!** The injector should always be separated from your core application logic! It should never be 
+injected into your business logic itself because that turns it into a
+[service locator](https://en.wikipedia.org/wiki/Service_locator_pattern), which hides dependencies and is therefore
+considered an antipattern.
+{{% /warning %}}
 
-> **Pro tip!** Automatic dependency injection usually involves reflection which is a rather slow process! Some DIC
-> implementations work around this by caching or automatic code generation. If your application startup is slow, this 
-> might be the reason. Check your DIC documentation for tuning options.
+{{% tip %}}
+**Pro tip!** Automatic dependency injection usually involves reflection which is a rather slow process! Some DIC
+implementations work around this by caching or automatic code generation. If your application startup is slow, this 
+might be the reason. Check your DIC documentation for tuning options.
+{{% /tip %}}
 
 ## Integrating third party modules
 

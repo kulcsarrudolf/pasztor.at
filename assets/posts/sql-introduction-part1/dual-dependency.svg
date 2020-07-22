@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="410pt" height="166pt" viewBox="0.00 0.00 410.00 166.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 162)">
+        <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-162 406,-162 406,4 -4,4"></polygon>
+        <!-- students -->
+        <g id="node1" class="node">
+            <polygon fill="none" stroke="#000000" points="173,-.5 173,-69.5 402,-69.5 402,-.5 173,-.5"></polygon>
+            <text text-anchor="middle" x="287.5" y="-54.3" fill="#000000">students</text>
+            <polyline fill="none" stroke="#000000" points="173,-46.5 402,-46.5 "></polyline>
+            <text text-anchor="middle" x="287.5" y="-31.3" fill="#000000">student_id INT</text>
+            <polyline fill="none" stroke="#000000" points="173,-23.5 402,-23.5 "></polyline>
+            <text text-anchor="middle" x="287.5" y="-8.3" fill="#000000">student_name VARCHAR(255)</text>
+        </g>
+        <!-- classes -->
+        <g id="node2" class="node">
+            <polygon fill="none" stroke="#000000" points="182.5,-88.5 182.5,-157.5 392.5,-157.5 392.5,-88.5 182.5,-88.5"></polygon>
+            <text text-anchor="middle" x="287.5" y="-142.3" fill="#000000">classes</text>
+            <polyline fill="none" stroke="#000000" points="182.5,-134.5 392.5,-134.5 "></polyline>
+            <text text-anchor="middle" x="287.5" y="-119.3" fill="#000000">class_id INT</text>
+            <polyline fill="none" stroke="#000000" points="182.5,-111.5 392.5,-111.5 "></polyline>
+            <text text-anchor="middle" x="287.5" y="-96.3" fill="#000000">class_name VARCHAR(255)</text>
+        </g>
+        <!-- students_classes -->
+        <g id="node3" class="node">
+            <polygon fill="none" stroke="#000000" points="0,-55.5 0,-124.5 137,-124.5 137,-55.5 0,-55.5"></polygon>
+            <text text-anchor="middle" x="68.5" y="-109.3" fill="#000000">students_classes</text>
+            <polyline fill="none" stroke="#000000" points="0,-101.5 137,-101.5 "></polyline>
+            <text text-anchor="middle" x="68.5" y="-86.3" fill="#000000">class_id INT</text>
+            <polyline fill="none" stroke="#000000" points="0,-78.5 137,-78.5 "></polyline>
+            <text text-anchor="middle" x="68.5" y="-63.3" fill="#000000">student_id INT</text>
+        </g>
+        <!-- students_classes&#45;&gt;students -->
+        <g id="edge2" class="edge">
+            <path fill="none" stroke="#777777" d="M137,-67C154.2262,-67 153.1781,-46.2793 163.2659,-38.1853"></path>
+            <polygon fill="#777777" stroke="#777777" points="164.5844,-41.4365 173,-35 162.4074,-34.7836 164.5844,-41.4365"></polygon>
+            <text text-anchor="middle" x="168" y="-23.8" fill="#000000">1</text>
+            <text text-anchor="middle" x="142" y="-55.8" fill="#000000">n</text>
+        </g>
+        <!-- students_classes&#45;&gt;classes -->
+        <g id="edge1" class="edge">
+            <path fill="none" stroke="#777777" d="M137,-90C158.0777,-90 158.1946,-113.4932 172.722,-120.8348"></path>
+            <polygon fill="#777777" stroke="#777777" points="171.9798,-124.2551 182.5,-123 173.4932,-117.4207 171.9798,-124.2551"></polygon>
+            <text text-anchor="middle" x="177.5" y="-111.8" fill="#000000">1</text>
+            <text text-anchor="middle" x="142" y="-78.8" fill="#000000">n</text>
+        </g>
+    </g>
+</svg>

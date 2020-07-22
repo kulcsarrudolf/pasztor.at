@@ -1,18 +1,18 @@
 ---
+slug: docker-101-anatomy
+authors:
+- janos
 categories: blog
 date: "2018-02-08T00:00:00Z"
 publishDate: "2018-02-08T00:00:00Z"
-summary: Docker is (mostly) used to run Linux, but in order to successfully create
-  a Docker image, we must first understand how Linux works.
-fbimage: posts/docker-101-anatomy.png
-googleimage: posts/docker-101-anatomy.png
+summary: Docker is (mostly) used to run Linux, but in order to successfully create a Docker image, we must first understand how Linux works.
+images:
+- posts/docker-101-anatomy.png
 preview: posts/docker-101-anatomy.jpg
 tags:
-- Docker
+- Containers
 - DevOps
 title: 'Docker 101: Linux Anatomy'
-twitter_card: summary_large_image
-twitterimage: posts/docker-101-anatomy.png
 ---
 
 If you are used to Windows system administration, you may be used to only being able to clone a system using
@@ -23,13 +23,15 @@ This is an important concept to grasp, since container technology relies heavily
 installation and shipping it. In fact, the standard OCI (Open Container Initiative) image used nowadays is basically a
 packed-up Linux with an additional config file in JSON format.
 
-> **Tip**: if you wish to learn more about how containers work internally, please read the previous article,
-> [Under the hood of Docker](/blog/under-the-hood-of-docker). 
+{{% tip %}}
+**Tip**: if you wish to learn more about how containers work internally, please read the previous article,
+[Under the hood of Docker](/blog/under-the-hood-of-docker). 
+{{% /tip %}}
 
-> **Note**: this article glosses over some of the intricacies of how a CPU and the kernel work for easier understanding.
-> If you wish to learn more about operating systems, I recommend the book
-> [Modern Operating Systems by Andrew S. Tanenbaum](/recommendations?book=andrew-tanenbaum-operating-systems)
-> (sponsored link) for further study.
+{{% tip %}}
+**Note**: this article glosses over some of the intricacies of how a CPU and the kernel work for easier understanding.
+If you wish to learn more about operating systems, I recommend the book Modern Operating Systems by Andrew S. Tanenbaum for further study.
+{{% /tip %}}
 
 ## The CPU
 
@@ -154,14 +156,15 @@ run as your init program**.
 However, if you want to run more than one program inside a container, you need to be careful since your init program
 then needs to fulfill the obligations outlined above.
 
-> **Danger:** shell scripts are tricky to get right as init programs. Instead, you should use something like 
-> supervisord if you need to run multiple applications in your container. The rkt container runtime has a workaround
-> for this, but it's not without its drawbacks.
+{{% warning %}}
+**Danger:** shell scripts are tricky to get right as init programs. Instead, you should use something like supervisord if you need to run multiple applications in your container. The rkt container runtime has a workaround for this, but it's not without its drawbacks.
+{{% /warning %}}
 
 In all cases, your program must handle signals correctly. (So it must stop if it receives a `SIGTERM`, for example.)
 
-> **Danger:** if your programs does not handle signals correctly, it will be killed without the ability to shut down
-> properly when the container is stopped.
+{{% warning %}}
+**Danger:** if your programs does not handle signals correctly, it will be killed without the ability to shut down properly when the container is stopped.
+{{% /warning %}}
 
 ### Docker on other systems
 
@@ -186,6 +189,6 @@ be built. This not only gives us the option to test our build process, but also 
 
 However, that is the topic of our next article. Until then, stay tuned.
 
-> **Recommended exercise**: to better understand how Linux works, I would recommend installing a Gentoo Linux from the
-> minimal CD/DVD. Since everything has to be done and compiled manually, it gives you a great insight into how Linux
-> works under the hood. 
+{{% tip %}}
+**Recommended exercise**: to better understand how Linux works, I would recommend installing a Gentoo Linux from the minimal CD/DVD. Since everything has to be done and compiled manually, it gives you a great insight into how Linux works under the hood. 
+{{% /tip %}}

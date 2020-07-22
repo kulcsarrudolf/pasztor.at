@@ -1,27 +1,17 @@
 ---
+slug: ide-matters
+authors:
+- janos
 categories: blog
 date: "2019-03-02T00:00:00Z"
 publishDate: "2019-03-02T00:00:00Z"
-summary: Your IDE is your best friend when it comes to being efficient. Why do so
-  many people not use it?
-fbimage: posts/ide-matters.png
-googleimage: posts/ide-matters.png
+summary: Your IDE is your best friend when it comes to being efficient. Why do so many people not use it?
+images:
+- posts/ide-matters.png
 preview: posts/ide-matters.jpg
-sharing:
-  discord: '@everyone Your choice of IDE matters for cleancode. Maybe stop using vanilla
-    vim?'
-  facebook: 'Your choice of #IDE matters for #cleancode. Maybe stop using vanilla
-    #vim?'
-  linkedin: 'Your choice of #IDE matters for #cleancode. Maybe stop using vanilla
-    #vim?'
-  patreon: 'Your choice of #IDE matters for #cleancode. Maybe stop using vanilla #vim?'
-  twitter: 'Your choice of #IDE matters for #cleancode. Maybe stop using vanilla #vim?'
 tags:
-- Development
-- Clean Code
+- Software Development
 title: Your choice of IDE matters
-twitter_card: summary_large_image
-twitterimage: posts/ide-matters.png
 ---
 
 This piece started out as a rant titled *&ldquo;VIM is not an IDE&rdquo;*, but as I have talked to some people about

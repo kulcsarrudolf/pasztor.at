@@ -1,33 +1,24 @@
 ---
+slug: what-is-the-ioc-container
+authors:
+- janos
 categories: blog
 date: "2019-02-11T00:00:00Z"
 publishDate: "2019-02-11T00:00:00Z"
 summary: Just what in the name of the allmighy bit is an IoC / Dependency Injection
   container? If find that this confuses a lot of people. Let's dig into it.
-fbimage: posts/what-is-the-ioc-container.png
-googleimage: posts/what-is-the-ioc-container.png
+images:
+- posts/what-is-the-ioc-container.png
 preview: posts/what-is-the-ioc-container.jpg
-sharing:
-  discord: '@everyone Just what the *** is an IoC / Dependency Injection container?
-    Find out after the click!'
-  facebook: 'Just what the *** is an IoC / Dependency Injection container? Find out
-    after the click! #cleancode'
-  linkedin: 'Just what the *** is an IoC / Dependency Injection container? Find out
-    after the click! #cleancode'
-  patreon: Just what the *** is an IoC / Dependency Injection container? Find out
-    after the click!
-  twitter: 'Just what the *** is an IoC / Dependency Injection container? Find out
-    after the click! #cleancode'
 tags:
-- Clean Code
-- Development
+- Software Development
 title: What the *** is an IoC container?
-twitter_card: summary_large_image
-twitterimage: posts/what-is-the-ioc-container.png
 ---
 
-> **Note:** The code examples in this article are ficticious! The actual method calls depend on your IoC container
-> implementation.
+{{% tip %}}
+**Note:** The code examples in this article are ficticious! The actual method calls depend on your IoC container
+implementation.
+{{% /tip %}}
 
 ## Recap: What is Dependency Injection
 

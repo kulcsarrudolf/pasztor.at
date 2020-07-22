@@ -1,0 +1,34 @@
+class UserInterface {
+}
+interface StudentBusinessLogicInterface {
+}
+interface TeacherBusinessLogicInterface {
+}
+class StudentBusinessLogicModule {
+}
+class TeacherBusinessLogicModule {
+}
+interface MySQLConnectorInterface {
+}
+interface ProfileImageStorageInterface {
+}
+interface OracleConnectorInterface {
+}
+class MySQLConnectorModule {
+}
+class ProfileImageStorageModule {
+}
+class OracleConnectorModule {
+}
+
+StudentBusinessLogicInterface <|.up. UserInterface: depends
+TeacherBusinessLogicInterface <|.up. UserInterface: depends
+StudentBusinessLogicInterface <|-down- StudentBusinessLogicModule: implements
+TeacherBusinessLogicInterface <|-down- TeacherBusinessLogicModule: implements
+MySQLConnectorInterface <|.up. StudentBusinessLogicModule: depends
+ProfileImageStorageInterface <|.up. StudentBusinessLogicModule: depends
+OracleConnectorInterface <|.up. TeacherBusinessLogicModule: depends
+ProfileImageStorageInterface <|.up. TeacherBusinessLogicModule: depends
+MySQLConnectorInterface <|-down- MySQLConnectorModule: implements
+ProfileImageStorageInterface <|-down- ProfileImageStorageModule: implements
+OracleConnectorInterface <|-down- OracleConnectorModule: implements

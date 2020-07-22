@@ -1,0 +1,20 @@
+hide footbox
+actor Attacker
+database "Internal service"
+control "Web application"
+group Direct attack
+   |||
+   Attacker ->x "Internal service": A direct attack does not work due to a firewall
+   |||
+end
+...
+group SSRF
+   Attacker -> "Web application": Tricky request to the application
+   activate "Web application"
+   "Web application" -> "Internal service": Request to an internal service
+   activate "Internal service"
+   "Internal service" --> "Web application"
+   deactivate "Internal service"
+   "Web application" --> Attacker: Data from internal service is returned to attacker
+   deactivate "Web application"
+end

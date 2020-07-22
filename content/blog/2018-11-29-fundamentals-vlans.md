@@ -1,19 +1,18 @@
 ---
+slug: fundamentals-vlans
+authors:
+- janos
 categories: blog
 date: "2018-11-29T00:00:00Z"
 publishDate: "2018-11-29T00:00:00Z"
-summary: How do you run multiple networks over the same physical network? How do virtual
-  LANs work?
-fbimage: posts/vlans-explained.png
-googleimage: posts/vlans-explained.png
+summary: How do you run multiple networks over the same physical network? How do virtual LANs work?
+images:
+- posts/vlans-explained.png
 preview: posts/vlans-explained.jpg
 tags:
-- Development
 - DevOps
-- Theory
+- Networks
 title: 'Fundamentals: VLANs explained'
-twitter_card: summary_large_image
-twitterimage: posts/vlans-explained.png
 ---
 
 In our [previous article](/blog/fundamentals-ethernet-explained) we've talked about how Ethernet works. Ethernet is the
@@ -38,7 +37,7 @@ devices on the network which VLAN the Ethernet frame belongs to.
 The next 2 bytes of the payload then have *another* Ethertype field, which now indicates what the contents of the 802.1Q
 tagged frame are.
 
-<figure><img src="posts/ethernet-vlan.svg" alt="" /><figcaption>The Ethernet II frame structure with an embedded 802.1Q header</figcaption></figure>
+![](posts/ethernet-vlan.svg "The Ethernet II frame structure with an embedded 802.1Q header")
 
 ## VLANs in practice
 

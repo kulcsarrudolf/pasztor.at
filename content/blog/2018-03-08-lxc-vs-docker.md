@@ -1,18 +1,18 @@
 ---
+slug: lxc-vs-docker
+authors:
+- janos
 categories: blog
 date: "2018-03-08T00:00:00Z"
 publishDate: "2018-03-08T00:00:00Z"
-summary: LXC is the older of the two, but how do they compare? What's the difference?
-  Which one should you choose for your next project?
-fbimage: posts/lxc-vs-docker.png
-googleimage: posts/lxc-vs-docker.png
+summary: LXC is the older of the two, but how do they compare? What's the difference? Which one should you choose for your next project?
+images:
+- posts/lxc-vs-docker.png
 preview: posts/lxc-vs-docker.jpg
 tags:
 - DevOps
-- Docker
+- Containers
 title: LXC vs Docker
-twitter_card: summary_large_image
-twitterimage: posts/lxc-vs-docker.png
 ---
 
 With the rising popularity of Docker the question presents itself: why Docker? Why not the much older, and better
@@ -76,9 +76,10 @@ several thousand, or even tens of thousands of lines of code for configuration m
 I guess the moral of the story is: pick your poison. At this time Docker is still very young, so LXC is a valid and
 viable solution if you want to stick with the classic ops model for a little longer.
 
-> **Common misconception**: Docker does not use LXC. In the beginning Docker used the LXC command line tools to run
-> containers, but that is no longer the case. Both Docker and LXC use the containerization features in the Linux kernel,
-> but are independent of each other. You can read more about this topic in my article
-> [Under the hood of Docker](/blog/under-the-hood-of-docker)
+{{% warning %}}
+**Common misconception**: Docker does not use LXC. In the beginning Docker used the LXC command line tools to run containers, but that is no longer the case. Both Docker and LXC use the containerization features in the Linux kernel, but are independent of each other. You can read more about this topic in my article [Under the hood of Docker](/blog/under-the-hood-of-docker)
+{{% warning %}}
 
-*I would like to thank [Kir Kolyshkin](https://twitter.com/kolyshkin) for the help in Linux containerization history.*
+{{% tip %}}
+I would like to thank [Kir Kolyshkin](https://twitter.com/kolyshkin) for the help in Linux containerization history.
+{{% /tip %}}

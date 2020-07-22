@@ -1,28 +1,33 @@
 ---
+slug: under-the-hood-of-docker
+authors:
+- janos
 categories: blog
 date: "2018-02-06T00:00:00Z"
 publishDate: "2018-02-06T00:00:00Z"
 summary: The runc and rkt container runtimes power Docker & co. But what powers the
   container runtimes? Read on for a deeper look into containerization technology.
-fbimage: posts/under-the-hood-of-docker.png
-googleimage: posts/under-the-hood-of-docker.png
+images:
+- posts/under-the-hood-of-docker.png
 preview: posts/under-the-hood-of-docker.jpg
 tags:
-- Docker
+- Containers
 - DevOps
 title: Under the hood of Docker
-twitter_card: summary_large_image
-twitterimage: posts/under-the-hood-of-docker.png
 ---
 
 It may come as a surprise to you, but containers are not a technology. They don't exist. They are actually a result
 of many different technologies built into the Linux kernel. Which ones you ask? Let's take a trip down memory lane...
 
-> **Note:** This article glosses over some historical and technological details in favor of easier understanding.
-> It is not meant as a guide to implementing a container runtime, as that would take MUCH more information than
-> a simple blog post.
+{{% tip %}}
+**Note:** This article glosses over some historical and technological details in favor of easier understanding.
+It is not meant as a guide to implementing a container runtime, as that would take MUCH more information than
+a simple blog post.
+{{% /tip %}}
 
-> **Tip:** You can find working C code demos for the content below on [my GitHub](https://github.com/janoszen/demo-container-runtime/tree/master/demo).
+{{% tip %}}
+**Tip:** You can find working C code demos for the content below on [my GitHub](https://github.com/janoszen/demo-container-runtime/tree/master/demo).
+{{% /tip %}}
 
 ## Traditional Linux resource limits
 
@@ -97,8 +102,10 @@ it is important to note that the chroot syscall is only available to the user `r
 to protect from a root user inside a chroot jail. It is therefore important that any program using the `chroot` system
 call also switches to a non-root user after doing so.
 
-> **Note:** Current container technology rarely uses chroot as their method of restricting filesystem access, but opt
-> to use things like OverlayFS, or the Linux Device Mapper directly, in conjunction with mount namespaces (see below).
+{{% tip %}}
+**Note:** Current container technology rarely uses chroot as their method of restricting filesystem access, but opt
+to use things like OverlayFS, or the Linux Device Mapper directly, in conjunction with mount namespaces (see below).
+{{% /tip %}}
 
 ## capabilities: making non-root users a little bit of root
 

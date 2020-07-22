@@ -1,18 +1,17 @@
 ---
+slug: structure-based-on-intent
+authors:
+- janos
 categories: blog
 date: "2018-02-27T00:00:00Z"
 publishDate: "2018-02-27T00:00:00Z"
-summary: When reviewing code I often see folders like model, view, controller, form,
-  etc. There is a way to make your folder names talk, but this ain't it.
-fbimage: posts/structure-based-on-intent.png
-googleimage: posts/structure-based-on-intent.png
+summary: When reviewing code I often see folders like model, view, controller, form, etc. There is a way to make your folder names talk, but this ain't it.
+images:
+- posts/structure-based-on-intent.png
 preview: posts/structure-based-on-intent.jpg
 tags:
-- Development
-- Clean Code
+- Software Development
 title: Structure your program based on Intent, not Architecture
-twitter_card: summary_large_image
-twitterimage: posts/structure-based-on-intent.png
 ---
 
 Let's set aside the fact that I think MVC is a horrible design pattern (we'll talk about that some other day) and focus
@@ -39,7 +38,9 @@ However, when you you work on a larger application, or you follow the concept of
 [one controller, one action](/blog/one-controller-one-action), these number of files in these folders escalates quickly
 and becomes a tangled mess of naming problems.
 
-> **Recommended talk:** [Robert "Uncle Bob" Martin - Architecture: The Lost Years](https://www.youtube.com/watch?v=HhNIttd87xs)
+{{% tip %}}
+**Recommended talk:** [Robert "Uncle Bob" Martin - Architecture: The Lost Years](https://www.youtube.com/watch?v=HhNIttd87xs)
+{{% /tip %}}
 
 Let's look at an example of a social media project. You have *Walls*, *WallPosts*, *Comments*, *PrivateConversations*, 
 *PrivateConversationMessages*, and a bunch more stuff. Using a *"classic"* arrangement, we'll have quite a sizable
@@ -115,13 +116,9 @@ incredibly hard for a new developer on the team to get a picture of what is what
 
 ## Structure based on intent
 
-If we look closely at our controllers, we can draw lines between what belongs together and what doesn't. For example,
-from a *business perspective* the Wall seems to be a concept that is quite clear cut: people can have walls, write
-posts, and comment on said posts. So let's put everything related to a wall into one folder. Similarly with private
-conversations:
+If we look closely at our controllers, we can draw lines between what belongs together and what doesn't. For example, from a *business perspective* the Wall seems to be a concept that is quite clear cut: people can have walls, write posts, and comment on said posts. So let's put everything related to a wall into one folder. Similarly, with private conversations:
 
-<figure>
-<ul class="tree">
+<figure><ul class="tree">
   <li class="tree__item tree__item--folder">
     src
     <ul class="tree__subtree">
@@ -170,8 +167,7 @@ conversations:
       </li>
     </ul>
   </li>
-</ul>
-</figure>
+</ul></figure>
 
 Still not great, but *better*. Now the directory structure can be extended without the fear of too many classes, and if
 we are looking for something it is quite clear where we can find it.
@@ -245,10 +241,13 @@ Small, easy to navigate and easy to read chunks of code. You can, of course, con
 a hierarchic fashion as deep as you feel comfortable with. I would advise that you keep it below 3-5 levels to make
 navigation easy.
 
-> **Tip:** MVC is not suitable to be your overarching design pattern. Instead, I would recommend taking a look at
-> [Entity-Boundary-Interactor](http://ebi.readthedocs.io/en/latest/)
+{{% tip %}}
+**Tip:** MVC is not suitable to be your overarching design pattern. Instead, I would recommend taking a look at [Entity-Boundary-Interactor](http://ebi.readthedocs.io/en/latest/)
+{{% /tip %}}
 
 To sum it up, **your outer most folder structure should be based on business concepts (intents)**, not the design pattern
 you chose to use.
 
-> **Recommended reading:** [One Controller, One Action](/blog/one-controller-one-action)
+{{% tip %}}
+**Recommended reading:** [One Controller, One Action](/blog/one-controller-one-action)
+{{% /tip %}}

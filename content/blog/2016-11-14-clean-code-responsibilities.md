@@ -1,4 +1,7 @@
 ---
+slug: clean-code-responsibilities
+authors:
+- janos
 categories: blog
 date: "2016-11-14T00:00:00Z"
 publishDate: "2016-11-14T00:00:00Z"
@@ -6,10 +9,7 @@ summary: I heard you want to be a better coder. You want to use reusable pieces,
   you want to have an easier time maintaining older code. You may also want to work
   better in a team and ensure there are less bugs.
 tags:
-- Development
-- OOP
-- Clean Code
-- S.O.L.I.D.
+- Software Development
 title: 'Clean Code: Responsibilities'
 ---
 

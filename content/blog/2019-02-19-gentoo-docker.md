@@ -1,29 +1,19 @@
 ---
+slug: gentoo-docker
+authors:
+- janos
 categories: blog
 date: "2019-02-19T00:00:00Z"
 publishDate: "2019-02-19T00:00:00Z"
 summary: Gentoo compiles everything from source, which sounds it might not be useful
   for Docker. Yet, it can be made to build a sub-100 MB image for PHP...
-fbimage: posts/gentoo-docker.png
-googleimage: posts/gentoo-docker.png
+images:
+- posts/gentoo-docker.png
 preview: posts/gentoo-docker.jpg
-sharing:
-  discord: '@everyone Building Docker containers from Gentoo Linux for better flexibility?
-    Too crazy?'
-  facebook: 'Building #Docker containers from #Gentoo Linux for better flexibility?
-    Too crazy? #DevOps #CrazyOps'
-  linkedin: 'Building #Docker containers from #Gentoo Linux for better flexibility?
-    Too crazy? #DevOps #CrazyOps'
-  patreon: 'Building #Docker containers from #Gentoo Linux for better flexibility?
-    Too crazy? #DevOps #CrazyOps'
-  twitter: 'Building #Docker containers from #Gentoo Linux for better flexibility?
-    Too crazy? #DevOps #CrazyOps'
 tags:
 - DevOps
-- Docker
+- Containers
 title: Gentoo as a Docker build system?
-twitter_card: summary_large_image
-twitterimage: posts/gentoo-docker.png
 ---
 
 Recently I ran into the need to launch a PHP Docker container. My initial thought was to just simply use the official

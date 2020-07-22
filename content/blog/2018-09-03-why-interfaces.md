@@ -1,19 +1,17 @@
 ---
+slug: why-interfaces
+authors:
+- janos
 categories: blog
 date: "2018-09-03T00:00:00Z"
 publishDate: "2018-09-03T00:00:00Z"
-summary: 'I''ve received the same question from a fair number of people: why would
-  you even use interfaces?'
-fbimage: posts/why-interfaces.png
-googleimage: posts/why-interfaces.png
+summary: 'I''ve received the same question from a fair number of people: why would you even use interfaces?'
+images:
+- posts/why-interfaces.png
 preview: posts/why-interfaces.jpg
 tags:
-- Development
-- Clean Code
-- S.O.L.I.D.
+- Software Development
 title: Why should you use interfaces?
-twitter_card: summary_large_image
-twitterimage: posts/why-interfaces.png
 ---
 
 When it comes to interfaces people tend to think that their only use is when you have multiple implementations you can
@@ -21,7 +19,9 @@ switch them out easily. Hoever, most people don't have multiple implementations 
 application. So why then would you use interfaces at all? After all the refactoring tools in our IDEs are powerful such
 that we can introduce them later on...
 
-> **Hint:** Need a quick refresher on interfaces? [Read up on the topic here!](/blog/the-curious-case-of-interfaces)
+{{% tip %}}
+**Hint:** Need a quick refresher on interfaces? [Read up on the topic here!](/blog/the-curious-case-of-interfaces)
+{{% /tip %}}
 
 ## Contracts, not interfaces
 
@@ -207,16 +207,17 @@ class MyCachingProxyRemoteDataFetcherImpl implements MyRemoteDataFetcher {
 }
 ```
 
-> **Hint:** Usually you want to call your implementation something more descriptive, such as embedding the library 
-> the implementation is using. One good example would be `UnirestRemoteDataFetcher` and
-> `InMemoryCachingRemoteDataFetcher`.
+{{% tip %}}
+**Hint:** Usually you want to call your implementation something more descriptive, such as embedding the library the implementation is using. One good example would be `UnirestRemoteDataFetcher` and `InMemoryCachingRemoteDataFetcher`.
+{{% /tip %}}
 
 As you can see, one implementation of the interface uses the other implementation. We can then configure our dependency
 injector to chain them together to let the application cache the data. This way we won't violate the SRP and we also
 won't have to touch our fetcher implementation if we later on decide to put in the caching logic.
 
-> **Warning!** In the spirit of *contracts* caching should only be added if the contract allows for it! If you add
-> caching without the upper layer expecting it, you may break the application!
+{{% warning %}}
+**Warning!** In the spirit of *contracts* caching should only be added if the contract allows for it! If you add caching without the upper layer expecting it, you may break the application!
+{{% /warning %}}
 
 ## Conclusion
 

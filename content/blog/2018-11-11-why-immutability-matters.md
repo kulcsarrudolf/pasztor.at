@@ -1,18 +1,17 @@
 ---
+slug: why-immutability-matters
+authors:
+- janos
 categories: blog
 date: "2018-11-11T00:00:00Z"
 publishDate: "2018-11-11T00:00:00Z"
-summary: I've talked about immutable objects in clean code before, but what exactly
-  are they? Why do we use them?
-fbimage: posts/why-immutability-matters.png
-googleimage: posts/why-immutability-matters.png
+summary: I've talked about immutable objects in clean code before, but what exactly are they? Why do we use them?
+images:
+- posts/why-immutability-matters.png
 preview: posts/why-immutability-matters.jpg
 tags:
-- Development
-- Clean Code
+- Software Development
 title: Why Immutability Matters
-twitter_card: summary_large_image
-twitterimage: posts/why-immutability-matters.png
 ---
 
 Immutable objects are an immensely powerful programming concept to avoid all sorts of concurrency issues and a whole
@@ -189,7 +188,9 @@ As you can see, instead of the `setName` method we now use a `withName` method w
 object. Always creating a new copy works around the issue of having mutable state. Sure enough, this can lead to some
 overhead, but modern compilers can work around that and if you run into performance issues, you can fix those later.
 
-> **Remember:** <q>Premature optimization is the root of all evil</q> (Donald Knuth)
+{{% tip %}}
+**Remember:** <q>Premature optimization is the root of all evil</q> (Donald Knuth)
+{{% /tip %}}
 
 Now, you may argue that a persistence layer keeping a reference to a working object is a broken persistence layer, but
 that is a real world scenario. Broken code does exist, and immutability is a valuable tool to prevent such mistakes from

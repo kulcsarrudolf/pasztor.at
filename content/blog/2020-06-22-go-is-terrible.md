@@ -4,23 +4,15 @@ slug: go-is-terrible
 date: "2020-06-22T00:00:00Z"
 publishDate: "2020-06-22T00:00:00Z"
 summary: Go certainly caught a lot of attention. Let's look at the bad parts!
-fbimage: posts/go-is-terrible.png
-googleimage: posts/go-is-terrible.png
+images:
+- posts/go-is-terrible.png
 preview: posts/go-is-terrible.jpg
-sharing:
-  discord: '@everyone Go is a terrible programming language: here''s why'
-  facebook: 'Go is a terrible programming language: here''s why'
-  linkedin: 'Go is a terrible programming language: here''s why'
-  patreon: 'Go is a terrible programming language: here''s why'
-  twitter: 'Go is a terrible programming language: here''s why'
 tags:
 - Software Development
 - Golang
 authors:
 - janos
 title: Go is a terrible language
-twitter_card: summary_large_image
-twitterimage: posts/go-is-terrible.png
 ---
 
 As a developer it's hard to ignore [Go](https://golang.org/) nowadays. Powering software like
@@ -168,9 +160,10 @@ the package. If it is written with a capital first letter it is &ldquo;public&rd
 In other words lower case things are only accessible in the same package, upper case things are globally visible.
 Unfortunately there is **no way to restrict visibility within the same package**.
 
-> **Note:** When using Go modules (which is the preferred way) one package means one directory. Other build systems
-> like [Bazel](https://bazel.build/) allow for multiple packages per directory. This somewhat mitigates the lack of
-> scoping.
+{{% tip %}}
+**Note:** When using Go modules (which is the preferred way) one package means one directory. Other build systems like [Bazel](https://bazel.build/) allow for multiple packages per directory. This somewhat mitigates the lack of
+scoping.
+{{% /tip %}}
 
 Imagine you have a data structure, and a set of functions that implement a very specific business logic. Someone who is
 not familiar with the business logic might not think much of it and implement a function in the same package that

@@ -1,4 +1,7 @@
 ---
+slug: proper-time-handling-with-php-and-mysql
+authors:
+- janos
 categories: blog
 date: "2013-05-07T00:00:00Z"
 publishDate: "2013-05-07T00:00:00Z"
@@ -10,7 +13,7 @@ summary: Few developers actually know that not only character encodings but also
   time handling.
 tags:
 - PHP
-- Development
+- Software Development
 title: Proper time handling with PHP and MySQL
 ---
 

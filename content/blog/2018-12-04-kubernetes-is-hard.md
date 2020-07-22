@@ -1,19 +1,19 @@
 ---
+slug: kubernetes-is-hard
+authors:
+- janos
 categories: blog
 date: "2018-12-04T00:00:00Z"
 publishDate: "2018-12-04T00:00:00Z"
 summary: Kubernetes won the container wars... allegedly. However, Kubernetes is still
   hard and causing a lot of grief.
-fbimage: posts/kubernetes-is-hard.png
-googleimage: posts/kubernetes-is-hard.png
+images:
+- posts/kubernetes-is-hard.png
 preview: posts/kubernetes-is-hard.jpg
 tags:
 - DevOps
-- Kubernetes
-- Docker
+- Containers
 title: Kubernetes is hard
-twitter_card: summary_large_image
-twitterimage: posts/kubernetes-is-hard.png
 ---
 
 I guess I should give a little preface to this article. [Kubernetes](https://kubernetes.io/) is the new runtime for many

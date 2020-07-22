@@ -1,33 +1,29 @@
 ---
+slug: fundamentals-ethernet-explained
+authors:
+- janos
 categories: blog
 date: "2018-11-28T00:00:00Z"
 publishDate: "2018-11-28T00:00:00Z"
-summary: Ethernet is one of the most fundamental protocols underpinning todays internet.
-  It is so fundamental that we often take it as granted and don't even think about
-  it.
-fbimage: posts/ethernet-explained.png
-googleimage: posts/ethernet-explained.png
+summary: Ethernet is one of the most fundamental protocols underpinning todays internet. It is so fundamental that we often take it as granted and don't even think about it.
+images:
+- posts/ethernet-explained.png
 preview: posts/ethernet-explained.jpg
 tags:
-- Development
 - DevOps
-- Theory
+- Networks
 title: 'Fundamentals: Ethernet explained'
-twitter_card: summary_large_image
-twitterimage: posts/ethernet-explained.png
 ---
 
-> **Did you know?** This article is also available [as an animated video](/videos/how-does-ethernet-work).
+{{% tip %}}
+**Did you know?** This article is also available [as an animated video](https://www.youtube.com/watch?v=5u52wbqBgEY).
+{{% /tip %}}
 
 ## A Little History
 
-Back in the early days before the Internet computer networks were much smaller and focussed more on local connectivity.
-Ethernet, or more accurately Ethernet II, was but one of the many protocols people used to connect computers into a
-local network.  Other contenders included, for example, IPX, which later died out due to it's inability to scale.
+Back in the early days before the Internet computer networks were much smaller and focussed more on local connectivity. Ethernet, or more accurately Ethernet II, was but one of the many protocols people used to connect computers into a local network.  Other contenders included, for example, IPX, which later died out due to it's inability to scale.
 
-In those early days network hardware was comparatively expensive and the system we have today where each computer is
-connected to a router with a dedicated cable, or even over the air, would have been unimaginable. Most commonly,
-computers were connected to a single, very long coaxial cable that had to be terminated with a plug at the end.
+In those early days network hardware was comparatively expensive and the system we have today where each computer is connected to a router with a dedicated cable, or even over the air, would have been unimaginable. Most commonly, computers were connected to a single, very long coaxial cable that had to be terminated with a plug at the end.
 
 Yes, you read that right. All computers on a single cable. When a computer wanted to send a data packet over the network
 it had to first &ldquo;shout&rdquo; a sequence of bits (preamble) on the wire to indicate that it would send data. If
@@ -41,15 +37,14 @@ so-called interframe gap, 12 bytes (*octets*) of &ldquo;silence&rdquo;.
 
 ## The Modern Ethernet
 
-<figure><img src="posts/ethernet.svg" alt="" /><figcaption>The Ethernet II frame structure</figcaption></figure>
+![](posts/ethernet.svg "The Ethernet II frame structure")
 
 Decades have passed and now networking hardware is available in abundance. Ethernet chips cost next to nothing, we have
 dedicated cables for all our machines and even 10 gigabit interfaces are no longer a rarity. IPX and it's cousins have
 all but died out and most of our networks are based on almost the same Ethernet protocol we used almost four decades
 ago.
 
-As mentioned in the previous segment, the first thing a device sends out is a 7 byte (or octet in old money)
-**preamble**. This preamble consists of 7 times the sequence `10101010`, or `0x55` in hexadecimal notation.
+As mentioned in the previous segment, the first thing a device sends out is a 7 byte (or octet in old money) **preamble**. This preamble consists of 7 times the sequence `10101010`, or `0x55` in hexadecimal notation.
 
 The preamble is followed by the **start frame delimiter**, which consisted of the sequence `10101011` (`0xD5`). The SFD
 indicated that the delimiter is finished and that data would now commence.

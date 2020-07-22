@@ -1,19 +1,17 @@
 ---
+slug: the-curious-case-of-interfaces
+authors:
+- janos
 categories: blog
 date: "2018-03-23T00:00:00Z"
 publishDate: "2018-03-23T00:00:00Z"
-summary: Interfaces are like internal APIs for your code. So how should you create
-  them?
-fbimage: posts/interfaces.png
-googleimage: posts/interfaces.png
+summary: Interfaces are like internal APIs for your code. So how should you create them?
+images:
+- posts/interfaces.png
 preview: posts/interfaces.jpg
 tags:
-- Development
-- Clean Code
-- S.O.L.I.D.
+- Software Development
 title: The curious case of Interfaces
-twitter_card: summary_large_image
-twitterimage: posts/interfaces.png
 ---
 
 No matter what kind of object-oriented programming language you are using, you have a way to

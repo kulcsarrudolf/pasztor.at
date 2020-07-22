@@ -5,28 +5,14 @@ authors:
 categories: blog
 date: "2019-05-17T00:00:00Z"
 publishDate: "2019-05-17T00:00:00Z"
-summary: After setting up the server as a Docker baseline, we now venture in building
-  a Docker infrastructure.
-fbimage: posts/immutable-infra-2.png
-googleimage: posts/immutable-infra-2.png
+summary: After setting up the server as a Docker baseline, we now venture in building a Docker infrastructure.
+images:
+- posts/immutable-infra-2.png
 preview: posts/immutable-infra-2.jpg
-sharing:
-  discord: '@everyone Immutable infrastructure in Practice, part 2 is here! Docker,
-    Traefik, Prometheus, and Grafana in action!'
-  facebook: 'Immutable infrastructure in Practice, part 2 is here! #Docker, #Traefik,
-    #Prometheus, and #Grafana in action! #devops'
-  linkedin: 'Immutable infrastructure in Practice, part 2 is here! #Docker, #Traefik,
-    #Prometheus, and #Grafana in action! #devops'
-  patreon: 'Immutable infrastructure in Practice, part 2 is here! #Docker, #Traefik,
-    #Prometheus, and #Grafana in action!'
-  twitter: 'Immutable infrastructure in Practice, part 2 is here! @Docker @Traefik
-    @PrometheusIO @grafana in action! #devops'
 tags:
 - DevOps
-- Docker
+- Containers
 title: Immutable Infrastructure in Practice — Part 2
-twitter_card: summary_large_image
-twitterimage: posts/immutable-infra-2.png
 ---
 
 In the [previous part](/blog/immutable-infra-1) we discussed how to set up a server based on the principle of immutability. Now that we have a server and a way to deploy the Docker package, let's discuss how we set up our Docker containers.

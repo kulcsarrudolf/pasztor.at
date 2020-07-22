@@ -1,4 +1,7 @@
 ---
+slug: dont-use-ftp-heres-why
+authors:
+- janos
 categories: blog
 date: "2013-04-26T00:00:00Z"
 publishDate: "2013-04-26T00:00:00Z"
@@ -10,7 +13,6 @@ summary: FTP has been around since the early days of the internet. Even though i
   If you have a choice, don’t use it. I’ll show you why.
 tags:
 - DevOps
-- FTP
 title: Don't use FTP — Here's why
 ---
 

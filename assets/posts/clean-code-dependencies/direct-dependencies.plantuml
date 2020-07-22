@@ -1,0 +1,19 @@
+class UserInterface {
+}
+class StudentBusinessLogic {
+}
+class TeacherBusinessLogic {
+}
+class MySQLConnector {
+}
+class ProfileImageStorage {
+}
+class OracleConnector {
+}
+
+UserInterface .down.|> StudentBusinessLogic: calls
+UserInterface .down.|> TeacherBusinessLogic: calls
+StudentBusinessLogic .down.|> MySQLConnector: calls
+StudentBusinessLogic .down.|> ProfileImageStorage: calls
+TeacherBusinessLogic .down.|> ProfileImageStorage: calls
+TeacherBusinessLogic .down.|> OracleConnector: calls

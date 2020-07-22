@@ -1,4 +1,7 @@
 ---
+slug: debugging-applications-with-strace
+authors:
+- janos
 categories: blog
 date: "2012-04-19T00:00:00Z"
 publishDate: "2012-04-19T00:00:00Z"
@@ -11,8 +14,6 @@ summary: There are times, when we get an application and need to find out what i
   out what it does externally (IO operations and such).
 tags:
 - DevOps
-- Debugging
-- Strace
 title: Debugging applications with strace
 ---
 

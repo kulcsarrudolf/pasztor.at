@@ -1,18 +1,17 @@
 ---
+slug: the-cookie-cutter-architecture
+authors:
+- janos
 categories: blog
 date: "2018-06-23T00:00:00Z"
 publishDate: "2018-06-23T00:00:00Z"
-summary: When it comes to business applications, you need an architecture that scales
-  well. This is my take, based on Uncle Bobs EBI.
-fbimage: posts/cookie-cutter-architecture.png
-googleimage: posts/cookie-cutter-architecture.png
+summary: When it comes to business applications, you need an architecture that scales well. This is my take, based on Uncle Bobs EBI.
+images:
+- posts/cookie-cutter-architecture.png
 preview: posts/cookie-cutter-architecture.jpg
 tags:
-- Development
-- Clean Code
+- Software Development
 title: The Cookie Cutter Architecture
-twitter_card: summary_large_image
-twitterimage: posts/cookie-cutter-architecture.png
 ---
 
 Even though most people recognize me as a DevOps person, I often work with business applications as well during the
@@ -148,9 +147,11 @@ transform that into an object that we can then work.
 
 ### Entities
 
-> **Note:** This article does not differentiate between entities and DTOs. For the purposes of this article an
-> entity is a structured set of data that you want to pass between parts of your application. If you want to split 
-> them based on purpose or use, go for it.
+{{% tip %}}
+**Note:** This article does not differentiate between entities and DTOs. For the purposes of this article an
+entity is a structured set of data that you want to pass between parts of your application. If you want to split 
+them based on purpose or use, go for it.
+{{% /tip %}}
 
 As I mentioned the different layers communicate using *entities*. These are not entities in the sense that you would
 expect from an ORM system. They do not contain magic functions to load subobjects, like `blogPost.getAuthor()`. These

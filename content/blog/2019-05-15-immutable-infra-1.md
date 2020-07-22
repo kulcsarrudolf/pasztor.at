@@ -5,27 +5,13 @@ authors:
 categories: blog
 date: "2019-05-15T00:00:00Z"
 publishDate: "2019-05-15T00:00:00Z"
-summary: Recently I rebuilt the infrastructure that hosts this website following the
-  principles of immutable infrastructure. Let's see how that works!
-fbimage: posts/immutable-infra-1.png
-googleimage: posts/immutable-infra-1.png
+summary: Recently I rebuilt the infrastructure that hosts this website following the principles of immutable infrastructure. Let's see how that works!
+images:
+- posts/immutable-infra-1.png
 preview: posts/immutable-infra-1.jpg
-sharing:
-  discord: '@everyone I rebuilt the server for my blog using immutable infrastructure.
-    Want to see how?'
-  facebook: 'I rebuilt the server for my #blog using #immutable #infrastructure. Want
-    to see how? #devops'
-  linkedin: 'I rebuilt the server for my #blog using #immutable #infrastructure. Want
-    to see how? #devops'
-  patreon: I rebuilt the server for my blog using immutable infrastructure. Want to
-    see how?
-  twitter: 'I rebuilt the server for my #blog using #immutable #infrastructure. Want
-    to see how? #devops'
 tags:
 - DevOps
 title: Immutable Infrastructure in Practice — Part 1
-twitter_card: summary_large_image
-twitterimage: posts/immutable-infra-1.png
 ---
 
 For over a year I [ran my own CDN for this website](/blog/building-your-own-cdn). However, I had to amend the article about the CDN because a year later I had a number of issues with it. If you are interested, go click and have a read.

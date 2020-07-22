@@ -5,31 +5,15 @@ date: "2020-06-10T00:00:00Z"
 publishDate: "2020-06-10T00:00:00Z"
 summary: Let's build an SSH server in Go that launches Docker containers for each
   session!
-fbimage: posts/ssh-direct-to-docker.png
-googleimage: posts/ssh-direct-to-docker.png
+images:
+- posts/ssh-direct-to-docker.png
 preview: posts/ssh-direct-to-docker.jpg
-sharing:
-  discord: '@everyone Let''s build an SSH server that launches a #Docker container
-    for each SSH connection!'
-  facebook: 'Let''s build an SSH server that launches a #Docker container for each
-    SSH connection!'
-  linkedin: 'Let''s build an SSH server that launches a #Docker container for each
-    SSH connection!'
-  patreon: 'Let''s build an SSH server that launches a #Docker container for each
-    SSH connection!'
-  twitter: 'Let''s build an SSH server that launches a #Docker container for each
-    SSH connection!'
 tags:
-- Linux
 - Golang
-- Docker
-- Kubernetes
 - Containers
 authors:
-    - janos
+- janos
 title: Building a custom SSH server for fun and... containers!
-twitter_card: summary_large_image
-twitterimage: posts/ssh-direct-to-docker.png
 ---
 
 During my career I had several projects in the web-hosting business. Partially driven by engineering pride I always

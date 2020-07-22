@@ -1,4 +1,6 @@
 ---
+authors:
+- janos
 categories: videos
 date: "2016-12-06T00:00:00Z"
 publishDate: "2016-12-06T00:00:00Z"

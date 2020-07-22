@@ -1,0 +1,11 @@
+hide footbox
+actor User
+group Lookup IP
+  User -> DNS: pasztor.at IN A ?
+  User <-- DNS: pasztor.at IN A 18.196.197.7
+end
+|||
+group Get website
+  User -> 18.196.197.7: Gimme the website
+  User <-- 18.196.197.7
+end

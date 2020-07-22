@@ -1,24 +1,17 @@
 ---
+slug: make-everything-final
+authors:
+- janos
 categories: blog
 date: "2019-02-04T00:00:00Z"
 publishDate: "2019-02-04T00:00:00Z"
-summary: 'I have a pretty radical suggestion for clean code: make all your classes
-  final!'
-fbimage: posts/make-everything-final.png
-googleimage: posts/make-everything-final.png
+summary: 'I have a pretty radical suggestion for clean code: make all your classes final!'
+images:
+- posts/make-everything-final.png
 preview: posts/make-everything-final.jpg
-sharing:
-  discord: '@everyone Here''s a radical idea: why not make all classes final?'
-  facebook: 'Here''s a radical idea: why not make all classes final? #cleancode #development'
-  linkedin: 'Here''s a radical idea: why not make all classes final?'
-  patreon: 'Here''s a radical idea: why not make all classes final?'
-  twitter: 'Here''s a radical idea: why not make all classes final? #cleancode #development'
 tags:
-- Clean Code
-- Development
+- Software Development
 title: Make all classes final!
-twitter_card: summary_large_image
-twitterimage: posts/make-everything-final.png
 ---
 
 Wait, what? Now I must have surely lost my marbles, right?
@@ -49,7 +42,8 @@ my suggestion seems to violate the Open-Closed principle (OCP).
 
 There are multiple authors who described this principle, but all of them boil down to the same point:
 
-> **Open-Closed Principle**: Software entities (classes, modules, functions, etc.) should be open for extension, but 
+- Software Development
+Open-Closed Principle**: Software entities (classes, modules, functions, etc.) should be open for extension, but 
 > closed for modification. *&mdash; Robert C. Martin*
 
 The reason for the open part should be pretty obvious: if a module / class / etc is not open, there is no way to extend

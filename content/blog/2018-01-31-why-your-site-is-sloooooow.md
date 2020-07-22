@@ -1,18 +1,19 @@
 ---
+slug: why-your-site-is-sloooooow
+authors:
+- janos
 categories: blog
 date: "2018-01-31T00:00:00Z"
 publishDate: "2018-01-31T00:00:00Z"
 summary: Google Tag Manager is probably the worst thing that happened to the web in
   the last 10 years. Yes, you read me right. Your shiny marketing tools are murdering
   your conversions. Wonder why? Read on.
-fbimage: posts/heres-why-your-site-is-slow.png
-googleimage: posts/heres-why-your-site-is-slow.png
+images:
+- posts/heres-why-your-site-is-slow.png
 preview: posts/heres-why-your-site-is-slow.jpg
 tags:
-- Development
+- Software Development
 title: Your marketing tools are killing your site performance
-twitter_card: summary_large_image
-twitterimage: posts/heres-why-your-site-is-slow.png
 ---
 
 ## It's not your Wordpress

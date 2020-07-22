@@ -1,24 +1,25 @@
 ---
+slug: react-hexagonal-architecture
+authors:
+- janos
 categories: blog
 date: "2018-08-26T00:00:00Z"
 publishDate: "2018-08-26T00:00:00Z"
-summary: ReactJS is a workhorse of frontend development, but it doesn't do so well
-  in terms of S.O.L.I.D. Can we change it by adopting a classic approach?
-fbimage: posts/hexagonal-architecture-react.png
-googleimage: posts/hexagonal-architecture-react.png
+summary: ReactJS is a workhorse of frontend development, but it doesn't do so well in terms of S.O.L.I.D. Can we change it by adopting a classic approach?
+images:
+- posts/hexagonal-architecture-react.png
 preview: posts/hexagonal-architecture-react.jpg
 tags:
-- Development
-- Clean Code
+- Software Development
 title: Hexagonal React
-twitter_card: summary_large_image
-twitterimage: posts/hexagonal-architecture-react.png
 ---
 
 When looking at ReactJS as a modern JavaScript solution for a UI, a lot of people seem to have a problem organizing
 their code. Let's take a deep dive and see if we can make it better. 
 
-> **In a hurry?** [Get the code right now](https://github.com/janoszen/react-hexagonal-architecture)
+{{% tip %}}
+**In a hurry?** [Get the code right now](https://github.com/janoszen/react-hexagonal-architecture)
+{{% /tip %}}
 
 ## What is React?
 

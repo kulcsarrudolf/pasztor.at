@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="438pt" height="304pt" viewBox="0.00 0.00 438.00 304.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 300)">
+        <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-300 434,-300 434,4 -4,4"></polygon>
+        <!-- r1 -->
+        <g id="node1" class="node">
+            <polygon fill="none" stroke="#000000" points="0,-249.5 0,-295.5 135,-295.5 135,-249.5 0,-249.5"></polygon>
+            <text text-anchor="middle" x="14.5" y="-280.3" fill="#000000">id</text>
+            <polyline fill="none" stroke="#000000" points="0,-272.5 29,-272.5 "></polyline>
+            <text text-anchor="middle" x="14.5" y="-257.3" fill="#000000">1</text>
+            <polyline fill="none" stroke="#000000" points="29,-249.5 29,-295.5 "></polyline>
+            <text text-anchor="middle" x="58" y="-280.3" fill="#000000">name</text>
+            <polyline fill="none" stroke="#000000" points="29,-272.5 87,-272.5 "></polyline>
+            <text text-anchor="middle" x="58" y="-257.3" fill="#000000">Anna</text>
+            <polyline fill="none" stroke="#000000" points="87,-249.5 87,-295.5 "></polyline>
+            <text text-anchor="middle" x="111" y="-280.3" fill="#000000">next</text>
+            <polyline fill="none" stroke="#000000" points="87,-272.5 135,-272.5 "></polyline>
+            <text text-anchor="middle" x="111" y="-257.3" fill="#000000">2</text>
+        </g>
+        <!-- r2 -->
+        <g id="node2" class="node">
+            <polygon fill="none" stroke="#000000" points="97,-166.5 97,-212.5 232,-212.5 232,-166.5 97,-166.5"></polygon>
+            <text text-anchor="middle" x="111.5" y="-197.3" fill="#000000">id</text>
+            <polyline fill="none" stroke="#000000" points="97,-189.5 126,-189.5 "></polyline>
+            <text text-anchor="middle" x="111.5" y="-174.3" fill="#000000">2</text>
+            <polyline fill="none" stroke="#000000" points="126,-166.5 126,-212.5 "></polyline>
+            <text text-anchor="middle" x="155" y="-197.3" fill="#000000">name</text>
+            <polyline fill="none" stroke="#000000" points="126,-189.5 184,-189.5 "></polyline>
+            <text text-anchor="middle" x="155" y="-174.3" fill="#000000">Joe</text>
+            <polyline fill="none" stroke="#000000" points="184,-166.5 184,-212.5 "></polyline>
+            <text text-anchor="middle" x="208" y="-197.3" fill="#000000">next</text>
+            <polyline fill="none" stroke="#000000" points="184,-189.5 232,-189.5 "></polyline>
+            <text text-anchor="middle" x="208" y="-174.3" fill="#000000">3</text>
+        </g>
+        <!-- r1&#45;&gt;r2 -->
+        <g id="edge1" class="edge">
+            <path fill="none" stroke="#000000" d="M116,-249.4026C116,-249.4026 116,-222.5477 116,-222.5477"></path>
+            <polygon fill="#000000" stroke="#000000" points="119.5001,-222.5477 116,-212.5477 112.5001,-222.5477 119.5001,-222.5477"></polygon>
+        </g>
+        <!-- r3 -->
+        <g id="node3" class="node">
+            <polygon fill="none" stroke="#000000" points="194,-83.5 194,-129.5 329,-129.5 329,-83.5 194,-83.5"></polygon>
+            <text text-anchor="middle" x="208.5" y="-114.3" fill="#000000">id</text>
+            <polyline fill="none" stroke="#000000" points="194,-106.5 223,-106.5 "></polyline>
+            <text text-anchor="middle" x="208.5" y="-91.3" fill="#000000">3</text>
+            <polyline fill="none" stroke="#000000" points="223,-83.5 223,-129.5 "></polyline>
+            <text text-anchor="middle" x="252" y="-114.3" fill="#000000">name</text>
+            <polyline fill="none" stroke="#000000" points="223,-106.5 281,-106.5 "></polyline>
+            <text text-anchor="middle" x="252" y="-91.3" fill="#000000">Betty</text>
+            <polyline fill="none" stroke="#000000" points="281,-83.5 281,-129.5 "></polyline>
+            <text text-anchor="middle" x="305" y="-114.3" fill="#000000">next</text>
+            <polyline fill="none" stroke="#000000" points="281,-106.5 329,-106.5 "></polyline>
+            <text text-anchor="middle" x="305" y="-91.3" fill="#000000">4</text>
+        </g>
+        <!-- r2&#45;&gt;r3 -->
+        <g id="edge2" class="edge">
+            <path fill="none" stroke="#000000" d="M213,-166.4026C213,-166.4026 213,-139.5477 213,-139.5477"></path>
+            <polygon fill="#000000" stroke="#000000" points="216.5001,-139.5477 213,-129.5477 209.5001,-139.5477 216.5001,-139.5477"></polygon>
+        </g>
+        <!-- r4 -->
+        <g id="node4" class="node">
+            <polygon fill="none" stroke="#000000" points="291,-.5 291,-46.5 430,-46.5 430,-.5 291,-.5"></polygon>
+            <text text-anchor="middle" x="305.5" y="-31.3" fill="#000000">id</text>
+            <polyline fill="none" stroke="#000000" points="291,-23.5 320,-23.5 "></polyline>
+            <text text-anchor="middle" x="305.5" y="-8.3" fill="#000000">4</text>
+            <polyline fill="none" stroke="#000000" points="320,-.5 320,-46.5 "></polyline>
+            <text text-anchor="middle" x="351" y="-31.3" fill="#000000">name</text>
+            <polyline fill="none" stroke="#000000" points="320,-23.5 382,-23.5 "></polyline>
+            <text text-anchor="middle" x="351" y="-8.3" fill="#000000">Xavier</text>
+            <polyline fill="none" stroke="#000000" points="382,-.5 382,-46.5 "></polyline>
+            <text text-anchor="middle" x="406" y="-31.3" fill="#000000">next</text>
+            <polyline fill="none" stroke="#000000" points="382,-23.5 430,-23.5 "></polyline>
+            <text text-anchor="middle" x="406" y="-8.3" fill="#000000">null</text>
+        </g>
+        <!-- r3&#45;&gt;r4 -->
+        <g id="edge3" class="edge">
+            <path fill="none" stroke="#000000" d="M310,-83.4026C310,-83.4026 310,-56.5477 310,-56.5477"></path>
+            <polygon fill="#000000" stroke="#000000" points="313.5001,-56.5477 310,-46.5477 306.5001,-56.5477 313.5001,-56.5477"></polygon>
+        </g>
+    </g>
+</svg>

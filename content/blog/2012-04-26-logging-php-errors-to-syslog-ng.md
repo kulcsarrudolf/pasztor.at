@@ -1,4 +1,7 @@
 ---
+slug: logging-php-errors-to-syslog
+authors:
+- janos
 categories: blog
 date: "2012-04-26T00:00:00Z"
 publishDate: "2012-04-26T00:00:00Z"
@@ -10,7 +13,6 @@ summary: Ever so often I get to set up hosts for running PHP. When running a loa
 tags:
 - DevOps
 - PHP
-- Syslog
 title: Logging PHP errors to syslog-ng
 ---
 

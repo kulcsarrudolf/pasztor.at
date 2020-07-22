@@ -1,4 +1,7 @@
 ---
+slug: sql-introduction-part2
+authors:
+- janos
 categories: blog
 date: "2016-10-21T00:00:00Z"
 publishDate: "2016-10-21T00:00:00Z"
@@ -6,8 +9,7 @@ summary: In the previous episode of our journey we have spoken about the basics 
   writing an SQL query. However, we did not speak of the limitations you can place
   on SQL tables.
 tags:
-- Development
-- SQL
+- Software Development
 title: Introduction to SQL databases Part 2
 ---
 
@@ -97,7 +99,9 @@ CREATE TABLE students (
 );
 ```
 
-> **Be careful!** Depending on your server, unique keys may allow multiple rows with `NULL` values!
+{{% warning %}}
+**Be careful!** Depending on your server, unique keys may allow multiple rows with `NULL` values!
+{{% /warning %}}
 
 ### Primary keys
 
@@ -136,11 +140,13 @@ Let's look at the difference:
 
 There are a few more differences, but most of those are unique to the SQL server you are using.
 
-> **Common misconception** A lot of university teachers would tell you that every table needs a numeric primary key.
-> This is not true, you can create a primary key on a textual (`VARCHAR`) column, or you could create a primary key
-> using multiple columns. If your students are given a textual identification, for example, this can be easily used to
-> make your database mimic your business model more closely. On the other hand, having a column named `id` or `table_id`
-> will make your database easier to understand for a lot of people.
+{{% warning %}}
+**Common misconception** A lot of university teachers would tell you that every table needs a numeric primary key.
+This is not true, you can create a primary key on a textual (`VARCHAR`) column, or you could create a primary key
+using multiple columns. If your students are given a textual identification, for example, this can be easily used to
+make your database mimic your business model more closely. On the other hand, having a column named `id` or `table_id`
+will make your database easier to understand for a lot of people.
+{{% /warning %}}
 
 ### Making the database fast (indexes)
 

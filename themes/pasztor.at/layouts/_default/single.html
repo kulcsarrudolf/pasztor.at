@@ -10,7 +10,13 @@
         <h1>{{ .Title }}</h1>
         {{ if $.PublishDate }}
         <div class="meta">
-            <time datetime="{{ $.PublishDate }}">{{ $.PublishDate.Format "Jan 2, 2006" }}</time>
+            <time datetime="{{ $.PublishDate }}">
+                <span class="line">{{ $.PublishDate.Format "Jun 1, 2006" }}</span>
+                <span class="calendar">
+                    <span class="day">{{ $.PublishDate.Day}}</span>
+                    <span class="month-year">{{ substr $.PublishDate.Month 0 3 }} {{ $.PublishDate.Year}}</span>
+                </span>
+            </time>
             {{ if (isset .Params "authors")}}
                 <span class="byline">
                     <span class="by">by</span>

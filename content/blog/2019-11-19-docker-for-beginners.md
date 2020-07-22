@@ -6,23 +6,15 @@ publishDate: "2019-11-19T00:00:00Z"
 summary: There are a million Docker tutorials out on the Internet, but few explain
   what's actually going on behind the scenes when you issue your first commands. So
   let's take a look!
-fbimage: posts/docker-for-beginners.png
-googleimage: posts/docker-for-beginners.png
+images:
+- posts/docker-for-beginners.png
 preview: posts/docker-for-beginners.jpg
-sharing:
-  discord: '@everyone New post: Getting started with Docker for the Inquisitive Mind'
-  facebook: 'New post: Getting started with Docker for the Inquisitive Mind'
-  linkedin: 'New post: Getting started with Docker for the Inquisitive Mind'
-  patreon: 'New post: Getting started with Docker for the Inquisitive Mind'
-  twitter: 'New post: Getting started with Docker for the Inquisitive Mind'
 tags:
-- Docker
+- Containers
 - DevOps
 title: Getting started with Docker for the Inquisitive Mind
 authors:
 - janos
-twitter_card: summary_large_image
-twitterimage: posts/docker-for-beginners.png
 ---
 
 Ok, so you have decided to start doing something with Docker but you don't even know what is what and how this whole thing works? Maybe you've read a couple of tutorials but you have no clue what you are doing? Then this is the post for you.

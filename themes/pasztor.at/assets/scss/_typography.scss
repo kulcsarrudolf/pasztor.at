@@ -52,20 +52,45 @@ html, body {
     .byline {
       display:none;
     }
+    .line {
+      display:block;
+    }
+    .calendar {
+      display: none;
+    }
   }
 
   @media screen and (min-width: 760px) {
     .meta {
-      //region Hack for vertical-align bottom misalignment
-      position:relative;
-      top:0.1rem;
-      //endregion
+      position: relative;
+      height: 4.5rem;
+      border-radius: 5px;
+      background:$color-background-card-light;
       margin-top:1.5rem;
-      width: $text-margin-left - 0.2rem;
+      width: $text-margin-left - 0.5rem;
       float:left;
       font-size:0.8rem;
       margin-left:0;
       color:$color-meta-text-light;
+      text-align:center;
+      .line {
+        display:none;
+      }
+      .calendar {
+        display: block;
+      }
+      .day {
+        font-size:2rem;
+        display:block;
+        height:3rem;
+        line-height:3rem;
+      }
+      .month-year {
+        text-align:center;
+      }
+      .comma {
+        display:none;
+      }
       time {
         display:block;
       }
@@ -88,6 +113,7 @@ html, body {
   @media screen and (min-width: 760px) and (prefers-color-scheme: dark) {
     .meta {
       color: $color-meta-text-dark;
+      background:$color-background-card-dark;
     }
   }
 
@@ -162,6 +188,10 @@ html, body {
   p, ul, ol, figure, dl, hr {
     margin-top:1.5rem;
     font-size:1rem;
+  }
+
+  ul ul {
+    margin-top:0;
   }
 
   h1, h2, h3, h4, h5, h6, p, ul, ol, figure, dl, div, hr {
@@ -275,15 +305,6 @@ html, body {
     }
   }
 
-  @media screen and (prefers-color-scheme: dark) {
-    a {
-      color: $color-link-dark;
-    }
-    a:visited {
-      color: $color-link-visited-dark;
-    }
-  }
-
   code {
     font-family: $font-mono;
   }
@@ -303,6 +324,81 @@ html, body {
     img {
       border-radius: 5px;
       max-width:100%;
+    }
+    table {
+      min-width:75%;
+      border-radius: 5px;
+      margin-left: auto;
+      margin-right:auto;
+      border: $color-decor;
+      border-collapse: separate;
+      border-spacing: 0;
+      background:$color-background-card-light;
+      margin-bottom:-0.1em;
+
+      th, td {
+        padding-left:0.75rem;
+        padding-right:0.75rem;
+        line-height:1.3rem;
+        border-left:0.1rem solid $color-decor;
+        border-top:0.1rem solid $color-decor;
+      }
+
+      thead {
+        background-color:$color-background-card-light-highlight;
+      }
+
+      tr td:last-child,
+      tr th:last-child {
+        border-right:0.1rem solid $color-decor;
+      }
+
+      tbody:last-child tr:last-child td {
+        border-bottom:0.1rem solid $color-decor;
+      }
+
+      thead:first-child tr:first-child th:first-child,
+      thead:first-child tr:first-child td:first-child {
+        border-top-left-radius: 5px;
+      }
+      thead:first-child tr:first-child,
+      thead:first-child tr:first-child th:last-child,
+      thead:first-child tr:first-child td:last-child {
+        border-top-right-radius: 5px;
+      }
+
+      tbody:last-child tr:last-child,
+      tbody:last-child tr:last-child td:first-child {
+        border-bottom-left-radius: 5px;
+      }
+      tbody:last-child tr:last-child,
+      tbody:last-child tr:last-child td:last-child {
+        border-bottom-right-radius: 5px;
+      }
+    }
+    ul {
+      text-align: left;
+      &.tree {
+        padding-top:1.5em;
+        padding-bottom:1.5em;
+        border-radius: 5px;
+        background: $color-background-card-light;
+        li {
+          list-style-type: none;
+        }
+        .tree__item--folder {
+          &::before {
+            content:"📁";
+            margin-right:0.2em;
+          }
+        }
+        .tree__item--file {
+          &::before {
+            content:"📝";
+            margin-right:0.2em;
+          }
+        }
+      }
     }
     figcaption {
       font-style: italic;
@@ -359,6 +455,27 @@ html, body {
       content:"ⓘ";
       color: $color-admonition-info;
       font-weight: bold;
+    }
+  }
+
+  @media screen and (prefers-color-scheme: dark) {
+    a {
+      color: $color-link-dark;
+    }
+    a:visited {
+      color: $color-link-visited-dark;
+    }
+    figure {
+      table {
+        background: $color-background-card-dark;
+
+        thead {
+          background-color: $color-background-card-dark-highlight;
+        }
+      }
+      ul.tree {
+        background: $color-background-card-dark;
+      }
     }
   }
 

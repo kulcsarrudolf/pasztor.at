@@ -1,0 +1,24 @@
+skinparam ParticipantPadding 20
+actor Browser
+control PHP1
+database Filesystem
+Browser -> PHP1: Hey, give me\nthat resource please!\nPHPSESSID=asdfasdf
+Activate PHP1
+PHP1 -> Filesystem: Lock session file 'asdfasdf'
+Activate Filesystem
+PHP1 <-- Filesystem: Here you go
+Deactivate Filesystem
+PHP1 -> Filesystem: Load contents of\nsession file 'asdfasdf'
+Activate Filesystem
+PHP1 <-- Filesystem: Here you go
+Deactivate Filesystem
+... PHP1 does other things\nto generate response,\nand when it's finished: ...
+PHP1 -> Filesystem: Store contents of\nsession file 'asdfasdf'
+Activate Filesystem
+PHP1 <-- Filesystem: OK, done
+Deactivate Filesystem
+PHP1 -> Filesystem: Release lock on\nsession file 'asdfasdf'
+Activate Filesystem
+PHP1 <-- Filesystem: OK, done
+Deactivate Filesystem
+Browser <-- PHP1: Here's your content.

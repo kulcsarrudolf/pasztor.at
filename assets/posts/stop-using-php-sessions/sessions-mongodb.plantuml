@@ -1,0 +1,30 @@
+actor Browser
+control PHP1
+control PHP2
+database MongoDB
+Browser -> PHP1: Hey, give me\nthat resource please!\nPHPSESSID=asdfasdf
+Activate PHP1
+PHP1 -> MongoDB: Give me the data\nfor sesson 'asdfasdf'
+Activate MongoDB
+PHP1 <-- MongoDB: Here you go
+Deactivate MongoDB
+Browser -> PHP2: Hey, give me\nthat other resource please!\nPHPSESSID=asdfasdf
+Activate PHP2
+PHP2 -> MongoDB: Give me the data\nfor session 'asdfasdf'
+Activate MongoDB
+PHP2 <-- MongoDB: Here you go
+Deactivate MongoDB
+... Both PHP 1 and PHP 2\ndo their thing ...
+PHP1 -> MongoDB: Write session data\nfor 'asdfasdf'
+Activate MongoDB
+PHP1 <-- MongoDB: OK, done
+Deactivate MongoDB
+Browser <-- PHP1: Here's your content.
+Deactivate PHP1
+PHP2 -> MongoDB: Write session data\nfor 'asdfasdf'
+Activate MongoDB
+PHP2 <-- MongoDB: Here you go
+note right: PHP2 is now overwriting\nany changes PHP1\nmay have made.
+Deactivate MongoDB
+Browser <-- PHP2: Here's your content.
+Deactivate PHP2

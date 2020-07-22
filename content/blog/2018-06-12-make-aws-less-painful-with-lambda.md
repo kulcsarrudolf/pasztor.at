@@ -1,19 +1,17 @@
 ---
+slug: make-aws-less-painful-with-lambda
+authors:
+- janos
 categories: blog
 date: "2018-06-12T00:00:00Z"
 publishDate: "2018-06-12T00:00:00Z"
-summary: Amazon Web Services can sometimes be a royal pain in the backside, especially
-  because a lot of their services are not entirely feature complete. A lot of these
-  gaps can, however, be filled with Amazon Lambda.
-fbimage: posts/make-aws-less-painful-with-lambda.png
-googleimage: posts/make-aws-less-painful-with-lambda.png
+summary: Amazon Web Services can sometimes be a royal pain in the backside, especially because a lot of their services are not entirely feature complete. A lot of these gaps can, however, be filled with Amazon Lambda.
+images:
+- posts/make-aws-less-painful-with-lambda.png
 preview: posts/make-aws-less-painful-with-lambda.jpg
 tags:
 - DevOps
-- AWS
 title: Make AWS less painful with Lambda functions
-twitter_card: summary_large_image
-twitterimage: posts/make-aws-less-painful-with-lambda.png
 ---
 
 All right, let me explain what I mean. Amazon has a wide range of services, but most of their services are designed

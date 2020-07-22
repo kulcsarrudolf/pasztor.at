@@ -5,28 +5,14 @@ authors:
 categories: blog
 date: "2019-06-12T00:00:00Z"
 publishDate: "2019-06-12T00:00:00Z"
-summary: Monocultures already caused the death of one strand of banana. What can we
-  learn from it in IT?
-fbimage: posts/monocultures.png
-googleimage: posts/monocultures.png
+summary: Monocultures already caused the death of one strand of banana. What can we learn from it in IT?
+images:
+- posts/monocultures.png
 preview: posts/monocultures.jpg
-sharing:
-  discord: '@everyone What''s similar between bananas and your IT setup? Both can
-    have monocultures, and both could be a problem!'
-  facebook: 'What''s similar between bananas and your IT setup? Both can have monocultures,
-    and both could be a problem! #DevOps'
-  linkedin: 'What''s similar between bananas and your IT setup? Both can have monocultures,
-    and both could be a problem! #DevOps'
-  patreon: 'What''s similar between bananas and your IT setup? Both can have monocultures,
-    and both could be a problem! #DevOps'
-  twitter: 'What''s similar between bananas and your IT setup? Both can have monocultures,
-    and both could be a problem! #DevOps'
 tags:
 - DevOps
-- Development
+- Software Development
 title: The danger of monocultures
-twitter_card: summary_large_image
-twitterimage: posts/monocultures.png
 ---
 
 In the 1950's a bananas looked much different than today. They were straight instead of curved, and they didn't have the signature bright yellow color todays bananas have. That's because in the 50's most of the worlds bananas were from the [Gros Michel or Big Mike](https://en.wikipedia.org/wiki/Gros_Michel_banana) variant. By the 60's, however, this kind of banana was all but gone. It was attacked by a particular kind of [fungus](https://youtu.be/9H0dy8fv33M) called the Panama disease that this variant was susceptible to and was replaced by the Cavendish, the banana we know and love (or hate) today.

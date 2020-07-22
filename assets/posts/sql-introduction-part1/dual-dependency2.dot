@@ -1,0 +1,9 @@
+digraph {
+    node [shape=plaintext];
+    Joe -> math;
+    Joe -> literature;
+    Joe -> history;
+    Suzy -> astronomy
+    Suzy -> math
+    Suzy -> physics
+}

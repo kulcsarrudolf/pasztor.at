@@ -43,28 +43,14 @@ menu:
       url: /blog/
       weight: -100
     - identifier: about
-      name: About Us
+      name: About me
       url: /about/
       weight: -90
     - identifier: discord
-      name: Join our Discord
+      name: Join my Discord
       url: https://discord.gg/sEWQcpe
       weight: -80
   footer:
-    - identifier: about
-      name: About Us
-      weight: 1
-    - identifier: about-sanja
-      parent: about
-      name: Sanja
-      url: /about/sanja
-      weight: 1
-    - identifier: about-janos
-      parent: about
-      name: Janos
-      url: /about/janos
-      weight: 2
-
     - identifier: subscribe
       name: Subscribe
       weight: 2

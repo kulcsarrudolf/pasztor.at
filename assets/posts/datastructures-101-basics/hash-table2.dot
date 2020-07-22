@@ -1,0 +1,19 @@
+digraph records {
+  node [shape=record,fontname="Open Sans;sans-serif",fontsize=14];
+  edge [fontname="Open Sans;sans-serif",fontsize=14]
+  splines=ortho;
+
+  hash [label="<0> 0|<1> 1 |<2> 2"]
+
+  hash:0 -> 0
+  0 -> 3
+  3 -> 6
+
+  hash:1 -> 1
+  1 -> 4
+  4 -> 7
+
+  hash:2 -> 2
+  2 -> 5
+  5 -> 8
+}

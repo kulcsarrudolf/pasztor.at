@@ -1,19 +1,18 @@
 ---
+slug: intercontinental-docker-swarm
+authors:
+- janos
 categories: blog
 date: "2017-10-22T00:00:00Z"
 publishDate: "2017-10-22T00:00:00Z"
-summary: 'Docker is the new hotness. Swarm is an even newer, even hotter thing. The
-  question is: will it blend? Can it run spanning multiple continents?'
-fbimage: posts/intercontinental-docker-swarm.png
-googleimage: posts/intercontinental-docker-swarm.png
+summary: 'Docker is the new hotness. Swarm is an even newer, even hotter thing. The question is: will it blend? Can it run spanning multiple continents?'
+images:
+- posts/intercontinental-docker-swarm.png
 preview: posts/intercontinental-docker-swarm.png
 tags:
-- CDN
-- Docker
+- Containers
 - DevOps
 title: Intercontinental Docker Swarm
-twitter_card: summary_large_image
-twitterimage: posts/intercontinental-docker-swarm.png
 ---
 
 ## Preparing AWS
@@ -157,7 +156,9 @@ rz9mixmz2bw50d0cppayy7ind     us-east-1           Ready               Active    
 tw55u6zokn6apzq6hi46yi7t8     us-west-1           Ready               Active              Reachable
 ```
 
-> **Hint:** Always join your swarm managers as workers first. If the join fails, it won't completely bork your cluster.
+{{% tip %}}
+**Hint:** Always join your swarm managers as workers first. If the join fails, it won't completely bork your cluster.
+{{% /tip %}}
 
 ## Adding an overlay network
 

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="138pt" height="188pt" viewBox="0.00 0.00 137.99 188.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 184)">
+        <polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-184 133.9885,-184 133.9885,4 -4,4"></polygon>
+        <!-- ui -->
+        <g id="node1" class="node">
+            <ellipse fill="none" stroke="#000000" cx="64.9942" cy="-162" rx="61.1893" ry="18"></ellipse>
+            <text text-anchor="middle" x="64.9942" y="-158.3" fill="#000000">User Interface</text>
+        </g>
+        <!-- bl -->
+        <g id="node2" class="node">
+            <ellipse fill="none" stroke="#000000" cx="64.9942" cy="-90" rx="64.9885" ry="18"></ellipse>
+            <text text-anchor="middle" x="64.9942" y="-86.3" fill="#000000">Business Logic</text>
+        </g>
+        <!-- ui&#45;&gt;bl -->
+        <g id="edge1" class="edge">
+            <path fill="none" stroke="#000000" d="M64.9942,-143.8314C64.9942,-136.131 64.9942,-126.9743 64.9942,-118.4166"></path>
+            <polygon fill="#000000" stroke="#000000" points="68.4943,-118.4132 64.9942,-108.4133 61.4943,-118.4133 68.4943,-118.4132"></polygon>
+        </g>
+        <!-- storage -->
+        <g id="node3" class="node">
+            <ellipse fill="none" stroke="#000000" cx="64.9942" cy="-18" rx="42.7926" ry="18"></ellipse>
+            <text text-anchor="middle" x="64.9942" y="-14.3" fill="#000000">Database</text>
+        </g>
+        <!-- bl&#45;&gt;storage -->
+        <g id="edge2" class="edge">
+            <path fill="none" stroke="#000000" d="M64.9942,-71.8314C64.9942,-64.131 64.9942,-54.9743 64.9942,-46.4166"></path>
+            <polygon fill="#000000" stroke="#000000" points="68.4943,-46.4132 64.9942,-36.4133 61.4943,-46.4133 68.4943,-46.4132"></polygon>
+        </g>
+    </g>
+</svg>

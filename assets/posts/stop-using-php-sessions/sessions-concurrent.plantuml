@@ -1,0 +1,34 @@
+actor Browser
+control PHP1
+control PHP2
+database Filesystem
+Browser -> PHP1: Hey, give me that\nresource please!\nPHPSESSID=asdfasdf
+Activate PHP1
+PHP1 -> Filesystem: Lock session file 'asdfasdf'
+Activate Filesystem
+PHP1 <-- Filesystem: Here you go
+Deactivate Filesystem
+Browser -> PHP2: Hey, give me that\nother resource please!\nPHPSESSID=asdfasdf
+Activate PHP2
+PHP2 -> Filesystem: Lock session file asdfasdf
+note right: PHP2 now has to\nwait for the lock
+Activate Filesystem
+Deactivate PHP2
+... PHP1 does other things\nto generate response,\nand when it's finished: ...
+PHP1 -> Filesystem: Release lock\non session file 'asdfasdf'
+Activate Filesystem
+PHP1 <-- Filesystem: OK, done
+Deactivate Filesystem
+Browser <-- PHP1: Here's your content.
+Deactivate PHP1
+PHP2 <-- Filesystem: Here you go
+note right: PHP2 is now\nfree to continue
+Deactivate Filesystem
+Activate PHP2
+... PHP2 does other things to\ngenerate response,\nand when it's finished: ...
+PHP2 -> Filesystem: Release lock\non session file 'asdfasdf'
+Activate Filesystem
+PHP2 <-- Filesystem: OK, done
+Deactivate Filesystem
+Browser <-- PHP2: Here's your content.
+Deactivate PHP2

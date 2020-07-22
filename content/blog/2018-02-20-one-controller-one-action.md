@@ -1,20 +1,17 @@
 ---
+slug: one-controller-one-action
+authors:
+- janos
 categories: blog
 date: "2018-02-20T00:00:00Z"
 publishDate: "2018-02-20T00:00:00Z"
-summary: How many actions do you put in a controller? 5-6? 20? What would you say
-  if I told you my limit is just one method?
-fbimage: posts/one-controller-one-action.png
-googleimage: posts/one-controller-one-action.png
+summary: How many actions do you put in a controller? 5-6? 20? What would you say if I told you my limit is just one method?
+images:
+- posts/one-controller-one-action.png
 preview: posts/one-controller-one-action.jpg
 tags:
-- Development
-- Clean Code
-- Functional programming
-- OOP
+- Software Development
 title: One Controller, One Action
-twitter_card: summary_large_image
-twitterimage: posts/one-controller-one-action.png
 ---
 
 It is safe to say that most web applications have way too many action methods in their controllers. It starts out with
@@ -106,7 +103,9 @@ that dependency without affecting the functionality of the `get()` method.
 True, single responsibility is defined in a business sense, not in a coding sense, but chances are you are also
 violating SRP in a business sense if you follow the CRUD setup.
 
-> **Single Responsibility Principle:** A class should have only one reason to change.
+{{% tip %}}
+**Single Responsibility Principle:** A class should have only one reason to change.
+{{% /tip %}}
 
 ## ...one action
 
@@ -135,8 +134,10 @@ class BlogPostGetController {
 Simple, nicely packed, and most of all: responsibilities don't get any more single-er than this. But wait, there's more!
 Look at the `BlogPostBusinessLogicInterface`. Judging from the API that must also have a fair-few methods. There is a
 little something called the Interface Segregation Principle. 
- 
-> **Interface Segregation Principle:** No client (caller) should be forced to depend on methods it does not use.
+
+{{% tip %}} 
+**Interface Segregation Principle:** No client (caller) should be forced to depend on methods it does not use.
+{{% /tip %}}
 
 If we want to adhere to this principle, we need to split that interface up into `BlogPostGetBusinessLogicInterface`
 and a couple of others. The implementation could then look like this:
@@ -283,7 +284,10 @@ Object orientation gives you structure, whereas functional programming gives you
 The one controller one action paradigm, when combined with immutability, leads to a beneficial blend of
 OOP and FP in my opinion.
 
-> **Recommended resources:**
-> - [Why functional programming matters (video)](https://www.youtube.com/watch?v=oB8jN68KGcU)
-> - [The Entity-Boundary-Interactor pattern](http://ebi.readthedocs.io/en/latest/)
-> - [The Action Domain Responder pattern](https://github.com/pmjones/adr)
+{{% tip %}}
+**Recommended resources:**
+
+- [Why functional programming matters (video)](https://www.youtube.com/watch?v=oB8jN68KGcU)
+- [The Entity-Boundary-Interactor pattern](http://ebi.readthedocs.io/en/latest/)
+- [The Action Domain Responder pattern](https://github.com/pmjones/adr)
+{{% /tip %}}

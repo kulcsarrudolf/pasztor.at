@@ -1,19 +1,18 @@
 ---
+slug: why-testing-is-hard
+authors:
+- janos
 categories: blog
 date: "2018-05-06T00:00:00Z"
 publishDate: "2018-05-06T00:00:00Z"
-summary: Why do so many developers struggle with testing? Why don't we all have 9x%
-  test coverage on our code?
-fbimage: posts/why-testing-is-hard.png
-googleimage: posts/why-testing-is-hard.png
+summary: Why do so many developers struggle with testing? Why don't we all have 9x% test coverage on our code?
+images:
+- posts/why-testing-is-hard.png
 preview: posts/why-testing-is-hard.jpg
 tags:
-- Clean Code
 - Testing
-- Development
+- Software Development
 title: Why testing is hard
-twitter_card: summary_large_image
-twitterimage: posts/why-testing-is-hard.png
 ---
 
 When most people start testing their software, they are driven by one urge: if they user does X, then Y should happen.
@@ -26,56 +25,31 @@ More often than not, this kind of thinking leads to tools like [Selenium](https:
 
 When we think of a modern web application in a very abstract way, we can draw something like this:
 
-{% xdot %}
-digraph records {
-  ui [label="User Interface"]
-  bl [label="Business Logic"]
-  storage [label="Database"]
-  
-  ui -> bl
-  bl -> storage
-}
-{% endxdot %}
+![The user interface depends on the business logic, the business logic depends on the database.](posts/why-testing-is-hard/module-dependencies.svg)
 
-Let's assume you want to create a set of tests that cover *most* possible cases. So **how many test cases do we have to
-write?**
+Let's assume you want to create a set of tests that cover *most* possible cases. So **how many test cases do we have to write?**
 
-The number of tests required to fully cover the application requires can be measured by something we call *cyclomatic
-complexity*, or simply put: how many decision points are there in the code, how many different paths of execution are
-possible, depending on the input and the database. For each possible execution path we have to write at least one test
-in order to cover the application.
+The number of tests required to fully cover the application requires can be measured by something we call *cyclomatic complexity*, or simply put: how many decision points are there in the code, how many different paths of execution are possible, depending on the input and the database. For each possible execution path we have to write at least one test in order to cover the application.
 
-So, if your whole application contains one `if` case with a simple decision, you need two tests: one if the `if` results
-in true, and one if the `if` results in false, resulting in a complexity of 2.
+So, if your whole application contains one `if` case with a simple decision, you need two tests: one if the `if` results in true, and one if the `if` results in false, resulting in a complexity of 2.
 
-However, looking at the graph above, the number of different cases already starts to climb. Think about how many
-decisions you need to make when processing a single request and what factors that request depends on? For each
-possible execution path you'd have to have a test case, each test case consisting of setting up the database correctly,
-running the test and evaluating the results, which is quite a lot of work, and is also very slow to run.
+However, looking at the graph above, the number of different cases already starts to climb. Think about how many decisions you need to make when processing a single request and what factors that request depends on? For each possible execution path you'd have to have a test case, each test case consisting of setting up the database correctly, running the test and evaluating the results, which is quite a lot of work, and is also very slow to run.
 
-This issue is compounded by the fact that every single change in the user interface requires touching potentially dozens
-of test cases. Needless to say, that can become a problem really fast when for every design change you are looking at a
-workload of potentially several hours. (And I'm not even mentioning the problem of accidentally running your tests
-against the production database... yes I've seen someone make that mistake.)
+This issue is compounded by the fact that every single change in the user interface requires touching potentially dozens of test cases. Needless to say, that can become a problem really fast when for every design change you are looking at a workload of potentially several hours. (And I'm not even mentioning the problem of accidentally running your tests against the production database... yes I've seen someone make that mistake.)
 
 Long story short, doing *only* integration tests, especially when also putting the user interface with its million
 buttons and form fields into the mix, is a sure fire way to fail and stop maintaining the tests pretty soon.
 
 ## Introducing: *unit tests*
 
-Ok, so it's pretty clear that we need to split this application somehow and test each component individually, then just
-test if they are wired together correctly. This method of *only testing one component* is called **unit testing**.
+Ok, so it's pretty clear that we need to split this application somehow and test each component individually, then just test if they are wired together correctly. This method of *only testing one component* is called **unit testing**.
 
-Sounds easy enough, doesn't it? There is but one problem left to solve: how do we split the application? After all, the
-function calls from the *User Interface* to the *Business Logic* and from the *Business Logic* to the *Database* are
-hard-wired!
+Sounds easy enough, doesn't it? There is but one problem left to solve: how do we split the application? After all, the function calls from the *User Interface* to the *Business Logic* and from the *Business Logic* to the *Database* are hard-wired!
 
-And that's where the real crux of the matter lies: **you can't start writing useful tests if your code is not written in
-a testable way!**
+And that's where the real crux of the matter lies: **you can't start writing useful tests if your code is not written in a testable way!**
 
 Somehow we need to *decouple* the UI from the Business Logic and the Business Logic from the Database. To test the
-Business Logic, for example, we need to pass in a simplified, *dumbed down* version of a database connector that is
-easier to set up with test data.
+Business Logic, for example, we need to pass in a simplified, *dumbed down* version of a database connector that is easier to set up with test data.
 
 ## Refactoring for testability
 
@@ -119,25 +93,19 @@ class BlogPostController {
 This enables us to replace the storage with a different implementation. Even more so if we
 [define an interface for it](/blog/the-curious-case-of-interfaces).
 
-> **Warning!** Many framework docs lead you down a rabbit hole of bad practices, encouraging you to use patterns like
-> static method calls or service locators, which will make testing hard. Be sure to use dependency injection if you
-> want testability.
+{{% warning %}}
+**Warning!** Many framework docs lead you down a rabbit hole of bad practices, encouraging you to use patterns like static method calls or service locators, which will make testing hard. Be sure to use dependency injection if you want testability.
+{{% /warning %}}
 
 ### Getting rid of global state
 
-Another factor in untestable code is the presence of hidden global state. Global state can come in many forms, such as
-global variables like `$SESSION` in PHP, the use of the singleton pattern, etc.
+Another factor in untestable code is the presence of hidden global state. Global state can come in many forms, such as global variables like `$SESSION` in PHP, the use of the singleton pattern, etc.
 
-For the sake of argument let's assume your controller is using `$SESSION`. For your tests you'd set up this variable
-with a certain value beforehand and then run your tests. Now, imagine a situation where you *forget* to reset the
-contents of this variable and something, somewhere deep in your controller relies upon that. If you run test `A` before
-test `B`, everything passes. If you run test `B` first, it fails. In other words your tests become *flaky*.
+For the sake of argument let's assume your controller is using `$SESSION`. For your tests you'd set up this variable with a certain value beforehand and then run your tests. Now, imagine a situation where you *forget* to reset the contents of this variable and something, somewhere deep in your controller relies upon that. If you run test `A` before test `B`, everything passes. If you run test `B` first, it fails. In other words your tests become *flaky*.
 
-Now, this is only one relatively simple example how hidden global scope can mess up your tests, there are many more
-possibilities and you'd generally want to avoid them.
+Now, this is only one relatively simple example how hidden global scope can mess up your tests, there are many more possibilities, and you'd generally want to avoid them.
 
-As a general programming advice, you'd want your modules / classes to have as little state as possible, and if state is
-needed, relegate it to a module / class that is specifically designed to deal with state.
+As a general programming advice, you'd want your modules / classes to have as little state as possible, and if state is needed, relegate it to a module / class that is specifically designed to deal with state.
 
 ## Unit tests vs. integration tests
 
