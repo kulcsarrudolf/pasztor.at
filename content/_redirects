@@ -1,4 +1,3 @@
-
 /what-is-the-cap-theorem                               /blog/cap-theorem
 /2010/03/22/the-big-exim-tutorial                      /blog/the-big-exim-tutorial
 /wp-content/uploads/2012/04/janos-pasztor.pdf          /cv
@@ -7,7 +6,8 @@
 /2013/04/29/setting-up-apache-with-php-fpm             /blog/setting-up-apache-with-php-fpm
 /2013/04/26/dont-use-ftp-heres-why                     /blog/dont-use-ftp-heres-why
 /2013/05/29/fixing-rdns_none-with-spamassassin         /blog/fixing-rdns_none-with-spamassassin
-/about-me                                              /cv
+/about-me                                              /about
+/cv                                                    /about
 /2013/05/07/proper-time-handling-with-php-and-mysql    /blog/proper-time-handling-with-php-and-mysql
 /2012/04/19/debugging-applications-with-strace         /blog/debugging-applications-with-strace
 /blog/loose-st.rict-static                             /blog/loose-strict-static
@@ -19,3 +19,5 @@
 /2013/02/06/limiting-linux-processes-cgroups-explained /blog/under-the-hood-of-docker
 /2013/01/22/lxc-vs-openvz                              /blog/lxc-vs-docker
 /2012/04/16/proper-xss-protection-in-javascript-php-and-smarty /blog/injection-type-vulnerabilities
+
+/* /404.html 404
