@@ -1,6 +1,8 @@
+@import "common/variables";
+
 .text .chroma {
   font-size:0.8rem;
-  border-radius: 5px;
+  border-radius: $border-radius;
   .lntd {
     vertical-align: top;
     padding: 0;

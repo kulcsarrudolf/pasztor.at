@@ -62,10 +62,10 @@ html, body {
     .meta {
       position: relative;
       height: 4.5rem;
-      border-radius: 5px;
+      width: $text-margin-left - 1rem;
+      border-radius: $border-radius;
       background:$color-background-card-light;
       margin-top:1.5rem;
-      width: $text-margin-left - 0.5rem;
       float:left;
       font-size:0.8rem;
       margin-left:0;
@@ -85,8 +85,8 @@ html, body {
       }
       .month-year {
         display: block;
-        border-bottom-left-radius:5px;
-        border-bottom-right-radius: 5px;
+        border-bottom-left-radius:$border-radius;
+        border-bottom-right-radius: $border-radius;
         text-align:center;
         color: $color-decor-contrast;
         background: $color-decor;
@@ -106,6 +106,7 @@ html, body {
 
     h1 + .meta + p:first-of-type {
       font-size:$size-lead;
+      letter-spacing: 0.1rem;
     }
 
     .bio>h2 {
@@ -160,6 +161,7 @@ html, body {
     .readmore {
       margin-top:1.5rem;
       a {
+        border-radius: 0.2rem;
         display: inline-block;
         padding-left:0.75rem;
         padding-right:0.75rem;
@@ -309,12 +311,12 @@ html, body {
     position: relative;
     text-align: center;
     img {
-      border-radius: 5px;
+      border-radius: $border-radius;
       max-width:100%;
     }
     table {
       min-width:75%;
-      border-radius: 5px;
+      border-radius: $border-radius;
       margin-left: auto;
       margin-right:auto;
       border: $color-decor;
@@ -346,21 +348,21 @@ html, body {
 
       thead:first-child tr:first-child th:first-child,
       thead:first-child tr:first-child td:first-child {
-        border-top-left-radius: 5px;
+        border-top-left-radius: $border-radius;
       }
       thead:first-child tr:first-child,
       thead:first-child tr:first-child th:last-child,
       thead:first-child tr:first-child td:last-child {
-        border-top-right-radius: 5px;
+        border-top-right-radius: $border-radius;
       }
 
       tbody:last-child tr:last-child,
       tbody:last-child tr:last-child td:first-child {
-        border-bottom-left-radius: 5px;
+        border-bottom-left-radius: $border-radius;
       }
       tbody:last-child tr:last-child,
       tbody:last-child tr:last-child td:last-child {
-        border-bottom-right-radius: 5px;
+        border-bottom-right-radius: $border-radius;
       }
     }
     ul {
@@ -368,7 +370,7 @@ html, body {
       &.tree {
         padding-top:1.5em;
         padding-bottom:1.5em;
-        border-radius: 5px;
+        border-radius: $border-radius;
         background: $color-background-card-light;
         li {
           list-style-type: none;
