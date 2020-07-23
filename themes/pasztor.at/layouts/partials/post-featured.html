@@ -1,0 +1,9 @@
+<div class="post post--featured">
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <div class="post__content">
+        <p>
+            {{ plainify (index (split .Content "</") 0) }}
+            <span class="post__readmore"><a href="{{ .RelPermalink }}">Read <span class="nobr">more &raquo;</span></a></span>
+        </p>
+    </div>
+</div>

@@ -6,8 +6,7 @@ authors:
 - janos
 categories: blog
 images:
-- posts/the-painful-enterprise-way-to-the-cloud.png
-preview: posts/the-painful-enterprise-way-to-the-cloud.jpg
+- posts/the-painful-enterprise-way-to-the-cloud/social.png
 tags:
 - Cloud
 - DevOps

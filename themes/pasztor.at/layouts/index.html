@@ -4,9 +4,19 @@
 
 {{ define "main" }}
     {{ .Content }}
-    <div class="post-list post-list--feature">
-        {{ range (.Paginate ( where site.RegularPages "Section" "blog" | first 8 ) ).Pages }}
-            {{ partial "post.html" . }}
+    <div class="posts posts--feature">
+        {{ range first 1 (where site.RegularPages "Section" "blog")}}
+            {{ partial "post-featured.html" . }}
+        {{ end }}
+        <aside>
+            {{ range last 2 (first 3 (where site.RegularPages "Section" "blog"))}}
+                {{ partial "post-home.html" . }}
+            {{ end }}
+        </aside>
+    </div>
+    <div class="posts">
+        {{ range last 8 (first 11 (where site.RegularPages "Section" "blog"))}}
+            {{ partial "post-home.html" . }}
         {{ end }}
     </div>
     <div class="readmore">
