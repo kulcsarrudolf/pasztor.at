@@ -207,6 +207,22 @@ html, body {
     color: $color-inline-code;
   }
 
+  button {
+    cursor:pointer;
+    display:inline-block;
+    box-sizing: border-box;
+    border:0.1rem solid $color-decor;
+    height:1.5rem;
+    padding-left:0.75rem;
+    padding-right:0.75rem;
+    border-radius: $border-radius;
+    transition: color $transition-length ease-in-out, background-color $transition-length ease-in-out;
+    &:hover {
+      color: $color-decor-contrast;
+      background-color: $color-decor;
+    }
+  }
+
   dl {
     overflow:auto;
     position:relative;
