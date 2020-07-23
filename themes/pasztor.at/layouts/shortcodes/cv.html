@@ -1,0 +1,17 @@
+{{- with index $.Site.Data.authors (.Get "author") }}
+<div class="cv">
+    <header>
+        <div class="info">
+            <h1>{{- .fullname -}}</h1>
+            <div class="tagline">{{- .tagline -}}</div>
+            <p>{{- .bio -}}</p>
+        </div>
+        <img src="{{ (resources.Get .avatar).RelPermalink}}" alt="" class="avatar" />
+    </header>
+    <div class="social">
+        <a target="_blank" rel="noopener noreferer" href="https://github.com/{{ .social.github }}/"><img src="{{ (resources.Get "icons/github.svg").RelPermalink }}" alt="" /> Github</a>
+        <a target="_blank" rel="noopener noreferer" href="https://www.linkedin.com/in/{{ .social.linkedin }}/"><img src="{{ (resources.Get "icons/linkedin.svg").RelPermalink }}" alt="" /> Linkedin</a>
+        <a target="_blank" rel="noopener noreferer" href="https://twitter/{{ .social.twitter }}/"><img src="{{ (resources.Get "icons/twitter.svg").RelPermalink }}" alt="" /> Twitter</a>
+    </div>
+</div>
+{{ end }}

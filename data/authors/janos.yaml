@@ -3,6 +3,10 @@ fullname: Janos Pasztor
 tagline: Software Engineer, Author & Trainer
 bio: Hi there! I'm a software engineer who loves writing. I've been in the industry for over 10 years, and I like to share what I have learned.
 avatar: janos.png
+social:
+  github: janoszen
+  twitter: janoszen
+  linkedin: janoszen
 jobs:
   - company: Deloitte Digital
     roles:
