@@ -3,9 +3,30 @@
     {{ if in .Content "<pre class=\"chroma\">" }}
         {{ partial "scss" (dict "file" "scss/code.scss") }}
     {{ end }}
+    {{ if (isset .Params "mp3") }}
+        {{ partial "scss" (dict "file" "scss/audio.scss") }}
+    {{ end }}
 {{ end }}
 
 {{ define "main" }}
+    {{ if (isset .Params "mp3") }}
+        <input type="checkbox" class="audio-toggle" value="1" id="player" />
+        <div class="audio-overlay">
+            <label for="player" class="audio-overlay-close">&nbsp;</label>
+            <div class="audio-player">
+                <header><h2>Listen to this post</h2>
+                    <label class="close" for="player" aria-label="Close">&times;</label>
+                </header>
+                <audio controls>
+                    <source src="{{ (resources.Get .Params.mp3).RelPermalink }}" />
+                    Your browser does not seem to support MP# playback.
+                </audio>
+                <footer>
+                    <a class="download" target="_blank" download type="audio/mpeg" href="{{ (resources.Get .Params.mp3).RelPermalink }}">Download MP3</a>
+                </footer>
+            </div>
+        </div>
+    {{ end }}
     <div class="text{{ if not $.PublishDate}} text--simple{{ end }}">
         <h1>{{ .Title }}</h1>
         {{ if $.PublishDate }}
@@ -17,21 +38,8 @@
                     <span class="month-year">{{ substr $.PublishDate.Month 0 3 }} {{ $.PublishDate.Year}}</span>
                 </span>
             </time>
-            {{ if (isset .Params "authors")}}
-                <span class="byline">
-                    <span class="by">by</span>
-                    <span class="authors">
-                            {{ $authorCount := len .Params.authors}}
-                            {{ range $key, $author := .Params.authors }}
-                                {{- with $.Site.GetPage "taxonomyTerm" (printf "about/%s" (urlize $author )) }}
-                                    <a href="{{ .RelPermalink }}">
-                                        <span class="displayname">{{ .Title }}</span>
-                                        <span class="fullname">{{ .Params.fullname }}</span>
-                                    </a>{{ if lt $key (sub $authorCount 1) }},{{ end }}
-                                {{ end }}
-                            {{ end }}
-                    </span>
-                </span>
+            {{ if (isset .Params "mp3") }}
+                <label for="player" class="listen">🎧 Listen</label>
             {{ end }}
         </div>
         {{ end }}

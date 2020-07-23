@@ -1,0 +1,112 @@
+@import "common/variables";
+
+label.listen {
+  display:block;
+  margin-top:1.5rem;
+  background:$color-background-card-light;
+  height:1.5rem;
+  width:4rem;
+  border-radius:$border-radius;
+  cursor: pointer;
+  transition: background-color $transition-length ease-in-out, color $transition-length ease-in-out;
+  &:hover {
+    color:$color-decor-contrast;
+    background:$color-decor;
+  }
+}
+
+.audio-toggle {
+  display:none;
+}
+
+.audio-overlay {
+  overflow:hidden;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:100vh;
+  opacity:0;
+  background:rgba(0,0,0,0.5);
+  transition: opacity $transition-length ease-in-out, bottom $transition-length ease-in-out;
+  z-index:10;
+}
+
+.audio-toggle:checked + .audio-overlay {
+  bottom:0;
+  opacity:1;
+}
+
+.audio-overlay-close {
+  display: block;
+  position:absolute;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  z-index:1;
+}
+
+.audio-player {
+  position: relative;
+  z-index:2;
+  width:320px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:3rem;
+  border-radius:$border-radius;
+  background: $color-background-card-light;
+  padding:1.5rem;
+  header {
+    display: flex;
+    flex-direction: row;
+  }
+  h2 {
+    flex: 1;
+    font-size:1.5rem;
+    font-family:$font-heading;
+    font-weight:$font-weight-heading;
+  }
+  label.close {
+    display: block;
+    cursor: pointer;
+    font-size:1.5rem;
+  }
+  audio {
+    margin-top:1.5rem;
+    width:100%;
+    height:3rem;
+  }
+  footer {
+    margin-top:1.5rem;
+  }
+  .download {
+    display: inline-block;
+    font-size:0.8rem;
+    height:1.5rem;
+    padding-left:0.75rem;
+    padding-right:0.75rem;
+    border-radius: $border-radius;
+    color: $color-decor-contrast;
+    text-decoration:none;
+    background: $color-decor;
+    &:hover {
+      background: $color-decor;
+      color: $color-decor-contrast;
+      opacity:0.8;
+    }
+    &:visited {
+      background: $color-decor;
+      color: $color-decor-contrast;
+    }
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  label[for="player"] {
+    background: $color-background-card-dark;
+  }
+  .audio-player {
+    background: $color-background-card-dark;
+  }
+}
