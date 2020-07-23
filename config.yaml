@@ -50,9 +50,28 @@ menu:
       url: https://discord.gg/sEWQcpe
       weight: -80
   footer:
+    - identifier: social
+      name: Social
+      weight: 2
+    - identifier: social-linkedin
+      parent: social
+      name: Linkedin
+      url: https://www.linkedin.com/in/janoszen
+      weight: 1
+    - identifier: social-github
+      parent: social
+      name: Github
+      url: https://github.com/janoszen
+      weight: 2
+    - identifier: social-twitter
+      parent: social
+      name: Twitter
+      url: https://twitter/janoszen
+      weight: 3
+
     - identifier: subscribe
       name: Subscribe
-      weight: 2
+      weight: 3
     - identifier: subscribe-discord
       parent: subscribe
       name: Discord
@@ -66,7 +85,7 @@ menu:
 
     - identifier: legal
       name: Legal
-      weight: 3
+      weight: 4
     - identifier: imprint
       parent: legal
       name: Imprint
