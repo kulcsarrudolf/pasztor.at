@@ -29,10 +29,10 @@
                 scriptElement.src = "https://www.googletagmanager.com/gtag/js?id=UA-108462692-1";
                 document.body.appendChild(scriptElement);
 
-                var eventLinks = document.querySelectorAll('[data-event]');
-                for (var i = 0; i < eventLinks.length; i++) {
+                let eventLinks = document.querySelectorAll('[data-event]');
+                for (let i = 0; i < eventLinks.length; i++) {
                     if (eventLinks.hasOwnProperty(i)) {
-                        var eventLink = eventLinks[i];
+                        let eventLink = eventLinks[i];
                         eventLink.addEventListener("click", function() {
                             gtag(
                                 'event',

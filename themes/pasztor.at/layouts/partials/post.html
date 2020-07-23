@@ -2,6 +2,14 @@
     <h2><a class="hidden" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
     <p>
         <a class="hidden" href="{{ .RelPermalink }}">{{ .Summary }}</a>
-        <span class="post__readmore"><a href="{{ .RelPermalink }}">Read <span class="nobr">more &raquo;</span></a></span>
+        <span class="post__readmore">
+            <a href="{{ .RelPermalink }}">
+                {{ if (isset .Params "mp3") }}
+                    Read more or <span class="nobr">listen &raquo;</span>
+                {{ else }}
+                    Read <span class="nobr">more &raquo;</span>
+                {{ end }}
+            </a>
+        </span>
     </p>
 </div>

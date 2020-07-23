@@ -25,6 +25,10 @@
     margin-bottom:1.5rem;
     font-variant: small-caps;
     color: $color-heading-light;
+    .audio-available {
+      font-size:1.2rem;
+      opacity:0.8;
+    }
   }
 
   &__readmore {
@@ -49,6 +53,10 @@
   .post {
     h2 {
       font-size:1.1rem;
+      .audio-available {
+        font-size:0.8rem;
+      }
+
       line-height:1.5rem;
       margin-bottom:0;
     }
