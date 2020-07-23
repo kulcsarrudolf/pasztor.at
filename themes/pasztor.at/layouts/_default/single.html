@@ -13,17 +13,21 @@
         <input type="checkbox" class="audio-toggle" value="1" id="player" />
         <div class="audio-overlay">
             <label for="player" class="audio-overlay-close">&nbsp;</label>
-            <div class="audio-player">
-                <header><h2>Listen to this post</h2>
-                    <label class="close" for="player" aria-label="Close">&times;</label>
-                </header>
-                <audio controls>
-                    <source src="{{ (resources.Get .Params.mp3).RelPermalink }}" />
-                    Your browser does not seem to support MP# playback.
-                </audio>
-                <footer>
-                    <a class="download" target="_blank" download type="audio/mpeg" href="{{ (resources.Get .Params.mp3).RelPermalink }}">Download MP3</a>
-                </footer>
+            <div class="audio-player-wrapper">
+                <div class="audio-player">
+                    <header><h2>Listen to this post</h2>
+                        <label class="close" for="player" aria-label="Close">&times;</label>
+                    </header>
+                    <main>
+                        <audio controls>
+                            <source src="{{ (resources.Get .Params.mp3).RelPermalink }}" />
+                            Your browser does not seem to support MP# playback.
+                        </audio>
+                    </main>
+                    <footer>
+                        <a class="download" target="_blank" download type="audio/mpeg" href="{{ (resources.Get .Params.mp3).RelPermalink }}">Download MP3</a>
+                    </footer>
+                </div>
             </div>
         </div>
     {{ end }}
