@@ -41,6 +41,9 @@ label.listen {
   @media screen and (prefers-reduced-motion: reduce) {
     transition: none;
   }
+  @media screen and (prefers-reduced-transparency: reduce) {
+    background: rgb(128,128,128);
+  }
   z-index:10;
   box-sizing: border-box;
   padding-left:$padding-left-page;
