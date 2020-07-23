@@ -1,7 +1,5 @@
 @import "common/variables";
 
-$font-heading: $font-serif;
-
 html, body {
   font-family: $font-sans;
   scroll-behavior: smooth;
@@ -294,22 +292,6 @@ html, body {
     padding-left:0.75rem;
   }
 
-  a {
-    color: $color-link-light;
-    text-decoration-color: $color-link-underline;
-    transition:color $transition-length ease-out, text-decoration-color $transition-length ease-out;
-    &:hover, &:visited:hover {
-      color: $color-link-hover;
-    }
-    &:active {
-      color:$color-link-active;
-    }
-    &:visited {
-      color: $color-link-visited-light;
-      text-decoration-color: $color-link-visited-underline;
-    }
-  }
-
   code {
     font-family: $font-mono;
   }
@@ -464,12 +446,6 @@ html, body {
   }
 
   @media screen and (prefers-color-scheme: dark) {
-    a {
-      color: $color-link-dark;
-    }
-    a:visited {
-      color: $color-link-visited-dark;
-    }
     figure {
       table {
         background: $color-background-card-dark;

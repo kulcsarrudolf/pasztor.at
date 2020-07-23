@@ -23,9 +23,11 @@
     &:hover {
       color: $color-decor;
     }
+    &:visited {
+      color: $color-text-light;
+    }
   }
 }
-
 
 @mixin menu-color-dark {
   a {
@@ -34,6 +36,9 @@
 
     &:hover {
       color: $color-decor;
+    }
+    &:visited {
+      color: $color-text-dark;
     }
   }
 }

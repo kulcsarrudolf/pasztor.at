@@ -3,12 +3,12 @@
 .tag-filter-input {
   display:none;
 }
-.tag-filter-input ~ .post-list .card {
+.tag-filter-input ~ .posts .post {
 }
-.tag-filter-input:checked ~ .post-list .card {
+.tag-filter-input:checked ~ .posts .post {
   display:none;
 }
-.tag-filter-input[value=""]:checked ~ .post-list .card {
+.tag-filter-input[value=""]:checked ~ .posts .post {
   display:block;
 }
 

@@ -12,6 +12,7 @@ preview: posts/building-your-own-cdn.jpg
 tags:
 - Containers
 - DevOps
+- Cloud
 title: Building your own CDN for Fun and Profit
 ---
 

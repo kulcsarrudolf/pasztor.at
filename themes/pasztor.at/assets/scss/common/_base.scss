@@ -84,3 +84,27 @@ header.page, main.page, footer.page {
 .nobr {
   white-space: nowrap;
 }
+
+a {
+  color: $color-link-light;
+  text-decoration-color: $color-link-underline;
+  transition:color $transition-length ease-out, text-decoration-color $transition-length ease-out;
+  &:hover, &:visited:hover {
+    color: $color-link-hover;
+  }
+  &:active {
+    color:$color-link-active;
+  }
+  &:visited {
+    color: $color-link-visited-light;
+    text-decoration-color: $color-link-visited-underline;
+  }
+}
+@media screen and (prefers-color-scheme: dark) {
+  a {
+    color: $color-link-dark;
+  }
+  a:visited {
+    color: $color-link-visited-dark;
+  }
+}

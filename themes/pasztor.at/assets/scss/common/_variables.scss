@@ -1,6 +1,7 @@
 $font-sans: "Helvetica Neue", Arial, sans-serif;
 $font-serif: Georgia, "Palatino Linotype", "Book Antiqua", Palatino, "Times New Roman", serif;
 $font-mono: "Lucida Console", Monaco, monospace;
+$font-heading: $font-serif;
 
 $font-weight-normal: 300;
 $font-weight-heading: 500;
@@ -17,13 +18,15 @@ $color-background-card-light-highlight: #e0e0e0;
 $color-background-card-dark: #444444;
 $color-background-card-dark-highlight: #333333;
 $color-text-light: #222222;
+$color-heading-light: #000000;
 $color-text-dark: #eaeaea;
+$color-heading-dark: #f0f0f0;
 $color-meta-text-light: #666666;
 $color-meta-text-dark: #e0e0e0;
 $color-inline-code: #e52e71;
 $color-blockquote-border: #999999;
-$color-link-light: #007db5;
-$color-link-dark: #549ec4;
+$color-link-light: #00a000;
+$color-link-dark: #72b372;
 $color-link-underline: #a2dffb;
 $color-link-hover: #e52e71;
 $color-link-active: #ff8a00;
@@ -34,6 +37,7 @@ $color-admonition-tip: #00a000;
 $color-admonition-warning: #f0a000;
 $color-admonition-info: #9090f0;
 $color-decor: #e52e71;
+$color-decor-accent: #e55c8e;
 $color-decor-contrast: #ffffff;
 $color-print-border: #cccccc;
 
@@ -51,3 +55,7 @@ $size-h5: 0.8rem;
 $size-h6: 0.6rem;
 $size-lead: 1.2rem;
 $size-stripe: 0.75rem;
+
+$grid-border-width: 0.1rem;
+$grid-column-gap: 3rem;
+$grid-row-gap: 3rem;

@@ -1,6 +1,6 @@
 <style>
     {{ range $taxonomyName, $taxonomy := index .Site.Taxonomies "tags" }}
-        .tag-filter-input[value="{{ $taxonomyName }}"]:checked ~ .post-list .card.filter-{{$taxonomyName}} {
+        .tag-filter-input[value="{{ $taxonomyName }}"]:checked ~ .posts .post.filter-{{$taxonomyName}} {
             display:block;
         }
     {{ end }}

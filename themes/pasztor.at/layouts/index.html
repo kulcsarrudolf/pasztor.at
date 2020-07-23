@@ -10,13 +10,13 @@
         {{ end }}
         <aside>
             {{ range last 2 (first 3 (where site.RegularPages "Section" "blog"))}}
-                {{ partial "post-home.html" . }}
+                {{ partial "post.html" . }}
             {{ end }}
         </aside>
     </div>
     <div class="posts">
         {{ range last 8 (first 11 (where site.RegularPages "Section" "blog"))}}
-            {{ partial "post-home.html" . }}
+            {{ partial "post.html" . }}
         {{ end }}
     </div>
     <div class="readmore">

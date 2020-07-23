@@ -1,8 +1,8 @@
 <div class="post post--featured">
-    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <h2><a class="hidden" href="{{ .RelPermalink }}">{{ replaceRE "([A-Z])" "<span class=\"highlight\">$1</span>" (replaceRE "(^|\\(| |-|:)([a-z])" "$1<span class=\"highlight\">$2</span>" .Title) | safeHTML }}</a></h2>
     <div class="post__content">
         <p>
-            {{ plainify (index (split .Content "</") 0) }}
+            <a class="hidden" href="{{ .RelPermalink }}">{{ plainify (index (split .Content "</") 0) }}</a>
             <span class="post__readmore"><a href="{{ .RelPermalink }}">Read <span class="nobr">more &raquo;</span></a></span>
         </p>
     </div>

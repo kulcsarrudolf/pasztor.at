@@ -1,0 +1,39 @@
+@media screen and (min-width: 768px) {
+  .posts {
+    &--feature {
+      grid-template-columns: repeat(8, minmax(0, 1fr));
+      row-gap: 0;
+      grid-row-gap: 0;
+      aside {
+        grid-column: span 3;
+        border-left:$grid-border-width/2 solid $color-text-light;
+        .post {
+          border-left:0;
+          &:first-child {
+            margin-bottom:$grid-row-gap;
+          }
+          border-right:0;
+          padding-right: $grid-column-gap / 2;
+        }
+      }
+
+      .post.post--featured {
+        h2 {
+          font-size:2rem;
+          line-height:3rem;
+        }
+        font-size:1rem;
+      }
+      .post {
+        padding-bottom:0;
+        h2 {
+          font-size:1.3rem;
+        }
+        font-size:0.9rem;
+        &:nth-child(1) {
+          grid-column: span 5;
+        }
+      }
+    }
+  }
+}

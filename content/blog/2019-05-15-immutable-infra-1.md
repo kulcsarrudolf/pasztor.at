@@ -11,6 +11,7 @@ images:
 preview: posts/immutable-infra-1.jpg
 tags:
 - DevOps
+- Cloud
 title: Immutable Infrastructure in Practice — Part 1
 ---
 

@@ -12,6 +12,7 @@ preview: posts/immutable-infra-2.jpg
 tags:
 - DevOps
 - Containers
+- Cloud
 title: Immutable Infrastructure in Practice — Part 2
 ---
 

@@ -11,6 +11,7 @@ images:
 preview: posts/make-aws-less-painful-with-lambda.jpg
 tags:
 - DevOps
+- Cloud
 title: Make AWS less painful with Lambda functions
 ---
 

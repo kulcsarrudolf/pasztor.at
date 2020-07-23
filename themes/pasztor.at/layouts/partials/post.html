@@ -1,11 +1,7 @@
-<a href="{{ .RelPermalink }}" class="card{{ range $tag := .Params.tags}} filter-{{$tag|urlize}}{{ end }}">
-    <div class="card-title">
-        <h2>{{ .Title }}</h2>
-    </div>
-    {{ if (isset .Params "images") }}
-        <img src="{{ ((resources.Get (index .Params.images 0)).Fill "1200x630 Center 90 jpg").RelPermalink }}" alt="" />
-    {{ end }}
-    <div class="card-content">
-        {{ .Summary }}
-    </div>
-</a>
+<div class="post{{ range $tag := .Params.tags}} filter-{{$tag|urlize}}{{ end }}">
+    <h2><a class="hidden" href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <p>
+        <a class="hidden" href="{{ .RelPermalink }}">{{ .Summary }}</a>
+        <span class="post__readmore"><a href="{{ .RelPermalink }}">Read <span class="nobr">more &raquo;</span></a></span>
+    </p>
+</div>
