@@ -432,7 +432,7 @@ html, body {
   .admonition {
     position:relative;
     &>* {
-      padding-left:1.5rem;
+      padding-left:2rem;
     }
     &>:first-child::before {
       display:block;

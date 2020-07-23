@@ -2,9 +2,7 @@
 title: Privacy policy
 ---
 
-We respect your privacy. You can turn third party integrations on or off at any time on this page, and we also respect the Do Not Track setting in your browser.
-
-To better protect your privacy, we recommend installing privacy enhancing tools in your browser, such as [Ghostery](https://www.ghostery.com/).
+I respect your privacy. You can turn third party integrations on or off at any time on this page, or on the popup when you first visit this site.
 
 ## Privacy settings
 
@@ -14,7 +12,7 @@ Most importantly, you can use the following button to adjust your privacy prefer
 
 ## About our hosting provider
 
-Our hosting provider is GitHub Pages. GitHub pages collects visitor logs according to [their privacy statement](https://docs.github.com/en/github/site-policy/github-privacy-statement#github-pages).
+Our hosting provider is Netlify. Netlify collects visitor logs according to [their privacy statement](https://www.netlify.com/privacy/).
 
 ## About Google Analytics
 
@@ -24,11 +22,11 @@ Google Analytics collects data on the visitors of this site, which pages are vie
 
 This site sometimes contains embedded videos from YouTube. These videos are embedded from the domain youtube-nocookie.com, which is YouTubes privacy-enhanced mode. In this mode YouTube only stores information about you, the visitor, if you play the video.
 
-## About e-mails you send us
+## About e-mails you send me
 
 E-mails sent to @pasztor.at addresses may kept for up to 8 years, but may also be deleted sooner. All e-mails are stored by [Google](https://gsuite.google.com/). However, e-mails may be transitioned to a different GDPR-compliant provider at a later time. 
 
-Please note that depending on your e-mail provider, your e-mails may be sent over the internet unencrypted. If you wish to send me encrypted e-mail, please use GPG. Our key [can be found here](/gpg.txt).
+Please note that depending on your e-mail provider, your e-mails may be sent over the internet unencrypted. If you wish to send me encrypted e-mail, please use GPG. My key [can be found here](/gpg.txt).
  
 ## Complaints, Information and Deletion Requests
 
