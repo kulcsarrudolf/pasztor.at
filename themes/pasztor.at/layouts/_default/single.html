@@ -52,12 +52,12 @@
         {{ if (isset .Params "authors")}}
             <div class="bio">
                 {{ range $key, $author := .Params.authors }}
-                    {{- with $.Site.GetPage "taxonomyTerm" (printf "about/%s" (urlize $author )) }}
-                        <h2>{{ .Params.fullname }}</h2>
-                        <img class="avatar" src="{{ ((resources.Get .Params.avatar).Resize "512x 90 jpg").RelPermalink }}" alt="" />
-                        {{ .Content }}
+                    {{- with index $.Site.Data.authors $author }}
+                        <h2>{{ .fullname }}</h2>
+                        <img class="avatar" src="{{ ((resources.Get .avatar).Resize "512x 90 jpg").RelPermalink }}" alt="" />
+                        <p>{{ .bio }}</p>
                         <nav class="readmore">
-                            <a href="/blog">Read more by {{ .Title }} &raquo;</a>
+                            <a href="/blog">Read more by {{ .name }} &raquo;</a>
                         </nav>
                     {{ end }}
                 {{ end }}

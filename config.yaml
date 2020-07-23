@@ -1,5 +1,5 @@
 baseURL: https://pasztor.at
-disablePathToLower: true
+disablePathToLower: false
 languageCode: en-us
 title: Janos Pasztor
 theme: pasztor.at
@@ -107,3 +107,5 @@ outputs:
   home:
     - HTML
     - Podcast
+disableKinds:
+  - taxonomyTerm
