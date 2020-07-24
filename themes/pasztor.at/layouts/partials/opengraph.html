@@ -3,7 +3,7 @@
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 {{ with $.Params.images }}{{ range first 6 . -}}
-    <meta property="og:image" content="{{ ((resources.Get .).Resize "1200x png").RelPermalink }}" />
+    <meta property="og:image" content="{{ ((resources.Get .).Resize "1200x png").Permalink }}" />
 {{ end }}{{ else -}}
     {{- $images := $.Resources.ByType "image" -}}
     {{- $featured := $images.GetMatch "*feature*" -}}
@@ -12,7 +12,7 @@
         <meta property="og:image" content="{{ $featured.Permalink }}"/>
     {{ else -}}
         {{- with $.Site.Params.images -}}
-            <meta property="og:image" content="{{ ((resources.Get (index . 0)).Resize "1200x png").RelPermalink }}"/>
+            <meta property="og:image" content="{{ ((resources.Get (index . 0)).Resize "1200x png").Permalink }}"/>
         {{ end }}{{ end }}{{ end }}
 
 {{- $iso8601 := "2006-01-02T15:04:05-07:00" -}}
@@ -26,7 +26,7 @@
     {{- end }}
 {{- end }}{{/* .IsPage */}}
 
-{{- with .Params.mp3 }}<meta property="og:audio" content="{{ (resources.Get .).RelPermalink }}" />{{ end }}
+{{- with .Params.mp3 }}<meta property="og:audio" content="{{ (resources.Get .).Permalink }}" />{{ end }}
 <meta property="og:locale" content="{{ .Site.LanguageCode }}" />
 {{- if (ne .Title "") }}{{- with .Site.Title }}<meta property="og:site_name" content="{{ . }}" />{{ end }}{{ end }}
 {{- with .Params.videos }}
