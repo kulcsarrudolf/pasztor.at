@@ -4,5 +4,5 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Strict-Transport-Security: max-age=315360000; includeSubdomains; preload
   X-Content-Type-Options: nosniff
-  Content-Security-Policy: default-src 'none'; connect-src 'self'; media-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://www.googletagmanager.com https://www.google-analytics.com; frame-src https://www.youtube-nocookie.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com; upgrade-insecure-requests; block-all-mixed-content; frame-ancestors 'none'; base-uri 'none'
+  Content-Security-Policy: default-src 'none'; connect-src 'self'; media-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://identity.netlify.com https://www.googletagmanager.com https://www.google-analytics.com; frame-src https://www.youtube-nocookie.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com; upgrade-insecure-requests; block-all-mixed-content; frame-ancestors 'none'; base-uri 'none'
   Feature-Policy: geolocation 'none'; midi 'none'; notifications 'none'; push 'none'; sync-xhr 'none'; microphone 'none'; camera 'none'; magnetometer 'none'; gyroscope 'none'; speaker 'self'; vibrate 'none'; fullscreen 'none'; payment 'none';
