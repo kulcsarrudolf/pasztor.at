@@ -129,9 +129,25 @@ outputFormats:
       suffixes:
         - xml
       type: application/rss+xml
+  feed:
+    baseName: feed
+    rel: alternate
+    isPlainText: false
+    isHTML: false
+    noUgly: true
+    permalinkable: false
+    mediaType:
+      delimiter: .
+      mainType: application
+      string: application/rss+xml
+      subType: rss
+      suffixes:
+        - xml
+      type: application/rss+xml
 outputs:
   home:
     - HTML
     - Podcast
+    - feed
 disableKinds:
   - taxonomyTerm
