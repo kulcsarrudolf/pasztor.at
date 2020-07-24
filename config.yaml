@@ -87,7 +87,7 @@ menu:
     - identifier: subscribe-rss
       parent: subscribe
       name: RSS
-      url: /rss.xml
+      url: /feed.xml
       weight: 2
 
     - identifier: legal
