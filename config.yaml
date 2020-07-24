@@ -4,11 +4,18 @@ languageCode: en-us
 title: Janos Pasztor
 theme: pasztor.at
 copyright: Copyright © Janos Pasztor. All rights reserved.
+author:
+  - Janos Pasztor
 permalinks:
   blog: /blog/:slug/
 taxonomies:
   tag: tags
   author: authors
+params:
+  title: Janos Pasztor
+  images:
+    - social.png
+  description:
 markup:
   goldmark:
     extensions:

@@ -13,5 +13,5 @@
 {{- $image := $favicon.Resize $size -}}
 {{"        "}}<link rel="icon" type="image/png" sizes="{{ $width }}x{{ $width }}"  href="{{ $image.RelPermalink }}">{{"\n"}}
 {{- end }}
-{{"        "}}<meta name="msapplication-TileImage" content="{{ $favicon.Resize "144x144 png" }}">
+{{"        "}}<meta name="msapplication-TileImage" content="{{ ($favicon.Resize "144x144 png").RelPermalink }}">
 {{"        <!-- endregion -->\n" | safeHTML}}

@@ -99,12 +99,13 @@ html, body {
       }
     }
 
-    &>p, &>ul, &>ol, &>figure, &>dl, &>div, &>pre, &>blockquote, &>hr, &>h2, &>h3, &>h4, &>h5, &>h6 {
+    .body>p, .body>ul, .body>ol, .body>figure, .body>dl, .body>div, .body>pre, .body>blockquote,
+    .body>hr, .body>h2, .body>h3, .body>h4, .body>h5, .body>h6{
       margin-left: $text-margin-left;
       max-width:$text-width;
     }
 
-    h1 + .meta + p:first-of-type {
+    .body p:first-of-type {
       font-size:$size-lead;
       letter-spacing: 0.1rem;
     }
@@ -519,7 +520,7 @@ html, body {
       }
     }
 
-    h1 + .meta + p:first-of-type {
+    .body p:first-of-type {
       margin-top:0;
     }
 

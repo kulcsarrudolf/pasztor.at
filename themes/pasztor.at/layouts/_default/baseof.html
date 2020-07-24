@@ -7,25 +7,53 @@
         <title>{{- block "title" . }}{{ if not .IsHome }}{{ with .Title }}{{ . }} | {{ end }}{{ end }}{{ .Site.Title }}{{- end }}</title>
         <link rel="canonical" href="{{ .Permalink }}" />
 
+        <style>@media screen {body{background:url({{ (resources.Get "noise-light.png").RelPermalink }});}}@media screen and (prefers-color-scheme: dark) {body{background-image:url({{ (resources.Get "noise-dark.png").RelPermalink }});}}</style>
         {{- block "css" . }}{{- end }}
-
         {{ partial "head" . }}
         <meta name="color-scheme" content="dark light" />
 
+        {{ if .IsPage }}
+            {{ if .PublishDate}}
+                {{ $now := now}}
+                {{ if (gt .PublishDate $now) }}
+                    <meta property="robots" content="noindex,nofollow" />
+                {{ end }}
+            {{ end }}
+        {{ end }}
+
         {{"<!-- region Social -->" | safeHTML}}
-        {{ template "_internal/opengraph.html" . }}
-        {{ template "_internal/twitter_cards.html" . }}
+        {{ partial "opengraph.html" . }}
+        {{ partial "twitter_cards.html" . }}
         {{"<!-- endregion -->\n" | safeHTML}}
 
         {{"<!-- region Social -->" | safeHTML}}
         <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
         <meta name="copyright" content="{{ .Site.Copyright }}" />
-        <meta name="author" content="{{ .Site.Author }}" />
         {{"<!-- endregion -->\n" | safeHTML}}
 
         {{ range .AlternativeOutputFormats -}}
             {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
         {{ end -}}
+
+        {{ $baseUrl := .Site.BaseURL }}
+        {{- with index $.Site.Data.authors "janos" }}
+            <script type="application/ld+json">
+                {
+                  "@context": "https://schema.org/",
+                  "@type": "Person",
+                  "mainEntityOfPage": "{{ $baseUrl }}",
+                  "name": "{{ .fullname }}",
+                  "jobTitle": "{{- .tagline -}}",
+                  "image": "{{ (resources.Get .avatar).Permalink}}",
+                  "url": "{{ $baseUrl }}",
+                  "sameAs": [
+                    "https://twitter.com/{{ .social.twitter }}",
+                    "https://github.com/{{ .social.github }}/",
+                    "https://www.linkedin.com/in/{{ .social.twitter }}/",
+                  ]
+                }
+           </script>
+        {{ end }}
 
         <script> </script>
     </head>

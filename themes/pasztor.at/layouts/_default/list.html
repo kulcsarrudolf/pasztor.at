@@ -6,7 +6,9 @@
     {{ if or .Title .Content }}
         <div class="text">
             <h1>{{ .Title }}</h1>
-            {{ .Content }}
+            <div class="body">
+                {{ .Content }}
+            </div>
         </div>
     {{ end }}
     {{ partial "tags.html" . }}

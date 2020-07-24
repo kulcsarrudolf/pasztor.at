@@ -32,11 +32,17 @@
             </div>
         </div>
     {{ end }}
-    <div class="text{{ if not $.PublishDate}} text--simple{{ end }}">
-        <h1>{{ .Title }}</h1>
+    <article class="text{{ if not $.PublishDate}} text--simple{{ end }}"{{ if $.PublishDate }} itemscope itemtype="https://schema.org/BlogPosting"{{ end }}>
+        {{ if $.PublishDate }}
+        {{ with .Params.images }}<meta itemprop="image" content="{{ (resources.Get (index . 0)).Permalink }}" />{{ end }}
+        <meta itemprop="mainEntityOfPage" content="{{ .Permalink }}" />
+        <meta itemprop="keywords" content="{{ delimit .Params.tags ", " }}" />
+        {{ end }}
+
+        <h1{{ if $.PublishDate }} itemprop="name headline"{{ end }}>{{ .Title }}</h1>
         {{ if $.PublishDate }}
         <div class="meta">
-            <time datetime="{{ $.PublishDate }}">
+            <time datetime="{{ $.PublishDate }}"{{ if $.PublishDate }} itemprop="datePublished"{{ end }}>
                 <span class="line">{{ $.PublishDate.Format "Jun 1, 2006" }}</span>
                 <span class="calendar">
                     <span class="day">{{ $.PublishDate.Day}}</span>
@@ -48,20 +54,22 @@
             {{ end }}
         </div>
         {{ end }}
-        {{ .Content }}
+        <div{{ if $.PublishDate }} itemprop="articleBody"{{ end }} class="body">
+            {{ .Content }}
+        </div>
         {{ if (isset .Params "authors")}}
-            <div class="bio">
-                {{ range $key, $author := .Params.authors }}
-                    {{- with index $.Site.Data.authors $author }}
-                        <h2>{{ .fullname }}</h2>
-                        <img class="avatar" src="{{ ((resources.Get .avatar).Resize "512x 90 jpg").RelPermalink }}" alt="" />
-                        <p>{{ .bio }}</p>
-                        <nav class="readmore">
-                            <a href="/blog">Read more by {{ .name }} &raquo;</a>
-                        </nav>
-                    {{ end }}
+            {{ range $key, $author := .Params.authors }}
+                <div class="bio" itemprop="author" itemscope itemtype="https://schema.org/Person">
+                {{- with index $.Site.Data.authors $author }}
+                    <h2 itemprop="name">{{ .fullname }}</h2>
+                    <img class="avatar" src="{{ ((resources.Get .avatar).Resize "512x 90 jpg").RelPermalink }}" alt="" />
+                    <p>{{ .bio }}</p>
+                    <nav class="readmore">
+                        <a href="/blog">Read more by {{ .name }} &raquo;</a>
+                    </nav>
                 {{ end }}
-            </div>
+                </div>
+            {{ end }}
         {{ end }}
-    </div>
+    </article>
 {{ end }}
