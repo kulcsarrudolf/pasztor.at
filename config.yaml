@@ -73,7 +73,7 @@ menu:
     - identifier: social-twitter
       parent: social
       name: Twitter
-      url: https://twitter/janoszen
+      url: https://twitter.com/janoszen
       weight: 3
 
     - identifier: subscribe
