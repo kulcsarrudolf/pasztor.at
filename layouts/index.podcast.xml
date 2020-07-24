@@ -17,7 +17,7 @@
         <sy:updateFrequency>1</sy:updateFrequency>
         <language>{{ .Site.Language }}</language>
         <copyright>{{ with .Site.Copyright }}{{.}}{{ end }}</copyright>
-        <itunes:new-feed-url>{{ .Site.BaseURL }}podcast.xml</itunes:new-feed-url>
+        <itunes:new-feed-url>{{ .Site.BaseURL }}/podcast.xml</itunes:new-feed-url>
         <itunes:subtitle>Thoughts of a Software Engineer</itunes:subtitle>
         <itunes:summary>Random topics from the mind of a software engineer with 10+ years of experience.</itunes:summary>
         <itunes:category text="Technology" />
