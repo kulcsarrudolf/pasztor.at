@@ -6,7 +6,7 @@
             <div class="tagline">{{- .tagline -}}</div>
             <p>{{- .bio -}}</p>
         </div>
-        <img src="{{ (resources.Get .avatar).RelPermalink}}" alt="" class="avatar" />
+        <img src="{{ ((resources.Get .avatar).Resize "256x").RelPermalink}}" alt="" class="avatar" />
     </header>
     <div class="social">
         <a target="_blank" rel="noopener noreferer" href="https://github.com/{{ .social.github }}/"><img src="{{ (resources.Get "icons/github.svg").RelPermalink }}" alt="" /> Github</a>
