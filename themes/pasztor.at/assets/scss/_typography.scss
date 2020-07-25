@@ -328,6 +328,7 @@ html, body {
     position: relative;
     text-align: center;
     img {
+      background: $color-background-card-light;
       border-radius: $border-radius;
       max-width:100%;
     }
