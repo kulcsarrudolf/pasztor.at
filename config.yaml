@@ -48,14 +48,18 @@ menu:
       name: Blog
       url: /blog/
       weight: -100
+    - identifier: podcast
+      name: Podcast
+      url: /podcast/
+      weight: -90
     - identifier: about
       name: About me
       url: /about/
-      weight: -90
+      weight: -80
     - identifier: discord
       name: Join my Discord
       url: https://discord.gg/sEWQcpe
-      weight: -80
+      weight: -70
   footer:
     - identifier: social
       name: Social
@@ -89,6 +93,11 @@ menu:
       name: RSS
       url: /feed.xml
       weight: 2
+    - identifier: subscribe-rss-podcast
+      parent: subscribe
+      name: Podcast RSS
+      url: /podcast.xml
+      weight: 3
 
     - identifier: legal
       name: Legal

@@ -4,7 +4,7 @@
     {{ $caption = . | safeHTML }}
 {{ end }}
 {{ $image := resources.Get .Destination }}
-{{ if or (strings.HasSuffix .Destination ".svg") (strings.HasSuffix .Destination ".gif") }}
+{{- if or (strings.HasSuffix .Destination ".svg") (strings.HasSuffix .Destination ".gif") -}}
     <figure>
         <img
                 src="{{ $image.RelPermalink }}"
@@ -16,7 +16,7 @@
             {{ end }}
         {{ end }}
     </figure>
-{{ else }}
+{{- else -}}
     {{ $small := $image.Resize "480x" }}
     {{ $medium := $image.Resize "768x" }}
     {{ $big := $image.Resize "1024x" }}
