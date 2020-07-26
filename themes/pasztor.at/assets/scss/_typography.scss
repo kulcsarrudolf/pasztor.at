@@ -100,7 +100,7 @@ html, body {
     }
 
     .body>p, .body>ul, .body>ol, .body>figure, .body>dl, .body>div, .body>pre, .body>blockquote,
-    .body>hr, .body>h2, .body>h3, .body>h4, .body>h5, .body>h6{
+    .body>hr, .body>h2, .body>h3, .body>h4, .body>h5, .body>h6, .bio {
       margin-left: $text-margin-left;
       max-width:$text-width;
     }
