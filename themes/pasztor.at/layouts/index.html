@@ -3,6 +3,7 @@
 {{ end }}
 
 {{ define "main" }}
+    <h1 class="aria-only" aria-hidden="false">Latest articles</h1>
     {{ .Content }}
     <div class="posts posts--feature">
         {{ range first 1 (where site.RegularPages "Section" "blog")}}

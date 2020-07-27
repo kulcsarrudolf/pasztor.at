@@ -20,7 +20,7 @@ video: https://youtu.be/xm3QcGvxuF8
 
 Learn how to have executable documentation for your cloud and how to avoid the nightmare that is a "hand-crafted", but forgotten setup.
 
-Github repository: https://github.com/refactorzone/terraform-aws-docker
+GitHub repository: https://github.com/refactorzone/terraform-aws-docker
 Terraform documentation: https://www.terraform.io/docs/
 Gruntwork guide: https://blog.gruntwork.io/a-comprehensive-guide-to-terraform-b3d32832baca
 

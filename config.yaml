@@ -3,7 +3,9 @@ disablePathToLower: false
 languageCode: en-us
 title: Janos Pasztor
 theme: pasztor.at
-copyright: Copyright © Janos Pasztor. All rights reserved.
+copyright: <span role="text" aria-label="Copyright Yanosh Pastor. All rights reserved.">Copyright &copy; Janos Pasztor. All rights reserved.</span>
+disableHugoGeneratorInject: true
+enableGitInfo: true
 author:
   - Janos Pasztor
 permalinks:
@@ -66,12 +68,12 @@ menu:
       weight: 2
     - identifier: social-linkedin
       parent: social
-      name: Linkedin
+      name: LinkedIn
       url: https://www.linkedin.com/in/janoszen
       weight: 1
     - identifier: social-github
       parent: social
-      name: Github
+      name: GitHub
       url: https://github.com/janoszen
       weight: 2
     - identifier: social-twitter
@@ -79,29 +81,39 @@ menu:
       name: Twitter
       url: https://twitter.com/janoszen
       weight: 3
-
-    - identifier: subscribe
-      name: Subscribe
-      weight: 3
-    - identifier: subscribe-discord
-      parent: subscribe
+    - identifier: social-discord
+      parent: social
       name: Discord
       url: /discord
-      weight: 1
-    - identifier: subscribe-rss
-      parent: subscribe
+      weight: 4
+    - identifier: social-rss
+      parent: social
       name: RSS
       url: /feed.xml
+      weight: 5
+
+    - identifier: podcast
+      name: Podcast
+      weight: 4
+    - identifier: subscribe-spotify
+      parent: podcast
+      name: Spotify
+      url: https://open.spotify.com/show/7CIjRONYPExPeFs2R8GDZ0
+      weight: 1
+    - identifier: podcast-soundcloud
+      parent: podcast
+      name: SoundCloud
+      url: https://soundcloud.com/pasztor_at/
       weight: 2
-    - identifier: subscribe-rss-podcast
-      parent: subscribe
-      name: Podcast RSS
+    - identifier: podcast-rss
+      parent: podcast
+      name: RSS
       url: /podcast.xml
       weight: 3
 
     - identifier: legal
       name: Legal
-      weight: 4
+      weight: 5
     - identifier: imprint
       parent: legal
       name: Imprint

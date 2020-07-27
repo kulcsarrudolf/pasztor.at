@@ -284,7 +284,7 @@ rack awareness in its feature list, meaning that we have to look for something e
 
 One obvious way would be to put everything, nginx, PHP, and MySQL into one container. So that's what we are going to
 do, using [supervisord](http://supervisord.org/). I won't bore you with the details, there are enough examples of using
-supervisord in Docker [on my Github organization](https://github.com/opsbears), go have a look.
+supervisord in Docker [on my GitHub organization](https://github.com/opsbears), go have a look.
 
 At any rate, we create our service like this:
 

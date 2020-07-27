@@ -207,7 +207,7 @@ This means, the following could all be considered service providers:
 - Video and audio platforms (e.g. YouTube)
 - Blog hosting platforms (e.g. Medium)
 - File storage services (e.g. Dropbox)
-- Code storage services (e.g. Github)
+- Code storage services (e.g. GitHub)
 - Web hosting and infrastructure as a service providers (e.g. Amazon Web Services ??? How would that even work?)
 - Any site with a large enough comment section to be considered a *large amount of works*. Good thing I don't have a
   comment section I guess...

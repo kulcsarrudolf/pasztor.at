@@ -1,8 +1,11 @@
 name: Janos
+name_pronounciation: Yanosh
 fullname: Janos Pasztor
+fullname_pronounciation: Yanosh Pastor
 tagline: Software Engineer, Author & Trainer
 bio: Hi there! I'm a software engineer who loves writing. I've been in the industry for over 10 years, and I like to share what I have learned.
 avatar: janos.png
+avatar_alt: Photo of a young man, smiling, with short brown hair, and brown round glasses, wearing a white shirt and a blue suit.
 social:
   github: janoszen
   twitter: janoszen

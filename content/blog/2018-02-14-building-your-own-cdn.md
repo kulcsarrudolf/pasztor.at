@@ -79,7 +79,7 @@ And finally, the lowest count of hops, which is the basis of BGP route calculati
 trip time. A hop across the ocean may be just one hop, but it's a damn long one.
 
 {{% tip %}}
-**Further reading:** Linkedin Engineering has a
+**Further reading:** LinkedIn Engineering has a
 [wonderful blog post about this topic](https://engineering.linkedin.com/network-performance/tcp-over-ip-anycast-pipe-dream-or-reality).
 {{% /tip %}}
 

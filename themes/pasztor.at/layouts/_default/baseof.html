@@ -57,7 +57,7 @@ Feel free to learn and build your own!
                   "sameAs": [
                     "https://twitter.com/{{ .social.twitter }}",
                     "https://github.com/{{ .social.github }}/",
-                    "https://www.linkedin.com/in/{{ .social.twitter }}/",
+                    "https://www.linkedin.com/in/{{ .social.twitter }}/"
                   ]
                 }
            </script>
@@ -71,19 +71,23 @@ Feel free to learn and build your own!
                 <div class="logo">
                     {{ partial "logo" . }}
                 </div>
+                <p class="aria-only" aria-hidden="false">
+                    Hey there! I see you are using a screen reader. I tried to make this page as accommodating as possible. If you have any suggestions how I can make it easier to use for you, please contact me via the Imprint page linked in the footer. Thank you.
+                </p>
                 <input type="checkbox" id="show-mobile-menu" value="1" aria-hidden="true" />
-                <div class="mobile-toggle" aria-hidden="true">
-                    <label for="show-mobile-menu">
+                <div class="mobile-toggle" aria-controls="mobile-menu" aria-label="Open navigation" role="button">
+                    <label for="show-mobile-menu" id="hamburger">
                         <span class="hamburger-bar"></span>
                         <span class="hamburger-bar"></span>
                         <span class="hamburger-bar"></span>
                     </label>
                 </div>
-                <div class="mobile-menu" aria-hidden="false">
-                    <label for="show-mobile-menu" class="hide-mobile-menu"></label>
+                <div class="mobile-menu" id="mobile-menu" aria-labelledby="navigation-header" role="dialog" aria-modal="false" aria-hidden="true">
+                    <label for="show-mobile-menu" class="hide-mobile-menu" aria-hidden="true"></label>
                     <nav>
                         <header>
-                            <h1><span class="highlight">N</span>avigation</h1>
+                            <h1 aria-label="Navigation" id="navigation-header"><span class="highlight">N</span>avigation</h1>
+                            <label for="show-mobile-menu" class="hide-mobile-menu-aria" role="button" aria-label="Close navigation">&nbsp;</label>
                         </header>
                         <ul>
                             {{ $currentPage := . }}
@@ -98,6 +102,22 @@ Feel free to learn and build your own!
                         </ul>
                     </nav>
                 </div>
+                <script>
+                    const mobile_menu_toggle = document.getElementById("show-mobile-menu");
+                    const mobile_menu = document.getElementById("mobile-menu")
+                    const hamburger = document.getElementById("hamburger")
+                    mobile_menu_toggle.addEventListener( 'change', function() {
+                        if(this.checked) {
+                            mobile_menu.setAttribute("aria-modal", "true");
+                            mobile_menu.setAttribute("aria-hidden", "false");
+                            hamburger.setAttribute("aria-hidden", "true");
+                        } else {
+                            mobile_menu.setAttribute("aria-modal", "false");
+                            mobile_menu.setAttribute("aria-hidden", "true");
+                            hamburger.setAttribute("aria-hidden", "false");
+                        }
+                    });
+                </script>
             </div>
         </header>
         <main class="page">
@@ -105,7 +125,8 @@ Feel free to learn and build your own!
                 {{- block "main" . }}{{- end }}
             </div>
         </main>
-        <footer class="page">
+        <footer class="page" aria-labelledby="footer-heading">
+            <h1 class="aria-only" id="footer-heading" aria-hidden="false">Footer</h1>
             <div class="page-footer">
                 <nav class="footer">
                     <ul>
@@ -142,7 +163,7 @@ Feel free to learn and build your own!
                         {{ end }}
                     </ul>
                 </nav>
-                <aside>{{ .Site.Copyright }}</aside>
+                <aside>{{ .Site.Copyright | safeHTML }}</aside>
             </div>
         </footer>
         {{ partial "gdpr.html"}}

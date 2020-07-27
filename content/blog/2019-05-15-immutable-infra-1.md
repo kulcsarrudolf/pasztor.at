@@ -28,7 +28,7 @@ In other words, the server would be built in such a way that every time I needed
 
 ## Designing the system
 
-![](posts/website-architecture.svg)
+![An illustration of the infrastructure being built. The content is in the content bucket on the object storage. From there it is fetched into the content folder which is in use by both nginx and PHP. The incoming user traffic is sent to nginx, which may ask PHP. Traefik also sends requests to Grafana, which may query Prometheus. Traefik is checked by UptimeRobot, which pushes alerts to VictorOps. Traefik and Prometheus are backed up into the Backup Bucket. Grafana also sends alerts to VictorOps.](posts/website-architecture.svg)
 
 My blog is built using [Jekyll](https://jekyllrb.com/), an engine that generates static HTML files. This makes the whole ordeal much simpler as I can just simply generate content and copy it to the new server as it comes up. I don't need to worry about persisting data from one server to the next. If I was using [Wordpress](https://wordpress.org/), for example, I would have to build some sort of a redundant database on multiple servers. I would then have to perform a *rolling update*, replacing one server at a time.
 

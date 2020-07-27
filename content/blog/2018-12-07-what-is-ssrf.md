@@ -26,7 +26,7 @@ Sounds unimpressive, right? However, keep in mind that more and more database, l
 be accessed over HTTP. What if I trick the application to download some data from etcd? Maybe your AWS API keys are
 stored in there and I can just grab them?
 
-![](posts/what-is-ssrf/ssrf.svg "Figure: How SSRF works")
+![An image illustrating SSRF. A direct attack where the attacker attacks the internal service directly doesn't work due to a firewall. However, the attacker can trick a web application into requesting some data from the internal service and return it to the attacker.](posts/what-is-ssrf/ssrf.svg "Figure: How SSRF works")
 
 Or, if I can trick the application to make a PUT or POST request instead of a GET request, I may even be able to change data.
 
@@ -50,7 +50,7 @@ Additionally, even a developer could be tricked into opening a link that, under 
 Let's look at a practical example. Many social networks nowadays integrate [OpenGraph](http://ogp.me/) as a method to
 render previews such as this:
 
-![](posts/ssrf-facebook-preview.png "How Facebook renders previews")
+![An illustration showing the preview of a post shared on Facebook.](posts/ssrf-facebook-preview.png "How Facebook renders previews")
 
 Now, think about how this works: the user pastes a link and some server side component needs to download the information from the server. Assuming that your `etcd` database lives on `10.2.0.1`. What is the user pastes this link?
 

@@ -85,6 +85,13 @@ header.page, main.page, footer.page {
   white-space: nowrap;
 }
 
+.aria-only {
+  display:none;
+  @media aural {
+    display:block;
+  }
+}
+
 a {
   color: $color-link-light;
   text-decoration-color: $color-link-underline;

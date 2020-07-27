@@ -27,15 +27,11 @@ about the language.
 
 ## Cross-platform
 
-One of the reasons Go caught my eye was its build system. The original promise of Java was that it would be
-cross-platform, but the fact that you needed to install a runtime was clearly a turnoff. Go, on the other hand, compiles
-to native binaries. On Windows, you will get an `.exe` file, on Linux an ELF binary and so on. What's more, unless you
-use [cgo](https://golang.org/cmd/cgo/) your Go program can live with *almost* no external dependencies. No need to
-install any `.dll` or `.so` files, a Go program will [just work](https://www.youtube.com/watch?v=YPN0qhSyWy8) out of
+One of the reasons Go caught my eye was its build system. The original promise of Java was that it would be cross-platform, but the fact that you needed to install a runtime was clearly a turnoff. Go, on the other hand, compiles to native binaries. On Windows, you will get an <code role="text" aria-label="E X E">.exe</code> file, on Linux an ELF binary and so on. What's more, unless you use [cgo](https://golang.org/cmd/cgo/) your Go program can live with *almost* no external dependencies. No need to install any <code role="text" aria-label="D L L">.dll</code> or <code role="text" aria-label="S O">.so</code> files, a Go program will [just work](https://www.youtube.com/watch?v=YPN0qhSyWy8) out of
 the box.
 
 It's a common misconception that Go programs will run entirely without external dependencies, but they get as close
-as humanly possible. Some libraries, such as [libc](https://en.wikipedia.org/wiki/C_standard_library), are still
+as humanly possible. Some libraries, such as [<code role="text" aria-label="lib-c">libc</code>](https://en.wikipedia.org/wiki/C_standard_library), are still
 required for a number of functions.
 
 The fact that Go could be used to build true cross-platform binaries that work without installing a clunky runtime, 
@@ -44,8 +40,8 @@ such as with Java or Python, was my main draw to Go.
 ## Goroutines and channels
 
 Once I got into Go a little more I realized how cool its handling of *concurrency* was. Traditionally you would
-utilize either threads or separate processes to run multiple tasks concurrently (e.g. Java, C, C++). Alternatively, you
-would rely on cooperative multitasking (e.g. Javascript) to the same effect.
+utilize either threads or separate processes to run multiple tasks concurrently (<abbr role="text" aria-label="for example">e.g.</abbr> Java, C, C++). Alternatively, you
+would rely on cooperative multitasking (<abbr role="text" aria-label="for example">e.g.</abbr> Javascript) to the same effect.
 
 With threads and processes every switch the operating system has to do incurs a time penalty. This is called a 
 [context switch](https://en.wikipedia.org/wiki/Context_switch). In other words, a careless programmer who uses tons of
@@ -89,7 +85,7 @@ is data available and makes it extremely easy to do concurrent programming.
 If you are interested in more details take a look at [channels](https://gobyexample.com/channels),
 [contexts](https://gobyexample.com/context), and [mutexes](https://gobyexample.com/mutexes).
 
-## Pointers, Defer and Garbage Collection
+## Pointers, Defer, and Garbage Collection
 
 When you think of [pointers](https://gobyexample.com/pointers) you first think of C or C++. Usually that memory is not
 a pleasant one.
@@ -117,7 +113,8 @@ function:
 ```go
 func foo() error {
     close := func() {
-        // Do somehing to clean up stuff
+        // Do something to
+    	// clean up stuff
     }
     err := doSomething()
     if err != nil {
@@ -137,7 +134,8 @@ The `defer` statement helps with exactly this problem:
 ```go
 func foo() error {
     close := func() {
-        // Do somehing to clean up stuff
+        // Do something to
+    	// clean up stuff
     }
     defer close()
 
@@ -235,7 +233,7 @@ If you fancy a deeper look head on over to [Go by Example](https://gobyexample.c
 
 One of the reasons speaking for Go is the copious amount of libraries. SSH client and server library?
 [Covered.](https://godoc.org/golang.org/x/crypto/ssh) SDK for AWS? [Done.](https://aws.amazon.com/sdk-for-go/)
-Github? [Of course.](https://github.com/google/go-github) Let's try something very rare... how about a FastCGI
+GitHub? [Of course.](https://github.com/google/go-github) Let's try something very rare... how about a FastCGI
 protocol implementation? [Sure, why not.](https://golang.org/pkg/net/http/fcgi/)
 
 I could keep going, but you get the picture. The popularity of Go has certainly helped the ecosystem.

@@ -1,6 +1,6 @@
-<div class="gdpr-overlay" id="gdpr">
-    <div class="gdpr-dialog" role="dialog">
-        <p>Is it OK if I turn on Google Analytics?</p>
+<div class="gdpr-overlay" id="gdpr" role="dialog" aria-describedby="gdpr-dialog-title" aria-modal="true" aria-hidden="true">
+    <div class="gdpr-dialog">
+        <p id="gdpr-dialog-title">Is it OK if I turn on Google Analytics?</p>
         <footer>
             <button class="default" id="gdpr-yes">Yes</button>
             <button id="gdpr-no">No</button>
@@ -101,11 +101,15 @@
     let privacyModal = document.getElementById("gdpr")
 
     let showModal = function() {
+        privacyModal.setAttribute("aria-modal", "true")
+        privacyModal.setAttribute("aria-hidden", "false")
         privacyModal.classList.add("gdpr-overlay--show");
     };
 
     let hideModal = function() {
         privacyModal.classList.remove("gdpr-overlay--show");
+        privacyModal.setAttribute("aria-modal", "false");
+        privacyModal.setAttribute("aria-hidden", "true");
     };
 
     let saveSettings = function(privacySettings) {

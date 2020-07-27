@@ -24,11 +24,11 @@ But, instead of bagging on VIM, let's take a look what makes a good IDE and why 
 Our editors and IDEs heavily influence what we optimize for. For example, if you use an IDE, a glance to the left
 give you the directory tree. Therefore it is not a big hassle to create more files.
 
-![](posts/ide-directory-tree.png "The directory tree of this website, as I'm writing it.")
+![An illustration that shows a development environment with a directory tree on the left and some source code on the right.](posts/ide-directory-tree.png "The directory tree of this website, as I'm writing it.")
 
 You can, of course, achieve a [similar setup with vim](https://shapeshed.com/vim-netrw/), but you will need to do the config legwork to get netrw or NERDtree running. In addition, netrw, as I have tested it, doesn't work well with tabs, since tabs open on top of the split layout.
 
-![](posts/vim-split.png "A split view directory tree in vim.")
+![An illustration of the editor vim with the split view option enabled.](posts/vim-split.png "A split view directory tree in vim.")
 
 **Vim is immensely powerful, but at its core it is designed to work on one, or very few files.** Other, simpler editors have even less facilities to handle a large number of files.
  
@@ -67,14 +67,14 @@ This is why so many modern IDE's have quite a bit of resource consumption. They 
 
 All reasonable programming languages and environments allow you to debug. This means that you can set a break point in your program code and make the whole system stop once you get there. While stopped, you can inspect the variables set there, and even go back in the call stack to inspect the calls that lead to the point where you are at.
 
-![](posts/ide-debug.png "Debugging in a modern IDE.")
+![An illustration of an IDE showing the step-by-step debugging options.](posts/ide-debug.png "Debugging in a modern IDE.")
 
 Furthermore, you can usually also go over the following code step by step, tracing the what each individual line in
 the code does to the variables. This is especially important when refactoring some legacy code that you need to learn.
 
 ## Refactoring tools
 
-![](posts/ide-refactor.png "Refactor operation in a modern IDE.")
+![An illustration of an IDE showing the automatic renaming option.](posts/ide-refactor.png "Refactor operation in a modern IDE.")
 
 Once your code is written, the project is done, right? Well, not so fast. Sometimes you get old code written by others, and sometimes you get old code ... well, written by you. You know the meme, when you look at the code you wrote six months ago...
 
@@ -97,7 +97,7 @@ This kind of refactoring often works in the most unexpected situations, such as 
 
 However, modern IDE's go much further in helping the refactoring process. They may, for example, offer the ability to change a method signature.
 
-![](posts/ide-change-signature.png "The change signature option in a modern IDE.")
+![An illustration of an IDE showing how function parameters can be refactored automatically.](posts/ide-change-signature.png "The change signature option in a modern IDE.")
 
 If we, for example, add a new parameter in this window, that change will propagate to all places where the method is used. When working in a language with static typing, or a static code analyser, it will immediately become apparent where the new parameter needs to be added. Alternatively, we can also use the &ldquo;Find usages&rdquo; option of our IDE.
 
@@ -107,7 +107,7 @@ Another important feature modern IDEs bring is in-depth code analysis. This is e
 
 However, this goes further than just a simple type-check. After all, you could use a static type checker for that. The idea is that the IDE will tell you about potential mistakes *as you write them*. A good IDE will root out your bad practices. The turnaround time between making a mistake and fixing it is much faster.
 
-![](posts/ide-static-code-analysis.png "A code analysis warning in a modern IDE.")
+![An illustration of an IDE showing warnings about code quality as the developer types.](posts/ide-static-code-analysis.png "A code analysis warning in a modern IDE.")
 
 This, of course, also influences how you write code. If you pay attention to these kind of warnings you will stop being callous about writing potentially unsafe code.
 
@@ -117,7 +117,7 @@ In most cases good code is simple, boring and easy to read. That means I shouldn
 
 And in the odd chance that you really, really need to do micro-optimization in the code instead of macro optimization, it should be really really well documented.
 
-![](posts/ide-suppressed-inspection.png "A suppressed inspection in a modern IDE")
+![An illustration of an IDE where a code quality warning is suppressed using a comment.](posts/ide-suppressed-inspection.png "A suppressed inspection in a modern IDE")
 
 These kind of inspections are basically like a quick code review, but automated. You should use them.
 
@@ -144,7 +144,7 @@ I recently had a developer complain that their company issued notebook was not p
 
 So, what are the options? Either you manually copy the code to the server (ugh) or you commit every change to your versioning system (git) and pull on the server (double ugh). No, none of these is a workable solution.
 
-![](posts/ide-deployment.png "Deployment configuration in a modern IDE")
+![An illustration of an IDE configuration window with options to automatically upload files using SFTP.](posts/ide-deployment.png "Deployment configuration in a modern IDE")
 
 Thankfully, modern IDE's have automated deployment tools. Edit the code, the IDE automatically syncs the code to the server and by the time you get over to your server to test it, it's already there.
 

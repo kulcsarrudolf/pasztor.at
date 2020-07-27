@@ -14,6 +14,10 @@ tags:
 date: "2020-07-15T00:00:00Z"
 publishDate: "2020-07-15T00:00:00Z"
 mp3: podcast/The painful Enterprise Way to the Cloud.mp3
+ogg: podcast/The painful Enterprise Way to the Cloud.ogg
+aac: podcast/The painful Enterprise Way to the Cloud.aac
+soundcloud: "https://soundcloud.com/pasztor_at/the-painful-enterprise-way-to-the-cloud"
+spotify: "https://open.spotify.com/episode/52IB09ZExAg6mo1BaS6Ewy"
 duration: 854
 ---
 

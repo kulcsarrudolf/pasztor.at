@@ -10,27 +10,51 @@
 
 {{ define "main" }}
     {{ if (isset .Params "mp3") }}
-        <input type="checkbox" class="audio-toggle" value="1" id="player" />
-        <div class="audio-overlay" role="dialog" aria-describedby="dialog-title">
-            <label for="player" class="audio-overlay-close">&nbsp;</label>
+        <input type="checkbox" class="audio-toggle" value="1" id="player" aria-hidden="true" />
+        <div class="audio-overlay" id="audio-overlay" role="dialog" aria-describedby="mp3-listen-title" aria-modal="true" aria-hidden="true">
+            <label for="player" class="audio-overlay-close" aria-hidden="true">&nbsp;</label>
             <div class="audio-player-wrapper">
-                <div class="audio-player">
+                <div class="audio-player" aria-modal="true">
                     <header>
-                        <h2 id="listen-title">Listen to this post</h2>
-                        <label class="close" for="player" aria-label="Close">&times;</label>
+                        <h2 id="mp3-listen-title">Listen to this post</h2>
+                        <label class="close" for="player" role="text" aria-label="Close player window">&times;</label>
                     </header>
-                    <main>
-                        <audio controls>
-                            <source src="{{ (resources.Get .Params.mp3).RelPermalink }}" />
-                            Your browser does not seem to support MP# playback.
+                    <main role="main">
+                        <audio controls tabindex="1" aria-hidden="false">
+                            <source src="{{ (resources.Get .Params.mp3).Permalink }}" type="audio/mpeg" />
+                            <source src="{{ (resources.Get .Params.aac).Permalink }}" type="audio/aac" />
+                            <source src="{{ (resources.Get .Params.ogg).Permalink }}" type="audio/ogg" />
+                            <span>Your browser does not seem to support audio playback. Please use the download and third party application options below.</span>
                         </audio>
                     </main>
                     <footer>
-                        <a class="download" target="_blank" download type="audio/mpeg" href="{{ (resources.Get .Params.mp3).RelPermalink }}">Download MP3</a>
+                        <a class="download" target="_blank" download type="audio/mpeg" href="{{ (resources.Get .Params.mp3).RelPermalink }}">MP3</a>
+                        {{ if (isset .Params "spotify") }}
+                            <a href="{{ .Params.spotify }}" target="_blank" rel="noopener noreferer">Spotify</a>
+                        {{ end }}
+                        {{ if (isset .Params "itunes") }}
+                            <a href="{{ .Params.itunes }}" target="_blank" rel="noopener noreferer">iTunes</a>
+                        {{ end }}
+                        {{ if (isset .Params "soundcloud") }}
+                            <a href="{{ .Params.soundcloud }}" target="_blank" rel="noopener noreferer">SoundCloud</a>
+                        {{ end }}
                     </footer>
                 </div>
             </div>
         </div>
+        <script>
+            const audio_toggle = document.getElementById("player");
+            const audio_overlay = document.getElementById("audio-overlay")
+            audio_toggle.addEventListener( 'change', function() {
+                if(this.checked) {
+                    audio_overlay.setAttribute("aria-modal", "true");
+                    audio_overlay.setAttribute("aria-hidden", "false");
+                } else {
+                    audio_overlay.setAttribute("aria-modal", "false");
+                    audio_overlay.setAttribute("aria-hidden", "true");
+                }
+            });
+        </script>
     {{ end }}
     <article class="text{{ if not $.PublishDate}} text--simple{{ end }}"{{ if $.PublishDate }} itemscope itemtype="https://schema.org/BlogPosting"{{ end }}>
         {{ if $.PublishDate }}
@@ -39,7 +63,7 @@
         <meta itemprop="keywords" content="{{ delimit .Params.tags ", " }}" />
         {{ end }}
 
-        <h1{{ if $.PublishDate }} itemprop="name headline"{{ end }}>{{ .Title }}</h1>
+        <h1{{ if $.PublishDate }} itemprop="name headline"{{ end }} aria-label="{{ replaceRE "\\(([a-zA-Z]+)\\)" "$1" .Title }}">{{ .Title }}</h1>
         {{ if $.PublishDate }}
         <div class="meta">
             <time datetime="{{ $.PublishDate }}"{{ if $.PublishDate }} itemprop="datePublished"{{ end }}>
@@ -50,22 +74,26 @@
                 </span>
             </time>
             {{ if (isset .Params "mp3") }}
-                <label for="player" class="listen">🎧 Listen</label>
+                <label for="player" class="listen" role="button" aria-label="Listen to this post">🎧 Listen</label>
             {{ end }}
         </div>
         {{ end }}
         <div{{ if $.PublishDate }} itemprop="articleBody"{{ end }} class="body">
-            {{ .Content }}
+            {{ if $.PublishDate }}
+                {{ replaceRE "(</p>)\\s*$" " <span aria-label=\"End of article.\" role=\"text\" class=\"qed\">∎</span>$1" .Content | safeHTML }}
+            {{ else }}
+                {{ .Content }}
+            {{ end }}
         </div>
         {{ if (isset .Params "authors")}}
             {{ range $key, $author := .Params.authors }}
                 <div class="bio" itemprop="author" itemscope itemtype="https://schema.org/Person">
                 {{- with index $.Site.Data.authors $author }}
-                    <h2 itemprop="name">{{ .fullname }}</h2>
-                    <img class="avatar" src="{{ ((resources.Get .avatar).Resize "512x 90 jpg").RelPermalink }}" alt="" />
+                    <h2 itemprop="name" aria-label="Author: {{ .fullname_pronounciation }}">{{ .fullname }}</h2>
+                    <img class="avatar" src="{{ ((resources.Get .avatar).Resize "512x 90 jpg").RelPermalink }}" alt="{{ .avatar_alt }}" />
                     <p>{{ .bio }}</p>
                     <nav class="readmore">
-                        <a href="/blog">Read more by {{ .name }} &raquo;</a>
+                        <a href="/blog" role="button">Read more by <span aria-label="{{ .name_pronounciation }}">{{ .name }}</span> &raquo;</a>
                     </nav>
                 {{ end }}
                 </div>
