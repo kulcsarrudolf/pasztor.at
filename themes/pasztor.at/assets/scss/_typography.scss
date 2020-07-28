@@ -540,6 +540,29 @@ html, body {
       word-break: break-all;
     }
   }
+
+  .podcasts {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+  a.podcast {
+    display: block;
+    height:3rem;
+  }
+  a.podcast img {
+    width:50%;
+    max-width:200px;
+  }
+  @media screen and (min-width: 768px) {
+    .podcasts {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-gap: 1.5rem;
+    }
+    a.podcast img {
+      width:100%;
+    }
+  }
 }
 
 .text {

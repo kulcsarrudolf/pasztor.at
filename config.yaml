@@ -95,21 +95,26 @@ menu:
     - identifier: podcast
       name: Podcast
       weight: 4
-    - identifier: subscribe-spotify
+    - identifier: podcast-spotify
       parent: podcast
       name: Spotify
       url: https://open.spotify.com/show/7CIjRONYPExPeFs2R8GDZ0
       weight: 1
+    - identifier: podcast-itunes
+      parent: podcast
+      name: iTunes
+      url: https://podcasts.apple.com/podcast/janos-pasztor/id1524971396
+      weight: 2
     - identifier: podcast-soundcloud
       parent: podcast
       name: SoundCloud
       url: https://soundcloud.com/pasztor_at/
-      weight: 2
+      weight: 3
     - identifier: podcast-rss
       parent: podcast
       name: RSS
       url: /podcast.xml
-      weight: 3
+      weight: 4
 
     - identifier: legal
       name: Legal

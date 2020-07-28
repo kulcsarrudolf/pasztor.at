@@ -18,6 +18,7 @@ ogg: podcast/The painful Enterprise Way to the Cloud.ogg
 aac: podcast/The painful Enterprise Way to the Cloud.aac
 soundcloud: "https://soundcloud.com/pasztor_at/the-painful-enterprise-way-to-the-cloud"
 spotify: "https://open.spotify.com/episode/52IB09ZExAg6mo1BaS6Ewy"
+itunes: "https://podcasts.apple.com/podcast/the-painful-enterprise-way-to-the-cloud/id1524971396?i=1000485976063"
 duration: 854
 ---
 
