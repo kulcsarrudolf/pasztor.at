@@ -38,6 +38,9 @@
                         {{ if (isset .Params "soundcloud") }}
                             <a href="{{ .Params.soundcloud }}" target="_blank" rel="noopener noreferer">SoundCloud</a>
                         {{ end }}
+                        {{ if (isset .Params "deezer") }}
+                            <a href="{{ .Params.deezer}}" target="_blank" rel="noopener noreferer">Deezer</a>
+                        {{ end }}
                     </footer>
                 </div>
             </div>
