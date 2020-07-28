@@ -284,7 +284,11 @@ This build process means that all the files in the current directory are packed 
 However, if you are on Windows, you will get this security warning:
 
 ```bat
-SECURITY WARNING: You are building a Docker image from Windows against a non-Windows Docker host. All files and directories added to build context will have '-rwxr-xr-x' permissions. It is recommended to double check and reset permissions for sensitive files and directories.
+SECURITY WARNING: You are building a Docker image from Windows
+against a non-Windows Docker host. All files and directories added
+to build context will have '-rwxr-xr-x' permissions. It is
+recommended to double check and reset permissions for sensitive
+files and directories.
 ```
 
 This warning is issued due to how Linux/Unix permissions are differend from Windows. If you build a Linux container on a Windows host, all files added via the `COPY` or `ADD` commands (more on those later) will have the executable permission. This is less than ideal since all files added will be executable. You can, of course, fix this issue by adding commands to the build process to set the permissions, but this is a good reason for using WSL instead of the Windows command line to run the build commands. Needless to say, for production uses this should be integrated in your CI/CD pipeline anyway and you shouldn't build images by hand.
@@ -313,7 +317,7 @@ Another important aspect of tagging is *versioning*. If you don't specify a vers
 So the build command should really look like this:
 
 ```bat
-C:\Users\janoszen\docker-test>docker build -t mynick/my-first-image:1.0.0 .
+D:\docker-test>docker build -t mynick/my-first-image:1.0.0 .
 ```
 
 Great! Our first image is done and properly tagged! If we so desire we can issue a `docker login` command to log in to the Docker Hub and `docker push` our image there. I'll leave it to you as an exercise to figure out.

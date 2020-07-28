@@ -205,7 +205,7 @@ html, body {
     animation: fadein 0.233s;
   }
 
-  p>code, ul>code, ol>code, dt>code, dd>code {
+  p>code, ul>code, ol>code, dt>code, dd>code, li>code {
     color: $color-inline-code;
   }
 
@@ -423,15 +423,27 @@ html, body {
     font-size: inherit;
     line-height:1.5rem;
     padding: 1.5rem;
+    padding-bottom:0.75rem;
 
     white-space: pre;
     overflow-x: scroll;
     overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    scrollbar-color:#cccccc transparent;
+    scrollbar-width:0.75rem;
+
     &::-webkit-scrollbar {
-      display: none;
+      margin-top:-0.75rem;
+      height:0.75rem;
+    }
+
+    &::-webkit-scrollbar-track {
+      background:transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      height:0.1rem;
+      border-radius:$border-radius;
+      background:#cccccc;
     }
   }
 
