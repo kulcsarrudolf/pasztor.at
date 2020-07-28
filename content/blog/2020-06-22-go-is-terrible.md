@@ -319,7 +319,8 @@ The reason was of the type `channel.RejectionReason`. And what do you think that
 the IDE to figure it out. (You shouldn't have to do this.)
 
 ```go
-// RejectionReason is an enumeration used when rejecting channel creation
+// RejectionReason is an enumeration
+// used when rejecting channel creation
 // requests. See RFC 4254, section 5.1.
 type RejectionReason uint32
 ```

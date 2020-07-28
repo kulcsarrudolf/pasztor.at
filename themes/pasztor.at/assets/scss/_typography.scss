@@ -423,10 +423,15 @@ html, body {
     font-size: inherit;
     line-height:1.5rem;
     padding: 1.5rem;
-    white-space: pre-wrap;
-    @media screen and (min-width: 768px) {
-      white-space: pre-wrap;
-      word-break: break-all;
+
+    white-space: pre;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
     }
   }
 
