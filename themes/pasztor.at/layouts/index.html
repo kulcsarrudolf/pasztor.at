@@ -16,7 +16,7 @@
         </aside>
     </div>
     <div class="posts">
-        {{ range last 8 (first 11 (where site.RegularPages "Section" "blog"))}}
+        {{ range last 6 (first 9 (where site.RegularPages "Section" "blog"))}}
             {{ partial "post.html" . }}
         {{ end }}
     </div>

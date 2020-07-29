@@ -1,15 +1,6 @@
-<div class="post{{ range $tag := .Params.tags}} filter-{{$tag|urlize}}{{ end }}">
-    <h2><a class="hidden" href="{{ .RelPermalink }}" aria-label="{{ replaceRE "\\(([a-zA-Z]+)\\)" "$1" .Title }}">{{ .Title }}</a></h2>
+<a href="{{ .RelPermalink }}" class="post{{ range $tag := .Params.tags}} filter-{{$tag|urlize}}{{ end }}">
+    <h2 aria-label="{{ replaceRE "\\(([a-zA-Z]+)\\)" "$1" .Title }}">{{ .Title }}</h2>
     <p>
-        <a class="hidden" href="{{ .RelPermalink }}">{{ .Summary }}</a>
-        <span class="post__readmore">
-            <a href="{{ .RelPermalink }}">
-                {{ if (isset .Params "mp3") }}
-                    <span role="text" aria-label="Read more or listen">Read more or <span class="nobr">listen &raquo;</span></span>
-                {{ else }}
-                    <span role="text" aria-label="Read more">Read <span class="nobr">more &raquo;</span></span>
-                {{ end }}
-            </a>
-        </span>
+        {{ .Summary }}
     </p>
-</div>
+</a>

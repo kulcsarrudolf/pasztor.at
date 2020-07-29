@@ -19,22 +19,32 @@
   position:relative;
   .tag {
     cursor:pointer;
-    transition: background $transition-length ease-in-out;
-    line-height:1.3em;
-    margin-bottom:0.1em;
-    height: 1.3em;
+    transition: background $transition-length ease-in-out, color $transition-length ease-in-out, box-shadow $transition-length ease-in-out;
+    line-height:1.3rem;
+    margin-bottom:0.1rem;
+    height: 1.5rem;
     border-radius:$border-radius;
     display:inline-block;
-    margin-right:0.375em;
+    margin-right:0.1rem;
     color: $color-text-light;
     background: $color-background-card-light;
+    text-decoration: none;
+    padding-left:0.75rem;
+    padding-right:0.75rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    &:hover {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+
     @media screen and (prefers-color-scheme: dark) {
       color: $color-text-dark;
       background: $color-background-card-dark;
+      box-shadow: 0 1px 3px rgba(255,255,255,0.12), 0 1px 2px rgba(255,255,255,0.24);
+      &:hover {
+        box-shadow: 0 14px 28px rgba(255,255,255,0.25), 0 10px 10px rgba(255,255,255,0.22);
+      }
     }
-    text-decoration: none;
-    padding-left:0.75em;
-    padding-righT:0.75em;
+
     &:hover {
       background: $color-decor;
       color: $color-decor-contrast;

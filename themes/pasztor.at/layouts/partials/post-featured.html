@@ -1,17 +1,8 @@
-<div class="post post--featured">
-    <h2><a class="hidden" href="{{ .RelPermalink }}" role="text" aria-label="{{ replaceRE "\\(([a-zA-Z]+)\\)" "$1" .Title }}">{{ replaceRE "([A-Z])" "<span class=\"highlight\">$1</span>" (replaceRE "(^|\\(| |-|:)([a-z])" "$1<span class=\"highlight\">$2</span>" .Title) | safeHTML }}</a></h2>
+<a href="{{ .RelPermalink }}" class="post post--featured">
+    <h2 role="text" aria-label="{{ replaceRE "\\(([a-zA-Z]+)\\)" "$1" .Title }}">{{ replaceRE "([A-Z])" "<span class=\"highlight\">$1</span>" (replaceRE "(^|\\(| |-|:)([a-z])" "$1<span class=\"highlight\">$2</span>" .Title) | safeHTML }}</h2>
     <div class="post__content">
         <p>
-            <a class="hidden" href="{{ .RelPermalink }}">{{ plainify (index (split .Content "</") 0) }}</a>
-            <span class="post__readmore">
-                <a href="{{ .RelPermalink }}">
-                    {{ if (isset .Params "mp3") }}
-                        <span role="text" aria-label="Read more or listen">Read more or <span class="nobr">listen &raquo;</span></span>
-                    {{ else }}
-                        <span role="text" aria-label="Read more">Read <span class="nobr">more &raquo;</span></span>
-                    {{ end }}
-                </a>
-            </span>
+            {{ plainify (index (split .Content "</") 0) }}
         </p>
     </div>
-</div>
+</a>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!--!
+{{ `<!--
 Hey, looks like you're interested in the source code.
 Why not take a look at the original Hugo source files on GitHub?
 
   https://github.com/janoszen/pasztor.at
 
 Feel free to learn and build your own!
--->
+-->` | safeHTML }}
 <html lang="{{ .Site.Language }}">
     <head>
         <meta charset="utf-8" />
@@ -15,7 +15,7 @@ Feel free to learn and build your own!
         <title>{{- block "title" . }}{{ if not .IsHome }}{{ with .Title }}{{ . }} | {{ end }}{{ end }}{{ .Site.Title }}{{- end }}</title>
         <link rel="canonical" href="{{ .Permalink }}" />
 
-        <style>@media screen {body{background:url({{ (resources.Get "noise-light.png").RelPermalink }});}}@media screen and (prefers-color-scheme: dark) {body{background-image:url({{ (resources.Get "noise-dark.png").RelPermalink }});}}</style>
+        <style>@media screen {body{background:url("data:image/png;base64,{{ base64Encode (((resources.Get "noise-light.png").Resize "100x png").Content) }}");}}@media screen and (prefers-color-scheme: dark) {body{background-image:url("data:image/png;base64,{{ base64Encode (((resources.Get "noise-dark.png").Resize "100x png").Content) }}");}}</style>
         {{- block "css" . }}{{- end }}
         {{ partial "head" . }}
         <meta name="color-scheme" content="dark light" />

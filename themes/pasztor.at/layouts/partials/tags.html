@@ -10,10 +10,10 @@
     <input class="tag-filter-input" type="radio" id="post-filter-{{$taxonomyName}}" name="post-filter" value="{{ $taxonomyName }}" />
 {{ end }}
 <div class="tags">
-    <label class="tag" for="post-filter-all">All</label>
+    <label class="tag" for="post-filter-all" aria-label="Show all posts">All</label>
     {{ range $taxonomyName, $taxonomy := index .Site.Taxonomies "tags" }}
         {{ with $.Site.GetPage (printf "/tags/%s" $taxonomyName) }}
-            <label class="tag" for="post-filter-{{$taxonomyName}}">{{ .Title  }}</label>
+            <label class="tag" for="post-filter-{{$taxonomyName}}" aria-label="Show only posts in {{ .Title }}">{{ .Title  }}</label>
         {{ end }}
     {{ end }}
 </div>
