@@ -8,6 +8,16 @@
     {{ end }}
 {{ end }}
 
+{{ define "meta" }}
+    {{- if (isset .Params "authors") -}}
+        {{- range $key, $author := .Params.authors -}}
+            {{- with index $.Site.Data.authors $author -}}
+                <meta name="author" content="{{ .fullname }}" />
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+{{ end }}
+
 {{ define "main" }}
     {{ if (isset .Params "mp3") }}
         <input type="checkbox" class="audio-toggle" value="1" id="player" aria-hidden="true" />
