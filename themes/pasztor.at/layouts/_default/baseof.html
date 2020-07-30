@@ -15,15 +15,16 @@ Feel free to learn and build your own!
         <title>{{- block "title" . }}{{ if not .IsHome }}{{ with .Title }}{{ . }} | {{ end }}{{ end }}{{ .Site.Title }}{{- end }}</title>
         <link rel="canonical" href="{{ .Permalink }}" />
 
-        <style>@media screen {body{background:url("data:image/png;base64,{{ base64Encode (((resources.Get "noise-light.png").Resize "100x png").Content) }}");}}@media screen and (prefers-color-scheme: dark) {body{background-image:url("data:image/png;base64,{{ base64Encode (((resources.Get "noise-dark.png").Resize "100x png").Content) }}");}}</style>
-        {{- block "css" . }}{{- end }}
-
         {{"<!-- region Social -->" | safeHTML}}
         {{ partial "opengraph.html" . }}
         {{ partial "twitter_cards.html" . }}
         {{"<!-- endregion -->\n" | safeHTML}}
 
         {{- block "meta" . }}{{- end }}
+
+        <style>@media screen {body{background:url("data:image/png;base64,{{ base64Encode (((resources.Get "noise-light.png").Resize "100x png").Content) }}");}}@media screen and (prefers-color-scheme: dark) {body{background-image:url("data:image/png;base64,{{ base64Encode (((resources.Get "noise-dark.png").Resize "100x png").Content) }}");}}</style>
+        {{- block "css" . }}{{- end }}
+
         {{ partial "head" . }}
         <meta name="color-scheme" content="dark light" />
 
