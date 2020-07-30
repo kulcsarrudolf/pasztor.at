@@ -3,7 +3,7 @@
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
 {{ with $.Params.images }}{{ range first 6 . -}}
-    <meta name="image" property="og:image" content="{{ ((resources.Get .).Resize "1200x png").Permalink }}" />
+    <meta name="image" property="og:image" content="{{ ((resources.Get .).Resize "1200x jpg 90%").Permalink }}" />
 {{ end }}{{ else -}}
     {{- $images := $.Resources.ByType "image" -}}
     {{- $featured := $images.GetMatch "*feature*" -}}
@@ -12,7 +12,7 @@
         <meta name="image" property="og:image" content="{{ $featured.Permalink }}"/>
     {{ else -}}
         {{- with $.Site.Params.images -}}
-            <meta name="image" property="og:image" content="{{ ((resources.Get (index . 0)).Resize "1200x png").Permalink }}"/>
+            <meta name="image" property="og:image" content="{{ ((resources.Get (index . 0)).Resize "1200x jpg 90%").Permalink }}"/>
         {{ end }}{{ end }}{{ end }}
 
 {{- $iso8601 := "2006-01-02T15:04:05-07:00" -}}
