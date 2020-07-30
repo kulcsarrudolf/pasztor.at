@@ -128,23 +128,24 @@ label.listen {
     border:0.1rem solid $color-decor;
     font-size:0.8rem;
     height:1.3rem;
+    line-height:1.3rem;
     border-radius: $border-radius;
     text-decoration:none;
     padding-left:0.75rem;
     padding-right:0.75rem;
     display: inline-block;
     color: inherit;
-    line-height:1.3rem;
     text-align:center;
+    transition: color $transition-length ease-in-out, background-color $transition-length ease-in-out;
     &:hover {
       color: $color-decor-contrast;
       background: $color-decor;
-      opacity:0.8;
     }
   }
   .download {
     color: $color-decor-contrast;
     background: $color-decor;
+    transition: color $transition-length ease-in-out, background-color $transition-length ease-in-out;
     border:0;
     &:hover {
       background: $color-decor;

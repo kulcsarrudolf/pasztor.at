@@ -17,7 +17,7 @@ params:
   title: Janos Pasztor
   images:
     - social.png
-  description:
+  description: Random thoughts from a software engineer with 10+ years of experience.
 markup:
   goldmark:
     extensions:
