@@ -30,7 +30,7 @@
                         <label class="close" for="player" role="text" aria-label="Close player window">&times;</label>
                     </header>
                     <main role="main">
-                        <audio controls tabindex="1" aria-hidden="false">
+                        <audio controls tabindex="1" aria-hidden="false" preload="metadata">
                             <source src="{{ (resources.Get .Params.mp3).Permalink }}" type="audio/mpeg" />
                             <source src="{{ (resources.Get .Params.aac).Permalink }}" type="audio/aac" />
                             <source src="{{ (resources.Get .Params.ogg).Permalink }}" type="audio/ogg" />
