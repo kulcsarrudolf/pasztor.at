@@ -82,11 +82,7 @@
         </div>
         {{ end }}
         <div{{ if $.PublishDate }} itemprop="articleBody"{{ end }} class="body">
-            {{ if $.PublishDate }}
-                {{ replaceRE "(</p>)\\s*$" " <span aria-label=\"End of article.\" role=\"text\" class=\"qed\">∎</span>$1" .Content | safeHTML }}
-            {{ else }}
-                {{ .Content }}
-            {{ end }}
+            {{ partial "content.html" . }}
         </div>
         {{ if (isset .Params "authors")}}
             {{ range $key, $author := .Params.authors }}

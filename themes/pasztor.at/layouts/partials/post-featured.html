@@ -2,7 +2,10 @@
     <h2 role="text" aria-label="{{ replaceRE "\\(([a-zA-Z]+)\\)" "$1" .Title }}">{{ replaceRE "([A-Z])" "<span class=\"highlight\">$1</span>" (replaceRE "(^|\\(| |-|:)([a-z])" "$1<span class=\"highlight\">$2</span>" .Title) | safeHTML }}</h2>
     <div class="post__content">
         <p>
-            {{ plainify (index (split .Content "</") 0) }}
+            {{ replace (index (split .Content "</p>") 0) "<p>" "" | safeHTML }}
+        </p>
+        <p>
+            {{ replace (index (split .Content "</p>") 1) "<p>" "" | safeHTML }}
         </p>
     </div>
 </a>

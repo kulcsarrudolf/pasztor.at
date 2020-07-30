@@ -1,7 +1,11 @@
 @import "base";
 @import "variables";
 @import "menu";
-
+footer.page {
+  h2 {
+    font-size:1rem;
+  }
+}
 @media screen and (min-width:760px) {
   .page-footer {
     display: flex;

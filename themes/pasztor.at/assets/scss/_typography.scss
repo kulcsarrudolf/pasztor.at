@@ -110,7 +110,7 @@ html, body {
 
     .body>p:first-of-type {
       font-size:$size-lead;
-      letter-spacing: 0.1rem;
+      letter-spacing: 0.05rem;
     }
 
     .bio>h2 {
@@ -200,6 +200,10 @@ html, body {
   p, ul, ol, figure, dl, hr {
     margin-top:1.5rem;
     font-size:1rem;
+  }
+
+  q {
+    font-style: italic;
   }
 
   ul ul {

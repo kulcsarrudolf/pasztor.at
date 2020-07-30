@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{{ `<!--
+{{ `<!--!
 Hey, looks like you're interested in the source code.
 Why not take a look at the original Hugo source files on GitHub?
 
@@ -134,15 +134,19 @@ Feel free to learn and build your own!
                             {{ if .HasChildren }}
                                 <li class="has-children {{ if $currentPage.HasMenuCurrent "footer" . }}active{{ end }}">
                                     {{ if (ne .URL "") }}
-                                        <a href="{{ .URL }}" class="nav-link nav-header">
-                                            {{ .Pre }}
-                                            <span>{{ .Name }}</span>
-                                        </a>
+                                        <h2>
+                                            <a href="{{ .URL }}" class="nav-link nav-header">
+                                                {{ .Pre }}
+                                                <span>{{ .Name }}</span>
+                                            </a>
+                                        </h2>
                                     {{ else }}
-                                        <span  class="nav-link nav-header">
-                                            {{ .Pre }}
-                                            <span>{{ .Name }}</span>
-                                        </span>
+                                        <h2>
+                                            <span class="nav-link nav-header">
+                                                {{ .Pre }}
+                                                <span>{{ .Name }}</span>
+                                            </span>
+                                        </h2>
                                     {{ end }}
                                     <ul class="sub-menu">
                                         {{ range .Children }}

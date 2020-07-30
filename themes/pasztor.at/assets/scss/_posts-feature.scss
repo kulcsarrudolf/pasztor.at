@@ -18,16 +18,20 @@
         grid-column: span 2;
 
         h2 {
-          font-size:2rem;
+          font-size:2.5rem;
           line-height:3rem;
-          margin-bottom:1.5rem;
+          margin-bottom:3rem;
           .audio-available {
             font-size:1.5rem;
           }
         }
-        .post__readmore {
-          display: block;
-          margin-top:1.5rem;
+
+        p {
+          margin-bottom:1.5rem;
+        }
+
+        p:last-child {
+          margin-bottom:0;
         }
       }
       .post {

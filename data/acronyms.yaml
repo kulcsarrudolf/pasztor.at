@@ -1,0 +1,24 @@
+ICMP:
+  pronounciation: I C M P
+  title: Internet Control Message Protocol
+  link: "https://en.wikipedia.org/wiki/Internet_Control_Message_Protocol"
+TCP:
+  pronounciation: T C P
+  title: Transmision Control Protocol
+  link: "https://en.wikipedia.org/wiki/Transmission_Control_Protocol"
+UDP:
+  pronounciation: U D P
+  title: User Datagram Protocol
+  link: "https://en.wikipedia.org/wiki/User_Datagram_Protocol"
+MTU:
+  pronounciation: M T U
+  title: Maximum Transmission Unit
+  link: "https://en.wikipedia.org/wiki/Maximum_transmission_unit"
+IP:
+  pronounciation: I P
+  title: Internet Protocol
+  link: "https://en.wikipedia.org/wiki/Internet_Protocol"
+TL;DR:
+  pronounciation: T L D R
+  title: Too Long; didn't read
+  link: "https://en.wikipedia.org/wiki/Wikipedia:Too_long;_didn%27t_read"
