@@ -17,6 +17,12 @@ Feel free to learn and build your own!
 
         <style>@media screen {body{background:url("data:image/png;base64,{{ base64Encode (((resources.Get "noise-light.png").Resize "100x png").Content) }}");}}@media screen and (prefers-color-scheme: dark) {body{background-image:url("data:image/png;base64,{{ base64Encode (((resources.Get "noise-dark.png").Resize "100x png").Content) }}");}}</style>
         {{- block "css" . }}{{- end }}
+
+        {{"<!-- region Social -->" | safeHTML}}
+        {{ partial "opengraph.html" . }}
+        {{ partial "twitter_cards.html" . }}
+        {{"<!-- endregion -->\n" | safeHTML}}
+
         {{- block "meta" . }}{{- end }}
         {{ partial "head" . }}
         <meta name="color-scheme" content="dark light" />
@@ -29,11 +35,6 @@ Feel free to learn and build your own!
                 {{ end }}
             {{ end }}
         {{ end }}
-
-        {{"<!-- region Social -->" | safeHTML}}
-        {{ partial "opengraph.html" . }}
-        {{ partial "twitter_cards.html" . }}
-        {{"<!-- endregion -->\n" | safeHTML}}
 
         {{"<!-- region Social -->" | safeHTML}}
         <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
