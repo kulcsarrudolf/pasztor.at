@@ -9,5 +9,5 @@ features = []
 min_version = "0.41.0"
 
 [author]
-  name = "Janos PAsztor"
+  name = "Janos Pasztor"
   homepage = "https://pasztor.at"

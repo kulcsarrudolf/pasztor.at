@@ -19,5 +19,6 @@
 /2013/02/06/limiting-linux-processes-cgroups-explained /blog/under-the-hood-of-docker
 /2013/01/22/lxc-vs-openvz                              /blog/lxc-vs-docker
 /2012/04/16/proper-xss-protection-in-javascript-php-and-smarty /blog/injection-type-vulnerabilities
+/feed/                                                 /feed.xml
 
 /* /404.html 404
