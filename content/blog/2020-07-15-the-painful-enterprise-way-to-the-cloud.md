@@ -20,6 +20,7 @@ soundcloud: "https://soundcloud.com/pasztor_at/the-painful-enterprise-way-to-the
 spotify: "https://open.spotify.com/episode/52IB09ZExAg6mo1BaS6Ewy"
 itunes: "https://podcasts.apple.com/podcast/the-painful-enterprise-way-to-the-cloud/id1524971396?i=1000485976063"
 deezer: "https://www.deezer.com/en/episode/235907712"
+google: https://podcasts.google.com/feed/aHR0cHM6Ly9wYXN6dG9yLmF0L3BvZGNhc3QueG1s/episode/cG9kY2FzdC9UaGUgcGFpbmZ1bCBFbnRlcnByaXNlIFdheSB0byB0aGUgQ2xvdWQubXAz
 duration: 854
 ---
 

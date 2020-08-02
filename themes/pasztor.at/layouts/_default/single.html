@@ -51,6 +51,9 @@
                         {{ if (isset .Params "deezer") }}
                             <a href="{{ .Params.deezer}}" target="_blank" rel="noopener noreferer">Deezer</a>
                         {{ end }}
+                        {{ if (isset .Params "google") }}
+                            <a href="{{ .Params.google}}" target="_blank" rel="noopener noreferer">Google</a>
+                        {{ end }}
                     </footer>
                 </div>
             </div>

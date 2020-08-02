@@ -115,11 +115,16 @@ menu:
       name: Deezer
       url: https://deezer.com/show/1564152
       weight: 4
+    - identifier: podcast-google
+      parent: podcast
+      name: Google
+      url: https://podcasts.google.com/feed/aHR0cHM6Ly9wYXN6dG9yLmF0L3BvZGNhc3QueG1s
+      weight: 5
     - identifier: podcast-rss
       parent: podcast
       name: RSS
       url: /podcast.xml
-      weight: 5
+      weight: 6
 
     - identifier: legal
       name: Legal
