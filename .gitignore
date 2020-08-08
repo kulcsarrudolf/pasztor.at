@@ -1,2 +1,7 @@
 _gen
 public
+*.wav
+.idea
+*.iml
+*.sesx
+*.pkf
