@@ -26,7 +26,7 @@ look at the bride and the groom.
 {{% warning %}}
 **Bias warning**: this article is written from a standpoint of a web developer who left PHP for Java because of static
 typing. Since I have only ever worked in web development, servers, etc. I cannot speak for, say, games development. If
-you have any feedback regarding this topic, feel free to [contact me](/contact).
+you have any feedback regarding this topic, feel free to [contact me](/imprint/).
 {{% /warning %}}
 
 ## Object Oriented Programming
@@ -212,4 +212,4 @@ caching and storage implementations, or wrapper classes for external libraries.
 {{% /tip %}}
 
 I have been using it for a while like this and I felt no adverse effects. What do you think? Would you code like this?
-[Let me know!](/contact)
+[Let me know!](/imprint/)
