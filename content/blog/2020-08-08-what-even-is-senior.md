@@ -32,7 +32,7 @@ One of the things that struck me as odd, and I never quite understood was the fa
 
 Little did I know as a twenty-some-year-old dev with barely 1-2 years of experience in the industry that change can be scary. When you have done the same thing for almost a decade, having to throw everything out the window and basically start from scratch is like staring into the abyss.
 
-The truth is, it’s easy to get comfortable. It’s easy to settle into a routine to write code, just delivering what you’re asked for. About ten years later, I was interviewing a fellow how had fallen into this trap. He had been working as a PHP developer for a small company for quite a few years. I expected someone with that much experience to have a decent amount of knowledge in the language he was working in. I was in for a shock. He knew *nothing* beyond the PHP 4 level of working.
+The truth is, it’s easy to get comfortable. It’s easy to settle into a routine to write code, just delivering what you’re asked for. About ten years later, I was interviewing a fellow who had fallen into this trap. He had been working as a PHP developer for a small company for quite a few years. I expected someone with that much experience to have a decent amount of knowledge in the language he was working in. I was in for a shock. He knew *nothing* beyond the PHP 4 level of working.
 
 I was in awe and could not help asking him how he got to that point. He said that over the years, he was always looking for new jobs. He never found one that paid quite as well as the one he had at the time. Of course, he was a *senior* colleague at the company right up to the point when he was let go.
 
