@@ -4,19 +4,9 @@ title: Privacy policy
 
 I respect your privacy. You can turn third party integrations on or off at any time on this page, or on the popup when you first visit this site.
 
-## Privacy settings
+## About my hosting provider
 
-Most importantly, you can use the following button to adjust your privacy preferences:
-
-<button class="privacy__open" disabled>Open Privacy Settings</button>
-
-## About our hosting provider
-
-Our hosting provider is Netlify. Netlify collects visitor logs according to [their privacy statement](https://www.netlify.com/privacy/).
-
-## About Google Analytics
-
-Google Analytics collects data on the visitors of this site, which pages are viewed on the page, what the source of the traffic is, and what kind of device you are using. Google Analytics does not store your IP address and the page owner only gets access to an aggregate view of the data.
+My hosting provider is Netlify. Netlify collects visitor logs according to [their privacy statement](https://www.netlify.com/privacy/).
 
 ## About embedded content
 
@@ -47,6 +37,6 @@ Austria
 
 ## Changes and updates to this policy
 
-The author of this website reserves the right to change this policy at any time, without prior notice. If JavaScript is enabled in your browser, and you have not installed extensions that block cookie notices, you may receive a notification about the updated privacy policy when you next visit this site.
+The author of this website reserves the right to change this policy at any time, without prior notice.
 
-This document has last been updated: July 20, 2020
+This document has last been updated: August 11, 2020
