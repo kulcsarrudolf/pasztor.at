@@ -1,5 +1,3 @@
-{{ $sass := resources.Get .file }}
-{{ $style := $sass | resources.ToCSS | resources.Minify }}
-    <style>
-        {{ $style.Content | safeCSS }}
-    </style>
+{{- $sass := resources.Get .file -}}
+{{- $style := $sass | resources.ToCSS -}}
+{{- return ($style.Content | safeCSS) -}}

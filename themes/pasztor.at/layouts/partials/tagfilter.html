@@ -1,0 +1,5 @@
+{{- range $taxonomyName, $taxonomy := index .Site.Taxonomies "tags" -}}
+    .tag-filter-input[value="{{ $taxonomyName }}"]:checked ~ .posts .post.filter-{{$taxonomyName}} {
+        display:block;
+    }
+{{- end -}}

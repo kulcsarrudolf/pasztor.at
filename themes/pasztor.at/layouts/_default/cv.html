@@ -1,5 +1,5 @@
 {{ define "css" }}
-    {{ partial "scss" (dict "file" "scss/cv.scss") }}
+    {{- .Page.Scratch.Add "css" (partial "scss" (dict "file" "scss/cv.scss") | safeCSS) -}}
 {{ end }}
 
 {{ define "main" }}

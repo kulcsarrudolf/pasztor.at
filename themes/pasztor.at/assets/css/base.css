@@ -1,0 +1,11 @@
+@media screen {
+    body {
+        background: url("data:image/png;base64,{{ base64Encode (((resources.Get "css/noise-light.png").Resize " 100x png ").Content) }}");
+    }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background-image: url("data:image/png;base64,{{ base64Encode (((resources.Get "css/noise-dark.png").Resize " 100x png ").Content)}}");
+    }
+}

@@ -4,5 +4,4 @@
   Referrer-Policy: strict-origin-when-cross-origin
   Strict-Transport-Security: max-age=315360000; includeSubdomains; preload
   X-Content-Type-Options: nosniff
-  Content-Security-Policy: default-src 'none'; connect-src 'self'; media-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com; upgrade-insecure-requests; block-all-mixed-content; frame-ancestors 'none'; base-uri 'none'
   Feature-Policy: accelerometer 'none'; autoplay 'self'; camera 'none'; document-domain 'none'; encrypted-media 'self'; fullscreen 'none'; geolocation 'none'; gyroscope 'none'; microphone 'none'; midi 'none'; payment 'none'; picture-in-picture 'none'; publickey-credentials-get 'none'; sync-xhr 'none'; usb 'none'; screen-wake-lock 'none'; xr-spatial-tracking 'none';

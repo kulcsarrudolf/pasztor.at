@@ -1,12 +1,12 @@
-{{ define "css" }}
-    {{ partial "scss" (dict "file" "scss/single.scss") }}
-    {{ if in .Content "<pre class=\"chroma\">" }}
-        {{ partial "scss" (dict "file" "scss/code.scss") }}
+{{ define "css" -}}
+    {{- .Page.Scratch.Add "css" (partial "scss" (dict "file" "scss/single.scss") | safeCSS) -}}
+    {{- if in .Content "<pre class=\"chroma\">" -}}
+        {{- .Page.Scratch.Add "css" (partial "scss" (dict "file" "scss/code.scss") | safeCSS) -}}
     {{ end }}
-    {{ if (isset .Params "mp3") }}
-        {{ partial "scss" (dict "file" "scss/audio.scss") }}
-    {{ end }}
-{{ end }}
+    {{- if (isset .Params "mp3") -}}
+        {{- .Page.Scratch.Add "css" (partial "scss" (dict "file" "scss/audio.scss") | safeCSS) -}}
+    {{- end -}}
+{{- end }}
 
 {{ define "meta" }}
     {{- if (isset .Params "authors") -}}

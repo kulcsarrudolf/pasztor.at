@@ -22,8 +22,15 @@ Feel free to learn and build your own!
 
         {{- block "meta" . }}{{- end }}
 
-        <style>@media screen {body{background:url("data:image/png;base64,{{ base64Encode (((resources.Get "noise-light.png").Resize "100x png").Content) }}");}}@media screen and (prefers-color-scheme: dark) {body{background-image:url("data:image/png;base64,{{ base64Encode (((resources.Get "noise-dark.png").Resize "100x png").Content) }}");}}</style>
-        {{- block "css" . }}{{- end }}
+        {{ $sassTemplate := resources.Get "css/base.css" }}
+        {{ $style := $sassTemplate | resources.ExecuteAsTemplate "css/base-rendered.css" . | resources.ToCSS }}
+        {{ .Page.Scratch.Set "css" $style.Content | safeCSS}}
+        {{ block "css" . }}{{end}}
+        {{ $cssPath := printf "%s%s" .RelPermalink "page.css"}}
+        {{ $css := .Page.Scratch.Get "css" | resources.FromString $cssPath | resources.Minify }}
+        <meta http-equiv="Content-Security-Policy"
+              content="default-src 'none'; connect-src 'self'; media-src 'self'; script-src 'self'; style-src 'self' '{{ ($css | resources.Fingerprint "sha512").Data.Integrity }}'; img-src 'self' data:; {{ if hasPrefix  .Site.BaseURL "https://" }}upgrade-insecure-requests; block-all-mixed-content; {{ end }}frame-ancestors 'none'; base-uri 'none'" />
+        <style>{{ $css.Content | safeCSS }}</style>
 
         {{ partial "head" . }}
         <meta name="color-scheme" content="dark light" />
