@@ -210,10 +210,6 @@ html, body {
     margin-top:0;
   }
 
-  h1, h2, h3, h4, h5, h6, p, ul, ol, figure, dl, div, hr {
-    animation: fadein 0.233s;
-  }
-
   p>code, ul>code, ol>code, dt>code, dd>code, li>code {
     color: $color-inline-code;
   }

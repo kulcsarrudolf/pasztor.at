@@ -68,15 +68,6 @@ header.page, main.page, footer.page {
   margin: 3rem;
 }
 
-@keyframes fadein{
-  from{
-    opacity:0
-  }
-  to{
-    opacity:1
-  }
-}
-
 .highlight {
   color: $color-decor;
 }

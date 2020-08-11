@@ -213,8 +213,6 @@ header.page {
 
 @media screen {
   .page-header {
-    animation: fadein $transition-length;
-
     position: relative;
     max-width: $width-max;
     margin-left: auto;
