@@ -58,19 +58,6 @@
                 </div>
             </div>
         </div>
-        <script>
-            const audio_toggle = document.getElementById("player");
-            const audio_overlay = document.getElementById("audio-overlay")
-            audio_toggle.addEventListener( 'change', function() {
-                if(this.checked) {
-                    audio_overlay.setAttribute("aria-modal", "true");
-                    audio_overlay.setAttribute("aria-hidden", "false");
-                } else {
-                    audio_overlay.setAttribute("aria-modal", "false");
-                    audio_overlay.setAttribute("aria-hidden", "true");
-                }
-            });
-        </script>
     {{ end }}
     <article class="text{{ if not $.PublishDate}} text--simple{{ end }}"{{ if $.PublishDate }} itemscope itemtype="https://schema.org/BlogPosting"{{ end }}>
         {{ if $.PublishDate }}

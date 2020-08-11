@@ -65,8 +65,6 @@ Feel free to learn and build your own!
                 }
            </script>
         {{ end }}
-
-        <script> </script>
     </head>
     <body>
         <header class="page">
@@ -105,22 +103,6 @@ Feel free to learn and build your own!
                         </ul>
                     </nav>
                 </div>
-                <script>
-                    const mobile_menu_toggle = document.getElementById("show-mobile-menu");
-                    const mobile_menu = document.getElementById("mobile-menu")
-                    const hamburger = document.getElementById("hamburger")
-                    mobile_menu_toggle.addEventListener( 'change', function() {
-                        if(this.checked) {
-                            mobile_menu.setAttribute("aria-modal", "true");
-                            mobile_menu.setAttribute("aria-hidden", "false");
-                            hamburger.setAttribute("aria-hidden", "true");
-                        } else {
-                            mobile_menu.setAttribute("aria-modal", "false");
-                            mobile_menu.setAttribute("aria-hidden", "true");
-                            hamburger.setAttribute("aria-hidden", "false");
-                        }
-                    });
-                </script>
             </div>
         </header>
         <main class="page">
@@ -173,5 +155,9 @@ Feel free to learn and build your own!
                 <aside>{{ .Site.Copyright | safeHTML }}</aside>
             </div>
         </footer>
+
+        {{ $js := resources.Get "js/aria.js" }}
+        {{ $secureJS := $js | resources.Fingerprint "sha512" }}
+        <script type="text/javascript" src="{{ $secureJS.Permalink }}" integrity="{{ $secureJS.Data.Integrity }}" defer></script>
     </body>
 </html>
