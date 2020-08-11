@@ -14,6 +14,12 @@ publishDate: "2020-08-08T00:00:00Z"
 mp3: podcast/What even is Senior.mp3
 ogg: podcast/What even is Senior.ogg
 aac: podcast/What even is Senior.aac
+soundcloud: https://soundcloud.com/pasztor_at/what-even-is-senior
+itunes: https://podcasts.apple.com/at/podcast/what-even-is-senior/id1524971396?i=1000487533602
+google: https://podcasts.google.com/feed/aHR0cHM6Ly9wYXN6dG9yLmF0L3BvZGNhc3QueG1s/episode/cG9kY2FzdC9XaGF0IGV2ZW4gaXMgU2VuaW9yLm1wMw
+spotify: https://open.spotify.com/episode/3GsomYfbG3lTr0pG9YcXke
+deezer: https://www.deezer.com/episode/238888952?utm_source=deezer&utm_content=episode-238888952&utm_term=0_1597182402&utm_medium=web
+duration: 808
 ---
 
 “Senior Software Developer” — says the text on the business card. But what makes someone senior? Is it the age? Is it the years in the business? Know-how? There’s a sometimes heated and, to some extent, endless debate going on what makes an engineer senior.
