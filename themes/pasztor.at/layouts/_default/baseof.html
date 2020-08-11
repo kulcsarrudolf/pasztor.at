@@ -28,8 +28,6 @@ Feel free to learn and build your own!
         {{ block "css" . }}{{end}}
         {{ $cssPath := printf "%s%s" .RelPermalink "page.css"}}
         {{ $css := .Page.Scratch.Get "css" | resources.FromString $cssPath | resources.Minify }}
-        <meta http-equiv="Content-Security-Policy"
-              content="default-src 'none'; connect-src 'self'; media-src 'self'; script-src 'self'; style-src 'self' '{{ ($css | resources.Fingerprint "sha512").Data.Integrity }}'; img-src 'self' data:; {{ if hasPrefix  .Site.BaseURL "https://" }}upgrade-insecure-requests; block-all-mixed-content; {{ end }}frame-ancestors 'none'; base-uri 'none'" />
         <style>{{ $css.Content | safeCSS }}</style>
 
         {{ partial "head" . }}

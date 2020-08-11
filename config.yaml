@@ -149,6 +149,10 @@ sitemap:
   changefreq: weekly
   filename: sitemap.xml
   priority: 0.5
+mediaTypes:
+  text/netlify:
+    suffixes: [""]
+    delimiter: ""
 outputFormats:
   Podcast:
     baseName: podcast
@@ -180,10 +184,16 @@ outputFormats:
       suffixes:
         - xml
       type: application/rss+xml
+  headers:
+    mediatype: text/netlify
+    baseName: _headers
+    isPlainText: true
+    notAlternative: true
 outputs:
   home:
     - HTML
     - Podcast
     - feed
+    - headers
 disableKinds:
   - taxonomyTerm
