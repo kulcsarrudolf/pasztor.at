@@ -118,7 +118,7 @@ public interface UserStorage {
 }
 ``` 
 
-Any *real* implementation will be *forced* to implement this method otherwise the code will compile. With that assumption in mind, let’s change the code of the API:
+Any *real* implementation will be *forced* to implement this method otherwise the code will not compile. With that assumption in mind, let’s change the code of the API:
 
 ```java
 public class UserCreateApi {
