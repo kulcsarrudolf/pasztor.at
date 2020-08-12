@@ -79,6 +79,15 @@
             {{ if (isset .Params "mp3") }}
                 <label for="player" class="listen" role="button" aria-label="Listen to this post">🎧 Listen</label>
             {{ end }}
+            <span class="authors">
+                {{- if (isset .Params "authors") -}}
+                    {{- range $key, $author := .Params.authors -}}
+                        {{- with index $.Site.Data.authors $author -}}
+                            {{- .fullname -}}
+                        {{- end }}{{ if $key }}, {{ end -}}
+                    {{- end -}}
+                {{- end -}}
+            </span>
         </div>
         {{ end }}
         <div{{ if $.PublishDate }} itemprop="articleBody"{{ end }} class="body">

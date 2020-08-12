@@ -56,6 +56,9 @@ html, body {
     .calendar {
       display: none;
     }
+    .authors {
+      display: none;
+    }
   }
 
 
@@ -535,19 +538,11 @@ html, body {
         text-decoration:none;
       }
 
-      .byline {
+      .authors {
         display: block;
-      }
-      .displayname {
-        display:none;
-      }
-      .by {
-        display:none;
-      }
-      .fullname {
-        display: inline;
-        color:#000000;
+        color:#333333;
         text-decoration: none;
+        font-size:1.5rem;
       }
       time {
         display: none;
