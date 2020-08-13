@@ -22,6 +22,7 @@ I have recently come across a project in Java with quite a high test coverage. W
 
 {{% warning %}}
 **Bias warning:** I am a follower of the [classicist/Detroit school of testing](https://medium.com/@adrianbooth/test-driven-development-wars-detroit-vs-london-classicist-vs-mockist-9956c78ae95f). If you follow a different school of thought, this post may enrage you.
+{{% /warning %}}
 
 ## Why do we test?
 
