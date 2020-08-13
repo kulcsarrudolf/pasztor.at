@@ -20,6 +20,9 @@ I have recently come across a project in Java with quite a high test coverage. W
 
 *&ldquo;Here we go again, bashing something popular,&rdquo;* &mdash; you say? Well, yes. We will be bashing Mockito. Not because it’s bad *per se*, but because it encourages writing bad tests. In this blog post, I want to demonstrate that overusing mocking will cause fragile tests and frustration in your team.
 
+{{% warning %}}
+**Bias warning:** I am a follower of the [classicist/Detroit school of testing](https://medium.com/@adrianbooth/test-driven-development-wars-detroit-vs-london-classicist-vs-mockist-9956c78ae95f). If you follow a different school of thought, this post may enrage you.
+
 ## Why do we test?
 
 Before we dive in, let’s ask ourselves the question: *why do we test?*
